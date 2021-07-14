@@ -17,8 +17,15 @@ class ViewController: UIViewController {
         
         // Load the "Box" scene from the "Experience" Reality File
         let boxAnchor = try! Experience.loadBox()
-        
+        boxAnchor.actions.sayApple.onAction = prints(_:)
         // Add the box anchor to the scene
         arView.scene.anchors.append(boxAnchor)
+        
     }
+    
+    func prints(_ entity:Entity?){
+        guard let entity = entity else {return}
+        print(entity)
+    }
+    
 }
