@@ -23,6 +23,8 @@ class ViewController: UIViewController {
         
     }
     
+    
+    
     func prints(_ entity:Entity?){
         guard let entity = entity else {return}
         print(entity)

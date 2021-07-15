@@ -13,11 +13,13 @@
 		2D69F498269ED873004433B4 /* SF-Pro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2D69F494269ED873004433B4 /* SF-Pro.ttf */; };
 		8C0B6021269D72460027FDAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0B6020269D72460027FDAA /* AppDelegate.swift */; };
 		8C0B6023269D72460027FDAA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0B6022269D72460027FDAA /* ViewController.swift */; };
-		8C0B6025269D72460027FDAA /* Experience0.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 8C0B6024269D72460027FDAA /* Experience0.rcproject */; };
 		8C0B6028269D72460027FDAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C0B6026269D72460027FDAA /* Main.storyboard */; };
 		8C0B602A269D72470027FDAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C0B6029269D72470027FDAA /* Assets.xcassets */; };
 		8C0B602D269D72470027FDAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C0B602B269D72470027FDAA /* LaunchScreen.storyboard */; };
 		8C0B6035269D72BE0027FDAA /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 8C0B6034269D72BE0027FDAA /* Experience.rcproject */; };
+		8C9431D7269F1F77006369F9 /* OnBoarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C9431D6269F1F77006369F9 /* OnBoarding.storyboard */; };
+		8C9431DC269F2EE3006369F9 /* OnBoarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9431DB269F2EE3006369F9 /* OnBoarding.swift */; };
+		8C9431DE269F3281006369F9 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9431DD269F3281006369F9 /* MainScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,12 +30,14 @@
 		8C0B601D269D72460027FDAA /* AR2ndTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AR2ndTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C0B6020269D72460027FDAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C0B6022269D72460027FDAA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8C0B6024269D72460027FDAA /* Experience0.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience0.rcproject; sourceTree = "<group>"; };
 		8C0B6027269D72460027FDAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8C0B6029269D72470027FDAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C0B602C269D72470027FDAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8C0B602E269D72470027FDAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8C0B6034269D72BE0027FDAA /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
+		8C9431D6269F1F77006369F9 /* OnBoarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnBoarding.storyboard; sourceTree = "<group>"; };
+		8C9431DB269F2EE3006369F9 /* OnBoarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoarding.swift; sourceTree = "<group>"; };
+		8C9431DD269F3281006369F9 /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,17 +81,43 @@
 		8C0B601F269D72460027FDAA /* AR2ndTest */ = {
 			isa = PBXGroup;
 			children = (
+				8C9431DA269F26B7006369F9 /* RCProjects */,
+				8C9431D9269F2674006369F9 /* Controllers */,
+				8C9431D8269F22EE006369F9 /* Storyboards */,
 				2D69F490269ED83A004433B4 /* Fonts */,
-				8C0B6020269D72460027FDAA /* AppDelegate.swift */,
-				8C0B6022269D72460027FDAA /* ViewController.swift */,
-				8C0B6034269D72BE0027FDAA /* Experience.rcproject */,
-				8C0B6024269D72460027FDAA /* Experience0.rcproject */,
-				8C0B6026269D72460027FDAA /* Main.storyboard */,
 				8C0B6029269D72470027FDAA /* Assets.xcassets */,
-				8C0B602B269D72470027FDAA /* LaunchScreen.storyboard */,
+				8C0B6020269D72460027FDAA /* AppDelegate.swift */,
 				8C0B602E269D72470027FDAA /* Info.plist */,
 			);
 			path = AR2ndTest;
+			sourceTree = "<group>";
+		};
+		8C9431D8269F22EE006369F9 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				8C0B602B269D72470027FDAA /* LaunchScreen.storyboard */,
+				8C9431D6269F1F77006369F9 /* OnBoarding.storyboard */,
+				8C0B6026269D72460027FDAA /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		8C9431D9269F2674006369F9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8C0B6022269D72460027FDAA /* ViewController.swift */,
+				8C9431DB269F2EE3006369F9 /* OnBoarding.swift */,
+				8C9431DD269F3281006369F9 /* MainScreen.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		8C9431DA269F26B7006369F9 /* RCProjects */ = {
+			isa = PBXGroup;
+			children = (
+				8C0B6034269D72BE0027FDAA /* Experience.rcproject */,
+			);
+			path = RCProjects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +184,7 @@
 				2D69F497269ED873004433B4 /* SF-Pro-Rounded-Bold.otf in Resources */,
 				8C0B6028269D72460027FDAA /* Main.storyboard in Resources */,
 				2D69F496269ED873004433B4 /* SF-Pro-Rounded-Semibold.otf in Resources */,
+				8C9431D7269F1F77006369F9 /* OnBoarding.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,8 +197,9 @@
 			files = (
 				8C0B6023269D72460027FDAA /* ViewController.swift in Sources */,
 				8C0B6021269D72460027FDAA /* AppDelegate.swift in Sources */,
+				8C9431DE269F3281006369F9 /* MainScreen.swift in Sources */,
+				8C9431DC269F2EE3006369F9 /* OnBoarding.swift in Sources */,
 				8C0B6035269D72BE0027FDAA /* Experience.rcproject in Sources */,
-				8C0B6025269D72460027FDAA /* Experience0.rcproject in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
