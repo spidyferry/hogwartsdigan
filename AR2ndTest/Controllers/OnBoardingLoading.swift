@@ -1,22 +1,22 @@
 //
-//  MainScreen.swift
+//  OnBoardingLoading.swift
 //  AR2ndTest
 //
-//  Created by ferry sugianto on 14/07/21.
+//  Created by ferry sugianto on 15/07/21.
 //
 
 import UIKit
-import CoreData
 
-class MainScreen: UIViewController {
-    
-//    var sapi:String!
-    
+class OnBoardingLoading: UIViewController {
 
+    let storyBoard: UIStoryboard = UIStoryboard(name: "OnBoarding", bundle: nil)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-//        sapi = UserDefaults.standard.string(forKey: "UserName")
-        
+        let MainScreen = storyBoard.instantiateViewController(withIdentifier: "OnBoarding") as! OnBoarding
+        MainScreen.modalPresentationStyle = .fullScreen
+        self.present(MainScreen, animated: false, completion: nil)
+
         // Do any additional setup after loading the view.
     }
     
