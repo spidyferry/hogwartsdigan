@@ -18,6 +18,12 @@
 		8C0B602A269D72470027FDAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C0B6029269D72470027FDAA /* Assets.xcassets */; };
 		8C0B602D269D72470027FDAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C0B602B269D72470027FDAA /* LaunchScreen.storyboard */; };
 		8C0B6035269D72BE0027FDAA /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 8C0B6034269D72BE0027FDAA /* Experience.rcproject */; };
+		8C401FA926A07D6200A07ED7 /* SelectChapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C401FA826A07D6200A07ED7 /* SelectChapter.swift */; };
+		8C401FAB26A07F7E00A07ED7 /* ParentGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C401FAA26A07F7E00A07ED7 /* ParentGuide.swift */; };
+		8C401FAD26A0847700A07ED7 /* ChapterStartConfirmation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C401FAC26A0847700A07ED7 /* ChapterStartConfirmation.swift */; };
+		8C401FAF26A0866600A07ED7 /* ChapterIntro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C401FAE26A0866600A07ED7 /* ChapterIntro.swift */; };
+		8C401FB126A0884E00A07ED7 /* GamePaused.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C401FB026A0884E00A07ED7 /* GamePaused.swift */; };
+		8C401FB326A08ABC00A07ED7 /* AlphabetRecognition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C401FB226A08ABC00A07ED7 /* AlphabetRecognition.swift */; };
 		8C8FB77426A0474A00525903 /* OnBoardingLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8FB77326A0474A00525903 /* OnBoardingLoading.swift */; };
 		8C9431D7269F1F77006369F9 /* OnBoarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C9431D6269F1F77006369F9 /* OnBoarding.storyboard */; };
 		8C9431DC269F2EE3006369F9 /* OnBoarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9431DB269F2EE3006369F9 /* OnBoarding.swift */; };
@@ -38,6 +44,12 @@
 		8C0B602C269D72470027FDAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8C0B602E269D72470027FDAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8C0B6034269D72BE0027FDAA /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
+		8C401FA826A07D6200A07ED7 /* SelectChapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectChapter.swift; sourceTree = "<group>"; };
+		8C401FAA26A07F7E00A07ED7 /* ParentGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentGuide.swift; sourceTree = "<group>"; };
+		8C401FAC26A0847700A07ED7 /* ChapterStartConfirmation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterStartConfirmation.swift; sourceTree = "<group>"; };
+		8C401FAE26A0866600A07ED7 /* ChapterIntro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterIntro.swift; sourceTree = "<group>"; };
+		8C401FB026A0884E00A07ED7 /* GamePaused.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePaused.swift; sourceTree = "<group>"; };
+		8C401FB226A08ABC00A07ED7 /* AlphabetRecognition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetRecognition.swift; sourceTree = "<group>"; };
 		8C8FB77326A0474A00525903 /* OnBoardingLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingLoading.swift; sourceTree = "<group>"; };
 		8C9431D6269F1F77006369F9 /* OnBoarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnBoarding.storyboard; sourceTree = "<group>"; };
 		8C9431DB269F2EE3006369F9 /* OnBoarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoarding.swift; sourceTree = "<group>"; };
@@ -111,9 +123,15 @@
 			isa = PBXGroup;
 			children = (
 				8C0B6022269D72460027FDAA /* ViewController.swift */,
+				8C401FB226A08ABC00A07ED7 /* AlphabetRecognition.swift */,
+				8C401FA826A07D6200A07ED7 /* SelectChapter.swift */,
 				8C9431DB269F2EE3006369F9 /* OnBoarding.swift */,
 				8C9431DD269F3281006369F9 /* MainScreen.swift */,
 				8C8FB77326A0474A00525903 /* OnBoardingLoading.swift */,
+				8C401FAA26A07F7E00A07ED7 /* ParentGuide.swift */,
+				8C401FAC26A0847700A07ED7 /* ChapterStartConfirmation.swift */,
+				8C401FAE26A0866600A07ED7 /* ChapterIntro.swift */,
+				8C401FB026A0884E00A07ED7 /* GamePaused.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -202,12 +220,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C0B6023269D72460027FDAA /* ViewController.swift in Sources */,
+				8C401FAF26A0866600A07ED7 /* ChapterIntro.swift in Sources */,
 				8C0B6021269D72460027FDAA /* AppDelegate.swift in Sources */,
 				8C9431DE269F3281006369F9 /* MainScreen.swift in Sources */,
 				8C8FB77426A0474A00525903 /* OnBoardingLoading.swift in Sources */,
+				8C401FAB26A07F7E00A07ED7 /* ParentGuide.swift in Sources */,
 				8C07070526A01A1900B83A34 /* inputName.swift in Sources */,
+				8C401FA926A07D6200A07ED7 /* SelectChapter.swift in Sources */,
 				8C9431DC269F2EE3006369F9 /* OnBoarding.swift in Sources */,
 				8C0B6035269D72BE0027FDAA /* Experience.rcproject in Sources */,
+				8C401FB326A08ABC00A07ED7 /* AlphabetRecognition.swift in Sources */,
+				8C401FAD26A0847700A07ED7 /* ChapterStartConfirmation.swift in Sources */,
+				8C401FB126A0884E00A07ED7 /* GamePaused.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

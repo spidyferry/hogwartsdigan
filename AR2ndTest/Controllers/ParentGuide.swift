@@ -1,28 +1,22 @@
 //
-//  MainScreen.swift
+//  ParentGuide.swift
 //  AR2ndTest
 //
-//  Created by ferry sugianto on 14/07/21.
+//  Created by ferry sugianto on 15/07/21.
 //
 
 import UIKit
-import CoreData
 
-class MainScreen: UIViewController {
-    
-//    var sapi:String!
-    @IBOutlet weak var startButton: UIButton!
-    @IBOutlet weak var guideButton: UIButton!
-    
+class ParentGuide: UIViewController {
 
+    @IBOutlet weak var closeButton: UIButton!
+    @IBOutlet weak var whiteTransBg: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        startButton.layer.cornerRadius = 20
-        guideButton.layer.cornerRadius = 20
-        
-//        sapi = UserDefaults.standard.string(forKey: "UserName")
-        
+        closeButton.layer.cornerRadius = 20
+        whiteTransBg.layer.cornerRadius = 20
+
         // Do any additional setup after loading the view.
     }
     

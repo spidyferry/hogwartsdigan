@@ -1,28 +1,25 @@
 //
-//  MainScreen.swift
+//  GamePaused.swift
 //  AR2ndTest
 //
-//  Created by ferry sugianto on 14/07/21.
+//  Created by ferry sugianto on 15/07/21.
 //
 
 import UIKit
-import CoreData
 
-class MainScreen: UIViewController {
-    
-//    var sapi:String!
-    @IBOutlet weak var startButton: UIButton!
-    @IBOutlet weak var guideButton: UIButton!
-    
+class GamePaused: UIViewController {
 
+    @IBOutlet weak var continueButton: UIButton!
+    @IBOutlet weak var narationButton: UIButton!
+    @IBOutlet weak var mainMenuButton: UIButton!
+    @IBOutlet weak var quitButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        startButton.layer.cornerRadius = 20
-        guideButton.layer.cornerRadius = 20
-        
-//        sapi = UserDefaults.standard.string(forKey: "UserName")
-        
+        continueButton.layer.cornerRadius = 20
+        narationButton.layer.cornerRadius = 20
+        mainMenuButton.layer.cornerRadius = 20
+        quitButton.layer.cornerRadius = 20
+
         // Do any additional setup after loading the view.
     }
     

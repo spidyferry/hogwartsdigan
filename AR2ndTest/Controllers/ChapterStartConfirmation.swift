@@ -1,28 +1,24 @@
 //
-//  MainScreen.swift
+//  ChapterStartConfirmation.swift
 //  AR2ndTest
 //
-//  Created by ferry sugianto on 14/07/21.
+//  Created by ferry sugianto on 15/07/21.
 //
 
 import UIKit
-import CoreData
 
-class MainScreen: UIViewController {
-    
-//    var sapi:String!
-    @IBOutlet weak var startButton: UIButton!
-    @IBOutlet weak var guideButton: UIButton!
-    
+class ChapterStartConfirmation: UIViewController {
 
+    @IBOutlet weak var whiteTransBg: UIView!
+    @IBOutlet weak var confirmButton: UIButton!
+    @IBOutlet weak var cancelButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        startButton.layer.cornerRadius = 20
-        guideButton.layer.cornerRadius = 20
-        
-//        sapi = UserDefaults.standard.string(forKey: "UserName")
-        
+        whiteTransBg.layer.cornerRadius = 20
+        confirmButton.layer.cornerRadius = 20
+        cancelButton.layer.cornerRadius = 20
+
         // Do any additional setup after loading the view.
     }
     
