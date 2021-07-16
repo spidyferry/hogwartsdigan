@@ -6,12 +6,12 @@
 //
 
 import UIKit
-import CoreData
 
 class OnBoarding: UIViewController {
     
     var userName = "Buddy"
     @IBOutlet weak var submitName: UIButton!
+    @IBOutlet weak var inputName: UITextField!
     
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
@@ -20,7 +20,6 @@ class OnBoarding: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         submitName.layer.cornerRadius = 20
-        
 
         // Do any additional setup after loading the view.
     }
@@ -33,16 +32,28 @@ class OnBoarding: UIViewController {
             let MainScreen = storyBoard.instantiateViewController(withIdentifier: "MainScreen") as! MainScreen
             MainScreen.modalPresentationStyle = .fullScreen
             self.present(MainScreen, animated: false, completion: nil)
-            print("Udah Jalan")
         }
     }
+    
     
     
     @IBAction func saveUserName(_ sender: Any) {
         let MainScreen = storyBoard.instantiateViewController(withIdentifier: "MainScreen") as! MainScreen
         MainScreen.modalPresentationStyle = .fullScreen
         self.present(MainScreen, animated: true, completion: nil)
-        UserDefaults.standard.set(userName, forKey: "UserName")
+        let inputText = inputName.text
+        userName = inputText!
+        print("ini send dari button : \(userName)")
+        saveDefaults(name: userName)
+
+    }
+    
+    func saveDefaults(name:String){
+        let defaults = UserDefaults.standard
+        defaults.set(name, forKey: "userName")
+        
+        let user:String = defaults.string(forKey: "userName")!
+        print("Ini di main screen : \(user)")
     }
     
 }

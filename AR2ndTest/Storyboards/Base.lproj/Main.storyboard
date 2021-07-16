@@ -52,6 +52,9 @@
                                 <state key="normal" title="Yes">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="84a-rU-kNd" kind="presentation" modalPresentationStyle="fullScreen" id="xbl-6t-0aA"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xro-un-whm">
                                 <rect key="frame" x="140" y="648" width="350" height="110"/>
@@ -61,6 +64,9 @@
                                 <state key="normal" title="No">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="W0c-Rr-nTu" kind="presentation" modalPresentationStyle="fullScreen" id="PS9-L0-0m7"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="a0P-iy-o5e"/>
@@ -113,6 +119,9 @@
                                 <state key="normal" title="Guide">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="iiH-6N-EZi" kind="presentation" modalPresentationStyle="fullScreen" id="nli-jx-6WU"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="12O-yn-IAD">
                                 <rect key="frame" x="297" y="355" width="600" height="160"/>
@@ -122,6 +131,9 @@
                                 <state key="normal" title="Start">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="W0c-Rr-nTu" kind="presentation" modalPresentationStyle="fullScreen" id="ThO-xp-SW8"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Game Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A21-nj-YEC">
                                 <rect key="frame" x="233" y="125" width="729" height="180"/>
@@ -144,6 +156,7 @@
                         <viewLayoutGuide key="safeArea" id="5nV-FW-8hS"/>
                         <color key="backgroundColor" red="0.9994472861" green="1" blue="0.89802503590000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
+                    <navigationItem key="navigationItem" id="zom-Lz-73D"/>
                     <connections>
                         <outlet property="guideButton" destination="LKv-nt-J2z" id="rpS-Xs-oN9"/>
                         <outlet property="startButton" destination="12O-yn-IAD" id="jTu-Id-Qz1"/>
@@ -151,7 +164,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N4i-KE-RZ2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-602" y="-582"/>
+            <point key="canvasLocation" x="-1255" y="365"/>
         </scene>
         <!--Parent Guide-->
         <scene sceneID="eKj-DT-ASi">
@@ -192,6 +205,9 @@
                                 <state key="normal" title="OK">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="d7g-t6-UMX" kind="presentation" modalPresentationStyle="fullScreen" id="bTC-Cp-oXL"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="FVL-Qs-abq"/>
@@ -204,7 +220,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mhF-ZI-Xqi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="50.753768844221106" y="-1250.359712230216"/>
+            <point key="canvasLocation" x="-1255" y="1176"/>
         </scene>
         <!--Select Chapter-->
         <scene sceneID="XJ6-zc-kfA">
@@ -225,6 +241,9 @@
                                 <rect key="frame" x="153" y="267" width="280" height="450"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="CardChapter1"/>
+                                <connections>
+                                    <segue destination="1i0-Jg-gpf" kind="presentation" modalPresentationStyle="fullScreen" id="N1z-ru-Fhq"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nyx-Ca-TIc">
                                 <rect key="frame" x="457" y="267" width="280" height="450"/>
@@ -275,7 +294,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SW2-iv-UlT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="50.753768844221106" y="-582.01438848920873"/>
+            <point key="canvasLocation" x="-602" y="365"/>
         </scene>
         <!--Chapter Intro-->
         <scene sceneID="lyN-Sr-H21">
@@ -318,6 +337,9 @@ there is a delicious fruit..</string>
                                 <state key="normal" title="Previous">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="1i0-Jg-gpf" kind="presentation" modalPresentationStyle="fullScreen" id="RxW-cr-RfN"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ogp-wH-ciR">
                                 <rect key="frame" x="697" y="648" width="350" height="110"/>
@@ -327,6 +349,9 @@ there is a delicious fruit..</string>
                                 <state key="normal" title="Next">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="xS4-qk-oIT" kind="presentation" modalPresentationStyle="fullScreen" id="3md-lB-mEV"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bHU-AS-aK7">
                                 <rect key="frame" x="987" y="536" width="61" height="59"/>
@@ -423,6 +448,11 @@ there is a delicious fruit..</string>
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="speaker" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="DRz-Hc-GM7">
+                                <rect key="frame" x="818" y="408.5" width="60" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="JoX-9a-l8g"/>
                         <color key="backgroundColor" red="0.9994472861" green="1" blue="0.89802503590000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -437,12 +467,12 @@ there is a delicious fruit..</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="twV-Vl-EZW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1348" y="-582"/>
+            <point key="canvasLocation" x="1348" y="1236"/>
         </scene>
-        <!--Game Paused-->
+        <!--Alphabet Recognition-->
         <scene sceneID="3Oy-pY-kGg">
             <objects>
-                <viewController id="xS4-qk-oIT" customClass="GamePaused" customModule="AR2ndTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="xS4-qk-oIT" customClass="AlphabetRecognition" customModule="AR2ndTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="p5C-DE-iC4">
                         <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -497,15 +527,19 @@ there is a delicious fruit..</string>
                         <viewLayoutGuide key="safeArea" id="2te-4f-XsQ"/>
                         <color key="backgroundColor" red="0.9994472861" green="1" blue="0.89802503590000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
+                    <connections>
+                        <outlet property="playAudio" destination="LOo-0d-Tmd" id="zqz-VQ-YYR"/>
+                        <outlet property="recognizeAlphabet" destination="uRt-3b-Sda" id="Zjp-xW-3eA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WHu-5i-hdc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1347.7386934673366" y="364.74820143884892"/>
         </scene>
-        <!--Chapter Intro-->
+        <!--Alphabet Success-->
         <scene sceneID="wee-yU-qtX">
             <objects>
-                <viewController id="4yQ-mZ-Yd1" customClass="ChapterIntro" customModule="AR2ndTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="4yQ-mZ-Yd1" customClass="AlphabetSuccess" customModule="AR2ndTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Tvz-tR-HGG">
                         <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -561,6 +595,9 @@ there is a delicious fruit..</string>
                                 <state key="normal" title="Next">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="BCD-9E-8AO" kind="presentation" modalPresentationStyle="fullScreen" id="1ZQ-O7-5Ap"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4lz-uF-J1T"/>
@@ -568,18 +605,18 @@ there is a delicious fruit..</string>
                     </view>
                     <connections>
                         <outlet property="confirmButton" destination="QaA-qR-Zyf" id="joS-Xk-0mi"/>
-                        <outlet property="nextButton" destination="QaA-qR-Zyf" id="Iza-pf-Ap1"/>
-                        <outlet property="whiteTransBg" destination="kO8-D7-XTE" id="KQE-p0-y4x"/>
+                        <outlet property="nextButton" destination="QaA-qR-Zyf" id="Uvs-3d-z4A"/>
+                        <outlet property="whiteTransBg" destination="kO8-D7-XTE" id="AeM-vf-Klc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UVg-zr-XUn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1993" y="365"/>
         </scene>
-        <!--Chapter Intro-->
+        <!--Word Hint-->
         <scene sceneID="Z6p-tl-ncA">
             <objects>
-                <viewController id="BCD-9E-8AO" customClass="ChapterIntro" customModule="AR2ndTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BCD-9E-8AO" customClass="WordHint" customModule="AR2ndTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4bs-zf-5wt">
                         <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -603,6 +640,9 @@ there is a delicious fruit..</string>
                                 <state key="normal" title="Previous">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="4yQ-mZ-Yd1" kind="presentation" modalPresentationStyle="fullScreen" id="BbO-7g-7uR"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uo3-Sz-UdJ">
                                 <rect key="frame" x="697" y="648" width="350" height="110"/>
@@ -612,6 +652,9 @@ there is a delicious fruit..</string>
                                 <state key="normal" title="Next">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="bEj-nL-yAD" kind="presentation" modalPresentationStyle="fullScreen" id="nBO-Jh-uP3"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Amq-B1-vVL">
                                 <rect key="frame" x="1092" y="38" width="62" height="60"/>
@@ -644,18 +687,18 @@ there is a delicious fruit..</string>
                     <connections>
                         <outlet property="cancelButton" destination="Tqp-Q3-UYF" id="uLc-4n-HVx"/>
                         <outlet property="confirmButton" destination="uo3-Sz-UdJ" id="icP-dL-elF"/>
-                        <outlet property="nextButton" destination="uo3-Sz-UdJ" id="zjR-vu-vEH"/>
-                        <outlet property="prevButton" destination="Tqp-Q3-UYF" id="jGG-Da-7vv"/>
+                        <outlet property="nextButton" destination="uo3-Sz-UdJ" id="jWL-pM-kiy"/>
+                        <outlet property="prevButton" destination="Tqp-Q3-UYF" id="JIN-aw-DYl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Vj-TS-JEx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2644.7236180904524" y="364.02877697841728"/>
         </scene>
-        <!--Chapter Intro-->
+        <!--Word Mission-->
         <scene sceneID="q2w-7m-8xw">
             <objects>
-                <viewController id="bEj-nL-yAD" customClass="ChapterIntro" customModule="AR2ndTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="bEj-nL-yAD" customClass="ARWordMission" customModule="AR2ndTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wh6-ww-fMA">
                         <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -711,6 +754,9 @@ there is a delicious fruit..</string>
                                 <state key="normal" title="Next">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="SKi-Rg-hAD"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="H14-IR-aZA"/>
@@ -718,7 +764,8 @@ there is a delicious fruit..</string>
                     </view>
                     <connections>
                         <outlet property="confirmButton" destination="ePK-L6-LaI" id="1lc-6G-Ic6"/>
-                        <outlet property="nextButton" destination="ePK-L6-LaI" id="bKa-NX-cBN"/>
+                        <outlet property="nextButton" destination="ePK-L6-LaI" id="wWG-aZ-7fj"/>
+                        <outlet property="whiteTransBG" destination="bh9-uB-6SO" id="pUE-rt-VaD"/>
                         <outlet property="whiteTransBg" destination="bh9-uB-6SO" id="ldJ-jS-rJ5"/>
                     </connections>
                 </viewController>
@@ -726,10 +773,10 @@ there is a delicious fruit..</string>
             </objects>
             <point key="canvasLocation" x="3293" y="364"/>
         </scene>
-        <!--Chapter Intro-->
+        <!--Success-->
         <scene sceneID="T8h-6W-m7N">
             <objects>
-                <viewController id="bgU-8J-ozd" customClass="ChapterIntro" customModule="AR2ndTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="bgU-8J-ozd" customClass="ARSuccess" customModule="AR2ndTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ocb-Ek-IpZ">
                         <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -787,25 +834,30 @@ Let’s try to pronounce it.</string>
                                 <state key="normal" title="Try">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="eXP-UT-rvH" kind="presentation" modalPresentationStyle="fullScreen" id="POl-6w-7f2"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="iQb-5F-qz9"/>
                         <color key="backgroundColor" red="0.9994472861" green="1" blue="0.89802503590000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <connections>
+                        <outlet property="WhiteTransBg" destination="Gm5-Fq-DZ4" id="8L8-Mx-yI1"/>
                         <outlet property="confirmButton" destination="oMH-Em-wzb" id="NeR-js-Sri"/>
                         <outlet property="nextButton" destination="oMH-Em-wzb" id="8cK-62-38B"/>
-                        <outlet property="whiteTransBg" destination="Gm5-Fq-DZ4" id="zFX-Dk-AyN"/>
+                        <outlet property="tryButton" destination="oMH-Em-wzb" id="Po3-U7-K2u"/>
+                        <outlet property="whiteTransBg" destination="Gm5-Fq-DZ4" id="9IP-nR-fgm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oON-hQ-eLH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3944" y="1071"/>
+            <point key="canvasLocation" x="3944" y="1236"/>
         </scene>
-        <!--Chapter Intro-->
+        <!--Word Recognition-->
         <scene sceneID="huU-kd-tnQ">
             <objects>
-                <viewController id="eXP-UT-rvH" customClass="ChapterIntro" customModule="AR2ndTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="eXP-UT-rvH" customClass="WordRecognition" customModule="AR2ndTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ycf-Qs-Y2A">
                         <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -866,15 +918,19 @@ Let’s try to pronounce it.</string>
                         <viewLayoutGuide key="safeArea" id="egd-Ez-Aem"/>
                         <color key="backgroundColor" red="0.9994472861" green="1" blue="0.89802503590000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
+                    <connections>
+                        <outlet property="playAudio" destination="qpw-gA-xEF" id="EM2-hb-qJz"/>
+                        <outlet property="wordRecognize" destination="QiM-Oc-gH3" id="Uac-G7-J8s"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KMr-B8-2bt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3293" y="1071"/>
+            <point key="canvasLocation" x="3293" y="1236"/>
         </scene>
-        <!--Chapter Intro-->
+        <!--Word Success-->
         <scene sceneID="rRr-Ev-6bO">
             <objects>
-                <viewController id="1gF-Z3-NB0" customClass="ChapterIntro" customModule="AR2ndTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="1gF-Z3-NB0" customClass="WordSuccess" customModule="AR2ndTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gDc-sT-01s">
                         <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -930,6 +986,9 @@ Let’s try to pronounce it.</string>
                                 <state key="normal" title="Next">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="OHZ-3s-64H" kind="presentation" modalPresentationStyle="fullScreen" id="6dA-gq-VYn"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="FAS-ds-MHT"/>
@@ -937,18 +996,18 @@ Let’s try to pronounce it.</string>
                     </view>
                     <connections>
                         <outlet property="confirmButton" destination="PHF-qv-59Q" id="pQM-Av-rwu"/>
-                        <outlet property="nextButton" destination="PHF-qv-59Q" id="XRk-L9-Qeb"/>
-                        <outlet property="whiteTransBg" destination="Fx1-Qk-mvk" id="O3Y-KL-Mg8"/>
+                        <outlet property="nextButton" destination="PHF-qv-59Q" id="cac-uK-Cnl"/>
+                        <outlet property="whiteTransBg" destination="Fx1-Qk-mvk" id="FsP-Lm-OLK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8nb-y1-mZn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2645" y="1071"/>
+            <point key="canvasLocation" x="2645" y="1236"/>
         </scene>
-        <!--Chapter Intro-->
+        <!--Alphabet Finish-->
         <scene sceneID="ivk-nh-XOD">
             <objects>
-                <viewController id="OHZ-3s-64H" customClass="ChapterIntro" customModule="AR2ndTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="OHZ-3s-64H" customClass="AlphabetFinish" customModule="AR2ndTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FtK-Vs-3hC">
                         <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -993,14 +1052,21 @@ Let’s try to pronounce it.</string>
                     </view>
                     <connections>
                         <outlet property="confirmButton" destination="mK0-sh-Ezz" id="D3Z-Le-qIO"/>
+                        <outlet property="finishButton" destination="mK0-sh-Ezz" id="7MT-nu-ySC"/>
                         <outlet property="nextButton" destination="mK0-sh-Ezz" id="uY6-eN-Ac2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6F8-Aj-EJ1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1993" y="1071"/>
+            <point key="canvasLocation" x="1993" y="1236"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="bTC-Cp-oXL"/>
+        <segue reference="BbO-7g-7uR"/>
+        <segue reference="PS9-L0-0m7"/>
+        <segue reference="RxW-cr-RfN"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="AlphabetBox" width="296" height="277"/>
         <image name="CardChapter1" width="280" height="451"/>
@@ -1017,6 +1083,7 @@ Let’s try to pronounce it.</string>
         <image name="person.crop.circle" catalog="system" width="128" height="121"/>
         <image name="play.circle" catalog="system" width="128" height="121"/>
         <image name="play.fill" catalog="system" width="116" height="128"/>
+        <image name="speaker" catalog="system" width="128" height="124"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

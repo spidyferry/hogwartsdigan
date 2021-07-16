@@ -1,35 +1,24 @@
 //
-//  MainScreen.swift
+//  WordRecognition.swift
 //  AR2ndTest
 //
-//  Created by ferry sugianto on 14/07/21.
+//  Created by ferry sugianto on 16/07/21.
 //
 
 import UIKit
-import CoreData
 
-class MainScreen: UIViewController {
-    
+class WordRecognition: UIViewController {
 
-    @IBOutlet weak var startButton: UIButton!
-    @IBOutlet weak var guideButton: UIButton!
-    
-
+    @IBOutlet weak var playAudio: UIButton!
+    @IBOutlet weak var wordRecognize: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        startButton.layer.cornerRadius = 20
-        guideButton.layer.cornerRadius = 20
-        
+        wordRecognize.layer.cornerRadius = 20
+        playAudio.layer.cornerRadius = 20
 
-        
         // Do any additional setup after loading the view.
     }
     
-    func loadUserName(){
-        let sapi = UserDefaults.standard.string(forKey: "userName")!
-        print("Di load setelah masuk app : \(sapi)")
-    }
 
     /*
     // MARK: - Navigation

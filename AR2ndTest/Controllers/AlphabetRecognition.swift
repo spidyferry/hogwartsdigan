@@ -9,8 +9,13 @@ import UIKit
 
 class AlphabetRecognition: UIViewController {
 
+    @IBOutlet weak var playAudio: UIButton!
+    @IBOutlet weak var recognizeAlphabet: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        playAudio.layer.cornerRadius = 20
+        recognizeAlphabet.layer.cornerRadius = 20
 
         // Do any additional setup after loading the view.
     }

@@ -10,14 +10,19 @@ import UIKit
 class OnBoardingLoading: UIViewController {
 
     let storyBoard: UIStoryboard = UIStoryboard(name: "OnBoarding", bundle: nil)
+    var isFirst = true
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         let MainScreen = storyBoard.instantiateViewController(withIdentifier: "OnBoarding") as! OnBoarding
         MainScreen.modalPresentationStyle = .fullScreen
         self.present(MainScreen, animated: false, completion: nil)
-
-        // Do any additional setup after loading the view.
     }
     
 
