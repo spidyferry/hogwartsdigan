@@ -65,7 +65,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="W0c-Rr-nTu" kind="presentation" modalPresentationStyle="fullScreen" id="PS9-L0-0m7"/>
+                                    <action selector="cancelChapter:" destination="1i0-Jg-gpf" eventType="touchUpInside" id="RoT-A6-iUk"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -341,7 +341,7 @@ there is a delicious fruit..</string>
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="1i0-Jg-gpf" kind="presentation" modalPresentationStyle="fullScreen" id="muh-XR-2TB"/>
+                                    <action selector="prevScreen:" destination="84a-rU-kNd" eventType="touchUpInside" id="df1-mQ-mPf"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ogp-wH-ciR">
@@ -375,6 +375,9 @@ there is a delicious fruit..</string>
                                         <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="50"/>
                                     </preferredSymbolConfiguration>
                                 </state>
+                                <connections>
+                                    <segue destination="BnN-NG-d2s" kind="presentation" modalPresentationStyle="fullScreen" id="eGu-f1-vgZ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ruh-uZ-AVQ"/>
@@ -393,7 +396,7 @@ there is a delicious fruit..</string>
         <!--Game Paused-->
         <scene sceneID="ERR-Vn-Aph">
             <objects>
-                <viewController id="BnN-NG-d2s" customClass="GamePaused" customModule="AR2ndTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GamePaused" id="BnN-NG-d2s" customClass="GamePaused" customModule="AR2ndTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="voa-jr-qJi">
                         <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -418,6 +421,9 @@ there is a delicious fruit..</string>
                                 <state key="normal" title="Continue">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="closePausedMenu:" destination="BnN-NG-d2s" eventType="touchUpInside" id="y2N-Nc-ZMJ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eex-UY-WCi">
                                 <rect key="frame" x="298" y="382" width="600" height="110"/>
@@ -438,6 +444,9 @@ there is a delicious fruit..</string>
                                 <state key="normal" title="Main Menu">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="d7g-t6-UMX" kind="presentation" modalPresentationStyle="fullScreen" id="mfO-3s-wQd"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TEO-Rr-CYg">
                                 <rect key="frame" x="298" y="638" width="600" height="110"/>
@@ -448,6 +457,9 @@ there is a delicious fruit..</string>
                                 <state key="normal" title="Quit">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="W0c-Rr-nTu" kind="presentation" modalPresentationStyle="fullScreen" id="jVJ-km-ovP"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="speaker" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="DRz-Hc-GM7">
                                 <rect key="frame" x="818" y="408.5" width="60" height="58"/>
@@ -459,7 +471,6 @@ there is a delicious fruit..</string>
                         <color key="backgroundColor" red="0.9994472861" green="1" blue="0.89802503590000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <connections>
-                        <outlet property="closeButton" destination="Fsz-i1-YR2" id="vP1-41-mXy"/>
                         <outlet property="continueButton" destination="Fsz-i1-YR2" id="MLj-UY-UdR"/>
                         <outlet property="mainMenuButton" destination="aFT-qf-A4m" id="EZv-h5-f5o"/>
                         <outlet property="narationButton" destination="Eex-UY-WCi" id="tFU-NY-Nsa"/>
@@ -468,7 +479,7 @@ there is a delicious fruit..</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="twV-Vl-EZW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1348" y="1236"/>
+            <point key="canvasLocation" x="1993" y="2850"/>
         </scene>
         <!--Alphabet Recognition-->
         <scene sceneID="3Oy-pY-kGg">
@@ -533,6 +544,9 @@ there is a delicious fruit..</string>
                                         <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="50"/>
                                     </preferredSymbolConfiguration>
                                 </state>
+                                <connections>
+                                    <segue destination="BnN-NG-d2s" kind="presentation" modalPresentationStyle="fullScreen" id="Qjc-NZ-5YA"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2te-4f-XsQ"/>
@@ -597,6 +611,9 @@ there is a delicious fruit..</string>
                                         <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="50"/>
                                     </preferredSymbolConfiguration>
                                 </state>
+                                <connections>
+                                    <segue destination="BnN-NG-d2s" kind="presentation" modalPresentationStyle="fullScreen" id="Alw-4D-88y"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QaA-qR-Zyf">
                                 <rect key="frame" x="423" y="648" width="350" height="110"/>
@@ -652,7 +669,7 @@ there is a delicious fruit..</string>
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="4yQ-mZ-Yd1" kind="presentation" modalPresentationStyle="fullScreen" id="BbO-7g-7uR"/>
+                                    <action selector="prevScreen:" destination="BCD-9E-8AO" eventType="touchUpInside" id="xJI-J1-Epj"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uo3-Sz-UdJ">
@@ -676,6 +693,9 @@ there is a delicious fruit..</string>
                                         <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="50"/>
                                     </preferredSymbolConfiguration>
                                 </state>
+                                <connections>
+                                    <segue destination="BnN-NG-d2s" kind="presentation" modalPresentationStyle="fullScreen" id="k9M-DK-gzl"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" text="A _ _ _ _" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qZA-Sm-3uJ">
                                 <rect key="frame" x="148" y="234" width="900" height="159.5"/>
@@ -756,6 +776,9 @@ there is a delicious fruit..</string>
                                         <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="50"/>
                                     </preferredSymbolConfiguration>
                                 </state>
+                                <connections>
+                                    <segue destination="BnN-NG-d2s" kind="presentation" modalPresentationStyle="fullScreen" id="iSJ-4G-zhb"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ePK-L6-LaI">
                                 <rect key="frame" x="402" y="648" width="350" height="110"/>
@@ -836,6 +859,9 @@ Let’s try to pronounce it.</string>
                                         <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="50"/>
                                     </preferredSymbolConfiguration>
                                 </state>
+                                <connections>
+                                    <segue destination="BnN-NG-d2s" kind="presentation" modalPresentationStyle="fullScreen" id="zSH-PC-aQ5"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oMH-Em-wzb">
                                 <rect key="frame" x="423" y="648" width="350" height="110"/>
@@ -893,6 +919,9 @@ Let’s try to pronounce it.</string>
                                         <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="50"/>
                                     </preferredSymbolConfiguration>
                                 </state>
+                                <connections>
+                                    <segue destination="BnN-NG-d2s" kind="presentation" modalPresentationStyle="fullScreen" id="PkE-Fx-Sc4"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" text="🍎" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="TN1-7U-p9v">
                                 <rect key="frame" x="477" y="340" width="242" height="239"/>
@@ -988,6 +1017,9 @@ Let’s try to pronounce it.</string>
                                         <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="50"/>
                                     </preferredSymbolConfiguration>
                                 </state>
+                                <connections>
+                                    <segue destination="BnN-NG-d2s" kind="presentation" modalPresentationStyle="fullScreen" id="hde-os-pJd"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PHF-qv-59Q">
                                 <rect key="frame" x="423" y="648" width="350" height="110"/>
@@ -1043,6 +1075,9 @@ Let’s try to pronounce it.</string>
                                         <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="50"/>
                                     </preferredSymbolConfiguration>
                                 </state>
+                                <connections>
+                                    <segue destination="BnN-NG-d2s" kind="presentation" modalPresentationStyle="fullScreen" id="d2T-ed-V2o"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mK0-sh-Ezz">
                                 <rect key="frame" x="402" y="648" width="350" height="110"/>
@@ -1073,10 +1108,9 @@ Let’s try to pronounce it.</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="1ZQ-O7-5Ap"/>
-        <segue reference="ThO-xp-SW8"/>
-        <segue reference="Cum-QQ-g22"/>
-        <segue reference="muh-XR-2TB"/>
+        <segue reference="d2T-ed-V2o"/>
+        <segue reference="jVJ-km-ovP"/>
+        <segue reference="mfO-3s-wQd"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="AlphabetBox" width="296" height="277"/>

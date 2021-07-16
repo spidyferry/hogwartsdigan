@@ -23,7 +23,10 @@ class GamePaused: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func closePausedMenu(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 
