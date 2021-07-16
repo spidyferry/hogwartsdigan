@@ -53,7 +53,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="84a-rU-kNd" kind="presentation" modalPresentationStyle="fullScreen" id="xbl-6t-0aA"/>
+                                    <segue destination="84a-rU-kNd" kind="presentation" modalPresentationStyle="fullScreen" id="kkD-EI-Pag"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xro-un-whm">
@@ -282,6 +282,9 @@
                                         <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="50"/>
                                     </preferredSymbolConfiguration>
                                 </state>
+                                <connections>
+                                    <segue destination="d7g-t6-UMX" kind="presentation" modalPresentationStyle="fullScreen" id="Cum-QQ-g22"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fvG-U7-4jE"/>
@@ -338,7 +341,7 @@ there is a delicious fruit..</string>
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="1i0-Jg-gpf" kind="presentation" modalPresentationStyle="fullScreen" id="RxW-cr-RfN"/>
+                                    <segue destination="1i0-Jg-gpf" kind="presentation" modalPresentationStyle="fullScreen" id="muh-XR-2TB"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ogp-wH-ciR">
@@ -350,7 +353,7 @@ there is a delicious fruit..</string>
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="xS4-qk-oIT" kind="presentation" modalPresentationStyle="fullScreen" id="3md-lB-mEV"/>
+                                    <segue destination="xS4-qk-oIT" kind="presentation" modalPresentationStyle="fullScreen" id="9ml-UV-Htw"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bHU-AS-aK7">
@@ -378,8 +381,6 @@ there is a delicious fruit..</string>
                         <color key="backgroundColor" red="0.9994472861" green="1" blue="0.89802503590000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <connections>
-                        <outlet property="cancelButton" destination="572-tQ-2gs" id="BYt-Ag-3kg"/>
-                        <outlet property="confirmButton" destination="ogp-wH-ciR" id="PRD-HN-pw1"/>
                         <outlet property="nextButton" destination="ogp-wH-ciR" id="n4h-n8-a9c"/>
                         <outlet property="prevButton" destination="572-tQ-2gs" id="dbS-vp-61B"/>
                         <outlet property="whiteTransBg" destination="MNX-XZ-icg" id="RrI-0Y-MMF"/>
@@ -520,6 +521,16 @@ there is a delicious fruit..</string>
                                 <state key="normal" image="mic.fill" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
                                         <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="60"/>
+                                    </preferredSymbolConfiguration>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VIq-6P-uBn">
+                                <rect key="frame" x="1092" y="38" width="62" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" image="gearshape.fill" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
+                                        <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="50"/>
                                     </preferredSymbolConfiguration>
                                 </state>
                             </button>
@@ -1062,10 +1073,10 @@ Let’s try to pronounce it.</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="bTC-Cp-oXL"/>
-        <segue reference="BbO-7g-7uR"/>
-        <segue reference="PS9-L0-0m7"/>
-        <segue reference="RxW-cr-RfN"/>
+        <segue reference="1ZQ-O7-5Ap"/>
+        <segue reference="ThO-xp-SW8"/>
+        <segue reference="Cum-QQ-g22"/>
+        <segue reference="muh-XR-2TB"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="AlphabetBox" width="296" height="277"/>

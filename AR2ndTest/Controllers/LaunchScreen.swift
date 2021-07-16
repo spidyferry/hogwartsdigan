@@ -1,32 +1,31 @@
 //
-//  MainScreen.swift
+//  LaunchScreen.swift
 //  AR2ndTest
 //
-//  Created by ferry sugianto on 14/07/21.
+//  Created by ferry sugianto on 16/07/21.
 //
 
 import UIKit
-import CoreData
 
-class MainScreen: UIViewController {
-    
-
-    @IBOutlet weak var startButton: UIButton!
-    @IBOutlet weak var guideButton: UIButton!
-    
+class LaunchScreen: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        startButton.layer.cornerRadius = 20
-        guideButton.layer.cornerRadius = 20
         
+//        let value = UIInterfaceOrientation.landscapeLeft.rawValue
+//        UIDevice.current.setValue(value, forKey: "orientation")
+
         // Do any additional setup after loading the view.
     }
     
-    func loadUserName(){
-        let sapi = UserDefaults.standard.string(forKey: "userName")!
-        print("Di load setelah masuk app : \(sapi)")
-    }
+//    override var supportedInterfaceOrientations: UIInterfaceOrientationMask{
+//        return .landscapeLeft
+//    }
+//
+//    override var shouldAutorotate: Bool{
+//        return true
+//    }
+    
 
     /*
     // MARK: - Navigation
