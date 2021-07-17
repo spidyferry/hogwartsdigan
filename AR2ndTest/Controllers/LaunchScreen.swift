@@ -8,6 +8,8 @@
 import UIKit
 
 class LaunchScreen: UIViewController {
+    
+//    let value = UIInterfaceOrientation.landscapeLeft.rawValue
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,23 +20,28 @@ class LaunchScreen: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-//    override var supportedInterfaceOrientations: UIInterfaceOrientationMask{
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        
+//        UIDevice.current.setValue(value, forKey: "orientation")
+//    }
+//    
+//    override open var supportedInterfaceOrientations: UIInterfaceOrientationMask{
 //        return .landscapeLeft
 //    }
 //
-//    override var shouldAutorotate: Bool{
-//        return true
+//    override open var shouldAutorotate: Bool{
+//        return false
 //    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+//    
+//    override open var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation{
+//        return .landscapeLeft
+//    }
 
 }
+
+//extension UINavigationController{
+//    override open var supportedInterfaceOrientations: UIInterfaceOrientationMask{
+//        return topViewController?.supportedInterfaceOrientations ?? .allButUpsideDown
+//    }
+//}
