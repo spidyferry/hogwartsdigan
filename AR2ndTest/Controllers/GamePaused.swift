@@ -15,10 +15,6 @@ class GamePaused: UIViewController {
     @IBOutlet weak var quitButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        continueButton.layer.cornerRadius = 20
-        narationButton.layer.cornerRadius = 20
-        mainMenuButton.layer.cornerRadius = 20
-        quitButton.layer.cornerRadius = 20
 
         // Do any additional setup after loading the view.
     }
@@ -27,14 +23,6 @@ class GamePaused: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 }

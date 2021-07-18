@@ -131,9 +131,6 @@
                                 <state key="normal" title="Start">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                                <connections>
-                                    <segue destination="xS4-qk-oIT" kind="presentation" modalPresentationStyle="fullScreen" id="mwh-FY-G1K"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Game Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A21-nj-YEC">
                                 <rect key="frame" x="233" y="125" width="729" height="180"/>
@@ -493,7 +490,7 @@ there is a delicious fruit..</string>
                                 <rect key="frame" x="0.0" y="315" width="1194" height="522"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Say it!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IqI-n8-Kon">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Say it!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IqI-n8-Kon">
                                 <rect key="frame" x="428" y="82" width="340" height="144"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="120"/>
@@ -554,6 +551,55 @@ there is a delicious fruit..</string>
                                     <segue destination="BnN-NG-d2s" kind="presentation" modalPresentationStyle="fullScreen" id="Qjc-NZ-5YA"/>
                                 </connections>
                             </button>
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nzs-ry-SFc">
+                                <rect key="frame" x="0.0" y="0.0" width="1194" height="837"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view alpha="0.65000000000000002" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xq4-3s-69u">
+                                        <rect key="frame" x="0.0" y="0.0" width="1194" height="837"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3yb-eL-HSg">
+                                        <rect key="frame" x="356" y="174" width="480" height="484"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Try Again?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="35W-Wo-HJU">
+                                                <rect key="frame" x="96" y="41" width="289" height="72"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="60"/>
+                                                <color key="textColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fN6-dc-TEM">
+                                                <rect key="frame" x="65" y="205" width="350" height="110"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.95837527509999998" green="0.52888590099999999" blue="0.20380106570000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="60"/>
+                                                <state key="normal" title="Yes">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="tryAgain:" destination="xS4-qk-oIT" eventType="touchUpInside" id="QQi-0W-AMo"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KpU-Ca-ynw">
+                                                <rect key="frame" x="65" y="338" width="350" height="110"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="60"/>
+                                                <state key="normal" title="Next">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="BCD-9E-8AO" kind="presentation" modalPresentationStyle="fullScreen" id="PMj-bG-2xs"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.9994472861" green="1" blue="0.89802503590000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </view>
+                                </subviews>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2te-4f-XsQ"/>
                         <color key="backgroundColor" red="0.9994472861" green="1" blue="0.89802503590000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -561,16 +607,19 @@ there is a delicious fruit..</string>
                     <connections>
                         <outlet property="playAudio" destination="LOo-0d-Tmd" id="zqz-VQ-YYR"/>
                         <outlet property="recognizeAlphabet" destination="uRt-3b-Sda" id="Zjp-xW-3eA"/>
+                        <outlet property="sayIt" destination="IqI-n8-Kon" id="hhT-So-5XT"/>
+                        <outlet property="tryAgainButton" destination="fN6-dc-TEM" id="CPh-Kh-r7U"/>
+                        <outlet property="tryagainNotification" destination="nzs-ry-SFc" id="GCf-b2-TMw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WHu-5i-hdc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1347.7386934673366" y="364.74820143884892"/>
+            <point key="canvasLocation" x="1347.7386934673366" y="364.02877697841728"/>
         </scene>
         <!--Alphabet Success-->
         <scene sceneID="wee-yU-qtX">
             <objects>
-                <viewController id="4yQ-mZ-Yd1" customClass="AlphabetSuccess" customModule="AR2ndTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AlphabetSuccess" id="4yQ-mZ-Yd1" customClass="AlphabetSuccess" customModule="AR2ndTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Tvz-tR-HGG">
                         <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -638,7 +687,6 @@ there is a delicious fruit..</string>
                         <color key="backgroundColor" red="0.9994472861" green="1" blue="0.89802503590000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <connections>
-                        <outlet property="confirmButton" destination="QaA-qR-Zyf" id="joS-Xk-0mi"/>
                         <outlet property="nextButton" destination="QaA-qR-Zyf" id="Uvs-3d-z4A"/>
                         <outlet property="whiteTransBg" destination="kO8-D7-XTE" id="AeM-vf-Klc"/>
                     </connections>
@@ -722,8 +770,6 @@ there is a delicious fruit..</string>
                         <color key="backgroundColor" red="0.9994472861" green="1" blue="0.89802503590000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <connections>
-                        <outlet property="cancelButton" destination="Tqp-Q3-UYF" id="uLc-4n-HVx"/>
-                        <outlet property="confirmButton" destination="uo3-Sz-UdJ" id="icP-dL-elF"/>
                         <outlet property="nextButton" destination="uo3-Sz-UdJ" id="jWL-pM-kiy"/>
                         <outlet property="prevButton" destination="Tqp-Q3-UYF" id="JIN-aw-DYl"/>
                     </connections>
@@ -803,10 +849,8 @@ there is a delicious fruit..</string>
                         <color key="backgroundColor" red="0.9994472861" green="1" blue="0.89802503590000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <connections>
-                        <outlet property="confirmButton" destination="ePK-L6-LaI" id="1lc-6G-Ic6"/>
                         <outlet property="nextButton" destination="ePK-L6-LaI" id="wWG-aZ-7fj"/>
                         <outlet property="whiteTransBG" destination="bh9-uB-6SO" id="pUE-rt-VaD"/>
-                        <outlet property="whiteTransBg" destination="bh9-uB-6SO" id="ldJ-jS-rJ5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KCr-8I-Pdb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -886,9 +930,6 @@ Let’s try to pronounce it.</string>
                         <color key="backgroundColor" red="0.9994472861" green="1" blue="0.89802503590000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <connections>
-                        <outlet property="WhiteTransBg" destination="Gm5-Fq-DZ4" id="8L8-Mx-yI1"/>
-                        <outlet property="confirmButton" destination="oMH-Em-wzb" id="NeR-js-Sri"/>
-                        <outlet property="nextButton" destination="oMH-Em-wzb" id="8cK-62-38B"/>
                         <outlet property="tryButton" destination="oMH-Em-wzb" id="Po3-U7-K2u"/>
                         <outlet property="whiteTransBg" destination="Gm5-Fq-DZ4" id="9IP-nR-fgm"/>
                     </connections>
@@ -1044,7 +1085,6 @@ Let’s try to pronounce it.</string>
                         <color key="backgroundColor" red="0.9994472861" green="1" blue="0.89802503590000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <connections>
-                        <outlet property="confirmButton" destination="PHF-qv-59Q" id="pQM-Av-rwu"/>
                         <outlet property="nextButton" destination="PHF-qv-59Q" id="cac-uK-Cnl"/>
                         <outlet property="whiteTransBg" destination="Fx1-Qk-mvk" id="FsP-Lm-OLK"/>
                     </connections>
@@ -1103,9 +1143,7 @@ Let’s try to pronounce it.</string>
                         <color key="backgroundColor" red="0.9994472861" green="1" blue="0.89802503590000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <connections>
-                        <outlet property="confirmButton" destination="mK0-sh-Ezz" id="D3Z-Le-qIO"/>
                         <outlet property="finishButton" destination="mK0-sh-Ezz" id="7MT-nu-ySC"/>
-                        <outlet property="nextButton" destination="mK0-sh-Ezz" id="uY6-eN-Ac2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6F8-Aj-EJ1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1114,8 +1152,8 @@ Let’s try to pronounce it.</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="9ml-UV-Htw"/>
-        <segue reference="Qjc-NZ-5YA"/>
+        <segue reference="PMj-bG-2xs"/>
+        <segue reference="iSJ-4G-zhb"/>
         <segue reference="Cum-QQ-g22"/>
     </inferredMetricsTieBreakers>
     <resources>

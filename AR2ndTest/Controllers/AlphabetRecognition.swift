@@ -15,7 +15,11 @@ class AlphabetRecognition: UIViewController, SFSpeechRecognizerDelegate {
     private var recognitionRequest: SFSpeechAudioBufferRecognitionRequest?
     private var recognitionTask: SFSpeechRecognitionTask?
     private let audioEngine = AVAudioEngine()
+    var alphabet = "a"
 
+    @IBOutlet weak var tryAgainButton: UIButton!
+    @IBOutlet weak var tryagainNotification: UIView!
+    @IBOutlet weak var sayIt: UILabel!
     @IBOutlet weak var playAudio: UIButton!
     @IBOutlet weak var recognizeAlphabet: UIButton!
     var soundPlayer : AVAudioPlayer!
@@ -24,11 +28,6 @@ class AlphabetRecognition: UIViewController, SFSpeechRecognizerDelegate {
         super.viewDidLoad()
         speechRecognizer.delegate = self
         prepareAudioPlayer()
-    }
-    
-    override public func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        speechRecognizer.delegate = self
     }
     
     private func startRecording() throws {
@@ -55,13 +54,18 @@ class AlphabetRecognition: UIViewController, SFSpeechRecognizerDelegate {
         
         // Create a recognition task for the speech recognition session.
         // Keep a reference to the task so that it can be canceled.
+        
         recognitionTask = speechRecognizer.recognitionTask(with: recognitionRequest) { result, error in
             var isFinal = false
             
             if let result = result {
                 isFinal = result.isFinal
-                print("Text \(result.bestTranscription.formattedString)")
+                self.alphabet = result.bestTranscription.formattedString
+                print("hasil teks \(self.alphabet)")
+                self.chekcingAlphabet()
             }
+            
+            
             
             if error != nil || isFinal {
                 // Stop recognizing speech if there is a problem.
@@ -70,8 +74,6 @@ class AlphabetRecognition: UIViewController, SFSpeechRecognizerDelegate {
 
                 self.recognitionRequest = nil
                 self.recognitionTask = nil
-
-                self.recognizeAlphabet.isEnabled = true
             }
         }
 
@@ -83,28 +85,24 @@ class AlphabetRecognition: UIViewController, SFSpeechRecognizerDelegate {
         
         audioEngine.prepare()
         try audioEngine.start()
-    }
-    
-    public func speechRecognizer(_ speechRecognizer: SFSpeechRecognizer, availabilityDidChange available: Bool) {
-        if available {
-            recognizeAlphabet.isEnabled = true
-        } else {
-            recognizeAlphabet.isEnabled = false
-        }
+        
     }
     
     @IBAction func startSpeech(_ sender: Any) {
         if audioEngine.isRunning {
             audioEngine.stop()
             recognitionRequest?.endAudio()
-            recognizeAlphabet.isEnabled = false
         } else {
             do {
                 try startRecording()
-                Timer.scheduledTimer(withTimeInterval: 3, repeats: true) { timer in
+                
+                sayIt.isHidden = false
+                Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { timer in
                     self.audioEngine.stop()
                     self.recognitionRequest?.endAudio()
+                    
                 }
+                
             } catch {
                 print(error.localizedDescription)
             }
@@ -125,6 +123,24 @@ class AlphabetRecognition: UIViewController, SFSpeechRecognizerDelegate {
             print(error.localizedDescription)
         }
     }
+    
+    func chekcingAlphabet(){
+//        let firstLetter = alphabet.prefix(1)
+        
+            print(alphabet)
+        
+        if (alphabet == "Hey"){
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let MainScreen = storyBoard.instantiateViewController(withIdentifier: "AlphabetSuccess") as! AlphabetSuccess
+            MainScreen.modalPresentationStyle = .fullScreen
+            self.present(MainScreen, animated: false, completion: nil)
+        } else {
+            tryagainNotification.isHidden = false
+        }
+    }
 
-
+    @IBAction func tryAgain(_ sender: Any) {
+        tryagainNotification.isHidden = true
+    }
+    
 }
