@@ -19,6 +19,7 @@
 		8C0B602A269D72470027FDAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C0B6029269D72470027FDAA /* Assets.xcassets */; };
 		8C0B602D269D72470027FDAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C0B602B269D72470027FDAA /* LaunchScreen.storyboard */; };
 		8C0B6035269D72BE0027FDAA /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 8C0B6034269D72BE0027FDAA /* Experience.rcproject */; };
+		8C179C0C26A4575100244FE3 /* AppleTest.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C179C0B26A4575100244FE3 /* AppleTest.mp3 */; };
 		8C401FA926A07D6200A07ED7 /* SelectChapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C401FA826A07D6200A07ED7 /* SelectChapter.swift */; };
 		8C401FAB26A07F7E00A07ED7 /* ParentGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C401FAA26A07F7E00A07ED7 /* ParentGuide.swift */; };
 		8C401FAD26A0847700A07ED7 /* ChapterStartConfirmation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C401FAC26A0847700A07ED7 /* ChapterStartConfirmation.swift */; };
@@ -55,6 +56,7 @@
 		8C0B602C269D72470027FDAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8C0B602E269D72470027FDAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8C0B6034269D72BE0027FDAA /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
+		8C179C0B26A4575100244FE3 /* AppleTest.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = AppleTest.mp3; sourceTree = "<group>"; };
 		8C401FA826A07D6200A07ED7 /* SelectChapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectChapter.swift; sourceTree = "<group>"; };
 		8C401FAA26A07F7E00A07ED7 /* ParentGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentGuide.swift; sourceTree = "<group>"; };
 		8C401FAC26A0847700A07ED7 /* ChapterStartConfirmation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterStartConfirmation.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 		8C8EA08C26A40381007DC059 /* AudioFiles */ = {
 			isa = PBXGroup;
 			children = (
+				8C179C0B26A4575100244FE3 /* AppleTest.mp3 */,
 				8C8EA08A26A40358007DC059 /* ATest.mp3 */,
 			);
 			path = AudioFiles;
@@ -254,6 +257,7 @@
 				2D69F498269ED873004433B4 /* SF-Pro.ttf in Resources */,
 				2D69F497269ED873004433B4 /* SF-Pro-Rounded-Bold.otf in Resources */,
 				8C0B6028269D72460027FDAA /* Main.storyboard in Resources */,
+				8C179C0C26A4575100244FE3 /* AppleTest.mp3 in Resources */,
 				2D69F496269ED873004433B4 /* SF-Pro-Rounded-Semibold.otf in Resources */,
 				8C9431D7269F1F77006369F9 /* OnBoarding.storyboard in Resources */,
 			);

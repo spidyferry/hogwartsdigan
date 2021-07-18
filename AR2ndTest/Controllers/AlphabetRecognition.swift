@@ -62,7 +62,7 @@ class AlphabetRecognition: UIViewController, SFSpeechRecognizerDelegate {
                 isFinal = result.isFinal
                 self.alphabet = result.bestTranscription.formattedString
                 print("hasil teks \(self.alphabet)")
-                self.chekcingAlphabet()
+                self.checkingAlphabet()
             }
             
             
@@ -100,7 +100,6 @@ class AlphabetRecognition: UIViewController, SFSpeechRecognizerDelegate {
                 Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { timer in
                     self.audioEngine.stop()
                     self.recognitionRequest?.endAudio()
-                    
                 }
                 
             } catch {
@@ -124,7 +123,7 @@ class AlphabetRecognition: UIViewController, SFSpeechRecognizerDelegate {
         }
     }
     
-    func chekcingAlphabet(){
+    func checkingAlphabet(){
 //        let firstLetter = alphabet.prefix(1)
         
             print(alphabet)
@@ -141,6 +140,7 @@ class AlphabetRecognition: UIViewController, SFSpeechRecognizerDelegate {
 
     @IBAction func tryAgain(_ sender: Any) {
         tryagainNotification.isHidden = true
+        sayIt.isHidden = true
     }
     
 }

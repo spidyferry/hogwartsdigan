@@ -28,6 +28,10 @@ class ViewController: UIViewController {
     func prints(_ entity:Entity?){
         guard let entity = entity else {return}
         print(entity)
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let MainScreen = storyBoard.instantiateViewController(withIdentifier: "ARSuccess") as! ARSuccess
+        MainScreen.modalPresentationStyle = .fullScreen
+        self.present(MainScreen, animated: false, completion: nil)
     }
     
 }
