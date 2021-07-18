@@ -20,6 +20,7 @@
 		8C0B602D269D72470027FDAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C0B602B269D72470027FDAA /* LaunchScreen.storyboard */; };
 		8C0B6035269D72BE0027FDAA /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 8C0B6034269D72BE0027FDAA /* Experience.rcproject */; };
 		8C179C0C26A4575100244FE3 /* AppleTest.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C179C0B26A4575100244FE3 /* AppleTest.mp3 */; };
+		8C179C0E26A4701700244FE3 /* ZapfinoExtraLT-One.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8C179C0D26A4701700244FE3 /* ZapfinoExtraLT-One.otf */; };
 		8C401FA926A07D6200A07ED7 /* SelectChapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C401FA826A07D6200A07ED7 /* SelectChapter.swift */; };
 		8C401FAB26A07F7E00A07ED7 /* ParentGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C401FAA26A07F7E00A07ED7 /* ParentGuide.swift */; };
 		8C401FAD26A0847700A07ED7 /* ChapterStartConfirmation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C401FAC26A0847700A07ED7 /* ChapterStartConfirmation.swift */; };
@@ -57,6 +58,7 @@
 		8C0B602E269D72470027FDAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8C0B6034269D72BE0027FDAA /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
 		8C179C0B26A4575100244FE3 /* AppleTest.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = AppleTest.mp3; sourceTree = "<group>"; };
+		8C179C0D26A4701700244FE3 /* ZapfinoExtraLT-One.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ZapfinoExtraLT-One.otf"; sourceTree = "<group>"; };
 		8C401FA826A07D6200A07ED7 /* SelectChapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectChapter.swift; sourceTree = "<group>"; };
 		8C401FAA26A07F7E00A07ED7 /* ParentGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentGuide.swift; sourceTree = "<group>"; };
 		8C401FAC26A0847700A07ED7 /* ChapterStartConfirmation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterStartConfirmation.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				2D69F493269ED872004433B4 /* SF-Pro-Rounded-Bold.otf */,
+				8C179C0D26A4701700244FE3 /* ZapfinoExtraLT-One.otf */,
 				2D69F491269ED872004433B4 /* SF-Pro-Rounded-Regular.otf */,
 				2D69F492269ED872004433B4 /* SF-Pro-Rounded-Semibold.otf */,
 				2D69F494269ED873004433B4 /* SF-Pro.ttf */,
@@ -250,6 +253,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C179C0E26A4701700244FE3 /* ZapfinoExtraLT-One.otf in Resources */,
 				8C8EA08B26A40358007DC059 /* ATest.mp3 in Resources */,
 				8C0B602D269D72470027FDAA /* LaunchScreen.storyboard in Resources */,
 				2D69F495269ED873004433B4 /* SF-Pro-Rounded-Regular.otf in Resources */,

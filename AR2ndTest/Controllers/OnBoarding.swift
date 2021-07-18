@@ -19,7 +19,6 @@ class OnBoarding: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        submitName.layer.cornerRadius = 20
 
         // Do any additional setup after loading the view.
     }

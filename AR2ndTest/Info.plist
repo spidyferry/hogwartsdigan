@@ -24,6 +24,8 @@
 	<string></string>
 	<key>NSSpeechRecognitionUsageDescription</key>
 	<string>Allow to recognize you voice</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Allow to use microphone</string>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>

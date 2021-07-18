@@ -13,8 +13,6 @@ class ARWordMission: UIViewController {
     @IBOutlet weak var nextButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        whiteTransBG.layer.cornerRadius = 20
-        nextButton.layer.cornerRadius = 20
 
         // Do any additional setup after loading the view.
     }

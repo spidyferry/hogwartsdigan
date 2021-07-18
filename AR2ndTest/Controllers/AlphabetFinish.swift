@@ -16,6 +16,12 @@ class AlphabetFinish: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func finishPerAlphabet(_ sender: Any) {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let MainScreen = storyBoard.instantiateViewController(withIdentifier: "SelectChapter") as! SelectChapter
+        MainScreen.modalPresentationStyle = .fullScreen
+        self.present(MainScreen, animated: false, completion: nil)
+    }
+    
 
 }

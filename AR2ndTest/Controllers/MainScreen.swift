@@ -17,8 +17,6 @@ class MainScreen: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        startButton.layer.cornerRadius = 20
-        guideButton.layer.cornerRadius = 20
         
         // Do any additional setup after loading the view.
     }

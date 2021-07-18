@@ -14,8 +14,6 @@ class WordHint: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        prevButton.layer.cornerRadius = 20
-        nextButton.layer.cornerRadius = 20
         // Do any additional setup after loading the view.
     }
     

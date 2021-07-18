@@ -27,11 +27,9 @@ class SelectChapter: UIViewController {
 //        scrollView.backgroundColor = .red
 //        view.addSubview(pageControl)
 //        view.addSubview(scrollView)
-        chapterBack.layer.cornerRadius = 20
-        chapterNext.layer.cornerRadius = 20
     }
-    
 
+    
 //    override func viewDidLayoutSubviews() {
 //        super.viewDidLayoutSubviews()
 //        pageControl.frame = CGRect(x: 10, y: view.frame.size.height - 100, width: view.frame.size.width - 20, height: 70)
