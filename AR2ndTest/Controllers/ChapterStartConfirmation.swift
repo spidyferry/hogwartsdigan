@@ -6,34 +6,22 @@
 //
 
 import UIKit
+import Speech
 
-class ChapterStartConfirmation: UIViewController {
+class ChapterStartConfirmation: UIViewController{
 
     @IBOutlet weak var whiteTransBg: UIView!
     @IBOutlet weak var confirmButton: UIButton!
     @IBOutlet weak var cancelButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        whiteTransBg.layer.cornerRadius = 20
-        confirmButton.layer.cornerRadius = 20
-        cancelButton.layer.cornerRadius = 20
 
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func cancelChapter(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

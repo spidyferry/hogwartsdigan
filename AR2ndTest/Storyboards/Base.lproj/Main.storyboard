@@ -132,7 +132,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="W0c-Rr-nTu" kind="presentation" modalPresentationStyle="fullScreen" id="ThO-xp-SW8"/>
+                                    <segue destination="xS4-qk-oIT" kind="presentation" modalPresentationStyle="fullScreen" id="mwh-FY-G1K"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Game Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A21-nj-YEC">
@@ -522,6 +522,9 @@ there is a delicious fruit..</string>
                                         <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="60"/>
                                     </preferredSymbolConfiguration>
                                 </state>
+                                <connections>
+                                    <action selector="playAudio:" destination="xS4-qk-oIT" eventType="touchUpInside" id="JGj-sU-JTZ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uRt-3b-Sda">
                                 <rect key="frame" x="697" y="648" width="350" height="110"/>
@@ -534,6 +537,9 @@ there is a delicious fruit..</string>
                                         <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="60"/>
                                     </preferredSymbolConfiguration>
                                 </state>
+                                <connections>
+                                    <action selector="startSpeech:" destination="xS4-qk-oIT" eventType="touchUpInside" id="f42-Td-ADG"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VIq-6P-uBn">
                                 <rect key="frame" x="1092" y="38" width="62" height="60"/>
@@ -1108,9 +1114,9 @@ Let’s try to pronounce it.</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="d2T-ed-V2o"/>
-        <segue reference="ThO-xp-SW8"/>
-        <segue reference="mfO-3s-wQd"/>
+        <segue reference="9ml-UV-Htw"/>
+        <segue reference="Qjc-NZ-5YA"/>
+        <segue reference="Cum-QQ-g22"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="AlphabetBox" width="296" height="277"/>

@@ -8,26 +8,35 @@
 import UIKit
 
 class SelectChapter: UIViewController {
+    
+    @IBOutlet weak var scrollViewCard: UIScrollView!
+    //    private let scrollView = UIScrollView()
+//    private let pageControl:UIPageControl = {
+//        let pageControl = UIPageControl()
+//        pageControl.numberOfPages = 3
+////        pageControl.backgroundColor = .systemBlue
+//        pageControl.pageIndicatorTintColor = .systemGray
+//        pageControl.currentPageIndicatorTintColor = .systemOrange
+//        return pageControl
+//    }()
 
     @IBOutlet weak var chapterBack: UIButton!
     @IBOutlet weak var chapterNext: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+//        scrollView.backgroundColor = .red
+//        view.addSubview(pageControl)
+//        view.addSubview(scrollView)
         chapterBack.layer.cornerRadius = 20
         chapterNext.layer.cornerRadius = 20
-        // Do any additional setup after loading the view.
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+//    override func viewDidLayoutSubviews() {
+//        super.viewDidLayoutSubviews()
+//        pageControl.frame = CGRect(x: 10, y: view.frame.size.height - 100, width: view.frame.size.width - 20, height: 70)
+//        scrollView.frame = CGRect(x: 134, y: 235, width: 926, height: 514)
+//    }
 
 }
+
