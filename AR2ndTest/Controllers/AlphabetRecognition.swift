@@ -113,7 +113,7 @@ class AlphabetRecognition: UIViewController, SFSpeechRecognizerDelegate {
     }
     
     func prepareAudioPlayer(){
-        let url = Bundle.main.url(forResource: "ATest", withExtension: "mp3")
+        let url = Bundle.main.url(forResource: "A", withExtension: "mp3")
         
         do{
             soundPlayer = try AVAudioPlayer(contentsOf: url!)
