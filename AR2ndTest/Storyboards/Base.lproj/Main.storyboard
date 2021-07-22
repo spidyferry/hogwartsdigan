@@ -315,7 +315,6 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="nextButtonTapped:" destination="W0c-Rr-nTu" eventType="touchUpInside" id="oNM-at-eOh"/>
-                                    <action selector="previousButtonTapped:" destination="W0c-Rr-nTu" eventType="touchUpInside" id="TfF-N9-6dY"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="frj-UK-AbO">
