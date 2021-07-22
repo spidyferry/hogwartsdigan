@@ -51,7 +51,6 @@
 		8C25587E26A907EF009987C6 /* Applebhet.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8C25587C26A907EF009987C6 /* Applebhet.xcdatamodeld */; };
 		8C25588126A90C9C009987C6 /* AlphabetTable+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C25587F26A90C9C009987C6 /* AlphabetTable+CoreDataClass.swift */; };
 		8C25588226A90C9C009987C6 /* AlphabetTable+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C25588026A90C9C009987C6 /* AlphabetTable+CoreDataProperties.swift */; };
-		8C25588B26A93020009987C6 /* TheA1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8C25588A26A93020009987C6 /* TheA1.txt */; };
 		8C401FA926A07D6200A07ED7 /* SelectChapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C401FA826A07D6200A07ED7 /* SelectChapter.swift */; };
 		8C401FAB26A07F7E00A07ED7 /* ParentGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C401FAA26A07F7E00A07ED7 /* ParentGuide.swift */; };
 		8C401FAD26A0847700A07ED7 /* ChapterStartConfirmation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C401FAC26A0847700A07ED7 /* ChapterStartConfirmation.swift */; };
@@ -71,6 +70,9 @@
 		8C9431D7269F1F77006369F9 /* OnBoarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C9431D6269F1F77006369F9 /* OnBoarding.storyboard */; };
 		8C9431DC269F2EE3006369F9 /* OnBoarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9431DB269F2EE3006369F9 /* OnBoarding.swift */; };
 		8C9431DE269F3281006369F9 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9431DD269F3281006369F9 /* MainScreen.swift */; };
+		8CC8676626A9629C005465FB /* TheA3.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8CC8676326A9629C005465FB /* TheA3.txt */; };
+		8CC8676726A9629C005465FB /* TheA2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8CC8676426A9629C005465FB /* TheA2.txt */; };
+		8CC8676826A9629C005465FB /* TheA1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8CC8676526A9629C005465FB /* TheA1.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -120,7 +122,6 @@
 		8C25587D26A907EF009987C6 /* Applebhet.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Applebhet.xcdatamodel; sourceTree = "<group>"; };
 		8C25587F26A90C9C009987C6 /* AlphabetTable+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AlphabetTable+CoreDataClass.swift"; sourceTree = "<group>"; };
 		8C25588026A90C9C009987C6 /* AlphabetTable+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AlphabetTable+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		8C25588A26A93020009987C6 /* TheA1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TheA1.txt; sourceTree = "<group>"; };
 		8C401FA826A07D6200A07ED7 /* SelectChapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectChapter.swift; sourceTree = "<group>"; };
 		8C401FAA26A07F7E00A07ED7 /* ParentGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentGuide.swift; sourceTree = "<group>"; };
 		8C401FAC26A0847700A07ED7 /* ChapterStartConfirmation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterStartConfirmation.swift; sourceTree = "<group>"; };
@@ -140,6 +141,9 @@
 		8C9431D6269F1F77006369F9 /* OnBoarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnBoarding.storyboard; sourceTree = "<group>"; };
 		8C9431DB269F2EE3006369F9 /* OnBoarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoarding.swift; sourceTree = "<group>"; };
 		8C9431DD269F3281006369F9 /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
+		8CC8676326A9629C005465FB /* TheA3.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TheA3.txt; sourceTree = "<group>"; };
+		8CC8676426A9629C005465FB /* TheA2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TheA2.txt; sourceTree = "<group>"; };
+		8CC8676526A9629C005465FB /* TheA1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TheA1.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,7 +216,9 @@
 		8C25588326A92AB8009987C6 /* Stories */ = {
 			isa = PBXGroup;
 			children = (
-				8C25588A26A93020009987C6 /* TheA1.txt */,
+				8CC8676526A9629C005465FB /* TheA1.txt */,
+				8CC8676426A9629C005465FB /* TheA2.txt */,
+				8CC8676326A9629C005465FB /* TheA3.txt */,
 			);
 			path = Stories;
 			sourceTree = "<group>";
@@ -378,10 +384,11 @@
 				367AB2CA26A7DAA700A6789E /* Z.mp3 in Resources */,
 				2D69F497269ED873004433B4 /* SF-Pro-Rounded-Bold.otf in Resources */,
 				367AB2C426A7DAA700A6789E /* C.mp3 in Resources */,
+				8CC8676626A9629C005465FB /* TheA3.txt in Resources */,
+				8CC8676826A9629C005465FB /* TheA1.txt in Resources */,
 				367AB2B526A7DAA700A6789E /* E.mp3 in Resources */,
 				367AB2CB26A7DAA700A6789E /* Launch.wav in Resources */,
 				8C0B6028269D72460027FDAA /* Main.storyboard in Resources */,
-				8C25588B26A93020009987C6 /* TheA1.txt in Resources */,
 				8C179C0C26A4575100244FE3 /* AppleTest.mp3 in Resources */,
 				367AB2BD26A7DAA700A6789E /* K.mp3 in Resources */,
 				367AB2C826A7DAA700A6789E /* A.mp3 in Resources */,
@@ -389,6 +396,7 @@
 				367AB2C226A7DAA700A6789E /* O.mp3 in Resources */,
 				367AB2B226A7DAA700A6789E /* N.mp3 in Resources */,
 				2D69F496269ED873004433B4 /* SF-Pro-Rounded-Semibold.otf in Resources */,
+				8CC8676726A9629C005465FB /* TheA2.txt in Resources */,
 				8C9431D7269F1F77006369F9 /* OnBoarding.storyboard in Resources */,
 				367AB2C026A7DAA700A6789E /* M.mp3 in Resources */,
 				367AB2CC26A7DAA700A6789E /* I.mp3 in Resources */,
