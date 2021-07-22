@@ -6,42 +6,75 @@
 //
 
 import UIKit
-import CoreData
 
 class MainScreen: UIViewController {
-    
 
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var guideButton: UIButton!
-//    let value = UIInterfaceOrientation.landscapeLeft.rawValue
-
+    @IBOutlet weak var userName: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        loadUserName()
     }
     
     func loadUserName(){
-        let sapi = UserDefaults.standard.string(forKey: "userName")!
-        print("Di load setelah masuk app : \(sapi)")
+        let name = UserDefaults.standard.string(forKey: "userName")!
+        userName.text = "Hi, \(name)"
     }
     
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//
-//        UIDevice.current.setValue(value, forKey: "orientation")
-//    }
-//
-//    override var supportedInterfaceOrientations: UIInterfaceOrientationMask{
-//        return .landscapeLeft
-//    }
-//
-//    override var shouldAutorotate: Bool{
-//        return false
-//    }
-//
-//    override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation{
-//        return .landscapeLeft
-//    }
+    @IBAction func getIsFinish(_ sender: Any) {
+        
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let MainScreen = storyBoard.instantiateViewController(withIdentifier: "SelectChapter") as! SelectChapter
+        MainScreen.modalPresentationStyle = .fullScreen
+        self.present(MainScreen, animated: true, completion: nil)
 
+    }
+    
 }
+
+
+
+
+
+
+
+//        MainScreen.alphabetCompleted = "sapi"
+        
+//        let defaults = UserDefaults.standard
+//        let array = defaults.array(forKey: "alphabetCompleted")  as? [Bool] ?? [Bool]()
+//        var currentIndex = 1
+        
+        
+//        for _ in array{
+//            if array[1] == true{
+//                print("lulus")
+//                break
+//            }
+//        }
+        
+//        for iscompleted in array
+//        {
+//            if iscompleted == true {
+//                print("Found \(iscompleted) for index \(currentIndex)")
+//                MainScreen.alphabetCompleted.append(currentIndex)
+//            }
+//            currentIndex += 1
+//        }
+//
+//        if completedChapter.contains(9) {
+//            print("yes")
+//        }
+        
+//        if completedChapter.contains(8) {
+//            return
+//        }else{
+//            print("bebek")
+//        }
+        
+//        print(completedChapter)

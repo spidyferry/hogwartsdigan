@@ -30,7 +30,7 @@
                                 <color key="textColor" red="0.95837527509999998" green="0.52888590099999999" blue="0.20380106570000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Buddy" textAlignment="natural" minimumFontSize="17" background="textfieldName" translatesAutoresizingMaskIntoConstraints="NO" id="udV-hQ-6Hw" customClass="inputName" customModule="AR2ndTest" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Duck-Duck DC" textAlignment="natural" minimumFontSize="17" background="textfieldName" translatesAutoresizingMaskIntoConstraints="NO" id="udV-hQ-6Hw" customClass="inputName" customModule="AR2ndTest" customModuleProvider="target">
                                 <rect key="frame" x="289" y="315" width="617" height="84"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="SFProRounded-Regular" family="SF Pro Rounded" pointSize="50"/>

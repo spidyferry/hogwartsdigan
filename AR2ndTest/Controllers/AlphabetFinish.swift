@@ -9,11 +9,11 @@ import UIKit
 
 class AlphabetFinish: UIViewController {
 
+    let defaults = UserDefaults.standard
     @IBOutlet weak var finishButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func finishPerAlphabet(_ sender: Any) {
