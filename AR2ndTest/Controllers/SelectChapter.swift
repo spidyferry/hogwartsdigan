@@ -20,7 +20,9 @@ class SelectChapter: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.setupPageController()
+        self.previousButton.isHidden = true
     }
     
     private func setupPageController() {
@@ -48,7 +50,6 @@ class SelectChapter: UIViewController {
         }
     }
     
-    
     @IBAction func nextButtonTapped(_ sender: Any) {
         print("Tapped")
         if self.currentPage < self.pages.count - 1 {
@@ -58,11 +59,26 @@ class SelectChapter: UIViewController {
         }
     }
     
-    
     func movePage(index: Int, isForward: Bool) {
         let vc = ChapterPage(with: self.pages[index])
         self.pageController?.setViewControllers([vc], direction: isForward ? .forward : .reverse, animated: true, completion: nil)
         self.pageController?.didMove(toParent: self)
+        
+        self.setPageControl()
+    }
+    
+    func setPageControl() {
+        if self.currentPage == 0 {
+            self.previousButton.isHidden = true
+        } else {
+            self.previousButton.isHidden = false
+        }
+        
+        if self.currentPage == self.pages.count - 1 {
+            self.nextButton.isHidden = true
+        } else {
+            self.nextButton.isHidden = false
+        }
     }
 }
 
@@ -98,6 +114,8 @@ extension SelectChapter: UIPageViewControllerDataSource, UIPageViewControllerDel
             
             self.lastPage = index
             self.currentPage = self.goToPage
+            
+            self.setPageControl()
         }
     }
     
