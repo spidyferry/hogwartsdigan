@@ -6,10 +6,17 @@
 //
 
 import UIKit
+import CoreData
 
 class OnBoarding: UIViewController {
     
-    var userName = "Buddy"
+    var userName = "Duck-Duck DC"
+    let defaults = UserDefaults.standard
+    let theAlphabets = ["The A", "The B", "The C", "The D", "The E", "The F", "The G", "The H", "The I", "The J", "The K", "The L", "The M", "The N", "The O", "The P", "The Q", "The R", "The S", "The T", "The U", "The V", "The W", "The X", "The Y", "The Z"]
+    
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    var alphabetCompleted:[AlphabetTable]?
+    
     @IBOutlet weak var submitName: UIButton!
     @IBOutlet weak var inputName: UITextField!
     
@@ -19,14 +26,13 @@ class OnBoarding: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        defaults.set(alphabetCompleted, forKey: "alphabetCompleted")
     }
     
     override func viewDidAppear(_ animated: Bool) {
         if(!appDelegate.hasAlreadyLaunched){
             appDelegate.sethasAlreadyLaunched()
-//            print("Belum Pernah Jalan")
         }else{
             let MainScreen = storyBoard.instantiateViewController(withIdentifier: "MainScreen") as! MainScreen
             MainScreen.modalPresentationStyle = .fullScreen
@@ -34,25 +40,41 @@ class OnBoarding: UIViewController {
         }
     }
     
-    
-    
     @IBAction func saveUserName(_ sender: Any) {
-        let MainScreen = storyBoard.instantiateViewController(withIdentifier: "MainScreen") as! MainScreen
-        MainScreen.modalPresentationStyle = .fullScreen
-        self.present(MainScreen, animated: true, completion: nil)
-        let inputText = inputName.text
-        userName = inputText!
-        print("ini send dari button : \(userName)")
-        saveDefaults(name: userName)
-
+        if(inputName.text?.isEmpty == true){
+            let MainScreen = storyBoard.instantiateViewController(withIdentifier: "MainScreen") as! MainScreen
+            MainScreen.modalPresentationStyle = .fullScreen
+            self.present(MainScreen, animated: true, completion: nil)
+            saveDefaults(name: userName)
+        }else{
+            let MainScreen = storyBoard.instantiateViewController(withIdentifier: "MainScreen") as! MainScreen
+            MainScreen.modalPresentationStyle = .fullScreen
+            self.present(MainScreen, animated: true, completion: nil)
+            let inputText = inputName.text
+            userName = inputText!
+            print("ini send dari button : \(userName)")
+            saveDefaults(name: userName)
+        }
     }
     
     func saveDefaults(name:String){
-        let defaults = UserDefaults.standard
         defaults.set(name, forKey: "userName")
         
-        let user:String = defaults.string(forKey: "userName")!
-        print("Ini di main screen : \(user)")
+        for alpha in theAlphabets{
+            let newRecords = AlphabetTable(context: self.context)
+            newRecords.alphabet = alpha
+            newRecords.date = Date()
+            newRecords.isCompleted = false
+            do{
+                try self.context.save()
+            }catch{
+                print("error init database \(error.localizedDescription)")
+            }
+        }
+        
+        
+//        let user:String = defaults.string(forKey: "userName")!
+//        print("Ini di main screen : \(user)")
     }
     
 }

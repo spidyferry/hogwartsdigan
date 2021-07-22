@@ -48,6 +48,10 @@
 		8C0B6035269D72BE0027FDAA /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 8C0B6034269D72BE0027FDAA /* Experience.rcproject */; };
 		8C179C0C26A4575100244FE3 /* AppleTest.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C179C0B26A4575100244FE3 /* AppleTest.mp3 */; };
 		8C179C0E26A4701700244FE3 /* ZapfinoExtraLT-One.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8C179C0D26A4701700244FE3 /* ZapfinoExtraLT-One.otf */; };
+		8C25587E26A907EF009987C6 /* Applebhet.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8C25587C26A907EF009987C6 /* Applebhet.xcdatamodeld */; };
+		8C25588126A90C9C009987C6 /* AlphabetTable+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C25587F26A90C9C009987C6 /* AlphabetTable+CoreDataClass.swift */; };
+		8C25588226A90C9C009987C6 /* AlphabetTable+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C25588026A90C9C009987C6 /* AlphabetTable+CoreDataProperties.swift */; };
+		8C25588B26A93020009987C6 /* TheA1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8C25588A26A93020009987C6 /* TheA1.txt */; };
 		8C401FA926A07D6200A07ED7 /* SelectChapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C401FA826A07D6200A07ED7 /* SelectChapter.swift */; };
 		8C401FAB26A07F7E00A07ED7 /* ParentGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C401FAA26A07F7E00A07ED7 /* ParentGuide.swift */; };
 		8C401FAD26A0847700A07ED7 /* ChapterStartConfirmation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C401FAC26A0847700A07ED7 /* ChapterStartConfirmation.swift */; };
@@ -113,6 +117,10 @@
 		8C0B6034269D72BE0027FDAA /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
 		8C179C0B26A4575100244FE3 /* AppleTest.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = AppleTest.mp3; sourceTree = "<group>"; };
 		8C179C0D26A4701700244FE3 /* ZapfinoExtraLT-One.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ZapfinoExtraLT-One.otf"; sourceTree = "<group>"; };
+		8C25587D26A907EF009987C6 /* Applebhet.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Applebhet.xcdatamodel; sourceTree = "<group>"; };
+		8C25587F26A90C9C009987C6 /* AlphabetTable+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AlphabetTable+CoreDataClass.swift"; sourceTree = "<group>"; };
+		8C25588026A90C9C009987C6 /* AlphabetTable+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AlphabetTable+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		8C25588A26A93020009987C6 /* TheA1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TheA1.txt; sourceTree = "<group>"; };
 		8C401FA826A07D6200A07ED7 /* SelectChapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectChapter.swift; sourceTree = "<group>"; };
 		8C401FAA26A07F7E00A07ED7 /* ParentGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentGuide.swift; sourceTree = "<group>"; };
 		8C401FAC26A0847700A07ED7 /* ChapterStartConfirmation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterStartConfirmation.swift; sourceTree = "<group>"; };
@@ -168,6 +176,8 @@
 		8C0B6014269D72460027FDAA = {
 			isa = PBXGroup;
 			children = (
+				8C25587F26A90C9C009987C6 /* AlphabetTable+CoreDataClass.swift */,
+				8C25588026A90C9C009987C6 /* AlphabetTable+CoreDataProperties.swift */,
 				8C0B601F269D72460027FDAA /* AR2ndTest */,
 				8C0B601E269D72460027FDAA /* Products */,
 			);
@@ -184,6 +194,7 @@
 		8C0B601F269D72460027FDAA /* AR2ndTest */ = {
 			isa = PBXGroup;
 			children = (
+				8C25588326A92AB8009987C6 /* Stories */,
 				8C8EA08C26A40381007DC059 /* AudioFiles */,
 				8C045B6026A31F2700003F45 /* Extensions */,
 				8C9431DA269F26B7006369F9 /* RCProjects */,
@@ -192,9 +203,18 @@
 				2D69F490269ED83A004433B4 /* Fonts */,
 				8C0B6029269D72470027FDAA /* Assets.xcassets */,
 				8C0B6020269D72460027FDAA /* AppDelegate.swift */,
+				8C25587C26A907EF009987C6 /* Applebhet.xcdatamodeld */,
 				8C0B602E269D72470027FDAA /* Info.plist */,
 			);
 			path = AR2ndTest;
+			sourceTree = "<group>";
+		};
+		8C25588326A92AB8009987C6 /* Stories */ = {
+			isa = PBXGroup;
+			children = (
+				8C25588A26A93020009987C6 /* TheA1.txt */,
+			);
+			path = Stories;
 			sourceTree = "<group>";
 		};
 		8C8EA08C26A40381007DC059 /* AudioFiles */ = {
@@ -361,6 +381,7 @@
 				367AB2B526A7DAA700A6789E /* E.mp3 in Resources */,
 				367AB2CB26A7DAA700A6789E /* Launch.wav in Resources */,
 				8C0B6028269D72460027FDAA /* Main.storyboard in Resources */,
+				8C25588B26A93020009987C6 /* TheA1.txt in Resources */,
 				8C179C0C26A4575100244FE3 /* AppleTest.mp3 in Resources */,
 				367AB2BD26A7DAA700A6789E /* K.mp3 in Resources */,
 				367AB2C826A7DAA700A6789E /* A.mp3 in Resources */,
@@ -382,6 +403,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C25587E26A907EF009987C6 /* Applebhet.xcdatamodeld in Sources */,
 				8C0B6023269D72460027FDAA /* ViewController.swift in Sources */,
 				8C401FBF26A1669D00A07ED7 /* ARSuccess.swift in Sources */,
 				8C401FAF26A0866600A07ED7 /* ChapterIntro.swift in Sources */,
@@ -395,11 +417,13 @@
 				8C401FA926A07D6200A07ED7 /* SelectChapter.swift in Sources */,
 				8C401FB526A1647D00A07ED7 /* AlphabetSuccess.swift in Sources */,
 				8C9431DC269F2EE3006369F9 /* OnBoarding.swift in Sources */,
+				8C25588226A90C9C009987C6 /* AlphabetTable+CoreDataProperties.swift in Sources */,
 				8C0B6035269D72BE0027FDAA /* Experience.rcproject in Sources */,
 				8C401FB326A08ABC00A07ED7 /* AlphabetRecognition.swift in Sources */,
 				8C401FC326A1720400A07ED7 /* LaunchScreen.swift in Sources */,
 				8C401FAD26A0847700A07ED7 /* ChapterStartConfirmation.swift in Sources */,
 				8C401FB126A0884E00A07ED7 /* GamePaused.swift in Sources */,
+				8C25588126A90C9C009987C6 /* AlphabetTable+CoreDataClass.swift in Sources */,
 				8C401FBD26A1661F00A07ED7 /* WordRecognition.swift in Sources */,
 				8C401FC126A167AE00A07ED7 /* AlphabetFinish.swift in Sources */,
 				8C401FBB26A165C300A07ED7 /* WordSuccess.swift in Sources */,
@@ -551,6 +575,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = VYG4M66448;
 				INFOPLIST_FILE = AR2ndTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -571,6 +596,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = VYG4M66448;
 				INFOPLIST_FILE = AR2ndTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -607,6 +633,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8C25587C26A907EF009987C6 /* Applebhet.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8C25587D26A907EF009987C6 /* Applebhet.xcdatamodel */,
+			);
+			currentVersion = 8C25587D26A907EF009987C6 /* Applebhet.xcdatamodel */;
+			path = Applebhet.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 8C0B6015269D72460027FDAA /* Project object */;
 }
