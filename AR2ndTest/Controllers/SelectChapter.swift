@@ -8,9 +8,15 @@
 import UIKit
 
 class SelectChapter: UIViewController {
+    @IBOutlet weak var previousButton: UIButton!
+    @IBOutlet weak var nextButton: UIButton!
+    
     private var pageController: UIPageViewController?
     private var pages: [Pages] = Pages.allCases
     private var currentIndex: Int = 0
+    private var goToPage: Int = 0
+    private var lastPage: Int = 0
+    private var currentPage: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,8 +35,33 @@ class SelectChapter: UIViewController {
         self.addChild(self.pageController!)
         self.view.addSubview(self.pageController!.view)
         
-        let initialVC   = ChapterPage(with: pages[0])
+        let initialVC = ChapterPage(with: pages[0])
         self.pageController?.setViewControllers([initialVC], direction: .forward, animated: true, completion: nil)
+        self.pageController?.didMove(toParent: self)
+    }
+    
+    @IBAction func previousButtonTapped(_ sender: Any) {
+        if self.currentPage != 0 {
+            self.currentPage -= 1
+            
+            self.movePage(index: self.currentPage, isForward: false)
+        }
+    }
+    
+    
+    @IBAction func nextButtonTapped(_ sender: Any) {
+        print("Tapped")
+        if self.currentPage < self.pages.count - 1 {
+            self.currentPage += 1
+            
+            self.movePage(index: self.currentPage, isForward: true)
+        }
+    }
+    
+    
+    func movePage(index: Int, isForward: Bool) {
+        let vc = ChapterPage(with: self.pages[index])
+        self.pageController?.setViewControllers([vc], direction: isForward ? .forward : .reverse, animated: true, completion: nil)
         self.pageController?.didMove(toParent: self)
     }
 }
@@ -58,6 +89,23 @@ extension SelectChapter: UIPageViewControllerDataSource, UIPageViewControllerDel
         
         let nextVC: ChapterPage = ChapterPage(with: pages[index])
         return nextVC
+    }
+    
+    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+        if completed {
+            guard let currentVC = previousViewControllers[0] as? ChapterPage else { return }
+            let index           = currentVC.page.index
+            
+            self.lastPage = index
+            self.currentPage = self.goToPage
+        }
+    }
+    
+    func pageViewController(_ pageViewController: UIPageViewController, willTransitionTo pendingViewControllers: [UIViewController]) {
+        guard let currentVC = pendingViewControllers[0] as? ChapterPage else { return }
+        let index           = currentVC.page.index
+        
+        self.goToPage = index
     }
     
     func presentationCount(for pageViewController: UIPageViewController) -> Int {

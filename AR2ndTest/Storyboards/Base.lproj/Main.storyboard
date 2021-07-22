@@ -296,6 +296,9 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                         <real key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="previousButtonTapped:" destination="W0c-Rr-nTu" eventType="touchUpInside" id="IGh-ak-XFg"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c9t-34-JNN">
                                 <rect key="frame" x="1070" y="447" width="90" height="90"/>
@@ -310,6 +313,10 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                         <real key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="nextButtonTapped:" destination="W0c-Rr-nTu" eventType="touchUpInside" id="oNM-at-eOh"/>
+                                    <action selector="previousButtonTapped:" destination="W0c-Rr-nTu" eventType="touchUpInside" id="TfF-N9-6dY"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="frj-UK-AbO">
                                 <rect key="frame" x="39" y="40" width="61" height="59"/>
@@ -328,6 +335,10 @@ Parents are expected to participate in monitoring and limiting the time that chi
                         <viewLayoutGuide key="safeArea" id="fvG-U7-4jE"/>
                         <color key="backgroundColor" red="0.9994472861" green="1" blue="0.89802503590000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
+                    <connections>
+                        <outlet property="nextButton" destination="c9t-34-JNN" id="UXe-wH-HlE"/>
+                        <outlet property="previousButton" destination="mlL-hW-FMY" id="JeL-Xs-YhQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SW2-iv-UlT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
