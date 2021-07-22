@@ -16,7 +16,7 @@
         <!--Chapter Start Confirmation-->
         <scene sceneID="2Ry-tc-g36">
             <objects>
-                <viewController id="1i0-Jg-gpf" customClass="ChapterStartConfirmation" customModule="AR2ndTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChapterStartConfirmation" id="1i0-Jg-gpf" customClass="ChapterStartConfirmation" customModule="AR2ndTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Emk-ml-s42">
                         <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
