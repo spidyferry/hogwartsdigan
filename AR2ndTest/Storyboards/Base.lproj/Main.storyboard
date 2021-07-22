@@ -162,10 +162,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hHj-pP-Hlf">
-                                <rect key="frame" x="1093" y="40" width="61" height="59"/>
+                                <rect key="frame" x="1095" y="41" width="58" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" image="person.crop.circle" catalog="system">
+                                <state key="normal" image="Piala">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
                                         <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="50"/>
                                     </preferredSymbolConfiguration>
@@ -1411,13 +1411,13 @@ Let’s try to pronounce it.</string>
         <image name="AlphabetBox" width="296" height="277"/>
         <image name="GirlDidIt" width="307" height="379"/>
         <image name="MeetDuckyBg" width="1265" height="418"/>
+        <image name="Piala" width="58" height="58"/>
         <image name="bg0" width="1265" height="418"/>
         <image name="bg1" width="1265" height="418"/>
         <image name="bg2" width="1194" height="517"/>
         <image name="chevron.left.circle" catalog="system" width="128" height="121"/>
         <image name="gearshape.fill" catalog="system" width="128" height="121"/>
         <image name="mic.fill" catalog="system" width="108" height="128"/>
-        <image name="person.crop.circle" catalog="system" width="128" height="121"/>
         <image name="play.circle" catalog="system" width="128" height="121"/>
         <image name="play.fill" catalog="system" width="116" height="128"/>
         <image name="speaker" catalog="system" width="128" height="124"/>
