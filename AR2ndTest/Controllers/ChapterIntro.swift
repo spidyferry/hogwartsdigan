@@ -27,7 +27,9 @@ class ChapterIntro: UIViewController {
     }
     
     func startNaration(){
-        self.bodyText.text = loadtext(file: textfile1)
+        Timer.scheduledTimer(withTimeInterval: 0.1, repeats: false) { timer in
+            self.bodyText.text = self.loadtext(file: self.textfile1)
+        }
         Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { timer in
             self.bodyText.text = self.loadtext(file: self.textfile2)
         }
