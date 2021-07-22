@@ -32,21 +32,21 @@ class ChapterPage: UIViewController {
         super.viewDidLoad()
         
         // Card Chapter Left
-        cardChapterLeft = UIButton(frame: CGRect(x: 153, y: 267, width: 280, height: 450))
+        cardChapterLeft = UIButton(frame: CGRect(x: 6, y: 10, width: 280, height: 450))
         cardChapterLeft?.setImage(UIImage(named: "CardChapter\(page.chapterStart)"), for: .normal)
         cardChapterLeft.tag = page.chapterStart
         cardChapterLeft.addTarget(self, action: #selector(buttonChapter), for: .touchUpInside)
         self.view.addSubview(cardChapterLeft!)
         
         // Card Chapter Middle
-        cardChapterMiddle = UIButton(frame: CGRect(x: 457, y: 267, width: 280, height: 450))
+        cardChapterMiddle = UIButton(frame: CGRect(x: 310, y: 10, width: 280, height: 450))
         cardChapterMiddle?.setImage(UIImage(named: "CardChapter\(page.chapterStart + 1)"), for: .normal)
         cardChapterMiddle.tag = page.chapterStart + 1
         cardChapterMiddle.addTarget(self, action: #selector(buttonChapter), for: .touchUpInside)
         self.view.addSubview(cardChapterMiddle!)
         
         // Card Chapter Right
-        cardChapterRight = UIButton(frame: CGRect(x: 760, y: 267, width: 280, height: 450))
+        cardChapterRight = UIButton(frame: CGRect(x: 613, y: 10, width: 280, height: 450))
         cardChapterRight?.setImage(UIImage(named: "CardChapter\(page.chapterStart + 2)"), for: .normal)
         cardChapterRight.tag = page.chapterStart + 2
         cardChapterRight.addTarget(self, action: #selector(buttonChapter), for: .touchUpInside)

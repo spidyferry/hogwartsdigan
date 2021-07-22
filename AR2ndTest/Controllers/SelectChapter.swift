@@ -24,7 +24,7 @@ class SelectChapter: UIViewController {
         self.pageController?.delegate               = self
         self.pageController?.view.backgroundColor   = .clear
         
-        self.pageController?.view.frame = CGRect(x: 0,y: 0,width: self.view.frame.width,height: self.view.frame.height)
+        self.pageController?.view.frame = CGRect(x: 145, y: 259, width: 901,height: 509)
         
         self.addChild(self.pageController!)
         self.view.addSubview(self.pageController!.view)
