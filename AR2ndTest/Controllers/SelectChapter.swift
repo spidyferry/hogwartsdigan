@@ -51,7 +51,6 @@ class SelectChapter: UIViewController {
     }
     
     @IBAction func nextButtonTapped(_ sender: Any) {
-        print("Tapped")
         if self.currentPage < self.pages.count - 1 {
             self.currentPage += 1
             
