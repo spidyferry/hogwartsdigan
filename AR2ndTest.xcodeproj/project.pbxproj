@@ -349,7 +349,6 @@
 				8C0B602B269D72470027FDAA /* LaunchScreen.storyboard */,
 				8C9431D6269F1F77006369F9 /* OnBoarding.storyboard */,
 				8C0B6026269D72460027FDAA /* Main.storyboard */,
-				8C07070426A01A1900B83A34 /* inputName.swift */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -357,6 +356,7 @@
 		8C9431D9269F2674006369F9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				8C07070426A01A1900B83A34 /* inputName.swift */,
 				8C0B6022269D72460027FDAA /* ViewController.swift */,
 				8C401FB226A08ABC00A07ED7 /* AlphabetRecognition.swift */,
 				8C401FA826A07D6200A07ED7 /* SelectChapter.swift */,
