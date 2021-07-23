@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "bg0@1x.png",
+      "filename" : "Card Chapter 3Done@1x.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "bg0@2x.png",
+      "filename" : "Card Chapter 3Done@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "bg0@3x.png",
+      "filename" : "Card Chapter 3Done@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
