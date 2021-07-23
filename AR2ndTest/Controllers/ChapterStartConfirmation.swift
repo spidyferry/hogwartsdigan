@@ -15,6 +15,7 @@ class ChapterStartConfirmation: UIViewController{
     var textfile2 = ""
     var textfile3 = ""
     let defaults = UserDefaults.standard
+    var titleChapter: String = ""
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var alphabetCompleted:[AlphabetTable]?
@@ -23,9 +24,14 @@ class ChapterStartConfirmation: UIViewController{
     @IBOutlet weak var confirmButton: UIButton!
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var instructionText: UITextView!
+    @IBOutlet weak var titleLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Change title chapter
+        self.titleLabel.text = titleChapter
+        
         let selectedChapter = UserDefaults.standard.integer(forKey: "chapterSelected")
         switch selectedChapter{
         case 1 :
