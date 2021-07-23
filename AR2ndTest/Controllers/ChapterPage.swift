@@ -17,6 +17,7 @@ class ChapterPage: UIViewController {
     let defaults = UserDefaults.standard
         
     var page: Pages
+    var chapter : [Chapter] = Chapter.allCases
     
     init(with page: Pages) {
         self.page = page
@@ -56,9 +57,12 @@ class ChapterPage: UIViewController {
     @objc func buttonChapter(sender: UIButton) {
         let index = sender.tag
         defaults.set(index, forKey: "chapterSelected")
+        
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let MainScreen = storyBoard.instantiateViewController(withIdentifier: "ChapterStartConfirmation") as! ChapterStartConfirmation
-        MainScreen.modalPresentationStyle = .fullScreen
-        self.present(MainScreen, animated: true, completion: nil)
+        let ChapterStartVC = storyBoard.instantiateViewController(withIdentifier: "ChapterStartConfirmation") as! ChapterStartConfirmation
+        
+        ChapterStartVC.modalPresentationStyle = .fullScreen
+        ChapterStartVC.titleChapter = chapter[index - 1].title
+        self.present(ChapterStartVC, animated: true, completion: nil)
     }
 }

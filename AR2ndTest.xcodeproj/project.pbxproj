@@ -62,6 +62,7 @@
 		367AB2CC26A7DAA700A6789E /* I.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 367AB2B126A7DAA700A6789E /* I.mp3 */; };
 		8AB1322226A94E8100DF114B /* ChapterPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB1322126A94E8100DF114B /* ChapterPage.swift */; };
 		8AB1322726A955D800DF114B /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB1322626A955D800DF114B /* Page.swift */; };
+		8AB1322926A9C33400DF114B /* Chapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB1322826A9C33400DF114B /* Chapter.swift */; };
 		8C045B6226A31F4500003F45 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C045B6126A31F4500003F45 /* Extensions.swift */; };
 		8C07070526A01A1900B83A34 /* inputName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C07070426A01A1900B83A34 /* inputName.swift */; };
 		8C0B6021269D72460027FDAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0B6020269D72460027FDAA /* AppDelegate.swift */; };
@@ -155,6 +156,7 @@
 		367AB2B126A7DAA700A6789E /* I.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = I.mp3; sourceTree = "<group>"; };
 		8AB1322126A94E8100DF114B /* ChapterPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterPage.swift; sourceTree = "<group>"; };
 		8AB1322626A955D800DF114B /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
+		8AB1322826A9C33400DF114B /* Chapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter.swift; sourceTree = "<group>"; };
 		8C045B6126A31F4500003F45 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		8C07070426A01A1900B83A34 /* inputName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = inputName.swift; sourceTree = "<group>"; };
 		8C0B601D269D72460027FDAA /* AR2ndTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AR2ndTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -221,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				8AB1322626A955D800DF114B /* Page.swift */,
+				8AB1322826A9C33400DF114B /* Chapter.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -540,6 +543,7 @@
 				8C401FC126A167AE00A07ED7 /* AlphabetFinish.swift in Sources */,
 				8C401FBB26A165C300A07ED7 /* WordSuccess.swift in Sources */,
 				8C401FB926A1656500A07ED7 /* ARWordMission.swift in Sources */,
+				8AB1322926A9C33400DF114B /* Chapter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
