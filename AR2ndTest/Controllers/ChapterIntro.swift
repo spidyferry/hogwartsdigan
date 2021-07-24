@@ -27,22 +27,31 @@ class ChapterIntro: UIViewController {
     }
     
     func startNaration(script:Array<String>){
+        for (index, element) in script.enumerated() {
+          print("Item \(index): \(element)")
+                
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0*Double(index)) {
+                self.bodyText.text = script[index]
+            }
+        }
         
-        Timer.scheduledTimer(withTimeInterval: 0.1, repeats: false) { timer in
-            self.bodyText.text = script[0]
-        }
-        Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { timer in
-            self.bodyText.text = script[1]
-        }
-        Timer.scheduledTimer(withTimeInterval: 6, repeats: false) { timer in
-            self.bodyText.text = script[2]
-        }
-        Timer.scheduledTimer(withTimeInterval: 6, repeats: false) { timer in
-            self.bodyText.text = script[3]
-        }
-        Timer.scheduledTimer(withTimeInterval: 8, repeats: false) { timer in
-            self.bodyText.text = script[4]
-        }
+        
+        
+//        Timer.scheduledTimer(withTimeInterval: 0.1, repeats: false) { timer in
+//            self.bodyText.text = script[0]
+//        }
+//        Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { timer in
+//            self.bodyText.text = script[1]
+//        }
+//        Timer.scheduledTimer(withTimeInterval: 6, repeats: false) { timer in
+//            self.bodyText.text = script[2]
+//        }
+//        Timer.scheduledTimer(withTimeInterval: 6, repeats: false) { timer in
+//            self.bodyText.text = script[3]
+//        }
+//        Timer.scheduledTimer(withTimeInterval: 8, repeats: false) { timer in
+//            self.bodyText.text = script[4]
+//        }
     }
 
     @IBAction func prevScreen(_ sender: Any) {

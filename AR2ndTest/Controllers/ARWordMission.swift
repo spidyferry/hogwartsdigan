@@ -22,14 +22,12 @@ class ARWordMission: UIViewController {
     }
     
     func startNaration(script:Array<String>){
-        Timer.scheduledTimer(withTimeInterval: 0.1, repeats: false) { timer in
-            self.bodyText.text = script[0]
-        }
-        Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { timer in
-            self.bodyText.text = script[1]
-        }
-        Timer.scheduledTimer(withTimeInterval: 6, repeats: false) { timer in
-            self.bodyText.text = script[2]
+        for (index, element) in script.enumerated() {
+          print("Item \(index): \(element)")
+                
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0*Double(index)) {
+                self.bodyText.text = script[index]
+            }
         }
     }
     
