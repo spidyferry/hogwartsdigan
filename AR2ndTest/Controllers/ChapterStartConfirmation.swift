@@ -12,11 +12,9 @@ class ChapterStartConfirmation: UIViewController{
     
     var alphabet = "Sorry :("
     var textfile1 = ""
-    var textfile2 = ""
-    var textfile3 = ""
-    let defaults = UserDefaults.standard
     var titleChapter: String = ""
     
+    let defaults = UserDefaults.standard
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var alphabetCompleted:[AlphabetTable]?
 
@@ -42,8 +40,11 @@ class ChapterStartConfirmation: UIViewController{
             if (theAIsComplete == false && theBIsComplete == false && theCIsComplete == false){
                 alphabet = "The A"
                 textfile1 = "TheA1"
-                textfile2 = "TheA2"
-                textfile3 = "TheA3"
+                defaults.set("ASuccess", forKey: "alphabetSuccess")
+                defaults.set("AppleARMission", forKey: "ARMission")
+                defaults.set("AppleARSuccess", forKey: "ARSuccess")
+                defaults.set("AppleSuccess", forKey: "wordSuccess")
+                
             }else if (theAIsComplete == true && theBIsComplete == false && theCIsComplete == false){
                 alphabet = "The B"
             }else if (theAIsComplete == true && theBIsComplete == true && theCIsComplete == false){
@@ -105,8 +106,6 @@ class ChapterStartConfirmation: UIViewController{
         self.present(MainScreen, animated: true, completion: nil)
         MainScreen.alphabetTitle.text = alphabet
         MainScreen.textfile1 = textfile1
-        MainScreen.textfile2 = textfile2
-        MainScreen.textfile3 = textfile3
     }
     @IBAction func cancelChapter(_ sender: Any) {
         dismiss(animated: true, completion: nil)

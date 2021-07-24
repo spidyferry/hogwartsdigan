@@ -833,7 +833,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" text="You have learned how to pronounce A" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Piz-jW-LKf">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Piz-jW-LKf">
                                 <rect key="frame" x="147" y="380" width="900" height="159.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -892,6 +892,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
                         <color key="backgroundColor" red="0.9994472861" green="1" blue="0.89802503590000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <connections>
+                        <outlet property="bodyText" destination="Piz-jW-LKf" id="Tnn-C6-bBO"/>
                         <outlet property="nextButton" destination="QaA-qR-Zyf" id="Uvs-3d-z4A"/>
                         <outlet property="whiteTransBg" destination="kO8-D7-XTE" id="AeM-vf-Klc"/>
                     </connections>
@@ -1015,7 +1016,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" text="Let's help Ducky to find                 an A _ _ _ _!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="IRD-hc-orK">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="IRD-hc-orK">
                                 <rect key="frame" x="212" y="380" width="771.5" height="159.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1074,6 +1075,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
                         <color key="backgroundColor" red="0.9994472861" green="1" blue="0.89802503590000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <connections>
+                        <outlet property="bodyText" destination="IRD-hc-orK" id="FAQ-z5-bwB"/>
                         <outlet property="nextButton" destination="ePK-L6-LaI" id="wWG-aZ-7fj"/>
                         <outlet property="whiteTransBG" destination="bh9-uB-6SO" id="pUE-rt-VaD"/>
                     </connections>
@@ -1107,8 +1109,6 @@ Parents are expected to participate in monitoring and limiting the time that chi
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Isz-7F-4H5">
                                 <rect key="frame" x="147" y="380" width="900" height="159.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">You have found The Apple!
-Let’s try to pronounce it.</string>
                                 <color key="textColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="60"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -1165,6 +1165,7 @@ Let’s try to pronounce it.</string>
                         <color key="backgroundColor" red="0.9994472861" green="1" blue="0.89802503590000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <connections>
+                        <outlet property="bodyText" destination="Isz-7F-4H5" id="d91-Dt-Edh"/>
                         <outlet property="tryButton" destination="oMH-Em-wzb" id="Po3-U7-K2u"/>
                         <outlet property="whiteTransBg" destination="Gm5-Fq-DZ4" id="9IP-nR-fgm"/>
                     </connections>
@@ -1361,7 +1362,7 @@ Let’s try to pronounce it.</string>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" text="You have learned how to pronounce an Apple" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="15U-fN-ot0">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="15U-fN-ot0">
                                 <rect key="frame" x="147" y="380" width="900" height="159.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1420,6 +1421,7 @@ Let’s try to pronounce it.</string>
                         <color key="backgroundColor" red="0.9994472861" green="1" blue="0.89802503590000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <connections>
+                        <outlet property="bodyText" destination="15U-fN-ot0" id="fgs-8a-6XT"/>
                         <outlet property="nextButton" destination="PHF-qv-59Q" id="cac-uK-Cnl"/>
                         <outlet property="whiteTransBg" destination="Fx1-Qk-mvk" id="FsP-Lm-OLK"/>
                     </connections>
@@ -1495,7 +1497,7 @@ Let’s try to pronounce it.</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="294-gv-xQz"/>
+        <segue reference="6dA-gq-VYn"/>
         <segue reference="1ZQ-O7-5Ap"/>
         <segue reference="Alw-4D-88y"/>
         <segue reference="WGK-U7-Tf6"/>

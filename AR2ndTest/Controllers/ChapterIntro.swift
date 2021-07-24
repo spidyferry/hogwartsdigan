@@ -10,8 +10,6 @@ import UIKit
 class ChapterIntro: UIViewController {
     
     var textfile1 = ""
-    var textfile2 = ""
-    var textfile3 = ""
 
     @IBOutlet weak var alphabetTitle: UILabel!
     @IBOutlet weak var bodyText: UITextView!
@@ -23,18 +21,20 @@ class ChapterIntro: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        startNaration()
+        let line = self.loadtext(file: self.textfile1)
+        let sentence = line.split(separator: ";").map {String($0)}
+        startNaration(script: sentence)
     }
     
-    func startNaration(){
+    func startNaration(script:Array<String>){
         Timer.scheduledTimer(withTimeInterval: 0.1, repeats: false) { timer in
-            self.bodyText.text = self.loadtext(file: self.textfile1)
+            self.bodyText.text = script[0]
         }
         Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { timer in
-            self.bodyText.text = self.loadtext(file: self.textfile2)
+            self.bodyText.text = script[1]
         }
         Timer.scheduledTimer(withTimeInterval: 6, repeats: false) { timer in
-            self.bodyText.text = self.loadtext(file: self.textfile3)
+            self.bodyText.text = script[2]
         }
     }
 
