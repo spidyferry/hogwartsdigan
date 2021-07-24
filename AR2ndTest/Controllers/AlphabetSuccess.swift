@@ -25,10 +25,10 @@ class AlphabetSuccess: UIViewController {
         Timer.scheduledTimer(withTimeInterval: 0.1, repeats: false) { timer in
             self.bodyText.text = script[0]
         }
-        Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { timer in
+        Timer.scheduledTimer(withTimeInterval: 2, repeats: false) { timer in
             self.bodyText.text = script[1]
         }
-        Timer.scheduledTimer(withTimeInterval: 6, repeats: false) { timer in
+        Timer.scheduledTimer(withTimeInterval: 4, repeats: false) { timer in
             self.bodyText.text = script[2]
         }
     }

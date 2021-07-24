@@ -11,7 +11,6 @@ import CoreData
 class ChapterStartConfirmation: UIViewController{
     
     var alphabet = "Sorry :("
-    var textfile1 = ""
     var titleChapter: String = ""
     
     let defaults = UserDefaults.standard
@@ -39,7 +38,7 @@ class ChapterStartConfirmation: UIViewController{
             
             if (theAIsComplete == false && theBIsComplete == false && theCIsComplete == false){
                 alphabet = "The A"
-                textfile1 = "TheA1"
+                defaults.set("AIntro", forKey: "alphabetIntro")
                 defaults.set("ASuccess", forKey: "alphabetSuccess")
                 defaults.set("AppleARMission", forKey: "ARMission")
                 defaults.set("AppleARSuccess", forKey: "ARSuccess")
@@ -105,7 +104,6 @@ class ChapterStartConfirmation: UIViewController{
         MainScreen.modalPresentationStyle = .fullScreen
         self.present(MainScreen, animated: true, completion: nil)
         MainScreen.alphabetTitle.text = alphabet
-        MainScreen.textfile1 = textfile1
     }
     @IBAction func cancelChapter(_ sender: Any) {
         dismiss(animated: true, completion: nil)

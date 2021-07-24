@@ -95,14 +95,15 @@
 		8C543B1926ABA10700C00509 /* ASuccess.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8C543B1526ABA10700C00509 /* ASuccess.txt */; };
 		8C543B1A26ABA10700C00509 /* AppleSuccess.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8C543B1626ABA10700C00509 /* AppleSuccess.txt */; };
 		8C543B1B26ABA10700C00509 /* AppleARMission.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8C543B1726ABA10700C00509 /* AppleARMission.txt */; };
+		8C543B1F26ABA58500C00509 /* TheA2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8C543B1E26ABA58500C00509 /* TheA2.txt */; };
+		8C543B2126ABA62E00C00509 /* TheA1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8C543B2026ABA62E00C00509 /* TheA1.txt */; };
+		8C543B2326ABAB6300C00509 /* AIntro.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8C543B2226ABAB6300C00509 /* AIntro.txt */; };
 		8C8EA08B26A40358007DC059 /* ATest.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C8EA08A26A40358007DC059 /* ATest.mp3 */; };
 		8C8FB77426A0474A00525903 /* OnBoardingLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8FB77326A0474A00525903 /* OnBoardingLoading.swift */; };
 		8C9431D7269F1F77006369F9 /* OnBoarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C9431D6269F1F77006369F9 /* OnBoarding.storyboard */; };
 		8C9431DC269F2EE3006369F9 /* OnBoarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9431DB269F2EE3006369F9 /* OnBoarding.swift */; };
 		8C9431DE269F3281006369F9 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9431DD269F3281006369F9 /* MainScreen.swift */; };
 		8CC8676626A9629C005465FB /* TheA3.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8CC8676326A9629C005465FB /* TheA3.txt */; };
-		8CC8676726A9629C005465FB /* TheA2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8CC8676426A9629C005465FB /* TheA2.txt */; };
-		8CC8676826A9629C005465FB /* TheA1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8CC8676526A9629C005465FB /* TheA1.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -196,14 +197,15 @@
 		8C543B1526ABA10700C00509 /* ASuccess.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ASuccess.txt; sourceTree = "<group>"; };
 		8C543B1626ABA10700C00509 /* AppleSuccess.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AppleSuccess.txt; sourceTree = "<group>"; };
 		8C543B1726ABA10700C00509 /* AppleARMission.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AppleARMission.txt; sourceTree = "<group>"; };
+		8C543B1E26ABA58500C00509 /* TheA2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TheA2.txt; sourceTree = "<group>"; };
+		8C543B2026ABA62E00C00509 /* TheA1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TheA1.txt; sourceTree = "<group>"; };
+		8C543B2226ABAB6300C00509 /* AIntro.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AIntro.txt; sourceTree = "<group>"; };
 		8C8EA08A26A40358007DC059 /* ATest.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ATest.mp3; sourceTree = "<group>"; };
 		8C8FB77326A0474A00525903 /* OnBoardingLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingLoading.swift; sourceTree = "<group>"; };
 		8C9431D6269F1F77006369F9 /* OnBoarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnBoarding.storyboard; sourceTree = "<group>"; };
 		8C9431DB269F2EE3006369F9 /* OnBoarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoarding.swift; sourceTree = "<group>"; };
 		8C9431DD269F3281006369F9 /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 		8CC8676326A9629C005465FB /* TheA3.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TheA3.txt; sourceTree = "<group>"; };
-		8CC8676426A9629C005465FB /* TheA2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TheA2.txt; sourceTree = "<group>"; };
-		8CC8676526A9629C005465FB /* TheA1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TheA1.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -286,12 +288,13 @@
 		8C25588326A92AB8009987C6 /* Stories */ = {
 			isa = PBXGroup;
 			children = (
-				8CC8676526A9629C005465FB /* TheA1.txt */,
+				8C543B2226ABAB6300C00509 /* AIntro.txt */,
 				8C543B1726ABA10700C00509 /* AppleARMission.txt */,
 				8C543B1426ABA10700C00509 /* AppleARSuccess.txt */,
 				8C543B1626ABA10700C00509 /* AppleSuccess.txt */,
 				8C543B1526ABA10700C00509 /* ASuccess.txt */,
-				8CC8676426A9629C005465FB /* TheA2.txt */,
+				8C543B2026ABA62E00C00509 /* TheA1.txt */,
+				8C543B1E26ABA58500C00509 /* TheA2.txt */,
 				8CC8676326A9629C005465FB /* TheA3.txt */,
 				364DD19626A97F670091DF28 /* TheA4.txt */,
 				364DD19826A97F840091DF28 /* TheA5.txt */,
@@ -498,12 +501,13 @@
 				2D69F497269ED873004433B4 /* SF-Pro-Rounded-Bold.otf in Resources */,
 				367AB2C426A7DAA700A6789E /* C.mp3 in Resources */,
 				8CC8676626A9629C005465FB /* TheA3.txt in Resources */,
-				8CC8676826A9629C005465FB /* TheA1.txt in Resources */,
 				364DD19926A97F840091DF28 /* TheA5.txt in Resources */,
 				367AB2B526A7DAA700A6789E /* E.mp3 in Resources */,
+				8C543B2126ABA62E00C00509 /* TheA1.txt in Resources */,
 				3620361C26A95D6B00066EFB /* s_butt_paused.mp3 in Resources */,
 				3677E0F626A9B8AF00B5FFAC /* s_congrat_B.mp3 in Resources */,
 				364DD19326A973EE0091DF28 /* narr_C.mp3 in Resources */,
+				8C543B1F26ABA58500C00509 /* TheA2.txt in Resources */,
 				8C0B6028269D72460027FDAA /* Main.storyboard in Resources */,
 				3677E0F826A9B8AF00B5FFAC /* s_congrat_A.mp3 in Resources */,
 				8C179C0C26A4575100244FE3 /* AppleTest.mp3 in Resources */,
@@ -517,12 +521,12 @@
 				3677E0FB26A9B8AF00B5FFAC /* s_congrat_apple.mp3 in Resources */,
 				8C543B1B26ABA10700C00509 /* AppleARMission.txt in Resources */,
 				2D69F496269ED873004433B4 /* SF-Pro-Rounded-Semibold.otf in Resources */,
-				8CC8676726A9629C005465FB /* TheA2.txt in Resources */,
 				3677E10526A9B9B200B5FFAC /* TheB5.txt in Resources */,
 				8C9431D7269F1F77006369F9 /* OnBoarding.storyboard in Resources */,
 				367AB2C026A7DAA700A6789E /* M.mp3 in Resources */,
 				367AB2CC26A7DAA700A6789E /* I.mp3 in Resources */,
 				3677E0FA26A9B8AF00B5FFAC /* s_congrat_chocolate.mp3 in Resources */,
+				8C543B2326ABAB6300C00509 /* AIntro.txt in Resources */,
 				8C543B1826ABA10700C00509 /* AppleARSuccess.txt in Resources */,
 				367AB2B926A7DAA700A6789E /* U.mp3 in Resources */,
 			);
