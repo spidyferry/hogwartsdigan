@@ -13,6 +13,8 @@ class OnBoarding: UIViewController {
     var userName = "Duck-Duck DC"
     let defaults = UserDefaults.standard
     let theAlphabets = ["The A", "The B", "The C", "The D", "The E", "The F", "The G", "The H", "The I", "The J", "The K", "The L", "The M", "The N", "The O", "The P", "The Q", "The R", "The S", "The T", "The U", "The V", "The W", "The X", "The Y", "The Z"]
+    let alphaRec = ["Hey", "The B", "The C", "The D", "The E", "The F", "The G", "The H", "The I", "The J", "The K", "The L", "The M", "The N", "The O", "The P", "The Q", "The R", "The S", "The T", "The U", "The V", "The W", "The X", "The Y", "The Z"]
+    let WRec = ["Apple", "The B", "The C", "The D", "The E", "The F", "The G", "The H", "The I", "The J", "The K", "The L", "The M", "The N", "The O", "The P", "The Q", "The R", "The S", "The T", "The U", "The V", "The W", "The X", "The Y", "The Z"]
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var alphabetCompleted:[AlphabetTable]?
@@ -60,21 +62,19 @@ class OnBoarding: UIViewController {
     func saveDefaults(name:String){
         defaults.set(name, forKey: "userName")
         
-        for alpha in theAlphabets{
+        for (index, element) in theAlphabets.enumerated() {
             let newRecords = AlphabetTable(context: self.context)
-            newRecords.alphabet = alpha
+            newRecords.alphabet = element
             newRecords.date = Date()
             newRecords.isCompleted = false
+            newRecords.alphabetRec = alphaRec[index]
+            newRecords.wordRec = WRec[index]
             do{
                 try self.context.save()
             }catch{
                 print("error init database \(error.localizedDescription)")
             }
         }
-        
-        
-//        let user:String = defaults.string(forKey: "userName")!
-//        print("Ini di main screen : \(user)")
     }
     
 }

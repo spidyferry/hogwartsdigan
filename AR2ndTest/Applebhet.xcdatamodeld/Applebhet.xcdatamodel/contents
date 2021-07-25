@@ -2,10 +2,12 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20F71" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="AlphabetTable" representedClassName="AlphabetTable" syncable="YES">
         <attribute name="alphabet" optional="YES" attributeType="String"/>
+        <attribute name="alphabetRec" optional="YES" attributeType="String"/>
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="isCompleted" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="wordRec" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="AlphabetTable" positionX="-54" positionY="-9" width="128" height="74"/>
+        <element name="AlphabetTable" positionX="-54" positionY="-9" width="128" height="104"/>
     </elements>
 </model>

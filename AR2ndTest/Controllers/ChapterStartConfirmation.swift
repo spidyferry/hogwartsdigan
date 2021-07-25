@@ -38,6 +38,7 @@ class ChapterStartConfirmation: UIViewController{
             
             if (theAIsComplete == false && theBIsComplete == false && theCIsComplete == false){
                 alphabet = "The A"
+                defaults.set("The A", forKey: "currentAlphabet")
                 defaults.set("AIntro", forKey: "alphabetIntro")
                 defaults.set("ASuccess", forKey: "alphabetSuccess")
                 defaults.set("AppleARMission", forKey: "ARMission")

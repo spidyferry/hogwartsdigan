@@ -23,7 +23,6 @@ class WordSuccess: UIViewController {
     
     func startNaration(script:Array<String>){
         for (index, element) in script.enumerated() {
-          print("Item \(index): \(element)")
                 
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.0*Double(index)) {
                 self.bodyText.text = script[index]
