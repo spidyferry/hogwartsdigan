@@ -671,8 +671,8 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                 <rect key="frame" x="454" y="316" width="286" height="267"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BPk-5K-bdW">
-                                <rect key="frame" x="529" y="330" width="138" height="239"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BPk-5K-bdW">
+                                <rect key="frame" x="454" y="330" width="286" height="239"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="200"/>
                                 <color key="textColor" red="0.64537519219999995" green="0.087355382740000001" blue="0.10584814100000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -803,6 +803,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
                         <outlet property="playAudio" destination="LOo-0d-Tmd" id="zqz-VQ-YYR"/>
                         <outlet property="recognizeAlphabet" destination="uRt-3b-Sda" id="Zjp-xW-3eA"/>
                         <outlet property="sayIt" destination="IqI-n8-Kon" id="hhT-So-5XT"/>
+                        <outlet property="theAlphabet" destination="BPk-5K-bdW" id="iMe-4h-bAn"/>
                         <outlet property="tryAgainButton" destination="fN6-dc-TEM" id="CPh-Kh-r7U"/>
                         <outlet property="tryagainNotification" destination="nzs-ry-SFc" id="GCf-b2-TMw"/>
                     </connections>

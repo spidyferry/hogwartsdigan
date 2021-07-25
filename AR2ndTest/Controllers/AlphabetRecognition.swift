@@ -8,15 +8,20 @@
 import UIKit
 import AVFoundation
 import Speech
+import CoreData
 
 class AlphabetRecognition: UIViewController, SFSpeechRecognizerDelegate {
     
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     private let speechRecognizer = SFSpeechRecognizer(locale: Locale(identifier: "en-US"))!
     private var recognitionRequest: SFSpeechAudioBufferRecognitionRequest?
     private var recognitionTask: SFSpeechRecognitionTask?
     private let audioEngine = AVAudioEngine()
-    var alphabet = "a"
+    var alphabetCompleted:[AlphabetTable]?
+    var alphabet = ""
+    var alphabetSupposedToBe:String = ""
 
+    @IBOutlet weak var theAlphabet: UILabel!
     @IBOutlet weak var tryAgainButton: UIButton!
     @IBOutlet weak var tryagainNotification: UIView!
     @IBOutlet weak var sayIt: UILabel!
@@ -26,6 +31,9 @@ class AlphabetRecognition: UIViewController, SFSpeechRecognizerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let currentAlphabet = UserDefaults.standard.string(forKey: "currentAlphabet")!
+        theAlphabet.text = currentAlphabet
+        alphabetSupposedToBe = getValueForRecognition(alphabetName: "A")
         speechRecognizer.delegate = self
         prepareAudioPlayer()
     }
@@ -128,7 +136,7 @@ class AlphabetRecognition: UIViewController, SFSpeechRecognizerDelegate {
         
             print(alphabet)
         
-        if (alphabet == "Hey"){
+        if (alphabet == alphabetSupposedToBe){
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let MainScreen = storyBoard.instantiateViewController(withIdentifier: "AlphabetSuccess") as! AlphabetSuccess
             MainScreen.modalPresentationStyle = .fullScreen
@@ -141,6 +149,19 @@ class AlphabetRecognition: UIViewController, SFSpeechRecognizerDelegate {
     @IBAction func tryAgain(_ sender: Any) {
         tryagainNotification.isHidden = true
         sayIt.isHidden = true
+    }
+    
+    func getValueForRecognition(alphabetName:String) -> String{
+        var alphabetToRecognize:[AlphabetTable]?
+        do {
+            let request = AlphabetTable.fetchRequest() as NSFetchRequest<AlphabetTable>
+            let pred = NSPredicate(format: "alphabet == %@", alphabetName)
+            request.predicate = pred
+            alphabetToRecognize = try context.fetch(request)
+        } catch {
+            print(error.localizedDescription)
+        }
+        return alphabetToRecognize![0].alphabetRec!
     }
     
 }

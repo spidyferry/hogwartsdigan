@@ -10,7 +10,7 @@ import CoreData
 
 class ChapterStartConfirmation: UIViewController{
     
-    var alphabet = "Sorry :("
+    var alphabet = ""
     var titleChapter: String = ""
     
     let defaults = UserDefaults.standard
@@ -32,13 +32,13 @@ class ChapterStartConfirmation: UIViewController{
         let selectedChapter = UserDefaults.standard.integer(forKey: "chapterSelected")
         switch selectedChapter{
         case 1 :
-            let theAIsComplete = fetchAlphabet(alphabetName: "The A")
-            let theBIsComplete = fetchAlphabet(alphabetName: "The B")
-            let theCIsComplete = fetchAlphabet(alphabetName: "The C")
+            let theAIsComplete = fetchAlphabet(alphabetName: "A")
+            let theBIsComplete = fetchAlphabet(alphabetName: "B")
+            let theCIsComplete = fetchAlphabet(alphabetName: "C")
             
             if (theAIsComplete == false && theBIsComplete == false && theCIsComplete == false){
-                alphabet = "The A"
-                defaults.set("The A", forKey: "currentAlphabet")
+                alphabet = "A"
+                defaults.set("A", forKey: "currentAlphabet")
                 defaults.set("AIntro", forKey: "alphabetIntro")
                 defaults.set("ASuccess", forKey: "alphabetSuccess")
                 defaults.set("AppleARMission", forKey: "ARMission")
@@ -104,7 +104,7 @@ class ChapterStartConfirmation: UIViewController{
         let MainScreen = storyBoard.instantiateViewController(withIdentifier: "ChapterIntro") as! ChapterIntro
         MainScreen.modalPresentationStyle = .fullScreen
         self.present(MainScreen, animated: true, completion: nil)
-        MainScreen.alphabetTitle.text = alphabet
+        MainScreen.alphabetTitle.text = "The \(alphabet)"
     }
     @IBAction func cancelChapter(_ sender: Any) {
         dismiss(animated: true, completion: nil)
