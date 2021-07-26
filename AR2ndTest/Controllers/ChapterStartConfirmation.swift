@@ -46,9 +46,9 @@ class ChapterStartConfirmation: UIViewController{
                 defaults.set("AppleSuccess", forKey: "wordSuccess")
                 
             }else if (theAIsComplete == true && theBIsComplete == false && theCIsComplete == false){
-                alphabet = "The B"
+                alphabet = "B"
             }else if (theAIsComplete == true && theBIsComplete == true && theCIsComplete == false){
-                alphabet = "The C"
+                alphabet = "C"
             }else{
                 instructionText.text = "Do you want to repeat?"
             }
