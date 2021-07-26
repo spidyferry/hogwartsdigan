@@ -6,26 +6,43 @@
 //
 
 import UIKit
+import CoreData
 
 class AlphabetFinish: UIViewController {
 
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    let defaults = UserDefaults.standard
+    let context         = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    let defaults        = UserDefaults.standard
+    let currentAlphabet = UserDefaults.standard.string(forKey: "currentAlphabet")!
+    
     @IBOutlet weak var finishButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let currentAlphabet = UserDefaults.standard.string(forKey: "currentAlphabet")!
-
     }
     
     @IBAction func finishPerAlphabet(_ sender: Any) {
+        self.setToComplete()
+        
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let MainScreen = storyBoard.instantiateViewController(withIdentifier: "SelectChapter") as! SelectChapter
-        MainScreen.modalPresentationStyle = .fullScreen
-        self.present(MainScreen, animated: false, completion: nil)
+        let SelectChapterVC = storyBoard.instantiateViewController(withIdentifier: "SelectChapter") as! SelectChapter
+        SelectChapterVC.modalPresentationStyle = .fullScreen
+        self.present(SelectChapterVC, animated: false, completion: nil)
     }
     
-    
-    
-
+    func setToComplete() {
+        do {
+            let request = AlphabetTable.fetchRequest() as NSFetchRequest<AlphabetTable>
+            
+            let predicate       = NSPredicate(format: "alphabet CONTAINS %@", self.currentAlphabet)
+            request.predicate   = predicate
+            
+            let alphabet = try context.fetch(request)
+            let item     = alphabet[0]
+            item.isCompleted = true
+            
+            try context.save()
+        } catch {
+            print("Failed to set complete: \(error.localizedDescription)")
+        }
+    }
 }
