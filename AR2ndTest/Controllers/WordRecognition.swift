@@ -8,10 +8,12 @@
 import UIKit
 import AVFoundation
 import Speech
+import CoreData
 
 
 class WordRecognition: UIViewController {
 
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     @IBOutlet weak var playAudio: UIButton!
     @IBOutlet weak var wordRecognize: UIButton!
     @IBOutlet weak var sayIt: UILabel!
@@ -23,13 +25,30 @@ class WordRecognition: UIViewController {
     private var recognitionRequest: SFSpeechAudioBufferRecognitionRequest?
     private var recognitionTask: SFSpeechRecognitionTask?
     private let audioEngine = AVAudioEngine()
+    var wordSupposedToBe:String = ""
     var word = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let currentAlphabet = UserDefaults.standard.string(forKey: "currentAlphabet")!
+        wordSupposedToBe = getValueForRecognition(alphabetName: currentAlphabet)
+        print(wordSupposedToBe)
         prepareAudioPlayer()
-
+        sayIt.text = wordSupposedToBe
         // Do any additional setup after loading the view.
+    }
+    
+    func getValueForRecognition(alphabetName:String) -> String{
+        var alphabetToRecognize:[AlphabetTable]?
+        do {
+            let request = AlphabetTable.fetchRequest() as NSFetchRequest<AlphabetTable>
+            let pred = NSPredicate(format: "alphabet == %@", alphabetName)
+            request.predicate = pred
+            alphabetToRecognize = try context.fetch(request)
+        } catch {
+            print(error.localizedDescription)
+        }
+        return alphabetToRecognize![0].wordRec!
     }
     
     func prepareAudioPlayer(){
@@ -126,7 +145,7 @@ class WordRecognition: UIViewController {
     }
     
     func checkingWord(){
-        if (word == "Apple"){
+        if (word == wordSupposedToBe){
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let MainScreen = storyBoard.instantiateViewController(withIdentifier: "WordSuccess") as! WordSuccess
             MainScreen.modalPresentationStyle = .fullScreen

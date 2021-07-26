@@ -9,10 +9,12 @@ import UIKit
 
 class AlphabetFinish: UIViewController {
 
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     let defaults = UserDefaults.standard
     @IBOutlet weak var finishButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        let currentAlphabet = UserDefaults.standard.string(forKey: "currentAlphabet")!
 
     }
     
@@ -22,6 +24,8 @@ class AlphabetFinish: UIViewController {
         MainScreen.modalPresentationStyle = .fullScreen
         self.present(MainScreen, animated: false, completion: nil)
     }
+    
+    
     
 
 }

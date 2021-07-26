@@ -371,27 +371,27 @@
 		8C9431D9269F2674006369F9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				8C07070426A01A1900B83A34 /* inputName.swift */,
-				8C0B6022269D72460027FDAA /* ViewController.swift */,
-				8C401FB226A08ABC00A07ED7 /* AlphabetRecognition.swift */,
-				8C401FA826A07D6200A07ED7 /* SelectChapter.swift */,
-				8C9431DB269F2EE3006369F9 /* OnBoarding.swift */,
-				8C9431DD269F3281006369F9 /* MainScreen.swift */,
 				8C8FB77326A0474A00525903 /* OnBoardingLoading.swift */,
+				8C9431DB269F2EE3006369F9 /* OnBoarding.swift */,
+				8C07070426A01A1900B83A34 /* inputName.swift */,
+				8C9431DD269F3281006369F9 /* MainScreen.swift */,
 				8C401FAA26A07F7E00A07ED7 /* ParentGuide.swift */,
+				8C401FA826A07D6200A07ED7 /* SelectChapter.swift */,
+				8AB1322126A94E8100DF114B /* ChapterPage.swift */,
 				8C401FAC26A0847700A07ED7 /* ChapterStartConfirmation.swift */,
 				8C401FAE26A0866600A07ED7 /* ChapterIntro.swift */,
-				8C401FB026A0884E00A07ED7 /* GamePaused.swift */,
+				8C401FB226A08ABC00A07ED7 /* AlphabetRecognition.swift */,
 				8C401FB426A1647D00A07ED7 /* AlphabetSuccess.swift */,
 				8C401FB626A164F500A07ED7 /* WordHint.swift */,
 				8C401FB826A1656500A07ED7 /* ARWordMission.swift */,
-				8C401FBA26A165C300A07ED7 /* WordSuccess.swift */,
-				8C401FBC26A1661F00A07ED7 /* WordRecognition.swift */,
+				8C0B6022269D72460027FDAA /* ViewController.swift */,
 				8C401FBE26A1669D00A07ED7 /* ARSuccess.swift */,
+				8C401FBC26A1661F00A07ED7 /* WordRecognition.swift */,
+				8C401FBA26A165C300A07ED7 /* WordSuccess.swift */,
 				8C401FC026A167AE00A07ED7 /* AlphabetFinish.swift */,
 				8C401FC226A1720400A07ED7 /* LaunchScreen.swift */,
-				8AB1322126A94E8100DF114B /* ChapterPage.swift */,
 				8AFD49D326AAB41500D30FB8 /* Profile.swift */,
+				8C401FB026A0884E00A07ED7 /* GamePaused.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";

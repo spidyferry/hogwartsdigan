@@ -6,15 +6,44 @@
 //
 
 import UIKit
+import CoreData
 
 class WordHint: UIViewController {
 
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     @IBOutlet weak var prevButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var hint: UITextView!
+    @IBOutlet weak var imageHint: UIImageView!
+    var wordSupposedToBe:String = ""
+    var dash:String = ""
+    var word:String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let currentAlphabet = UserDefaults.standard.string(forKey: "currentAlphabet")!
+        wordSupposedToBe = getValueForRecognition(alphabetName: currentAlphabet)
+        
+        for _ in 1..<wordSupposedToBe.count{
+            dash.append(" _")
+        }
+        
+        hint.text = "\(wordSupposedToBe.prefix(1))\(dash)"
+        imageHint.image = UIImage(named: "A")
+    }
+    
+    func getValueForRecognition(alphabetName:String) -> String{
+        var alphabetToRecognize:[AlphabetTable]?
+        do {
+            let request = AlphabetTable.fetchRequest() as NSFetchRequest<AlphabetTable>
+            let pred = NSPredicate(format: "alphabet == %@", alphabetName)
+            request.predicate = pred
+            alphabetToRecognize = try context.fetch(request)
+        } catch {
+            print(error.localizedDescription)
+        }
+        return alphabetToRecognize![0].wordRec!
     }
     
     @IBAction func prevScreen(_ sender: Any) {

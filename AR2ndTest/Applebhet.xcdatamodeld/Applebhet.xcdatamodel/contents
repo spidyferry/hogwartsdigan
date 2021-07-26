@@ -5,9 +5,10 @@
         <attribute name="alphabetRec" optional="YES" attributeType="String"/>
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="isCompleted" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="word" optional="YES" attributeType="String"/>
         <attribute name="wordRec" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="AlphabetTable" positionX="-54" positionY="-9" width="128" height="104"/>
+        <element name="AlphabetTable" positionX="-54" positionY="-9" width="128" height="119"/>
     </elements>
 </model>
