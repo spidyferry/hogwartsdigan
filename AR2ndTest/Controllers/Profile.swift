@@ -38,7 +38,7 @@ class Profile: UIViewController {
             var totalScore: Int = 0
             var totalInChapter: Int = 3
             for (index, item) in alphabetList.enumerated() {
-                if item.isCompleted == false && totalInChapter > 0 {
+                if item.isCompleted == true && totalInChapter > 0 {
                     totalInChapter -= 1
                     
                     if totalInChapter == 0 || (index == alphabetList.count - 1 && totalInChapter == 1) {
