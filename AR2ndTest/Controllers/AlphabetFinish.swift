@@ -37,10 +37,18 @@ class AlphabetFinish: UIViewController {
             request.predicate   = predicate
             
             let alphabet = try context.fetch(request)
-            let item     = alphabet[0]
-            item.isCompleted = true
             
-            try context.save()
+            if(alphabet.count != 0) {
+                let item            = alphabet[0]
+                item.isCompleted    = true
+                
+                try context.save()
+            }
+            
+            else {
+                print("Cannot find alphabet \(self.currentAlphabet)")
+            }
+            
         } catch {
             print("Failed to set complete: \(error.localizedDescription)")
         }
