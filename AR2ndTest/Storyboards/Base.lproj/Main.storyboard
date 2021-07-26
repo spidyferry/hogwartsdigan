@@ -200,6 +200,14 @@
                         <color key="backgroundColor" red="0.99932080509999999" green="1" blue="0.88625890019999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <navigationItem key="navigationItem" id="7hR-5r-HrL"/>
+                    <connections>
+                        <outlet property="newLearnerBadge" destination="wf4-eE-9Bi" id="oMI-sl-6zV"/>
+                        <outlet property="theAchieverBadge" destination="5eO-Zc-Ndv" id="EzL-A1-dki"/>
+                        <outlet property="theAdventureBadge" destination="j64-hk-rFA" id="Euq-KZ-FaV"/>
+                        <outlet property="theExpertBadge" destination="6hA-7M-TPr" id="j0b-R9-PEz"/>
+                        <outlet property="theExplorerBadge" destination="7ln-KX-z8g" id="Max-ju-xh8"/>
+                        <outlet property="theMasterBadge" destination="VPk-GS-z43" id="JGH-lL-m5h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OcX-zv-Wgy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
