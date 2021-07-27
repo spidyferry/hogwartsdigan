@@ -123,7 +123,7 @@ class ChapterStartConfirmation: UIViewController{
     }
     @IBAction func cancelChapter(_ sender: Any) {
         buttonNoPressed.play()
-        dismiss(animated: true, completion: nil)
+//        dismiss(animated: true, completion: nil)
     }
 
 }

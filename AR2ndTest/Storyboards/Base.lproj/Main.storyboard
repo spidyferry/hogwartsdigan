@@ -74,6 +74,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="cancelChapter:" destination="1i0-Jg-gpf" eventType="touchUpInside" id="RoT-A6-iUk"/>
+                                    <segue destination="W0c-Rr-nTu" kind="presentation" modalPresentationStyle="fullScreen" id="A9y-8I-ua6"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The ABC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="58m-xA-r8M">
@@ -1508,7 +1509,8 @@ Parents are expected to participate in monitoring and limiting the time that chi
     <inferredMetricsTieBreakers>
         <segue reference="294-gv-xQz"/>
         <segue reference="PMj-bG-2xs"/>
-        <segue reference="iSJ-4G-zhb"/>
+        <segue reference="d2T-ed-V2o"/>
+        <segue reference="A9y-8I-ua6"/>
         <segue reference="WGK-U7-Tf6"/>
     </inferredMetricsTieBreakers>
     <resources>

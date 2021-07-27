@@ -26,7 +26,7 @@ class AlphabetFinish: UIViewController {
         self.setToComplete()
         
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let SelectChapterVC = storyBoard.instantiateViewController(withIdentifier: "SelectChapter") as! SelectChapter
+        let SelectChapterVC = storyBoard.instantiateViewController(withIdentifier: "ChapterStartConfirmation") as! ChapterStartConfirmation
         SelectChapterVC.modalPresentationStyle = .fullScreen
         self.present(SelectChapterVC, animated: false, completion: nil)
     }
