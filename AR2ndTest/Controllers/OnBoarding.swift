@@ -13,9 +13,9 @@ class OnBoarding: UIViewController {
     var userName = "Duck-Duck DC"
     let defaults = UserDefaults.standard
     let theAlphabets = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
-    let theWords = ["Apple", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
-    let alphaRec = ["Hey", "The B", "The C", "The D", "The E", "The F", "The G", "The H", "The I", "The J", "The K", "The L", "The M", "The N", "The O", "The P", "The Q", "The R", "The S", "The T", "The U", "The V", "The W", "The X", "The Y", "The Z"]
-    let WRec = ["Apple", "The B", "The C", "The D", "The E", "The F", "The G", "The H", "The I", "The J", "The K", "The L", "The M", "The N", "The O", "The P", "The Q", "The R", "The S", "The T", "The U", "The V", "The W", "The X", "The Y", "The Z"]
+    let theWords = ["Apple", "Basket", "Chocolate", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+    let alphaRec = ["Hey", "B", "See", "D", "E", "F", "G", "Age", "Hi", "J", "OK", "L", "I am", "And", "Oh", "P", "Cue", "Are", "Yes", "T", "You", "Fee", "W", "The X", "Why", "Z"]
+    let WRec = ["Apple", "Basket", "Chocolate", "The D", "The E", "The F", "The G", "The H", "The I", "The J", "The K", "The L", "The M", "The N", "The O", "The P", "The Q", "The R", "The S", "The T", "The U", "The V", "The W", "The X", "The Y", "The Z"]
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var alphabetCompleted:[AlphabetTable]?

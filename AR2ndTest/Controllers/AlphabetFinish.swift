@@ -12,17 +12,14 @@ class AlphabetFinish: UIViewController {
 
     let context         = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     let defaults        = UserDefaults.standard
-    let currentAlphabet = UserDefaults.standard.string(forKey: "currentAlphabet")!
+    var currentAlphabet = UserDefaults.standard.string(forKey: "currentAlphabet")!
     
     @IBOutlet weak var finishButton: UIButton!
     var alphabetToRecognize:[AlphabetTable]?
-    var currentAlphabet:String=""
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         currentAlphabet = UserDefaults.standard.string(forKey: "currentAlphabet")!
-
     }
     
     @IBAction func finishPerAlphabet(_ sender: Any) {

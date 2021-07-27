@@ -1031,8 +1031,8 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                 <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="60"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The ABC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iba-PR-0kb">
-                                <rect key="frame" x="359" y="82" width="478" height="144"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iba-PR-0kb">
+                                <rect key="frame" x="598" y="82" width="0.0" height="0.0"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="120"/>
                                 <color key="textColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1083,6 +1083,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
                         <color key="backgroundColor" red="0.9994472861" green="1" blue="0.89802503590000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <connections>
+                        <outlet property="alphabetTitle" destination="Iba-PR-0kb" id="BeX-D1-TnG"/>
                         <outlet property="bodyText" destination="IRD-hc-orK" id="FAQ-z5-bwB"/>
                         <outlet property="nextButton" destination="ePK-L6-LaI" id="wWG-aZ-7fj"/>
                         <outlet property="whiteTransBG" destination="bh9-uB-6SO" id="pUE-rt-VaD"/>
@@ -1507,7 +1508,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
     <inferredMetricsTieBreakers>
         <segue reference="294-gv-xQz"/>
         <segue reference="PMj-bG-2xs"/>
-        <segue reference="d2T-ed-V2o"/>
+        <segue reference="iSJ-4G-zhb"/>
         <segue reference="WGK-U7-Tf6"/>
     </inferredMetricsTieBreakers>
     <resources>
