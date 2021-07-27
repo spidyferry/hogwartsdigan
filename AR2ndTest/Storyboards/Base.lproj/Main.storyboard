@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -143,6 +144,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="closeGuide:" destination="iiH-6N-EZi" eventType="touchUpInside" id="UeF-eK-Fyf"/>
+                                    <action selector="okButtonTapped:" destination="qLN-sv-1O5" eventType="touchUpInside" id="KPI-31-aue"/>
                                     <segue destination="d7g-t6-UMX" kind="presentation" modalPresentationStyle="fullScreen" id="WGK-U7-Tf6"/>
                                 </connections>
                             </button>
@@ -239,6 +241,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="guideButtonTapped:" destination="d7g-t6-UMX" eventType="touchUpInside" id="17W-0a-d1S"/>
                                     <segue destination="iiH-6N-EZi" kind="presentation" modalPresentationStyle="fullScreen" id="nli-jx-6WU"/>
                                 </connections>
                             </button>
@@ -257,6 +260,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="getIsFinish:" destination="d7g-t6-UMX" eventType="touchUpInside" id="G2g-gF-VqV"/>
+                                    <action selector="startButtonPressed:" destination="d7g-t6-UMX" eventType="touchUpInside" id="SOO-s8-EO3"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hHj-pP-Hlf">
@@ -269,6 +273,7 @@
                                     </preferredSymbolConfiguration>
                                 </state>
                                 <connections>
+                                    <action selector="usernameButtonTapped:" destination="d7g-t6-UMX" eventType="touchUpInside" id="wCH-0S-bHt"/>
                                     <segue destination="qLN-sv-1O5" kind="presentation" modalPresentationStyle="fullScreen" id="nXZ-Tj-uPv"/>
                                 </connections>
                             </button>
@@ -353,7 +358,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="closeGuide:" destination="iiH-6N-EZi" eventType="touchUpInside" id="2Vn-Pg-IoF"/>
+                                    <action selector="closeGuide:" destination="iiH-6N-EZi" eventType="touchUpInside" id="roA-Mj-oAu"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -526,6 +531,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="nextButtonTapped:" destination="84a-rU-kNd" eventType="touchUpInside" id="kXp-eB-DhX"/>
                                     <segue destination="xS4-qk-oIT" kind="presentation" modalPresentationStyle="fullScreen" id="9ml-UV-Htw"/>
                                 </connections>
                             </button>
@@ -984,7 +990,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WhT-Pf-XBQ">
-                                <rect key="frame" x="478" y="350" width="240" height="240"/>
+                                <rect key="frame" x="477" y="362" width="240" height="240"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -1195,8 +1201,8 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                 <rect key="frame" x="0.0" y="315" width="1194" height="522"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apple" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cmP-Nq-hcH">
-                                <rect key="frame" x="300" y="230" width="600" height="72"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cmP-Nq-hcH">
+                                <rect key="frame" x="600" y="230" width="0.0" height="0.0"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="60"/>
                                 <color key="textColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1222,10 +1228,13 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                     <segue destination="BnN-NG-d2s" kind="presentation" modalPresentationStyle="fullScreen" id="PkE-Fx-Sc4"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iID-oo-nDh">
-                                <rect key="frame" x="477" y="350" width="240" height="240"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" text="🍎" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="TN1-7U-p9v">
+                                <rect key="frame" x="477" y="340" width="242" height="239"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="200"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qpw-gA-xEF">
                                 <rect key="frame" x="140" y="648" width="350" height="110"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1270,6 +1279,11 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                 <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
+                                    <view alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OA7-qS-aEv">
+                                        <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9x2-de-Qlo">
                                         <rect key="frame" x="356" y="174" width="480" height="484"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1323,11 +1337,6 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OA7-qS-aEv">
-                                        <rect key="frame" x="0.0" y="-1" width="1194" height="834"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </view>
                                 </subviews>
                             </view>
                         </subviews>
@@ -1339,7 +1348,6 @@ Parents are expected to participate in monitoring and limiting the time that chi
                         <outlet property="playAudio" destination="qpw-gA-xEF" id="EM2-hb-qJz"/>
                         <outlet property="sayIt" destination="cmP-Nq-hcH" id="1YX-JY-H41"/>
                         <outlet property="tryagainNotification" destination="Ldz-H0-mPQ" id="oir-Am-Py6"/>
-                        <outlet property="wordHint" destination="iID-oo-nDh" id="CZU-aQ-ahq"/>
                         <outlet property="wordRecognize" destination="QiM-Oc-gH3" id="Uac-G7-J8s"/>
                     </connections>
                 </viewController>
@@ -1504,9 +1512,9 @@ Parents are expected to participate in monitoring and limiting the time that chi
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="294-gv-xQz"/>
+        <segue reference="6dA-gq-VYn"/>
         <segue reference="1ZQ-O7-5Ap"/>
-        <segue reference="PkE-Fx-Sc4"/>
+        <segue reference="eGu-f1-vgZ"/>
         <segue reference="A9y-8I-ua6"/>
         <segue reference="WGK-U7-Tf6"/>
     </inferredMetricsTieBreakers>
@@ -1529,5 +1537,8 @@ Parents are expected to participate in monitoring and limiting the time that chi
         <image name="play.circle" catalog="system" width="128" height="121"/>
         <image name="play.fill" catalog="system" width="116" height="128"/>
         <image name="speaker" catalog="system" width="128" height="124"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
