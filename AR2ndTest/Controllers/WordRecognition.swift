@@ -144,6 +144,7 @@ class WordRecognition: UIViewController {
         audioEngine.prepare()
         try audioEngine.start()
         
+        //test
     }
     
     func checkingWord(){
