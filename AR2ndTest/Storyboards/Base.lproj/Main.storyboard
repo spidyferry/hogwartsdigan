@@ -144,6 +144,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="closeGuide:" destination="iiH-6N-EZi" eventType="touchUpInside" id="UeF-eK-Fyf"/>
+                                    <action selector="okButtonTapped:" destination="qLN-sv-1O5" eventType="touchUpInside" id="KPI-31-aue"/>
                                     <segue destination="d7g-t6-UMX" kind="presentation" modalPresentationStyle="fullScreen" id="WGK-U7-Tf6"/>
                                 </connections>
                             </button>
@@ -240,6 +241,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="guideButtonTapped:" destination="d7g-t6-UMX" eventType="touchUpInside" id="17W-0a-d1S"/>
                                     <segue destination="iiH-6N-EZi" kind="presentation" modalPresentationStyle="fullScreen" id="nli-jx-6WU"/>
                                 </connections>
                             </button>
@@ -258,6 +260,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="getIsFinish:" destination="d7g-t6-UMX" eventType="touchUpInside" id="G2g-gF-VqV"/>
+                                    <action selector="startButtonPressed:" destination="d7g-t6-UMX" eventType="touchUpInside" id="SOO-s8-EO3"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hHj-pP-Hlf">
@@ -270,6 +273,7 @@
                                     </preferredSymbolConfiguration>
                                 </state>
                                 <connections>
+                                    <action selector="usernameButtonTapped:" destination="d7g-t6-UMX" eventType="touchUpInside" id="wCH-0S-bHt"/>
                                     <segue destination="qLN-sv-1O5" kind="presentation" modalPresentationStyle="fullScreen" id="nXZ-Tj-uPv"/>
                                 </connections>
                             </button>
@@ -354,7 +358,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="closeGuide:" destination="iiH-6N-EZi" eventType="touchUpInside" id="2Vn-Pg-IoF"/>
+                                    <action selector="closeGuide:" destination="iiH-6N-EZi" eventType="touchUpInside" id="roA-Mj-oAu"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -527,6 +531,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="nextButtonTapped:" destination="84a-rU-kNd" eventType="touchUpInside" id="kXp-eB-DhX"/>
                                     <segue destination="xS4-qk-oIT" kind="presentation" modalPresentationStyle="fullScreen" id="9ml-UV-Htw"/>
                                 </connections>
                             </button>
@@ -1509,7 +1514,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
     <inferredMetricsTieBreakers>
         <segue reference="6dA-gq-VYn"/>
         <segue reference="1ZQ-O7-5Ap"/>
-        <segue reference="hde-os-pJd"/>
+        <segue reference="eGu-f1-vgZ"/>
         <segue reference="A9y-8I-ua6"/>
         <segue reference="WGK-U7-Tf6"/>
     </inferredMetricsTieBreakers>
