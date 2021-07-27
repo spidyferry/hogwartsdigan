@@ -6,8 +6,10 @@
 //
 
 import UIKit
+import CoreData
 
 class ChapterPage: UIViewController {
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
     // Card Chapter
     var cardChapterLeft: UIButton!
@@ -18,6 +20,8 @@ class ChapterPage: UIViewController {
         
     var page: Pages
     var chapter : [Chapter] = Chapter.allCases
+    
+    private var alphabetList = [AlphabetTable]()
     
     init(with page: Pages) {
         self.page = page
@@ -32,26 +36,7 @@ class ChapterPage: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Card Chapter Left
-        cardChapterLeft = UIButton(frame: CGRect(x: 6, y: 10, width: 280, height: 450))
-        cardChapterLeft?.setImage(UIImage(named: "CardChapter\(page.chapterStart)"), for: .normal)
-        cardChapterLeft.tag = page.chapterStart
-        cardChapterLeft.addTarget(self, action: #selector(buttonChapter), for: .touchUpInside)
-        self.view.addSubview(cardChapterLeft!)
-        
-        // Card Chapter Middle
-        cardChapterMiddle = UIButton(frame: CGRect(x: 310, y: 10, width: 280, height: 450))
-        cardChapterMiddle?.setImage(UIImage(named: "CardChapter\(page.chapterStart + 1)"), for: .normal)
-        cardChapterMiddle.tag = page.chapterStart + 1
-        cardChapterMiddle.addTarget(self, action: #selector(buttonChapter), for: .touchUpInside)
-        self.view.addSubview(cardChapterMiddle!)
-        
-        // Card Chapter Right
-        cardChapterRight = UIButton(frame: CGRect(x: 613, y: 10, width: 280, height: 450))
-        cardChapterRight?.setImage(UIImage(named: "CardChapter\(page.chapterStart + 2)"), for: .normal)
-        cardChapterRight.tag = page.chapterStart + 2
-        cardChapterRight.addTarget(self, action: #selector(buttonChapter), for: .touchUpInside)
-        self.view.addSubview(cardChapterRight!)
+        self.showChapterCard()
     }
     
     @objc func buttonChapter(sender: UIButton) {
@@ -64,5 +49,67 @@ class ChapterPage: UIViewController {
         ChapterStartVC.modalPresentationStyle = .fullScreen
         ChapterStartVC.titleChapter = chapter[index - 1].title
         self.present(ChapterStartVC, animated: true, completion: nil)
+    }
+    
+    func showChapterCard() {
+        // Card Chapter Left
+        let chapterLeftDone     = self.fetchCompleted(index: page.chapterStart - 1)
+        let chapterLeftTitle    = "CardChapter\(page.chapterStart)\(chapterLeftDone ? "Done" : "")"
+        
+        cardChapterLeft = UIButton(frame: CGRect(x: 6, y: 10, width: 280, height: 450))
+        cardChapterLeft?.setImage(UIImage(named: chapterLeftTitle), for: .normal)
+        cardChapterLeft.tag = page.chapterStart
+        cardChapterLeft.addTarget(self, action: #selector(buttonChapter), for: .touchUpInside)
+        self.view.addSubview(cardChapterLeft!)
+        
+        // Card Chapter Middle
+        let chapterMiddleDone     = self.fetchCompleted(index: page.chapterStart)
+        let chapterMiddleTitle    = "CardChapter\(page.chapterStart + 1)\(chapterMiddleDone ? "Done" : "")"
+        
+        cardChapterMiddle = UIButton(frame: CGRect(x: 310, y: 10, width: 280, height: 450))
+        cardChapterMiddle?.setImage(UIImage(named: chapterMiddleTitle), for: .normal)
+        cardChapterMiddle.tag = page.chapterStart + 1
+        cardChapterMiddle.addTarget(self, action: #selector(buttonChapter), for: .touchUpInside)
+        self.view.addSubview(cardChapterMiddle!)
+        
+        // Card Chapter Right
+        let chapterRightDone     = self.fetchCompleted(index: page.chapterStart + 1)
+        let chapterRightTitle    = "CardChapter\(page.chapterStart + 2)\(chapterRightDone ? "Done" : "")"
+        
+        cardChapterRight = UIButton(frame: CGRect(x: 613, y: 10, width: 280, height: 450))
+        cardChapterRight?.setImage(UIImage(named: chapterRightTitle), for: .normal)
+        cardChapterRight.tag = page.chapterStart + 2
+        cardChapterRight.addTarget(self, action: #selector(buttonChapter), for: .touchUpInside)
+        self.view.addSubview(cardChapterRight!)
+    }
+    
+    func fetchCompleted(index: Int) -> Bool {
+        do {
+            let request = AlphabetTable.fetchRequest() as NSFetchRequest<AlphabetTable>
+            
+            let alphabets       = chapter[index].alphabets
+            let predicate       = NSPredicate(format: "alphabet IN %@", alphabets)
+            request.predicate   = predicate
+            
+            let alphabetList = try context.fetch(request)
+
+            var isDone: Bool = false
+            var totalInChapter: Int = 0
+            for item in alphabetList {
+                if item.isCompleted == true && totalInChapter <= alphabets.count {
+                    totalInChapter += 1
+                    
+                    if totalInChapter == alphabets.count {
+                        isDone = true
+                    }
+                }
+            }
+            
+            return isDone
+        } catch {
+            print("Failed to fetch completed data: \(error.localizedDescription)")
+            
+            return false
+        }
     }
 }

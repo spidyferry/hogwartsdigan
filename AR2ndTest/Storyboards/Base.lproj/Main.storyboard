@@ -163,29 +163,29 @@
                                         <state key="normal" title="Button" image="BadgeTheExplorer"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j64-hk-rFA">
-                                        <rect key="frame" x="729" y="27" width="101" height="148"/>
+                                        <rect key="frame" x="719" y="27" width="120" height="148"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button" image="BadgeTheExplorer"/>
+                                        <state key="normal" title="Button" image="BadgeTheAdventurer"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6hA-7M-TPr">
                                         <rect key="frame" x="407" y="213" width="101" height="148"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button" image="BadgeTheExplorer"/>
+                                        <state key="normal" title="Button" image="BadgeTheExpert"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5eO-Zc-Ndv">
                                         <rect key="frame" x="89" y="213" width="101" height="148"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button" image="BadgeTheExplorer"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VPk-GS-z43">
-                                        <rect key="frame" x="729" y="213" width="101" height="148"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button" image="BadgeTheExplorer"/>
+                                        <state key="normal" title="Button" image="BadgeTheAchiever"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wf4-eE-9Bi">
                                         <rect key="frame" x="89" y="27" width="101" height="148"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button" image="BadgeNewLearner"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VPk-GS-z43">
+                                        <rect key="frame" x="691" y="213" width="229" height="148"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button" image="BadgeTheAppleBethMaster"/>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -200,6 +200,14 @@
                         <color key="backgroundColor" red="0.99932080509999999" green="1" blue="0.88625890019999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <navigationItem key="navigationItem" id="7hR-5r-HrL"/>
+                    <connections>
+                        <outlet property="newLearnerBadge" destination="wf4-eE-9Bi" id="oMI-sl-6zV"/>
+                        <outlet property="theAchieverBadge" destination="5eO-Zc-Ndv" id="EzL-A1-dki"/>
+                        <outlet property="theAdventureBadge" destination="j64-hk-rFA" id="Euq-KZ-FaV"/>
+                        <outlet property="theExpertBadge" destination="6hA-7M-TPr" id="j0b-R9-PEz"/>
+                        <outlet property="theExplorerBadge" destination="7ln-KX-z8g" id="Max-ju-xh8"/>
+                        <outlet property="theMasterBadge" destination="VPk-GS-z43" id="JGH-lL-m5h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OcX-zv-Wgy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1505,6 +1513,10 @@ Parents are expected to participate in monitoring and limiting the time that chi
     <resources>
         <image name="AlphabetBox" width="296" height="277"/>
         <image name="BadgeNewLearner" width="102" height="148"/>
+        <image name="BadgeTheAchiever" width="103" height="149"/>
+        <image name="BadgeTheAdventurer" width="122" height="148"/>
+        <image name="BadgeTheAppleBethMaster" width="175" height="148"/>
+        <image name="BadgeTheExpert" width="102" height="148"/>
         <image name="BadgeTheExplorer" width="101" height="148"/>
         <image name="GirlDidIt" width="307" height="379"/>
         <image name="MeetDuckyBg" width="1265" height="418"/>

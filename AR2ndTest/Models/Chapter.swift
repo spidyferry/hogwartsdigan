@@ -41,6 +41,29 @@ enum Chapter: CaseIterable {
         }
     }
     
+    var alphabets: [String] {
+        switch self {
+            case .chapter1:
+                return ["A", "B", "C"]
+            case .chapter2:
+                return ["D", "E", "F"]
+            case .chapter3:
+                return ["H", "I", "J"]
+            case .chapter4:
+                return ["K", "L", "M"]
+            case .chapter5:
+                return ["N", "O", "P"]
+            case .chapter6:
+                return ["Q", "R", "S"]
+            case .chapter7:
+                return ["T", "U", "V"]
+            case .chapter8:
+                return ["W", "X", "Y"]
+            case .chapter9:
+                return ["Y", "Z"]
+        }
+    }
+    
     var index: Int {
         switch self {
             case .chapter1:

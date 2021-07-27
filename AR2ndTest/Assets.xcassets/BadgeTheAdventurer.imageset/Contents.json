@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Badge - The Adventurer 2@1x.png",
+      "filename" : "Badge - The Adventurer@1x.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Badge - The Adventurer 2@2x.png",
+      "filename" : "Badge - The Adventurer@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Badge - The Adventurer 2@3x.png",
+      "filename" : "Badge - The Adventurer@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
