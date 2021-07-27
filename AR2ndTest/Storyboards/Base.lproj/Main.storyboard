@@ -1201,8 +1201,8 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                 <rect key="frame" x="0.0" y="315" width="1194" height="522"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cmP-Nq-hcH">
-                                <rect key="frame" x="600" y="230" width="0.0" height="0.0"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apple" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cmP-Nq-hcH">
+                                <rect key="frame" x="300" y="230" width="600" height="72"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="60"/>
                                 <color key="textColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1512,9 +1512,9 @@ Parents are expected to participate in monitoring and limiting the time that chi
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="6dA-gq-VYn"/>
+        <segue reference="294-gv-xQz"/>
         <segue reference="1ZQ-O7-5Ap"/>
-        <segue reference="eGu-f1-vgZ"/>
+        <segue reference="PkE-Fx-Sc4"/>
         <segue reference="A9y-8I-ua6"/>
         <segue reference="WGK-U7-Tf6"/>
     </inferredMetricsTieBreakers>

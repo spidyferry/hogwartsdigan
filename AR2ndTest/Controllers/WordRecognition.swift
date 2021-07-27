@@ -18,6 +18,7 @@ class WordRecognition: UIViewController {
     @IBOutlet weak var wordRecognize: UIButton!
     @IBOutlet weak var sayIt: UILabel!
     @IBOutlet weak var tryagainNotification: UIView!
+    @IBOutlet weak var wordHint: UIImageView!
     
     var audioPlayer:AVAudioPlayer!
     
@@ -34,8 +35,9 @@ class WordRecognition: UIViewController {
         wordSupposedToBe = getValueForRecognition(alphabetName: currentAlphabet)
         print(wordSupposedToBe)
         prepareAudioPlayer()
+        print(wordSupposedToBe)
         sayIt.text = wordSupposedToBe
-        // Do any additional setup after loading the view.
+        wordHint.image = UIImage(named: "A")
     }
     
     func getValueForRecognition(alphabetName:String) -> String{
@@ -142,6 +144,7 @@ class WordRecognition: UIViewController {
         audioEngine.prepare()
         try audioEngine.start()
         
+        //test
     }
     
     func checkingWord(){
