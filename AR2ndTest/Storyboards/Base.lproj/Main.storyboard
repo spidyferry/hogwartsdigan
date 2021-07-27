@@ -144,6 +144,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="closeGuide:" destination="iiH-6N-EZi" eventType="touchUpInside" id="UeF-eK-Fyf"/>
+                                    <action selector="okButtonTapped:" destination="qLN-sv-1O5" eventType="touchUpInside" id="tgw-Bc-C53"/>
                                     <segue destination="d7g-t6-UMX" kind="presentation" modalPresentationStyle="fullScreen" id="WGK-U7-Tf6"/>
                                 </connections>
                             </button>
@@ -240,6 +241,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="guideButtonTapped:" destination="d7g-t6-UMX" eventType="touchUpInside" id="Iyo-MA-oOb"/>
                                     <segue destination="iiH-6N-EZi" kind="presentation" modalPresentationStyle="fullScreen" id="nli-jx-6WU"/>
                                 </connections>
                             </button>
@@ -258,6 +260,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="getIsFinish:" destination="d7g-t6-UMX" eventType="touchUpInside" id="G2g-gF-VqV"/>
+                                    <action selector="startButtonPressed:" destination="d7g-t6-UMX" eventType="touchUpInside" id="4LN-PO-thV"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hHj-pP-Hlf">
@@ -270,6 +273,7 @@
                                     </preferredSymbolConfiguration>
                                 </state>
                                 <connections>
+                                    <action selector="usernameButtonTapped:" destination="d7g-t6-UMX" eventType="touchUpInside" id="EOW-YE-tyc"/>
                                     <segue destination="qLN-sv-1O5" kind="presentation" modalPresentationStyle="fullScreen" id="nXZ-Tj-uPv"/>
                                 </connections>
                             </button>
@@ -1509,9 +1513,9 @@ Parents are expected to participate in monitoring and limiting the time that chi
     <inferredMetricsTieBreakers>
         <segue reference="294-gv-xQz"/>
         <segue reference="PMj-bG-2xs"/>
-        <segue reference="d2T-ed-V2o"/>
+        <segue reference="PkE-Fx-Sc4"/>
         <segue reference="A9y-8I-ua6"/>
-        <segue reference="WGK-U7-Tf6"/>
+        <segue reference="D82-pD-idJ"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="AlphabetBox" width="296" height="277"/>

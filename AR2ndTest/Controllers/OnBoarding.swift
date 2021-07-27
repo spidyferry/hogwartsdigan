@@ -38,6 +38,7 @@ class OnBoarding: UIViewController {
         audioPlayer.prepareToPlay()
         audioPlayer.numberOfLoops = -1
         audioPlayer.play()
+        audioPlayer.volume = 0.5
         
         defaults.set(alphabetCompleted, forKey: "alphabetCompleted")
     }
