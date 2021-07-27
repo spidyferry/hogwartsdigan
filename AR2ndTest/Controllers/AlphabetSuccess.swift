@@ -6,14 +6,23 @@
 //
 
 import UIKit
+import AVFoundation
 
 class AlphabetSuccess: UIViewController {
 
+    var audioPlayer = AVAudioPlayer()
     @IBOutlet weak var bodyText: UITextView!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var whiteTransBg: UIView!
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        
+        let AssortedMusics = NSURL(fileURLWithPath: Bundle.main.path(forResource: "s_bgm", ofType: "wav")!)
+        audioPlayer = try! AVAudioPlayer(contentsOf: AssortedMusics as URL)
+        audioPlayer.prepareToPlay()
+        audioPlayer.numberOfLoops = -1
+        audioPlayer.play()
 
         let alphabetSuccess:String = UserDefaults.standard.string(forKey: "alphabetSuccess")!
         let line = self.loadtext(file: alphabetSuccess)
