@@ -17,7 +17,7 @@ class OnBoarding: UIViewController {
     let defaults = UserDefaults.standard
     let theAlphabets = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
     let theWords = ["Apple", "Basket", "Chocolate", "Duck", "Ear", "Feather", "Girrafe", "Hen", "Ice Cream", "Jelly", "Kiwi", "Lion", "Mango", "Nib", "Orange", "Penguin", "Queen", "Rooster", "Star", "Tree", "Umbrella", "Vase", "Well", "Xylophone", "Yoghurt", "Zebra"]
-    let alphaRec = ["Hey", "The B", "The C", "The D", "The E", "The F", "The G", "The H", "The I", "The J", "The K", "The L", "The M", "The N", "The O", "The P", "The Q", "The R", "The S", "The T", "The U", "The V", "The W", "The X", "The Y", "The Z"]
+    let alphaRec = ["Hey", "B", "See", "D", "E", "F", "G", "Age", "Hi", "J", "OK", "L", "I am", "And", "Oh", "P", "Cue", "Are", "Yes", "T", "You", "Fee", "W", "The X", "Why", "Z"]
     let WRec = ["Apple", "Basket", "Chocolate", "Duck", "Ear", "Feather", "Girrafe", "Hen", "Ice Cream", "Jelly", "Kiwi", "Lion", "Mango", "Nib", "Orange", "Penguin", "Queen", "Rooster", "Star", "Tree", "Umbrella", "Vase", "Well", "Xylophone", "Yoghurt", "Zebra"]
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext

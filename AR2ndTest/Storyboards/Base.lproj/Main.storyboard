@@ -74,6 +74,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="cancelChapter:" destination="1i0-Jg-gpf" eventType="touchUpInside" id="RoT-A6-iUk"/>
+                                    <segue destination="W0c-Rr-nTu" kind="presentation" modalPresentationStyle="fullScreen" id="A9y-8I-ua6"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The ABC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="58m-xA-r8M">
@@ -143,7 +144,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="closeGuide:" destination="iiH-6N-EZi" eventType="touchUpInside" id="UeF-eK-Fyf"/>
-                                    <action selector="okButtonTapped:" destination="qLN-sv-1O5" eventType="touchUpInside" id="0MJ-kq-hth"/>
                                     <segue destination="d7g-t6-UMX" kind="presentation" modalPresentationStyle="fullScreen" id="WGK-U7-Tf6"/>
                                 </connections>
                             </button>
@@ -240,7 +240,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="guideButtonTapped:" destination="d7g-t6-UMX" eventType="touchUpInside" id="Y5h-ie-3fb"/>
                                     <segue destination="iiH-6N-EZi" kind="presentation" modalPresentationStyle="fullScreen" id="nli-jx-6WU"/>
                                 </connections>
                             </button>
@@ -259,7 +258,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="getIsFinish:" destination="d7g-t6-UMX" eventType="touchUpInside" id="G2g-gF-VqV"/>
-                                    <action selector="startButtonPressed:" destination="d7g-t6-UMX" eventType="touchUpInside" id="Nxs-Sh-DXp"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hHj-pP-Hlf">
@@ -272,7 +270,6 @@
                                     </preferredSymbolConfiguration>
                                 </state>
                                 <connections>
-                                    <action selector="usernameButtonTapped:" destination="d7g-t6-UMX" eventType="touchUpInside" id="B0U-R0-HZz"/>
                                     <segue destination="qLN-sv-1O5" kind="presentation" modalPresentationStyle="fullScreen" id="nXZ-Tj-uPv"/>
                                 </connections>
                             </button>
@@ -530,7 +527,6 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="nextButtonTapped:" destination="84a-rU-kNd" eventType="touchUpInside" id="YfD-oc-L60"/>
                                     <segue destination="xS4-qk-oIT" kind="presentation" modalPresentationStyle="fullScreen" id="9ml-UV-Htw"/>
                                 </connections>
                             </button>
@@ -1036,8 +1032,8 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                 <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="60"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The ABC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iba-PR-0kb">
-                                <rect key="frame" x="359" y="82" width="478" height="144"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iba-PR-0kb">
+                                <rect key="frame" x="598" y="82" width="0.0" height="0.0"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="120"/>
                                 <color key="textColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1088,6 +1084,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
                         <color key="backgroundColor" red="0.9994472861" green="1" blue="0.89802503590000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <connections>
+                        <outlet property="alphabetTitle" destination="Iba-PR-0kb" id="BeX-D1-TnG"/>
                         <outlet property="bodyText" destination="IRD-hc-orK" id="FAQ-z5-bwB"/>
                         <outlet property="nextButton" destination="ePK-L6-LaI" id="wWG-aZ-7fj"/>
                         <outlet property="whiteTransBG" destination="bh9-uB-6SO" id="pUE-rt-VaD"/>
@@ -1510,10 +1507,10 @@ Parents are expected to participate in monitoring and limiting the time that chi
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="nXZ-Tj-uPv"/>
         <segue reference="294-gv-xQz"/>
-        <segue reference="1ZQ-O7-5Ap"/>
-        <segue reference="Alw-4D-88y"/>
+        <segue reference="PMj-bG-2xs"/>
+        <segue reference="d2T-ed-V2o"/>
+        <segue reference="A9y-8I-ua6"/>
         <segue reference="WGK-U7-Tf6"/>
     </inferredMetricsTieBreakers>
     <resources>

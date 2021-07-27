@@ -9,12 +9,14 @@ import UIKit
 
 class ARWordMission: UIViewController {
 
+    @IBOutlet weak var alphabetTitle: UILabel!
     @IBOutlet weak var whiteTransBG: UIView!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var bodyText: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let currentAlphabet = UserDefaults.standard.string(forKey: "currentAlphabet")!
+        alphabetTitle.text = "The \(currentAlphabet)"
         let ARMission:String = UserDefaults.standard.string(forKey: "ARMission")!
         let line = self.loadtext(file: ARMission)
         let sentence = line.split(separator: ";").map {String($0)}

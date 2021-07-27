@@ -12,19 +12,21 @@ class AlphabetFinish: UIViewController {
 
     let context         = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     let defaults        = UserDefaults.standard
-    let currentAlphabet = UserDefaults.standard.string(forKey: "currentAlphabet")!
+    var currentAlphabet = UserDefaults.standard.string(forKey: "currentAlphabet")!
     
     @IBOutlet weak var finishButton: UIButton!
+    var alphabetToRecognize:[AlphabetTable]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        currentAlphabet = UserDefaults.standard.string(forKey: "currentAlphabet")!
     }
     
     @IBAction func finishPerAlphabet(_ sender: Any) {
         self.setToComplete()
         
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let SelectChapterVC = storyBoard.instantiateViewController(withIdentifier: "SelectChapter") as! SelectChapter
+        let SelectChapterVC = storyBoard.instantiateViewController(withIdentifier: "ChapterStartConfirmation") as! ChapterStartConfirmation
         SelectChapterVC.modalPresentationStyle = .fullScreen
         self.present(SelectChapterVC, animated: false, completion: nil)
     }
@@ -53,4 +55,5 @@ class AlphabetFinish: UIViewController {
             print("Failed to set complete: \(error.localizedDescription)")
         }
     }
+
 }

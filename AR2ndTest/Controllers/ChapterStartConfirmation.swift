@@ -41,58 +41,63 @@ class ChapterStartConfirmation: UIViewController{
         let selectedChapter = UserDefaults.standard.integer(forKey: "chapterSelected")
         switch selectedChapter{
         case 1 :
-            let theAIsComplete = fetchAlphabet(alphabetName: "A")
-            let theBIsComplete = fetchAlphabet(alphabetName: "B")
-            let theCIsComplete = fetchAlphabet(alphabetName: "C")
-            
-            if (theAIsComplete == false && theBIsComplete == false && theCIsComplete == false){
-                alphabet = "A"
-                defaults.set("A", forKey: "currentAlphabet")
-                defaults.set("AIntro", forKey: "alphabetIntro")
-                defaults.set("ASuccess", forKey: "alphabetSuccess")
-                defaults.set("AppleARMission", forKey: "ARMission")
-                defaults.set("AppleARSuccess", forKey: "ARSuccess")
-                defaults.set("AppleSuccess", forKey: "wordSuccess")
-                
-            }else if (theAIsComplete == true && theBIsComplete == false && theCIsComplete == false){
-                alphabet = "The B"
-            }else if (theAIsComplete == true && theBIsComplete == true && theCIsComplete == false){
-                alphabet = "The C"
-            }else{
-                instructionText.text = "Do you want to repeat?"
-            }
+            prepareDataforCurrentChapter(first: "A", second: "B", third: "C")
         case 2 :
-            let theDIsComplete = fetchAlphabet(alphabetName: "The D")
-            print(theDIsComplete)
+            prepareDataforCurrentChapter(first: "D", second: "E", third: "F")
         case 3 :
-            let theGIsComplete = fetchAlphabet(alphabetName: "The G")
-            print(theGIsComplete)
+            prepareDataforCurrentChapter(first: "G", second: "H", third: "I")
         case 4 :
-            let theJIsComplete = fetchAlphabet(alphabetName: "The J")
-            print(theJIsComplete)
+            prepareDataforCurrentChapter(first: "J", second: "K", third: "L")
         case 5 :
-            let theMIsComplete = fetchAlphabet(alphabetName: "The M")
-            print(theMIsComplete)
+            prepareDataforCurrentChapter(first: "M", second: "N", third: "O")
         case 6 :
-            let thePIsComplete = fetchAlphabet(alphabetName: "The P")
-            print(thePIsComplete)
+            prepareDataforCurrentChapter(first: "P", second: "Q", third: "R")
         case 7 :
-            let theSIsComplete = fetchAlphabet(alphabetName: "The S")
-            print(theSIsComplete)
+            prepareDataforCurrentChapter(first: "S", second: "T", third: "U")
         case 8 :
-            let theVIsComplete = fetchAlphabet(alphabetName: "The V")
-            print(theVIsComplete)
+            prepareDataforCurrentChapter(first: "V", second: "W", third: "X")
         case 9 :
-            let theYIsComplete = fetchAlphabet(alphabetName: "The Y")
-            print(theYIsComplete)
+            prepareDataforCurrentChapter(first: "Y", second: "Z", third: "Z")
             
         default:
             print("default")
         }
     }
-
-    override func viewWillAppear(_ animated: Bool) {
-
+    
+    func prepareDataforCurrentChapter (first:String, second:String, third: String){
+        let firstIsComplete = fetchAlphabet(alphabetName: first)
+        let secondIsComplete = fetchAlphabet(alphabetName: second)
+        let thirdIsComplete = fetchAlphabet(alphabetName: third)
+        
+        if (firstIsComplete == false && secondIsComplete == false && thirdIsComplete == false){
+            alphabet = first
+            defaults.set(first, forKey: "currentAlphabet")
+            defaults.set("\(first)alphabetIntro", forKey: "alphabetIntro")
+            defaults.set("\(first)alphabetSuccess", forKey: "alphabetSuccess")
+            defaults.set("\(first)ARMission", forKey: "ARMission")
+            defaults.set("\(first)ARSuccess", forKey: "ARSuccess")
+            defaults.set("\(first)wordSuccess", forKey: "wordSuccess")
+        }else if (firstIsComplete == true && secondIsComplete == false && thirdIsComplete == false){
+            alphabet = second
+            defaults.set(second, forKey: "currentAlphabet")
+            defaults.set("\(second)alphabetIntro", forKey: "alphabetIntro")
+            defaults.set("\(second)alphabetSuccess", forKey: "alphabetSuccess")
+            defaults.set("\(second)ARMission", forKey: "ARMission")
+            defaults.set("\(second)ARSuccess", forKey: "ARSuccess")
+            defaults.set("\(second)wordSuccess", forKey: "wordSuccess")
+            instructionText.text = "Do you want to continue?"
+        }else if (firstIsComplete == true && secondIsComplete == true && thirdIsComplete == false){
+            alphabet = third
+            defaults.set(third, forKey: "currentAlphabet")
+            defaults.set("\(third)alphabetIntro", forKey: "alphabetIntro")
+            defaults.set("\(third)alphabetSuccess", forKey: "alphabetSuccess")
+            defaults.set("\(third)ARMission", forKey: "ARMission")
+            defaults.set("\(third)ARSuccess", forKey: "ARSuccess")
+            defaults.set("\(third)wordSuccess", forKey: "wordSuccess")
+            instructionText.text = "Do you want to continue?"
+        }else{
+            instructionText.text = "Do you want to repeat?"
+        }
     }
     
     func fetchAlphabet(alphabetName:String) -> Bool{
@@ -118,7 +123,7 @@ class ChapterStartConfirmation: UIViewController{
     }
     @IBAction func cancelChapter(_ sender: Any) {
         buttonNoPressed.play()
-        dismiss(animated: true, completion: nil)
+//        dismiss(animated: true, completion: nil)
     }
 
 }
