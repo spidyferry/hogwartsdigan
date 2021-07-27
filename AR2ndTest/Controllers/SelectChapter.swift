@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import AVFoundation
 
 class SelectChapter: UIViewController {
+    
+    var buttonPressed = AVAudioPlayer()
     @IBOutlet weak var previousButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     
@@ -20,6 +23,11 @@ class SelectChapter: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        do {
+            buttonPressed = try AVAudioPlayer (contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource : "s_butt_pressed", ofType: "mp3")!))
+        } catch {
+            print(error)
+        }
         
         self.setupPageController()
         self.previousButton.isHidden = true
@@ -43,6 +51,7 @@ class SelectChapter: UIViewController {
     }
     
     @IBAction func previousButtonTapped(_ sender: Any) {
+        buttonPressed.play()
         if self.currentPage != 0 {
             self.currentPage -= 1
             
@@ -51,6 +60,7 @@ class SelectChapter: UIViewController {
     }
     
     @IBAction func nextButtonTapped(_ sender: Any) {
+        buttonPressed.play()
         if self.currentPage < self.pages.count - 1 {
             self.currentPage += 1
             

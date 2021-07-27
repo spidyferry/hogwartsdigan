@@ -7,8 +7,11 @@
 
 import UIKit
 import CoreData
+import AVFoundation
 
 class Profile: UIViewController {
+    
+    var okButtonTapped = AVAudioPlayer()
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     @IBOutlet weak var newLearnerBadge: UIButton!
@@ -22,7 +25,11 @@ class Profile: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        do {
+            okButtonTapped = try AVAudioPlayer (contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource : "s_butt_pressed", ofType: "mp3")!))
+        } catch {
+            print(error)
+        }
         self.fetchCompleted()
     }
     
@@ -79,5 +86,10 @@ class Profile: UIViewController {
             theMasterBadge.setImage(UIImage(named: "BadgeTheAppleBethMasterDone"), for: .normal)
         }
         
+    }
+    
+    
+    @IBAction func okButtonTapped(_ sender: Any) {
+        okButtonTapped.play()
     }
 }

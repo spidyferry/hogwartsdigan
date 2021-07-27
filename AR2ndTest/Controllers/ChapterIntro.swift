@@ -6,9 +6,12 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ChapterIntro: UIViewController {
 
+    var buttonNextPressed = AVAudioPlayer()
+    var buttonPreviousPressed = AVAudioPlayer()
     @IBOutlet weak var alphabetTitle: UILabel!
     @IBOutlet weak var bodyText: UITextView!
     
@@ -19,6 +22,15 @@ class ChapterIntro: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+//        Audio Button
+        do {
+            buttonNextPressed = try AVAudioPlayer (contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource : "s_butt_pressed", ofType: "mp3")!))
+            buttonPreviousPressed = try AVAudioPlayer (contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource : "s_butt_paused", ofType: "mp3")!))
+        } catch {
+            print(error)
+        }
+        
+        
         let alphabetIntro:String = UserDefaults.standard.string(forKey: "alphabetIntro")!
         let line = self.loadtext(file: alphabetIntro)
         let sentence = line.split(separator: ";").map {String($0)}
@@ -43,7 +55,15 @@ class ChapterIntro: UIViewController {
     }
 
     @IBAction func prevScreen(_ sender: Any) {
+//        audio button tapped
+        buttonPreviousPressed.play()
+        
         dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func nextButtonTapped(_ sender: Any) {
+//        audio button tapped
+        buttonNextPressed.play()
     }
     
     func loadtext(file:String) -> String{
