@@ -27,6 +27,8 @@ class AlphabetRecognition: UIViewController, SFSpeechRecognizerDelegate {
     @IBOutlet weak var sayIt: UILabel!
     @IBOutlet weak var playAudio: UIButton!
     @IBOutlet weak var recognizeAlphabet: UIButton!
+    @IBOutlet weak var recordShadow1: UIView!
+    @IBOutlet weak var recordShadow2: UIView!
     var soundPlayer : AVAudioPlayer!
     
     override func viewDidLoad() {
@@ -37,6 +39,13 @@ class AlphabetRecognition: UIViewController, SFSpeechRecognizerDelegate {
         print(alphabetSupposedToBe)
         speechRecognizer.delegate = self
         prepareAudioPlayer()
+        
+        recordShadow1.layer.cornerRadius = 20
+        recordShadow2.layer.cornerRadius = 20
+        
+        // Hide record shadow
+        self.recordShadow1.layer.opacity = 0
+        self.recordShadow2.layer.opacity = 0
     }
     
     private func startRecording() throws {
@@ -106,9 +115,12 @@ class AlphabetRecognition: UIViewController, SFSpeechRecognizerDelegate {
                 try startRecording()
                 
                 sayIt.isHidden = false
+                self.startRecordAnimation()
+
                 Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { timer in
                     self.audioEngine.stop()
                     self.recognitionRequest?.endAudio()
+                    self.stopRecordAnimation()
                 }
                 
             } catch {
@@ -143,6 +155,7 @@ class AlphabetRecognition: UIViewController, SFSpeechRecognizerDelegate {
             MainScreen.modalPresentationStyle = .fullScreen
             self.present(MainScreen, animated: false, completion: nil)
         } else {
+            self.stopRecordAnimation()
             tryagainNotification.isHidden = false
         }
     }
@@ -165,4 +178,38 @@ class AlphabetRecognition: UIViewController, SFSpeechRecognizerDelegate {
         return alphabetToRecognize![0].alphabetRec!
     }
     
+    func startRecordAnimation() {
+        UIView.animateKeyframes(withDuration: 1.0, delay: 0, options: [.repeat]) {
+            // 1st Keyframe
+            UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 0.0) {
+                self.recognizeAlphabet.backgroundColor = UIColor(red: 25.0/255.0, green: 67.0/255.0, blue: 80/255.0, alpha: 1)
+            }
+
+            // 2nd Keyframe
+            UIView.addKeyframe(withRelativeStartTime: 0.3, relativeDuration: 0.3) {
+                self.recordShadow1.layer.opacity = 1
+            }
+
+            // 3rd Keyframe
+            UIView.addKeyframe(withRelativeStartTime: 0.6, relativeDuration: 0.6) {
+                self.recordShadow2.layer.opacity = 1
+            }
+        } completion: { isComplete in
+            if isComplete {
+                //
+            }
+        }
+    }
+    
+    func stopRecordAnimation() {
+        UIView.animate(withDuration: 0.3, delay: 0, options: []) {
+            self.recordShadow2.layer.opacity = 0
+            self.recordShadow1.layer.opacity = 0
+            self.recognizeAlphabet.backgroundColor = UIColor(red: 245.0/255.0, green: 134.0/255.0, blue: 52/255.0, alpha: 1)
+        } completion: { isComplete in
+            if isComplete {
+                //
+            }
+        }
+    }
 }
