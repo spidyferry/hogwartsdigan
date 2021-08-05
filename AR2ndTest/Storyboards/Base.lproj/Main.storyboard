@@ -964,6 +964,9 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                                         <real key="value" value="20"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="tryAgain:" destination="xS4-qk-oIT" eventType="touchUpInside" id="C7O-HF-z3i"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="war-rm-J9b">
                                                 <rect key="frame" x="65" y="327" width="350" height="110"/>
@@ -982,6 +985,9 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                                         <real key="value" value="20"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="nextPage:" destination="xS4-qk-oIT" eventType="touchUpInside" id="kxk-g4-6Iu"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.9994472861" green="1" blue="0.89802503590000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
