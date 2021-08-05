@@ -387,10 +387,10 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg2" translatesAutoresizingMaskIntoConstraints="NO" id="vvj-JS-VP9">
                                 <rect key="frame" x="0.0" y="317" width="1194" height="517"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="vvj-JS-VP9" secondAttribute="height" multiplier="1194:517" id="SjA-4Z-pe4"/>
+                                    <constraint firstAttribute="width" secondItem="vvj-JS-VP9" secondAttribute="height" multiplier="1194:517" id="6PV-0c-jiX"/>
                                 </constraints>
                             </imageView>
-                            <view alpha="0.5" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ksK-J6-3ft">
+                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ksK-J6-3ft">
                                 <rect key="frame" x="140" y="234" width="914" height="400"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
@@ -405,8 +405,8 @@
                                 <color key="textColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" scrollEnabled="NO" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="az8-do-Aug">
-                                <rect key="frame" x="147" y="276" width="893" height="341"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="az8-do-Aug">
+                                <rect key="frame" x="150" y="264" width="894" height="341"/>
                                 <string key="text">This application is intended to help children in recognizing letters and how to pronounce them as well as real applications in everyday life.
 Parents are expected to participate in monitoring and limiting the time that children need in this game.</string>
                                 <color key="textColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -417,9 +417,10 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                 <rect key="frame" x="422" y="664" width="350" height="110"/>
                                 <color key="backgroundColor" red="0.95837527509999998" green="0.52888590099999999" blue="0.20380106570000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="350" id="CE1-qZ-0fD"/>
-                                    <constraint firstAttribute="width" secondItem="u2y-49-TFl" secondAttribute="height" multiplier="35:11" id="DVZ-57-4UJ"/>
-                                    <constraint firstAttribute="height" constant="110" id="pSt-cf-Ejm"/>
+                                    <constraint firstAttribute="width" secondItem="u2y-49-TFl" secondAttribute="height" multiplier="35:11" id="218-3p-xKs"/>
+                                    <constraint firstAttribute="width" constant="350" id="GNk-5l-kcX"/>
+                                    <constraint firstAttribute="width" secondItem="u2y-49-TFl" secondAttribute="height" multiplier="35:11" id="bmb-b6-34d"/>
+                                    <constraint firstAttribute="height" constant="110" id="erV-OU-DDj"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="60"/>
                                 <state key="normal" title="OK">
@@ -438,22 +439,22 @@ Parents are expected to participate in monitoring and limiting the time that chi
                         <viewLayoutGuide key="safeArea" id="FVL-Qs-abq"/>
                         <color key="backgroundColor" red="0.9994472861" green="1" blue="0.89802503590000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="az8-do-Aug" firstAttribute="centerY" secondItem="ksK-J6-3ft" secondAttribute="centerY" id="4hB-gf-j3l"/>
-                            <constraint firstItem="u2y-49-TFl" firstAttribute="leading" secondItem="FVL-Qs-abq" secondAttribute="leading" constant="422" id="6QG-Wi-nbg"/>
-                            <constraint firstItem="az8-do-Aug" firstAttribute="leading" secondItem="ksK-J6-3ft" secondAttribute="leading" constant="10" id="CFj-eQ-3FA"/>
-                            <constraint firstItem="ksK-J6-3ft" firstAttribute="top" secondItem="ucg-l4-jPc" secondAttribute="top" constant="20" id="FSP-yS-gLS"/>
-                            <constraint firstAttribute="bottom" secondItem="vvj-JS-VP9" secondAttribute="bottom" id="FZe-dk-GW4"/>
-                            <constraint firstItem="FVL-Qs-abq" firstAttribute="trailing" secondItem="ksK-J6-3ft" secondAttribute="trailing" constant="140" id="GdM-Mx-fHe"/>
-                            <constraint firstItem="ucg-l4-jPc" firstAttribute="top" secondItem="FVL-Qs-abq" secondAttribute="top" constant="70" id="IZm-7l-jhD"/>
-                            <constraint firstItem="vvj-JS-VP9" firstAttribute="trailing" secondItem="FVL-Qs-abq" secondAttribute="trailing" id="Kgd-Xt-8c9"/>
-                            <constraint firstItem="vvj-JS-VP9" firstAttribute="leading" secondItem="FVL-Qs-abq" secondAttribute="leading" id="Ue5-cA-0aR"/>
-                            <constraint firstItem="ksK-J6-3ft" firstAttribute="leading" secondItem="FVL-Qs-abq" secondAttribute="leading" constant="140" id="V7e-JY-lJP"/>
-                            <constraint firstItem="FVL-Qs-abq" firstAttribute="bottom" secondItem="u2y-49-TFl" secondAttribute="bottom" constant="40" id="Ygz-7m-U8E"/>
-                            <constraint firstItem="ksK-J6-3ft" firstAttribute="centerX" secondItem="FVL-Qs-abq" secondAttribute="centerX" id="aVI-uF-EAn"/>
-                            <constraint firstItem="u2y-49-TFl" firstAttribute="centerX" secondItem="FVL-Qs-abq" secondAttribute="centerX" id="gEO-oZ-X4X"/>
-                            <constraint firstItem="FVL-Qs-abq" firstAttribute="trailing" secondItem="u2y-49-TFl" secondAttribute="trailing" constant="422" id="iKO-Vi-76Q"/>
-                            <constraint firstItem="az8-do-Aug" firstAttribute="trailing" secondItem="ksK-J6-3ft" secondAttribute="trailing" constant="10" id="ovQ-D1-TZE"/>
-                            <constraint firstItem="ucg-l4-jPc" firstAttribute="centerX" secondItem="FVL-Qs-abq" secondAttribute="centerX" id="quC-fX-ghP"/>
+                            <constraint firstItem="vvj-JS-VP9" firstAttribute="bottom" secondItem="FVL-Qs-abq" secondAttribute="bottom" constant="20" id="9zx-Dy-C5C"/>
+                            <constraint firstItem="u2y-49-TFl" firstAttribute="centerX" secondItem="FVL-Qs-abq" secondAttribute="centerX" id="E5u-oO-DeL"/>
+                            <constraint firstItem="ksK-J6-3ft" firstAttribute="top" secondItem="ucg-l4-jPc" secondAttribute="bottom" constant="20" id="Inf-EV-3GS"/>
+                            <constraint firstItem="az8-do-Aug" firstAttribute="trailing" secondItem="ksK-J6-3ft" secondAttribute="trailing" constant="10" id="JNN-Qh-txu"/>
+                            <constraint firstItem="FVL-Qs-abq" firstAttribute="trailing" secondItem="ksK-J6-3ft" secondAttribute="trailing" constant="140" id="STc-mR-Hiz"/>
+                            <constraint firstAttribute="bottom" secondItem="vvj-JS-VP9" secondAttribute="bottom" id="TgQ-8e-jCs"/>
+                            <constraint firstItem="vvj-JS-VP9" firstAttribute="leading" secondItem="FVL-Qs-abq" secondAttribute="leading" id="V9q-lv-Oru"/>
+                            <constraint firstItem="vvj-JS-VP9" firstAttribute="trailing" secondItem="FVL-Qs-abq" secondAttribute="trailing" id="biY-Yf-iE0"/>
+                            <constraint firstItem="FVL-Qs-abq" firstAttribute="bottom" secondItem="u2y-49-TFl" secondAttribute="bottom" constant="40" id="hFY-PB-ZLA"/>
+                            <constraint firstItem="ucg-l4-jPc" firstAttribute="top" secondItem="FVL-Qs-abq" secondAttribute="top" constant="70" id="hnt-8b-UUh"/>
+                            <constraint firstItem="ucg-l4-jPc" firstAttribute="centerX" secondItem="FVL-Qs-abq" secondAttribute="centerX" id="sHz-vf-B5S"/>
+                            <constraint firstItem="u2y-49-TFl" firstAttribute="top" secondItem="ksK-J6-3ft" secondAttribute="bottom" constant="30" id="tE9-SS-I0s"/>
+                            <constraint firstItem="az8-do-Aug" firstAttribute="centerY" secondItem="ksK-J6-3ft" secondAttribute="centerY" id="tFQ-ni-GwQ"/>
+                            <constraint firstItem="ksK-J6-3ft" firstAttribute="leading" secondItem="FVL-Qs-abq" secondAttribute="leading" constant="140" id="w2m-bJ-tO6"/>
+                            <constraint firstItem="ksK-J6-3ft" firstAttribute="centerX" secondItem="FVL-Qs-abq" secondAttribute="centerX" id="yJk-HU-2BQ"/>
+                            <constraint firstItem="az8-do-Aug" firstAttribute="leading" secondItem="ksK-J6-3ft" secondAttribute="leading" constant="10" id="yl2-Zi-I32"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="XXR-bN-m1b"/>
@@ -1614,6 +1615,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="nXZ-Tj-uPv"/>
         <segue reference="294-gv-xQz"/>
         <segue reference="PMj-bG-2xs"/>
         <segue reference="Qjc-NZ-5YA"/>
