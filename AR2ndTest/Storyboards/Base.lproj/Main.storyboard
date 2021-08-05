@@ -164,40 +164,73 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view alpha="0.5" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bne-LX-E5T">
-                                <rect key="frame" x="140" y="244" width="914" height="400"/>
+                                <rect key="frame" x="195" y="230" width="804" height="405"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ln-KX-z8g">
-                                        <rect key="frame" x="407" y="27" width="101" height="148"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ln-KX-z8g">
+                                        <rect key="frame" x="353" y="30" width="98" height="148"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="98" id="Btz-nR-Ys1"/>
+                                            <constraint firstAttribute="height" constant="148" id="b8n-va-ZQV"/>
+                                        </constraints>
                                         <state key="normal" title="Button" image="BadgeTheExplorer"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j64-hk-rFA">
-                                        <rect key="frame" x="719" y="27" width="120" height="148"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j64-hk-rFA">
+                                        <rect key="frame" x="625.5" y="30" width="124" height="148"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="148" id="A0r-Ul-aSs"/>
+                                            <constraint firstAttribute="width" constant="124" id="KM6-e9-Mfz"/>
+                                            <constraint firstAttribute="height" constant="148" id="ZnD-sM-u4a"/>
+                                        </constraints>
                                         <state key="normal" title="Button" image="BadgeTheAdventurer"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6hA-7M-TPr">
-                                        <rect key="frame" x="407" y="213" width="101" height="148"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6hA-7M-TPr">
+                                        <rect key="frame" x="351" y="227" width="102" height="148"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="102" id="hry-yj-nVV"/>
+                                            <constraint firstAttribute="height" constant="148" id="v7n-Am-0op"/>
+                                        </constraints>
                                         <state key="normal" title="Button" image="BadgeTheExpert"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5eO-Zc-Ndv">
-                                        <rect key="frame" x="89" y="213" width="101" height="148"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5eO-Zc-Ndv">
+                                        <rect key="frame" x="64" y="227" width="103" height="148"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="148" id="J6S-FB-xIu"/>
+                                            <constraint firstAttribute="width" constant="103" id="TEc-iu-VlN"/>
+                                        </constraints>
                                         <state key="normal" title="Button" image="BadgeTheAchiever"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wf4-eE-9Bi">
-                                        <rect key="frame" x="89" y="27" width="101" height="148"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wf4-eE-9Bi">
+                                        <rect key="frame" x="64" y="30" width="103" height="148"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="148" id="IaH-Zn-1vD"/>
+                                            <constraint firstAttribute="width" constant="103" id="dSk-ac-lkN"/>
+                                        </constraints>
                                         <state key="normal" title="Button" image="BadgeNewLearner"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VPk-GS-z43">
-                                        <rect key="frame" x="691" y="213" width="229" height="148"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VPk-GS-z43">
+                                        <rect key="frame" x="599" y="227" width="177" height="148"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="148" id="8oe-js-sUh"/>
+                                            <constraint firstAttribute="width" constant="177" id="Sq9-zo-a6V"/>
+                                        </constraints>
                                         <state key="normal" title="Button" image="BadgeTheAppleBethMaster"/>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="7ln-KX-z8g" firstAttribute="centerX" secondItem="Bne-LX-E5T" secondAttribute="centerX" id="5hU-Dc-oge"/>
+                                    <constraint firstItem="wf4-eE-9Bi" firstAttribute="top" secondItem="Bne-LX-E5T" secondAttribute="top" constant="30" id="9ze-ho-3Kp"/>
+                                    <constraint firstItem="7ln-KX-z8g" firstAttribute="top" secondItem="Bne-LX-E5T" secondAttribute="top" constant="30" id="BGu-8z-rES"/>
+                                    <constraint firstAttribute="bottom" secondItem="6hA-7M-TPr" secondAttribute="bottom" constant="30" id="DVY-8e-NTd"/>
+                                    <constraint firstItem="wf4-eE-9Bi" firstAttribute="leading" secondItem="Bne-LX-E5T" secondAttribute="leading" constant="64" id="Od3-SE-eju"/>
+                                    <constraint firstAttribute="bottom" secondItem="5eO-Zc-Ndv" secondAttribute="bottom" constant="30" id="Qss-3z-duq"/>
+                                    <constraint firstAttribute="trailing" secondItem="VPk-GS-z43" secondAttribute="trailing" constant="28" id="cwd-eg-IIT"/>
+                                    <constraint firstAttribute="bottom" secondItem="VPk-GS-z43" secondAttribute="bottom" constant="30" id="dpD-jF-TE0"/>
+                                    <constraint firstItem="6hA-7M-TPr" firstAttribute="centerX" secondItem="Bne-LX-E5T" secondAttribute="centerX" id="mzV-kj-fVo"/>
+                                    <constraint firstItem="j64-hk-rFA" firstAttribute="centerX" secondItem="VPk-GS-z43" secondAttribute="centerX" id="qrV-yo-aye"/>
+                                    <constraint firstItem="5eO-Zc-Ndv" firstAttribute="leading" secondItem="Bne-LX-E5T" secondAttribute="leading" constant="64" id="u0t-kc-KyZ"/>
+                                    <constraint firstItem="j64-hk-rFA" firstAttribute="top" secondItem="Bne-LX-E5T" secondAttribute="top" constant="30" id="xZm-vO-KgC"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="20"/>
@@ -209,17 +242,16 @@
                         <color key="backgroundColor" red="0.99932080509999999" green="1" blue="0.88625890019999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="4kg-mK-eQy" firstAttribute="centerX" secondItem="YtH-4z-zoD" secondAttribute="centerX" id="5TG-mz-cCx"/>
-                            <constraint firstItem="YtH-4z-zoD" firstAttribute="trailing" secondItem="Bne-LX-E5T" secondAttribute="trailing" constant="140" id="CYR-yt-ezf"/>
-                            <constraint firstItem="Bne-LX-E5T" firstAttribute="centerX" secondItem="YtH-4z-zoD" secondAttribute="centerX" id="NhX-so-uBf"/>
+                            <constraint firstItem="Bne-LX-E5T" firstAttribute="leading" secondItem="YtH-4z-zoD" secondAttribute="leading" constant="195" id="FmA-qj-h1u"/>
                             <constraint firstItem="nhc-Vc-b12" firstAttribute="trailing" secondItem="YtH-4z-zoD" secondAttribute="trailing" id="NrP-fI-6eP"/>
                             <constraint firstItem="YtH-4z-zoD" firstAttribute="bottom" secondItem="6lI-dk-TGd" secondAttribute="bottom" constant="40" id="Nwc-Mc-O3o"/>
-                            <constraint firstItem="Bne-LX-E5T" firstAttribute="leading" secondItem="YtH-4z-zoD" secondAttribute="leading" constant="140" id="OKS-08-JKk"/>
-                            <constraint firstItem="Bne-LX-E5T" firstAttribute="top" secondItem="4kg-mK-eQy" secondAttribute="bottom" constant="20" id="U2C-F9-wjq"/>
+                            <constraint firstItem="YtH-4z-zoD" firstAttribute="trailing" secondItem="Bne-LX-E5T" secondAttribute="trailing" constant="195" id="Pgm-sp-DDd"/>
                             <constraint firstItem="6lI-dk-TGd" firstAttribute="centerX" secondItem="YtH-4z-zoD" secondAttribute="centerX" id="WeR-3V-w6t"/>
                             <constraint firstItem="nhc-Vc-b12" firstAttribute="centerX" secondItem="YtH-4z-zoD" secondAttribute="centerX" id="YOS-Lm-NqF"/>
                             <constraint firstItem="nhc-Vc-b12" firstAttribute="leading" secondItem="YtH-4z-zoD" secondAttribute="leading" id="vwU-d8-9VR"/>
                             <constraint firstItem="4kg-mK-eQy" firstAttribute="top" secondItem="YtH-4z-zoD" secondAttribute="top" constant="70" id="wMm-N8-Jr4"/>
                             <constraint firstAttribute="bottom" secondItem="nhc-Vc-b12" secondAttribute="bottom" id="y46-KZ-4e6"/>
+                            <constraint firstItem="Bne-LX-E5T" firstAttribute="top" secondItem="4kg-mK-eQy" secondAttribute="top" constant="20" id="zqs-q8-zVe"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="7hR-5r-HrL"/>
