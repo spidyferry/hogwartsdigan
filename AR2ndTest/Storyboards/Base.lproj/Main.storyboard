@@ -27,9 +27,8 @@
                                 <rect key="frame" x="-57" y="388" width="1268" height="476"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <view alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GnU-WI-Ws3">
-                                <rect key="frame" x="141" y="358" width="914" height="204"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GnU-WI-Ws3">
+                                <rect key="frame" x="140" y="308" width="914" height="254"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -37,17 +36,20 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" text="Do you want to start?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="4xE-oI-CQp">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" text="Are you ready to start?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="4xE-oI-CQp">
                                 <rect key="frame" x="147" y="415" width="900" height="89"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="60"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ioh-1y-v6V">
-                                <rect key="frame" x="697" y="648" width="350" height="110"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ioh-1y-v6V">
+                                <rect key="frame" x="704" y="664" width="350" height="110"/>
                                 <color key="backgroundColor" red="0.95837527509999998" green="0.52888590099999999" blue="0.20380106570000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ioh-1y-v6V" secondAttribute="height" multiplier="35:11" id="CLN-Gg-9oO"/>
+                                    <constraint firstAttribute="height" constant="110" id="MZc-YF-f6F"/>
+                                    <constraint firstAttribute="width" constant="350" id="aF9-D2-2z7"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="60"/>
                                 <state key="normal" title="Yes">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -61,10 +63,14 @@
                                     <action selector="gotoNext:" destination="1i0-Jg-gpf" eventType="touchUpInside" id="GPt-eJ-NGe"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xro-un-whm">
-                                <rect key="frame" x="140" y="648" width="350" height="110"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xro-un-whm">
+                                <rect key="frame" x="140" y="664" width="350" height="110"/>
                                 <color key="backgroundColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Xro-un-whm" secondAttribute="height" multiplier="35:11" id="S9s-t4-QfH"/>
+                                    <constraint firstAttribute="height" constant="110" id="oHs-3p-AOK"/>
+                                    <constraint firstAttribute="width" constant="350" id="sxm-1Z-n3o"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="60"/>
                                 <state key="normal" title="No">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -79,9 +85,8 @@
                                     <segue destination="W0c-Rr-nTu" kind="presentation" modalPresentationStyle="fullScreen" id="A9y-8I-ua6"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The ABC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="58m-xA-r8M">
-                                <rect key="frame" x="337" y="82" width="521" height="144"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The ABC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="58m-xA-r8M">
+                                <rect key="frame" x="358" y="84" width="478" height="144"/>
                                 <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="120"/>
                                 <color key="textColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -89,6 +94,20 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="a0P-iy-o5e"/>
                         <color key="backgroundColor" red="0.9994472861" green="1" blue="0.89802503590000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="a0P-iy-o5e" firstAttribute="bottom" secondItem="ioh-1y-v6V" secondAttribute="bottom" constant="40" id="1bc-mD-4cR"/>
+                            <constraint firstItem="58m-xA-r8M" firstAttribute="top" secondItem="a0P-iy-o5e" secondAttribute="top" constant="84" id="3n5-mO-8hy"/>
+                            <constraint firstItem="a0P-iy-o5e" firstAttribute="bottom" secondItem="Xro-un-whm" secondAttribute="bottom" constant="40" id="3tA-km-xJX"/>
+                            <constraint firstAttribute="bottom" secondItem="GnU-WI-Ws3" secondAttribute="bottom" constant="272" id="6rU-py-ldb"/>
+                            <constraint firstItem="4xE-oI-CQp" firstAttribute="centerX" secondItem="GnU-WI-Ws3" secondAttribute="centerX" id="ICY-5x-BRl"/>
+                            <constraint firstItem="Xro-un-whm" firstAttribute="leading" secondItem="a0P-iy-o5e" secondAttribute="leading" constant="140" id="bAY-M1-r3e"/>
+                            <constraint firstItem="GnU-WI-Ws3" firstAttribute="centerY" secondItem="4xE-oI-CQp" secondAttribute="centerY" id="bMI-5m-YHq"/>
+                            <constraint firstItem="a0P-iy-o5e" firstAttribute="trailing" secondItem="ioh-1y-v6V" secondAttribute="trailing" constant="140" id="bhe-hw-1kQ"/>
+                            <constraint firstItem="GnU-WI-Ws3" firstAttribute="leading" secondItem="a0P-iy-o5e" secondAttribute="leading" constant="140" id="cKL-dw-tB8"/>
+                            <constraint firstItem="a0P-iy-o5e" firstAttribute="trailing" secondItem="GnU-WI-Ws3" secondAttribute="trailing" constant="140" id="fRu-dw-nKu"/>
+                            <constraint firstItem="58m-xA-r8M" firstAttribute="centerX" secondItem="a0P-iy-o5e" secondAttribute="centerX" id="kRd-ar-CdR"/>
+                            <constraint firstItem="GnU-WI-Ws3" firstAttribute="top" secondItem="58m-xA-r8M" secondAttribute="bottom" constant="80" id="tOE-wd-JSg"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="cancelButton" destination="Xro-un-whm" id="rX6-gg-Oxe"/>
@@ -1635,7 +1654,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
         <segue reference="294-gv-xQz"/>
         <segue reference="PMj-bG-2xs"/>
         <segue reference="eGu-f1-vgZ"/>
-        <segue reference="jVJ-km-ovP"/>
+        <segue reference="A9y-8I-ua6"/>
         <segue reference="D82-pD-idJ"/>
     </inferredMetricsTieBreakers>
     <resources>
