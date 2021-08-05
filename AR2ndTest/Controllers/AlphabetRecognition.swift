@@ -31,7 +31,7 @@ class AlphabetRecognition: UIViewController, SFSpeechRecognizerDelegate {
     @IBOutlet weak var recognizeAlphabet: UIButton!
     @IBOutlet weak var recordShadow1: UIView!
     @IBOutlet weak var recordShadow2: UIView!
-    var soundPlayer : AVAudioPlayer!
+//    var soundPlayer : AVAudioPlayer!
     @IBOutlet weak var pauseButton: UIButton!
     
     override func viewDidLoad() {
@@ -124,7 +124,7 @@ class AlphabetRecognition: UIViewController, SFSpeechRecognizerDelegate {
                 Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { timer in
                     self.audioEngine.stop()
                     self.recognitionRequest?.endAudio()
-                    self.stopRecordAnimation()
+//                    self.stopRecordAnimation()
                 }
                 
             } catch {
@@ -159,7 +159,7 @@ class AlphabetRecognition: UIViewController, SFSpeechRecognizerDelegate {
             MainScreen.modalPresentationStyle = .fullScreen
             self.present(MainScreen, animated: false, completion: nil)
         } else {
-            self.stopRecordAnimation()
+//            self.stopRecordAnimation()
             tryagainNotification.isHidden = false
         }
     }
@@ -203,11 +203,7 @@ class AlphabetRecognition: UIViewController, SFSpeechRecognizerDelegate {
                 //
             }
         }
-    @IBAction func pauseButtTapped(_ sender: Any) {
-        AudioNextTapped.shared.playSound()
-        AudioPausedTheme.shared.playSound()
-    }
-    
+        
     func stopRecordAnimation() {
         UIView.animate(withDuration: 0.3, delay: 0, options: []) {
             self.recordShadow2.layer.opacity = 0
@@ -218,5 +214,10 @@ class AlphabetRecognition: UIViewController, SFSpeechRecognizerDelegate {
                 //
             }
         }
+    }
+}
+    @IBAction func pauseButtTapped(_ sender: Any) {
+        AudioNextTapped.shared.playSound()
+        AudioPausedTheme.shared.playSound()
     }
 }
