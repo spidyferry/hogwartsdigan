@@ -23,6 +23,8 @@ class AlphabetFinish: UIViewController {
     }
     
     @IBAction func finishPerAlphabet(_ sender: Any) {
+        AudioNextTapped.shared.playSound()
+        
         self.setToComplete()
         
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
@@ -56,4 +58,7 @@ class AlphabetFinish: UIViewController {
         }
     }
 
+    @IBAction func pauseButtTapped(_ sender: Any) {
+        AudioPausedTheme.shared.playSound()
+    }
 }

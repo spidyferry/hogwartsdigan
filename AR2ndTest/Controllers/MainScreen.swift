@@ -6,12 +6,8 @@
 //
 
 import UIKit
-import AVFoundation
 
 class MainScreen: UIViewController {
-
-    var buttonTapped = AVAudioPlayer()
-    var usernameButtonTapped = AVAudioPlayer()
     
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var guideButton: UIButton!
@@ -19,12 +15,7 @@ class MainScreen: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        do {
-            buttonTapped = try AVAudioPlayer (contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource : "s_butt_pressed", ofType: "mp3")!))
-            usernameButtonTapped = try AVAudioPlayer (contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource : "s_butt_pressed", ofType: "mp3")!))
-        } catch {
-            print(error)
-        }
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -46,15 +37,15 @@ class MainScreen: UIViewController {
     }
     
     @IBAction func startButtonPressed(_ sender: Any) {
-        buttonTapped.play()
+        AudioNextTapped.shared.playSound()
     }
     
     @IBAction func guideButtonTapped(_ sender: Any) {
-        buttonTapped.play()
+        AudioNextTapped.shared.playSound()
     }
     
     @IBAction func usernameButtonTapped(_ sender: Any) {
-        usernameButtonTapped.play()
+        AudioNextTapped.shared.playSound()
     }
 }
 

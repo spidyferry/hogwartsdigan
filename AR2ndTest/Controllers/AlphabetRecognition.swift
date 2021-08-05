@@ -11,6 +11,8 @@ import Speech
 import CoreData
 
 class AlphabetRecognition: UIViewController, SFSpeechRecognizerDelegate {
+    var recAlphabet = AVAudioPlayer()
+    var soundPlayer : AVAudioPlayer!
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     private let speechRecognizer = SFSpeechRecognizer(locale: Locale(identifier: "en-US"))!
@@ -27,10 +29,11 @@ class AlphabetRecognition: UIViewController, SFSpeechRecognizerDelegate {
     @IBOutlet weak var sayIt: UILabel!
     @IBOutlet weak var playAudio: UIButton!
     @IBOutlet weak var recognizeAlphabet: UIButton!
-    var soundPlayer : AVAudioPlayer!
+    @IBOutlet weak var pauseButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         let currentAlphabet = UserDefaults.standard.string(forKey: "currentAlphabet")!
         theAlphabet.text = currentAlphabet
         alphabetSupposedToBe = getValueForRecognition(alphabetName: currentAlphabet)
@@ -163,6 +166,11 @@ class AlphabetRecognition: UIViewController, SFSpeechRecognizerDelegate {
             print(error.localizedDescription)
         }
         return alphabetToRecognize![0].alphabetRec!
+    }
+    
+    @IBAction func pauseButtTapped(_ sender: Any) {
+        AudioNextTapped.shared.playSound()
+        AudioPausedTheme.shared.playSound()
     }
     
 }

@@ -6,24 +6,17 @@
 //
 
 import UIKit
-import AVFoundation
 
 class AlphabetSuccess: UIViewController {
 
-    var audioPlayer = AVAudioPlayer()
     @IBOutlet weak var bodyText: UITextView!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var whiteTransBg: UIView!
+    
     override func viewDidLoad() {
-        
         super.viewDidLoad()
+        AudioCongrat.shared.playSound()
         
-        let AssortedMusics = NSURL(fileURLWithPath: Bundle.main.path(forResource: "s_bgm", ofType: "wav")!)
-        audioPlayer = try! AVAudioPlayer(contentsOf: AssortedMusics as URL)
-        audioPlayer.prepareToPlay()
-        audioPlayer.numberOfLoops = -1
-        audioPlayer.play()
-
         let alphabetSuccess:String = UserDefaults.standard.string(forKey: "alphabetSuccess")!
         let line = self.loadtext(file: alphabetSuccess)
         let sentence = line.split(separator: ";").map {String($0)}
@@ -45,5 +38,13 @@ class AlphabetSuccess: UIViewController {
             let content = try? String(contentsOfFile: path) else {return "no files"}
         return content
     }
-
+    @IBAction func pauseMenuTapped(_ sender: Any) {
+        AudioNextTapped.shared.playSound()
+        AudioPausedTheme.shared.playSound()
+    }
+    
+    @IBAction func nextButtTapped(_ sender: Any) {
+        AudioNextTapped.shared.playSound()
+    }
+    
 }

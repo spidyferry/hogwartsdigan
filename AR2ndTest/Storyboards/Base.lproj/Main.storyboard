@@ -432,6 +432,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                     </preferredSymbolConfiguration>
                                 </state>
                                 <connections>
+                                    <action selector="buttBackTapped:" destination="W0c-Rr-nTu" eventType="touchUpInside" id="0H6-eh-Max"/>
                                     <segue destination="d7g-t6-UMX" kind="presentation" modalPresentationStyle="fullScreen" id="D82-pD-idJ"/>
                                 </connections>
                             </button>
@@ -554,6 +555,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                     </preferredSymbolConfiguration>
                                 </state>
                                 <connections>
+                                    <action selector="pauseButtTapped:" destination="84a-rU-kNd" eventType="touchUpInside" id="eZx-AK-7Ty"/>
                                     <segue destination="BnN-NG-d2s" kind="presentation" modalPresentationStyle="fullScreen" id="eGu-f1-vgZ"/>
                                 </connections>
                             </button>
@@ -565,6 +567,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
                         <outlet property="alphabetTitle" destination="wrm-XK-BW0" id="zRT-hv-rC9"/>
                         <outlet property="bodyText" destination="c80-1i-E0q" id="Yr9-vh-zko"/>
                         <outlet property="nextButton" destination="ogp-wH-ciR" id="n4h-n8-a9c"/>
+                        <outlet property="pauseButton" destination="w8J-7H-BC9" id="QQL-IW-eZs"/>
                         <outlet property="prevButton" destination="572-tQ-2gs" id="dbS-vp-61B"/>
                         <outlet property="whiteTransBg" destination="MNX-XZ-icg" id="RrI-0Y-MMF"/>
                     </connections>
@@ -603,6 +606,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                 </state>
                                 <connections>
                                     <action selector="closePausedMenu:" destination="BnN-NG-d2s" eventType="touchUpInside" id="y2N-Nc-ZMJ"/>
+                                    <action selector="contButtonTapped:" destination="BnN-NG-d2s" eventType="touchUpInside" id="Bm4-2R-Nrt"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eex-UY-WCi">
@@ -614,6 +618,9 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                 <state key="normal" title="Naration Voice">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="narrButtonTapped:" destination="BnN-NG-d2s" eventType="touchUpInside" id="6Jm-Gb-oVb"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aFT-qf-A4m">
                                 <rect key="frame" x="298" y="510" width="600" height="110"/>
@@ -625,6 +632,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="mainMenuButtonTapped:" destination="BnN-NG-d2s" eventType="touchUpInside" id="1df-LV-Kki"/>
                                     <segue destination="d7g-t6-UMX" kind="presentation" modalPresentationStyle="fullScreen" id="mfO-3s-wQd"/>
                                 </connections>
                             </button>
@@ -638,6 +646,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="quitButtonTapped:" destination="BnN-NG-d2s" eventType="touchUpInside" id="DwZ-vS-opx"/>
                                     <segue destination="W0c-Rr-nTu" kind="presentation" modalPresentationStyle="fullScreen" id="jVJ-km-ovP"/>
                                 </connections>
                             </button>
@@ -731,7 +740,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                     <action selector="startSpeech:" destination="xS4-qk-oIT" eventType="touchUpInside" id="f42-Td-ADG"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VIq-6P-uBn">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VIq-6P-uBn" userLabel="Pause Button">
                                 <rect key="frame" x="1092" y="38" width="62" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -741,6 +750,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                     </preferredSymbolConfiguration>
                                 </state>
                                 <connections>
+                                    <action selector="pauseButtTapped:" destination="xS4-qk-oIT" eventType="touchUpInside" id="puh-C8-7tM"/>
                                     <segue destination="BnN-NG-d2s" kind="presentation" modalPresentationStyle="fullScreen" id="Qjc-NZ-5YA"/>
                                 </connections>
                             </button>
@@ -813,6 +823,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
                         <color key="backgroundColor" red="0.9994472861" green="1" blue="0.89802503590000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <connections>
+                        <outlet property="pauseButton" destination="VIq-6P-uBn" id="Aj3-Tg-UCN"/>
                         <outlet property="playAudio" destination="LOo-0d-Tmd" id="zqz-VQ-YYR"/>
                         <outlet property="recognizeAlphabet" destination="uRt-3b-Sda" id="Zjp-xW-3eA"/>
                         <outlet property="sayIt" destination="IqI-n8-Kon" id="hhT-So-5XT"/>
@@ -881,6 +892,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                     </preferredSymbolConfiguration>
                                 </state>
                                 <connections>
+                                    <action selector="pauseMenuTapped:" destination="4yQ-mZ-Yd1" eventType="touchUpInside" id="inJ-uc-Rdh"/>
                                     <segue destination="BnN-NG-d2s" kind="presentation" modalPresentationStyle="fullScreen" id="Alw-4D-88y"/>
                                 </connections>
                             </button>
@@ -898,6 +910,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="nextButtTapped:" destination="4yQ-mZ-Yd1" eventType="touchUpInside" id="05d-uc-VGl"/>
                                     <segue destination="BCD-9E-8AO" kind="presentation" modalPresentationStyle="fullScreen" id="1ZQ-O7-5Ap"/>
                                 </connections>
                             </button>
@@ -965,6 +978,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="nextButtTapped:" destination="BCD-9E-8AO" eventType="touchUpInside" id="O4q-72-OcD"/>
                                     <segue destination="bEj-nL-yAD" kind="presentation" modalPresentationStyle="fullScreen" id="nBO-Jh-uP3"/>
                                 </connections>
                             </button>
@@ -978,6 +992,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                     </preferredSymbolConfiguration>
                                 </state>
                                 <connections>
+                                    <action selector="pauseButtTapped:" destination="BCD-9E-8AO" eventType="touchUpInside" id="3Jt-xG-Hje"/>
                                     <segue destination="BnN-NG-d2s" kind="presentation" modalPresentationStyle="fullScreen" id="k9M-DK-gzl"/>
                                 </connections>
                             </button>
@@ -1063,6 +1078,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                     </preferredSymbolConfiguration>
                                 </state>
                                 <connections>
+                                    <action selector="pauseButtTapped:" destination="bEj-nL-yAD" eventType="touchUpInside" id="tHm-37-ueD"/>
                                     <segue destination="BnN-NG-d2s" kind="presentation" modalPresentationStyle="fullScreen" id="iSJ-4G-zhb"/>
                                 </connections>
                             </button>
@@ -1080,6 +1096,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="nextButtTapped:" destination="bEj-nL-yAD" eventType="touchUpInside" id="Duo-o9-28L"/>
                                     <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="SKi-Rg-hAD"/>
                                 </connections>
                             </button>
@@ -1154,6 +1171,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                     </preferredSymbolConfiguration>
                                 </state>
                                 <connections>
+                                    <action selector="pauseButtTapped:" destination="bgU-8J-ozd" eventType="touchUpInside" id="Sfs-xI-vTe"/>
                                     <segue destination="BnN-NG-d2s" kind="presentation" modalPresentationStyle="fullScreen" id="zSH-PC-aQ5"/>
                                 </connections>
                             </button>
@@ -1171,6 +1189,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="tryButtTapped:" destination="bgU-8J-ozd" eventType="touchUpInside" id="MUO-ig-BHI"/>
                                     <segue destination="eXP-UT-rvH" kind="presentation" modalPresentationStyle="fullScreen" id="POl-6w-7f2"/>
                                 </connections>
                             </button>
@@ -1214,7 +1233,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                 <color key="textColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6mv-Kd-sKw">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6mv-Kd-sKw" userLabel="Pause Button">
                                 <rect key="frame" x="1092" y="38" width="62" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1224,6 +1243,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                     </preferredSymbolConfiguration>
                                 </state>
                                 <connections>
+                                    <action selector="pauseButtTapped:" destination="eXP-UT-rvH" eventType="touchUpInside" id="YfD-zZ-Bza"/>
                                     <segue destination="BnN-NG-d2s" kind="presentation" modalPresentationStyle="fullScreen" id="PkE-Fx-Sc4"/>
                                 </connections>
                             </button>
@@ -1299,6 +1319,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="tryAgain:" destination="eXP-UT-rvH" eventType="touchUpInside" id="cNp-kR-tls"/>
+                                                    <action selector="tryAgainYesTapped:" destination="eXP-UT-rvH" eventType="touchUpInside" id="Gty-CR-VZa"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a7N-jp-usX">
@@ -1315,6 +1336,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
+                                                    <action selector="tryAgainNextTapped:" destination="eXP-UT-rvH" eventType="touchUpInside" id="3Hu-1Z-TIU"/>
                                                     <segue destination="OHZ-3s-64H" kind="presentation" modalPresentationStyle="fullScreen" id="294-gv-xQz"/>
                                                 </connections>
                                             </button>
@@ -1408,6 +1430,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                     </preferredSymbolConfiguration>
                                 </state>
                                 <connections>
+                                    <action selector="pauseButtTapped:" destination="1gF-Z3-NB0" eventType="touchUpInside" id="gtZ-lS-6n1"/>
                                     <segue destination="BnN-NG-d2s" kind="presentation" modalPresentationStyle="fullScreen" id="hde-os-pJd"/>
                                 </connections>
                             </button>
@@ -1425,6 +1448,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="nextButtTapped:" destination="1gF-Z3-NB0" eventType="touchUpInside" id="KRL-VN-gNn"/>
                                     <segue destination="OHZ-3s-64H" kind="presentation" modalPresentationStyle="fullScreen" id="6dA-gq-VYn"/>
                                 </connections>
                             </button>
@@ -1471,6 +1495,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                     </preferredSymbolConfiguration>
                                 </state>
                                 <connections>
+                                    <action selector="pauseButtTapped:" destination="OHZ-3s-64H" eventType="touchUpInside" id="vYV-Fw-byV"/>
                                     <segue destination="BnN-NG-d2s" kind="presentation" modalPresentationStyle="fullScreen" id="d2T-ed-V2o"/>
                                 </connections>
                             </button>
@@ -1511,9 +1536,9 @@ Parents are expected to participate in monitoring and limiting the time that chi
     <inferredMetricsTieBreakers>
         <segue reference="294-gv-xQz"/>
         <segue reference="1ZQ-O7-5Ap"/>
-        <segue reference="PkE-Fx-Sc4"/>
+        <segue reference="zSH-PC-aQ5"/>
         <segue reference="A9y-8I-ua6"/>
-        <segue reference="WGK-U7-Tf6"/>
+        <segue reference="D82-pD-idJ"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="AlphabetBox" width="296" height="277"/>
