@@ -468,7 +468,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
                             <constraint firstItem="vvj-JS-VP9" firstAttribute="bottom" secondItem="FVL-Qs-abq" secondAttribute="bottom" constant="20" id="9zx-Dy-C5C"/>
                             <constraint firstItem="u2y-49-TFl" firstAttribute="centerX" secondItem="FVL-Qs-abq" secondAttribute="centerX" id="E5u-oO-DeL"/>
                             <constraint firstItem="ksK-J6-3ft" firstAttribute="top" secondItem="ucg-l4-jPc" secondAttribute="bottom" constant="20" id="Inf-EV-3GS"/>
-                            <constraint firstItem="az8-do-Aug" firstAttribute="trailing" secondItem="ksK-J6-3ft" secondAttribute="trailing" constant="10" id="JNN-Qh-txu"/>
+                            <constraint firstItem="az8-do-Aug" firstAttribute="trailing" secondItem="ksK-J6-3ft" secondAttribute="trailing" constant="-10" id="JNN-Qh-txu"/>
                             <constraint firstItem="FVL-Qs-abq" firstAttribute="trailing" secondItem="ksK-J6-3ft" secondAttribute="trailing" constant="140" id="STc-mR-Hiz"/>
                             <constraint firstAttribute="bottom" secondItem="vvj-JS-VP9" secondAttribute="bottom" id="TgQ-8e-jCs"/>
                             <constraint firstItem="vvj-JS-VP9" firstAttribute="leading" secondItem="FVL-Qs-abq" secondAttribute="leading" id="V9q-lv-Oru"/>
