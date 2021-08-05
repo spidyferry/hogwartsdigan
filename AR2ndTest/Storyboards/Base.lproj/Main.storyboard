@@ -23,9 +23,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg0" translatesAutoresizingMaskIntoConstraints="NO" id="Z0q-wx-BW0">
-                                <rect key="frame" x="-57" y="388" width="1268" height="476"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="Z0q-wx-BW0">
+                                <rect key="frame" x="0.0" y="417" width="1194" height="417"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Z0q-wx-BW0" secondAttribute="height" multiplier="398:139" id="gTy-BC-iBc"/>
+                                </constraints>
                             </imageView>
                             <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GnU-WI-Ws3">
                                 <rect key="frame" x="140" y="308" width="914" height="254"/>
@@ -96,9 +98,11 @@
                         <color key="backgroundColor" red="0.9994472861" green="1" blue="0.89802503590000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="a0P-iy-o5e" firstAttribute="bottom" secondItem="ioh-1y-v6V" secondAttribute="bottom" constant="40" id="1bc-mD-4cR"/>
+                            <constraint firstItem="Z0q-wx-BW0" firstAttribute="leading" secondItem="a0P-iy-o5e" secondAttribute="leading" id="2iJ-4h-Cyt"/>
                             <constraint firstItem="58m-xA-r8M" firstAttribute="top" secondItem="a0P-iy-o5e" secondAttribute="top" constant="84" id="3n5-mO-8hy"/>
                             <constraint firstItem="a0P-iy-o5e" firstAttribute="bottom" secondItem="Xro-un-whm" secondAttribute="bottom" constant="40" id="3tA-km-xJX"/>
                             <constraint firstAttribute="bottom" secondItem="GnU-WI-Ws3" secondAttribute="bottom" constant="272" id="6rU-py-ldb"/>
+                            <constraint firstItem="Z0q-wx-BW0" firstAttribute="bottom" secondItem="a0P-iy-o5e" secondAttribute="bottom" constant="20" id="HQN-uh-JRh"/>
                             <constraint firstItem="4xE-oI-CQp" firstAttribute="centerX" secondItem="GnU-WI-Ws3" secondAttribute="centerX" id="ICY-5x-BRl"/>
                             <constraint firstItem="Xro-un-whm" firstAttribute="leading" secondItem="a0P-iy-o5e" secondAttribute="leading" constant="140" id="bAY-M1-r3e"/>
                             <constraint firstItem="GnU-WI-Ws3" firstAttribute="centerY" secondItem="4xE-oI-CQp" secondAttribute="centerY" id="bMI-5m-YHq"/>
@@ -106,7 +110,9 @@
                             <constraint firstItem="GnU-WI-Ws3" firstAttribute="leading" secondItem="a0P-iy-o5e" secondAttribute="leading" constant="140" id="cKL-dw-tB8"/>
                             <constraint firstItem="a0P-iy-o5e" firstAttribute="trailing" secondItem="GnU-WI-Ws3" secondAttribute="trailing" constant="140" id="fRu-dw-nKu"/>
                             <constraint firstItem="58m-xA-r8M" firstAttribute="centerX" secondItem="a0P-iy-o5e" secondAttribute="centerX" id="kRd-ar-CdR"/>
+                            <constraint firstItem="Z0q-wx-BW0" firstAttribute="trailing" secondItem="a0P-iy-o5e" secondAttribute="trailing" id="qs6-QC-Dsd"/>
                             <constraint firstItem="GnU-WI-Ws3" firstAttribute="top" secondItem="58m-xA-r8M" secondAttribute="bottom" constant="80" id="tOE-wd-JSg"/>
+                            <constraint firstItem="Z0q-wx-BW0" firstAttribute="centerX" secondItem="a0P-iy-o5e" secondAttribute="centerX" id="wLO-e7-UCw"/>
                         </constraints>
                     </view>
                     <connections>
@@ -602,10 +608,6 @@ Parents are expected to participate in monitoring and limiting the time that chi
                         <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg0" translatesAutoresizingMaskIntoConstraints="NO" id="7dI-Tr-Ey6">
-                                <rect key="frame" x="-57" y="388" width="1268" height="476"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <view alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MNX-XZ-icg">
                                 <rect key="frame" x="141" y="316" width="914" height="286"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -653,9 +655,9 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                 <rect key="frame" x="704" y="664" width="350" height="110"/>
                                 <color key="backgroundColor" red="0.95837527509999998" green="0.52888590099999999" blue="0.20380106570000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="110" id="acY-vN-hM9"/>
-                                    <constraint firstAttribute="width" constant="350" id="wad-U5-LVw"/>
-                                    <constraint firstAttribute="width" secondItem="ogp-wH-ciR" secondAttribute="height" multiplier="35:11" id="z2E-ld-teM"/>
+                                    <constraint firstAttribute="height" constant="110" id="BQh-Wq-Asq"/>
+                                    <constraint firstAttribute="width" constant="350" id="CIJ-Iw-OLT"/>
+                                    <constraint firstAttribute="width" secondItem="ogp-wH-ciR" secondAttribute="height" multiplier="35:11" id="S9h-5O-2eZ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="60"/>
                                 <state key="normal" title="Next">
@@ -694,21 +696,31 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                     <segue destination="BnN-NG-d2s" kind="presentation" modalPresentationStyle="fullScreen" id="eGu-f1-vgZ"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="7dI-Tr-Ey6">
+                                <rect key="frame" x="0.0" y="417" width="1194" height="417"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="7dI-Tr-Ey6" secondAttribute="height" multiplier="398:139" id="OgA-HT-0OI"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ruh-uZ-AVQ"/>
                         <color key="backgroundColor" red="0.9994472861" green="1" blue="0.89802503590000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="ruh-uZ-AVQ" firstAttribute="trailing" secondItem="w8J-7H-BC9" secondAttribute="trailing" constant="40" id="3RV-Ka-rQv"/>
                             <constraint firstItem="ruh-uZ-AVQ" firstAttribute="bottom" secondItem="572-tQ-2gs" secondAttribute="bottom" constant="40" id="4B1-i2-FyT"/>
-                            <constraint firstItem="ruh-uZ-AVQ" firstAttribute="bottom" secondItem="ogp-wH-ciR" secondAttribute="bottom" constant="40" id="4r5-2F-HFc"/>
                             <constraint firstItem="c80-1i-E0q" firstAttribute="top" secondItem="wrm-XK-BW0" secondAttribute="bottom" constant="80" id="55t-Lh-OCo"/>
                             <constraint firstItem="c80-1i-E0q" firstAttribute="leading" secondItem="ruh-uZ-AVQ" secondAttribute="leading" constant="147" id="7s9-cT-syW"/>
+                            <constraint firstItem="7dI-Tr-Ey6" firstAttribute="centerX" secondItem="ruh-uZ-AVQ" secondAttribute="centerX" id="Dtw-7v-pkV"/>
                             <constraint firstItem="c80-1i-E0q" firstAttribute="centerX" secondItem="ruh-uZ-AVQ" secondAttribute="centerX" id="Eac-2c-rys"/>
+                            <constraint firstItem="ruh-uZ-AVQ" firstAttribute="trailing" secondItem="ogp-wH-ciR" secondAttribute="trailing" constant="140" id="GcD-wh-BML"/>
+                            <constraint firstItem="ruh-uZ-AVQ" firstAttribute="bottom" secondItem="ogp-wH-ciR" secondAttribute="bottom" constant="40" id="GuI-bP-b2S"/>
+                            <constraint firstItem="7dI-Tr-Ey6" firstAttribute="bottom" secondItem="ruh-uZ-AVQ" secondAttribute="bottom" constant="20" id="J6v-v1-HG1"/>
                             <constraint firstItem="572-tQ-2gs" firstAttribute="leading" secondItem="ruh-uZ-AVQ" secondAttribute="leading" constant="140" id="bqu-If-CNW"/>
                             <constraint firstItem="w8J-7H-BC9" firstAttribute="top" secondItem="ruh-uZ-AVQ" secondAttribute="top" constant="30" id="d4v-JT-fvR"/>
                             <constraint firstItem="ruh-uZ-AVQ" firstAttribute="trailing" secondItem="c80-1i-E0q" secondAttribute="trailing" constant="147" id="gRY-su-6S8"/>
+                            <constraint firstItem="7dI-Tr-Ey6" firstAttribute="trailing" secondItem="ruh-uZ-AVQ" secondAttribute="trailing" id="hbj-5X-cnO"/>
                             <constraint firstItem="wrm-XK-BW0" firstAttribute="top" secondItem="ruh-uZ-AVQ" secondAttribute="top" constant="84" id="sOJ-fv-Q1c"/>
-                            <constraint firstItem="ruh-uZ-AVQ" firstAttribute="trailing" secondItem="ogp-wH-ciR" secondAttribute="trailing" constant="140" id="tGZ-AR-xxp"/>
+                            <constraint firstItem="7dI-Tr-Ey6" firstAttribute="leading" secondItem="ruh-uZ-AVQ" secondAttribute="leading" id="wA8-Yb-wMa"/>
                             <constraint firstItem="wrm-XK-BW0" firstAttribute="centerX" secondItem="ruh-uZ-AVQ" secondAttribute="centerX" id="wRh-pP-Hbn"/>
                         </constraints>
                     </view>
@@ -1697,12 +1709,13 @@ Parents are expected to participate in monitoring and limiting the time that chi
     <inferredMetricsTieBreakers>
         <segue reference="294-gv-xQz"/>
         <segue reference="PMj-bG-2xs"/>
-        <segue reference="zSH-PC-aQ5"/>
+        <segue reference="eGu-f1-vgZ"/>
         <segue reference="A9y-8I-ua6"/>
         <segue reference="D82-pD-idJ"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="AlphabetBox" width="296" height="277"/>
+        <image name="Background" width="1194" height="417"/>
         <image name="BadgeNewLearner" width="102" height="148"/>
         <image name="BadgeTheAchiever" width="103" height="149"/>
         <image name="BadgeTheAdventurer" width="122" height="148"/>
