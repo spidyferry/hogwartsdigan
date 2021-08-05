@@ -163,73 +163,73 @@
                                 <color key="textColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view alpha="0.5" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bne-LX-E5T">
-                                <rect key="frame" x="195" y="230" width="804" height="405"/>
+                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bne-LX-E5T">
+                                <rect key="frame" x="195" y="234" width="804" height="401"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ln-KX-z8g">
                                         <rect key="frame" x="353" y="30" width="98" height="148"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="98" id="Btz-nR-Ys1"/>
-                                            <constraint firstAttribute="height" constant="148" id="b8n-va-ZQV"/>
+                                            <constraint firstAttribute="height" constant="148" id="86j-s0-EeH"/>
+                                            <constraint firstAttribute="width" constant="98" id="hZ2-L0-Kxs"/>
                                         </constraints>
                                         <state key="normal" title="Button" image="BadgeTheExplorer"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j64-hk-rFA">
                                         <rect key="frame" x="625.5" y="30" width="124" height="148"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="148" id="A0r-Ul-aSs"/>
-                                            <constraint firstAttribute="width" constant="124" id="KM6-e9-Mfz"/>
-                                            <constraint firstAttribute="height" constant="148" id="ZnD-sM-u4a"/>
+                                            <constraint firstAttribute="width" constant="124" id="Fuy-Um-Pjf"/>
+                                            <constraint firstAttribute="height" constant="148" id="HRR-GS-Dld"/>
                                         </constraints>
                                         <state key="normal" title="Button" image="BadgeTheAdventurer"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6hA-7M-TPr">
-                                        <rect key="frame" x="351" y="227" width="102" height="148"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6hA-7M-TPr">
+                                        <rect key="frame" x="351" y="223" width="102" height="148"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="102" id="hry-yj-nVV"/>
-                                            <constraint firstAttribute="height" constant="148" id="v7n-Am-0op"/>
+                                            <constraint firstAttribute="height" constant="148" id="bOe-dt-DLd"/>
+                                            <constraint firstAttribute="width" constant="102" id="xhP-qb-IgB"/>
                                         </constraints>
                                         <state key="normal" title="Button" image="BadgeTheExpert"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5eO-Zc-Ndv">
-                                        <rect key="frame" x="64" y="227" width="103" height="148"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5eO-Zc-Ndv">
+                                        <rect key="frame" x="64" y="223" width="103" height="148"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="148" id="J6S-FB-xIu"/>
-                                            <constraint firstAttribute="width" constant="103" id="TEc-iu-VlN"/>
+                                            <constraint firstAttribute="width" constant="103" id="3DU-kz-ppP"/>
+                                            <constraint firstAttribute="height" constant="148" id="d3O-c8-Fv3"/>
                                         </constraints>
                                         <state key="normal" title="Button" image="BadgeTheAchiever"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wf4-eE-9Bi">
                                         <rect key="frame" x="64" y="30" width="103" height="148"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="148" id="IaH-Zn-1vD"/>
-                                            <constraint firstAttribute="width" constant="103" id="dSk-ac-lkN"/>
+                                            <constraint firstAttribute="width" constant="103" id="IfH-zS-Q9s"/>
+                                            <constraint firstAttribute="height" constant="148" id="ldq-tx-AkG"/>
                                         </constraints>
                                         <state key="normal" title="Button" image="BadgeNewLearner"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VPk-GS-z43">
-                                        <rect key="frame" x="599" y="227" width="177" height="148"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VPk-GS-z43">
+                                        <rect key="frame" x="599" y="223" width="177" height="148"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="148" id="8oe-js-sUh"/>
-                                            <constraint firstAttribute="width" constant="177" id="Sq9-zo-a6V"/>
+                                            <constraint firstAttribute="width" constant="177" id="AAu-1A-Lz8"/>
+                                            <constraint firstAttribute="height" constant="148" id="VP7-DR-Dvm"/>
                                         </constraints>
                                         <state key="normal" title="Button" image="BadgeTheAppleBethMaster"/>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="7ln-KX-z8g" firstAttribute="centerX" secondItem="Bne-LX-E5T" secondAttribute="centerX" id="5hU-Dc-oge"/>
-                                    <constraint firstItem="wf4-eE-9Bi" firstAttribute="top" secondItem="Bne-LX-E5T" secondAttribute="top" constant="30" id="9ze-ho-3Kp"/>
-                                    <constraint firstItem="7ln-KX-z8g" firstAttribute="top" secondItem="Bne-LX-E5T" secondAttribute="top" constant="30" id="BGu-8z-rES"/>
-                                    <constraint firstAttribute="bottom" secondItem="6hA-7M-TPr" secondAttribute="bottom" constant="30" id="DVY-8e-NTd"/>
-                                    <constraint firstItem="wf4-eE-9Bi" firstAttribute="leading" secondItem="Bne-LX-E5T" secondAttribute="leading" constant="64" id="Od3-SE-eju"/>
-                                    <constraint firstAttribute="bottom" secondItem="5eO-Zc-Ndv" secondAttribute="bottom" constant="30" id="Qss-3z-duq"/>
-                                    <constraint firstAttribute="trailing" secondItem="VPk-GS-z43" secondAttribute="trailing" constant="28" id="cwd-eg-IIT"/>
-                                    <constraint firstAttribute="bottom" secondItem="VPk-GS-z43" secondAttribute="bottom" constant="30" id="dpD-jF-TE0"/>
-                                    <constraint firstItem="6hA-7M-TPr" firstAttribute="centerX" secondItem="Bne-LX-E5T" secondAttribute="centerX" id="mzV-kj-fVo"/>
-                                    <constraint firstItem="j64-hk-rFA" firstAttribute="centerX" secondItem="VPk-GS-z43" secondAttribute="centerX" id="qrV-yo-aye"/>
-                                    <constraint firstItem="5eO-Zc-Ndv" firstAttribute="leading" secondItem="Bne-LX-E5T" secondAttribute="leading" constant="64" id="u0t-kc-KyZ"/>
-                                    <constraint firstItem="j64-hk-rFA" firstAttribute="top" secondItem="Bne-LX-E5T" secondAttribute="top" constant="30" id="xZm-vO-KgC"/>
+                                    <constraint firstItem="5eO-Zc-Ndv" firstAttribute="leading" secondItem="Bne-LX-E5T" secondAttribute="leading" constant="64" id="1yH-5D-d2d"/>
+                                    <constraint firstItem="j64-hk-rFA" firstAttribute="centerX" secondItem="VPk-GS-z43" secondAttribute="centerX" id="2e6-A1-MSV"/>
+                                    <constraint firstItem="wf4-eE-9Bi" firstAttribute="leading" secondItem="Bne-LX-E5T" secondAttribute="leading" constant="64" id="4Cg-0p-Jqs"/>
+                                    <constraint firstAttribute="width" secondItem="Bne-LX-E5T" secondAttribute="height" multiplier="804:401" id="BLY-FZ-Lzq"/>
+                                    <constraint firstAttribute="bottom" secondItem="5eO-Zc-Ndv" secondAttribute="bottom" constant="30" id="KhY-gk-gf2"/>
+                                    <constraint firstItem="wf4-eE-9Bi" firstAttribute="top" secondItem="Bne-LX-E5T" secondAttribute="top" constant="30" id="PLz-I2-KCm"/>
+                                    <constraint firstAttribute="trailing" secondItem="VPk-GS-z43" secondAttribute="trailing" constant="28" id="Rrf-M3-Jfm"/>
+                                    <constraint firstAttribute="bottom" secondItem="VPk-GS-z43" secondAttribute="bottom" constant="30" id="Xk3-kL-oKw"/>
+                                    <constraint firstAttribute="bottom" secondItem="6hA-7M-TPr" secondAttribute="bottom" constant="30" id="aXB-cX-TXx"/>
+                                    <constraint firstItem="7ln-KX-z8g" firstAttribute="top" secondItem="Bne-LX-E5T" secondAttribute="top" constant="30" id="fWC-Dd-xey"/>
+                                    <constraint firstItem="j64-hk-rFA" firstAttribute="top" secondItem="Bne-LX-E5T" secondAttribute="top" constant="30" id="ius-M9-rk1"/>
+                                    <constraint firstItem="6hA-7M-TPr" firstAttribute="centerX" secondItem="Bne-LX-E5T" secondAttribute="centerX" id="xtj-4d-KT7"/>
+                                    <constraint firstItem="7ln-KX-z8g" firstAttribute="centerX" secondItem="Bne-LX-E5T" secondAttribute="centerX" id="zzx-LY-2lY"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -242,16 +242,17 @@
                         <color key="backgroundColor" red="0.99932080509999999" green="1" blue="0.88625890019999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="4kg-mK-eQy" firstAttribute="centerX" secondItem="YtH-4z-zoD" secondAttribute="centerX" id="5TG-mz-cCx"/>
-                            <constraint firstItem="Bne-LX-E5T" firstAttribute="leading" secondItem="YtH-4z-zoD" secondAttribute="leading" constant="195" id="FmA-qj-h1u"/>
+                            <constraint firstItem="Bne-LX-E5T" firstAttribute="top" secondItem="4kg-mK-eQy" secondAttribute="bottom" constant="20" id="5zg-7n-K0J"/>
+                            <constraint firstItem="6lI-dk-TGd" firstAttribute="top" secondItem="Bne-LX-E5T" secondAttribute="bottom" constant="29" id="6zm-p9-yZh"/>
+                            <constraint firstItem="Bne-LX-E5T" firstAttribute="leading" secondItem="YtH-4z-zoD" secondAttribute="leading" constant="195" id="EnE-Sj-iCj"/>
                             <constraint firstItem="nhc-Vc-b12" firstAttribute="trailing" secondItem="YtH-4z-zoD" secondAttribute="trailing" id="NrP-fI-6eP"/>
                             <constraint firstItem="YtH-4z-zoD" firstAttribute="bottom" secondItem="6lI-dk-TGd" secondAttribute="bottom" constant="40" id="Nwc-Mc-O3o"/>
-                            <constraint firstItem="YtH-4z-zoD" firstAttribute="trailing" secondItem="Bne-LX-E5T" secondAttribute="trailing" constant="195" id="Pgm-sp-DDd"/>
                             <constraint firstItem="6lI-dk-TGd" firstAttribute="centerX" secondItem="YtH-4z-zoD" secondAttribute="centerX" id="WeR-3V-w6t"/>
                             <constraint firstItem="nhc-Vc-b12" firstAttribute="centerX" secondItem="YtH-4z-zoD" secondAttribute="centerX" id="YOS-Lm-NqF"/>
+                            <constraint firstItem="Bne-LX-E5T" firstAttribute="centerX" secondItem="YtH-4z-zoD" secondAttribute="centerX" id="YUy-ry-swF"/>
                             <constraint firstItem="nhc-Vc-b12" firstAttribute="leading" secondItem="YtH-4z-zoD" secondAttribute="leading" id="vwU-d8-9VR"/>
                             <constraint firstItem="4kg-mK-eQy" firstAttribute="top" secondItem="YtH-4z-zoD" secondAttribute="top" constant="70" id="wMm-N8-Jr4"/>
                             <constraint firstAttribute="bottom" secondItem="nhc-Vc-b12" secondAttribute="bottom" id="y46-KZ-4e6"/>
-                            <constraint firstItem="Bne-LX-E5T" firstAttribute="top" secondItem="4kg-mK-eQy" secondAttribute="top" constant="20" id="zqs-q8-zVe"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="7hR-5r-HrL"/>
@@ -1615,10 +1616,9 @@ Parents are expected to participate in monitoring and limiting the time that chi
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="nXZ-Tj-uPv"/>
         <segue reference="294-gv-xQz"/>
         <segue reference="PMj-bG-2xs"/>
-        <segue reference="Qjc-NZ-5YA"/>
+        <segue reference="eGu-f1-vgZ"/>
         <segue reference="A9y-8I-ua6"/>
         <segue reference="WGK-U7-Tf6"/>
     </inferredMetricsTieBreakers>
