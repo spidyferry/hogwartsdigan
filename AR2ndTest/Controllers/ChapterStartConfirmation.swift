@@ -7,12 +7,9 @@
 
 import UIKit
 import CoreData
-import AVFoundation
 
 class ChapterStartConfirmation: UIViewController{
     
-    var buttonYesPressed = AVAudioPlayer()
-    var buttonNoPressed = AVAudioPlayer()
     var alphabet = ""
     var titleChapter: String = ""
     
@@ -28,12 +25,7 @@ class ChapterStartConfirmation: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        do {
-            buttonYesPressed = try AVAudioPlayer (contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource : "s_butt_pressed", ofType: "mp3")!))
-            buttonNoPressed = try AVAudioPlayer (contentsOf: URL.init(fileURLWithPath: Bundle.main.path(forResource : "s_butt_paused", ofType: "mp3")!))
-        } catch {
-            print(error)
-        }
+        AudioNarration.shared.stopSound()
         
         // Change title chapter
         self.titleLabel.text = titleChapter
@@ -114,7 +106,8 @@ class ChapterStartConfirmation: UIViewController{
     }
     
     @IBAction func gotoNext(_ sender: Any) {
-        buttonYesPressed.play()
+        AudioNextTapped.shared.playSound()
+        AudioBGM.shared.stopSound()
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let MainScreen = storyBoard.instantiateViewController(withIdentifier: "ChapterIntro") as! ChapterIntro
         MainScreen.modalPresentationStyle = .fullScreen
@@ -122,7 +115,7 @@ class ChapterStartConfirmation: UIViewController{
         MainScreen.alphabetTitle.text = "The \(alphabet)"
     }
     @IBAction func cancelChapter(_ sender: Any) {
-        buttonNoPressed.play()
+        AudioPrevTapped.shared.playSound()
 //        dismiss(animated: true, completion: nil)
     }
 

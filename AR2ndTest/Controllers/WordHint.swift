@@ -46,8 +46,15 @@ class WordHint: UIViewController {
         return alphabetToRecognize![0].wordRec!
     }
     
+    @IBAction func pauseButtTapped(_ sender: Any) {
+        AudioPausedTheme.shared.playSound()
+    }
     @IBAction func prevScreen(_ sender: Any) {
+        AudioPrevTapped.shared.playSound()
         dismiss(animated: true, completion: nil)
+    }
+    @IBAction func nextButtTapped(_ sender: Any) {
+        AudioNextTapped.shared.playSound()
     }
     
 
