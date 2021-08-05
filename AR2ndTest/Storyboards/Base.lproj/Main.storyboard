@@ -10,6 +10,9 @@
         <array key="SF-Pro-Rounded-Bold.otf">
             <string>SFProRounded-Bold</string>
         </array>
+        <array key="SF-Pro-Rounded-Semibold.otf">
+            <string>SFProRounded-Semibold</string>
+        </array>
     </customFonts>
     <scenes>
         <!--Chapter Start Confirmation-->
@@ -124,14 +127,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg2" translatesAutoresizingMaskIntoConstraints="NO" id="nhc-Vc-b12">
-                                <rect key="frame" x="0.0" y="324" width="1194" height="522"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg2" translatesAutoresizingMaskIntoConstraints="NO" id="nhc-Vc-b12">
+                                <rect key="frame" x="0.0" y="312" width="1194" height="522"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="nhc-Vc-b12" secondAttribute="height" multiplier="199:87" id="B02-Gl-HL5"/>
+                                </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6lI-dk-TGd">
-                                <rect key="frame" x="422" y="667" width="350" height="110"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6lI-dk-TGd">
+                                <rect key="frame" x="422" y="664" width="350" height="110"/>
                                 <color key="backgroundColor" red="0.95837527509999998" green="0.52888590099999999" blue="0.20380106570000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="6lI-dk-TGd" secondAttribute="height" multiplier="35:11" id="2be-16-jwh"/>
+                                    <constraint firstAttribute="height" constant="110" id="4cA-1a-9oY"/>
+                                    <constraint firstAttribute="width" constant="350" id="5S2-bo-J6K"/>
+                                    <constraint firstAttribute="width" secondItem="6lI-dk-TGd" secondAttribute="height" multiplier="35:11" id="LAS-OY-gHf"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="60"/>
                                 <state key="normal" title="OK">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -147,49 +157,80 @@
                                     <segue destination="d7g-t6-UMX" kind="presentation" modalPresentationStyle="fullScreen" id="WGK-U7-Tf6"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Achievements" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4kg-mK-eQy">
-                                <rect key="frame" x="206" y="82" width="783" height="144"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Achievements" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4kg-mK-eQy">
+                                <rect key="frame" x="205.5" y="70" width="783" height="144"/>
                                 <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="120"/>
                                 <color key="textColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bne-LX-E5T">
-                                <rect key="frame" x="140" y="244" width="914" height="400"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bne-LX-E5T">
+                                <rect key="frame" x="195" y="234" width="804" height="401"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ln-KX-z8g">
-                                        <rect key="frame" x="407" y="27" width="101" height="148"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ln-KX-z8g">
+                                        <rect key="frame" x="353" y="30" width="98" height="148"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="148" id="86j-s0-EeH"/>
+                                            <constraint firstAttribute="width" constant="98" id="hZ2-L0-Kxs"/>
+                                        </constraints>
                                         <state key="normal" title="Button" image="BadgeTheExplorer"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j64-hk-rFA">
-                                        <rect key="frame" x="719" y="27" width="120" height="148"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j64-hk-rFA">
+                                        <rect key="frame" x="625.5" y="30" width="124" height="148"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="124" id="Fuy-Um-Pjf"/>
+                                            <constraint firstAttribute="height" constant="148" id="HRR-GS-Dld"/>
+                                        </constraints>
                                         <state key="normal" title="Button" image="BadgeTheAdventurer"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6hA-7M-TPr">
-                                        <rect key="frame" x="407" y="213" width="101" height="148"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6hA-7M-TPr">
+                                        <rect key="frame" x="351" y="223" width="102" height="148"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="148" id="bOe-dt-DLd"/>
+                                            <constraint firstAttribute="width" constant="102" id="xhP-qb-IgB"/>
+                                        </constraints>
                                         <state key="normal" title="Button" image="BadgeTheExpert"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5eO-Zc-Ndv">
-                                        <rect key="frame" x="89" y="213" width="101" height="148"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5eO-Zc-Ndv">
+                                        <rect key="frame" x="64" y="223" width="103" height="148"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="103" id="3DU-kz-ppP"/>
+                                            <constraint firstAttribute="height" constant="148" id="d3O-c8-Fv3"/>
+                                        </constraints>
                                         <state key="normal" title="Button" image="BadgeTheAchiever"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wf4-eE-9Bi">
-                                        <rect key="frame" x="89" y="27" width="101" height="148"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wf4-eE-9Bi">
+                                        <rect key="frame" x="64" y="30" width="103" height="148"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="103" id="IfH-zS-Q9s"/>
+                                            <constraint firstAttribute="height" constant="148" id="ldq-tx-AkG"/>
+                                        </constraints>
                                         <state key="normal" title="Button" image="BadgeNewLearner"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VPk-GS-z43">
-                                        <rect key="frame" x="691" y="213" width="229" height="148"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VPk-GS-z43">
+                                        <rect key="frame" x="599" y="223" width="177" height="148"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="177" id="AAu-1A-Lz8"/>
+                                            <constraint firstAttribute="height" constant="148" id="VP7-DR-Dvm"/>
+                                        </constraints>
                                         <state key="normal" title="Button" image="BadgeTheAppleBethMaster"/>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="5eO-Zc-Ndv" firstAttribute="leading" secondItem="Bne-LX-E5T" secondAttribute="leading" constant="64" id="1yH-5D-d2d"/>
+                                    <constraint firstItem="j64-hk-rFA" firstAttribute="centerX" secondItem="VPk-GS-z43" secondAttribute="centerX" id="2e6-A1-MSV"/>
+                                    <constraint firstItem="wf4-eE-9Bi" firstAttribute="leading" secondItem="Bne-LX-E5T" secondAttribute="leading" constant="64" id="4Cg-0p-Jqs"/>
+                                    <constraint firstAttribute="width" secondItem="Bne-LX-E5T" secondAttribute="height" multiplier="804:401" id="BLY-FZ-Lzq"/>
+                                    <constraint firstAttribute="bottom" secondItem="5eO-Zc-Ndv" secondAttribute="bottom" constant="30" id="KhY-gk-gf2"/>
+                                    <constraint firstItem="wf4-eE-9Bi" firstAttribute="top" secondItem="Bne-LX-E5T" secondAttribute="top" constant="30" id="PLz-I2-KCm"/>
+                                    <constraint firstAttribute="trailing" secondItem="VPk-GS-z43" secondAttribute="trailing" constant="28" id="Rrf-M3-Jfm"/>
+                                    <constraint firstAttribute="bottom" secondItem="VPk-GS-z43" secondAttribute="bottom" constant="30" id="Xk3-kL-oKw"/>
+                                    <constraint firstAttribute="bottom" secondItem="6hA-7M-TPr" secondAttribute="bottom" constant="30" id="aXB-cX-TXx"/>
+                                    <constraint firstItem="7ln-KX-z8g" firstAttribute="top" secondItem="Bne-LX-E5T" secondAttribute="top" constant="30" id="fWC-Dd-xey"/>
+                                    <constraint firstItem="j64-hk-rFA" firstAttribute="top" secondItem="Bne-LX-E5T" secondAttribute="top" constant="30" id="ius-M9-rk1"/>
+                                    <constraint firstItem="6hA-7M-TPr" firstAttribute="centerX" secondItem="Bne-LX-E5T" secondAttribute="centerX" id="xtj-4d-KT7"/>
+                                    <constraint firstItem="7ln-KX-z8g" firstAttribute="centerX" secondItem="Bne-LX-E5T" secondAttribute="centerX" id="zzx-LY-2lY"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="20"/>
@@ -199,6 +240,20 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="YtH-4z-zoD"/>
                         <color key="backgroundColor" red="0.99932080509999999" green="1" blue="0.88625890019999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="4kg-mK-eQy" firstAttribute="centerX" secondItem="YtH-4z-zoD" secondAttribute="centerX" id="5TG-mz-cCx"/>
+                            <constraint firstItem="Bne-LX-E5T" firstAttribute="top" secondItem="4kg-mK-eQy" secondAttribute="bottom" constant="20" id="5zg-7n-K0J"/>
+                            <constraint firstItem="6lI-dk-TGd" firstAttribute="top" secondItem="Bne-LX-E5T" secondAttribute="bottom" constant="29" id="6zm-p9-yZh"/>
+                            <constraint firstItem="Bne-LX-E5T" firstAttribute="leading" secondItem="YtH-4z-zoD" secondAttribute="leading" constant="195" id="EnE-Sj-iCj"/>
+                            <constraint firstItem="nhc-Vc-b12" firstAttribute="trailing" secondItem="YtH-4z-zoD" secondAttribute="trailing" id="NrP-fI-6eP"/>
+                            <constraint firstItem="YtH-4z-zoD" firstAttribute="bottom" secondItem="6lI-dk-TGd" secondAttribute="bottom" constant="40" id="Nwc-Mc-O3o"/>
+                            <constraint firstItem="6lI-dk-TGd" firstAttribute="centerX" secondItem="YtH-4z-zoD" secondAttribute="centerX" id="WeR-3V-w6t"/>
+                            <constraint firstItem="nhc-Vc-b12" firstAttribute="centerX" secondItem="YtH-4z-zoD" secondAttribute="centerX" id="YOS-Lm-NqF"/>
+                            <constraint firstItem="Bne-LX-E5T" firstAttribute="centerX" secondItem="YtH-4z-zoD" secondAttribute="centerX" id="YUy-ry-swF"/>
+                            <constraint firstItem="nhc-Vc-b12" firstAttribute="leading" secondItem="YtH-4z-zoD" secondAttribute="leading" id="vwU-d8-9VR"/>
+                            <constraint firstItem="4kg-mK-eQy" firstAttribute="top" secondItem="YtH-4z-zoD" secondAttribute="top" constant="70" id="wMm-N8-Jr4"/>
+                            <constraint firstAttribute="bottom" secondItem="nhc-Vc-b12" secondAttribute="bottom" id="y46-KZ-4e6"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="7hR-5r-HrL"/>
                     <connections>
@@ -222,32 +277,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg2" translatesAutoresizingMaskIntoConstraints="NO" id="hEG-K2-ik9">
-                                <rect key="frame" x="0.0" y="315" width="1194" height="521"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg2" translatesAutoresizingMaskIntoConstraints="NO" id="hEG-K2-ik9">
+                                <rect key="frame" x="0.0" y="317" width="1194" height="517"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hEG-K2-ik9" secondAttribute="height" multiplier="1194:517" id="llx-Q8-Dyq"/>
+                                </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LKv-nt-J2z">
-                                <rect key="frame" x="297" y="549" width="600" height="160"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="100"/>
-                                <state key="normal" title="Guide">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hHj-pP-Hlf">
+                                <rect key="frame" x="1096" y="30" width="58" height="58"/>
+                                <color key="tintColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" image="Piala">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
+                                        <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="50"/>
+                                    </preferredSymbolConfiguration>
                                 </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="20"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="guideButtonTapped:" destination="d7g-t6-UMX" eventType="touchUpInside" id="17W-0a-d1S"/>
-                                    <segue destination="iiH-6N-EZi" kind="presentation" modalPresentationStyle="fullScreen" id="nli-jx-6WU"/>
+                                    <action selector="usernameButtonTapped:" destination="d7g-t6-UMX" eventType="touchUpInside" id="wCH-0S-bHt"/>
+                                    <segue destination="qLN-sv-1O5" kind="presentation" modalPresentationStyle="fullScreen" id="nXZ-Tj-uPv"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="12O-yn-IAD">
-                                <rect key="frame" x="297" y="355" width="600" height="160"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ducky's Friend" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RTu-CY-7TH">
+                                <rect key="frame" x="964.5" y="40" width="121.5" height="38"/>
+                                <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="18"/>
+                                <color key="textColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AppleBhet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A21-nj-YEC">
+                                <rect key="frame" x="236" y="206" width="722" height="180"/>
+                                <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="150"/>
+                                <color key="textColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="12O-yn-IAD">
+                                <rect key="frame" x="297" y="486" width="600" height="160"/>
                                 <color key="backgroundColor" red="0.95837527509999998" green="0.52888590099999999" blue="0.20380106570000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="S61-QA-C3p"/>
+                                    <constraint firstAttribute="width" constant="600" id="fhq-Gy-08R"/>
+                                    <constraint firstAttribute="width" secondItem="12O-yn-IAD" secondAttribute="height" multiplier="15:4" id="lRY-JP-e99"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="100"/>
                                 <state key="normal" title="Start">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -262,48 +330,52 @@
                                     <action selector="startButtonPressed:" destination="d7g-t6-UMX" eventType="touchUpInside" id="SOO-s8-EO3"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hHj-pP-Hlf">
-                                <rect key="frame" x="1095" y="41" width="58" height="58"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" image="Piala">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
-                                        <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="50"/>
-                                    </preferredSymbolConfiguration>
-                                </state>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j6P-EJ-81Z">
+                                <rect key="frame" x="989" y="691" width="133" height="148"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" adjustable="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="j6P-EJ-81Z" secondAttribute="height" multiplier="133:148" id="95l-UL-Ut7"/>
+                                    <constraint firstAttribute="height" constant="148" id="FrL-9S-F5l"/>
+                                    <constraint firstAttribute="width" constant="133" id="dkF-Co-2pP"/>
+                                </constraints>
+                                <state key="normal" image="Guide"/>
                                 <connections>
-                                    <action selector="usernameButtonTapped:" destination="d7g-t6-UMX" eventType="touchUpInside" id="wCH-0S-bHt"/>
-                                    <segue destination="qLN-sv-1O5" kind="presentation" modalPresentationStyle="fullScreen" id="nXZ-Tj-uPv"/>
+                                    <action selector="guideButtonTapped:" destination="d7g-t6-UMX" eventType="touchUpInside" id="bPp-jn-coJ"/>
+                                    <segue destination="iiH-6N-EZi" kind="presentation" modalPresentationStyle="fullScreen" id="QRY-Sm-UHa"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="AppleBhet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A21-nj-YEC">
-                                <rect key="frame" x="309" y="162" width="582" height="145"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="121"/>
-                                <color key="textColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ducky's Friend" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RTu-CY-7TH">
-                                <rect key="frame" x="789" y="59" width="296" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="18"/>
-                                <color key="textColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5nV-FW-8hS"/>
                         <color key="backgroundColor" red="0.9994472861" green="1" blue="0.89802503590000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="A21-nj-YEC" firstAttribute="top" secondItem="5nV-FW-8hS" secondAttribute="top" constant="206" id="09c-Te-yKg"/>
+                            <constraint firstItem="A21-nj-YEC" firstAttribute="centerX" secondItem="5nV-FW-8hS" secondAttribute="centerX" id="CG5-ox-m84"/>
+                            <constraint firstItem="RTu-CY-7TH" firstAttribute="centerY" secondItem="hHj-pP-Hlf" secondAttribute="centerY" id="GmO-JE-WSg"/>
+                            <constraint firstItem="hHj-pP-Hlf" firstAttribute="leading" secondItem="RTu-CY-7TH" secondAttribute="trailing" constant="10" id="JAS-WC-Xu6"/>
+                            <constraint firstItem="12O-yn-IAD" firstAttribute="top" secondItem="A21-nj-YEC" secondAttribute="bottom" constant="100" id="Mrw-3p-lxr"/>
+                            <constraint firstItem="j6P-EJ-81Z" firstAttribute="bottom" secondItem="5nV-FW-8hS" secondAttribute="bottom" constant="25" id="Mxe-7D-vHO"/>
+                            <constraint firstItem="hHj-pP-Hlf" firstAttribute="top" secondItem="5nV-FW-8hS" secondAttribute="top" constant="30" id="P46-N0-f72"/>
+                            <constraint firstAttribute="bottom" secondItem="hEG-K2-ik9" secondAttribute="bottom" id="TwW-tH-x4J"/>
+                            <constraint firstItem="12O-yn-IAD" firstAttribute="centerX" secondItem="5nV-FW-8hS" secondAttribute="centerX" id="XRu-sv-phh"/>
+                            <constraint firstItem="5nV-FW-8hS" firstAttribute="trailing" secondItem="hHj-pP-Hlf" secondAttribute="trailing" constant="40" id="Yh5-pu-1g3"/>
+                            <constraint firstItem="RTu-CY-7TH" firstAttribute="top" secondItem="5nV-FW-8hS" secondAttribute="top" constant="40" id="jyS-FV-YBC"/>
+                            <constraint firstItem="hEG-K2-ik9" firstAttribute="trailing" secondItem="5nV-FW-8hS" secondAttribute="trailing" id="qcb-PK-I37"/>
+                            <constraint firstItem="5nV-FW-8hS" firstAttribute="trailing" secondItem="j6P-EJ-81Z" secondAttribute="trailing" constant="72" id="sTZ-N3-LQJ"/>
+                            <constraint firstItem="hEG-K2-ik9" firstAttribute="leading" secondItem="5nV-FW-8hS" secondAttribute="leading" id="uBB-9v-BJx"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="zom-Lz-73D"/>
                     <connections>
-                        <outlet property="guideButton" destination="LKv-nt-J2z" id="rpS-Xs-oN9"/>
+                        <outlet property="guideButton" destination="j6P-EJ-81Z" id="9FZ-Wr-1Vm"/>
                         <outlet property="startButton" destination="12O-yn-IAD" id="jTu-Id-Qz1"/>
                         <outlet property="userName" destination="RTu-CY-7TH" id="gLt-g5-8g9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N4i-KE-RZ2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1255.2763819095478" y="364.74820143884892"/>
+            <point key="canvasLocation" x="-1255.2763819095478" y="364.02877697841728"/>
         </scene>
         <!--Parent Guide-->
         <scene sceneID="eKj-DT-ASi">
@@ -313,13 +385,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg2" translatesAutoresizingMaskIntoConstraints="NO" id="vvj-JS-VP9">
-                                <rect key="frame" x="0.0" y="315" width="1194" height="522"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg2" translatesAutoresizingMaskIntoConstraints="NO" id="vvj-JS-VP9">
+                                <rect key="frame" x="0.0" y="317" width="1194" height="517"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="vvj-JS-VP9" secondAttribute="height" multiplier="1194:517" id="6PV-0c-jiX"/>
+                                </constraints>
                             </imageView>
-                            <view alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ksK-J6-3ft">
+                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ksK-J6-3ft">
                                 <rect key="frame" x="140" y="234" width="914" height="400"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -327,26 +400,29 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Guide for Parent" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ucg-l4-jPc">
-                                <rect key="frame" x="158" y="82" width="880" height="144"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guide for Parent" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ucg-l4-jPc">
+                                <rect key="frame" x="157" y="70" width="880" height="144"/>
                                 <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="120"/>
                                 <color key="textColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="az8-do-Aug">
-                                <rect key="frame" x="147" y="276" width="900" height="660.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="az8-do-Aug">
+                                <rect key="frame" x="150" y="264" width="894" height="341"/>
                                 <string key="text">This application is intended to help children in recognizing letters and how to pronounce them as well as real applications in everyday life.
 Parents are expected to participate in monitoring and limiting the time that children need in this game.</string>
                                 <color key="textColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="41"/>
+                                <fontDescription key="fontDescription" name="SFProRounded-Semibold" family="SF Pro Rounded" pointSize="43"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u2y-49-TFl">
-                                <rect key="frame" x="422" y="657" width="350" height="110"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u2y-49-TFl">
+                                <rect key="frame" x="422" y="664" width="350" height="110"/>
                                 <color key="backgroundColor" red="0.95837527509999998" green="0.52888590099999999" blue="0.20380106570000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="u2y-49-TFl" secondAttribute="height" multiplier="35:11" id="218-3p-xKs"/>
+                                    <constraint firstAttribute="width" constant="350" id="GNk-5l-kcX"/>
+                                    <constraint firstAttribute="width" secondItem="u2y-49-TFl" secondAttribute="height" multiplier="35:11" id="bmb-b6-34d"/>
+                                    <constraint firstAttribute="height" constant="110" id="erV-OU-DDj"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="60"/>
                                 <state key="normal" title="OK">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -363,7 +439,26 @@ Parents are expected to participate in monitoring and limiting the time that chi
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="FVL-Qs-abq"/>
                         <color key="backgroundColor" red="0.9994472861" green="1" blue="0.89802503590000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="vvj-JS-VP9" firstAttribute="bottom" secondItem="FVL-Qs-abq" secondAttribute="bottom" constant="20" id="9zx-Dy-C5C"/>
+                            <constraint firstItem="u2y-49-TFl" firstAttribute="centerX" secondItem="FVL-Qs-abq" secondAttribute="centerX" id="E5u-oO-DeL"/>
+                            <constraint firstItem="ksK-J6-3ft" firstAttribute="top" secondItem="ucg-l4-jPc" secondAttribute="bottom" constant="20" id="Inf-EV-3GS"/>
+                            <constraint firstItem="az8-do-Aug" firstAttribute="trailing" secondItem="ksK-J6-3ft" secondAttribute="trailing" constant="10" id="JNN-Qh-txu"/>
+                            <constraint firstItem="FVL-Qs-abq" firstAttribute="trailing" secondItem="ksK-J6-3ft" secondAttribute="trailing" constant="140" id="STc-mR-Hiz"/>
+                            <constraint firstAttribute="bottom" secondItem="vvj-JS-VP9" secondAttribute="bottom" id="TgQ-8e-jCs"/>
+                            <constraint firstItem="vvj-JS-VP9" firstAttribute="leading" secondItem="FVL-Qs-abq" secondAttribute="leading" id="V9q-lv-Oru"/>
+                            <constraint firstItem="vvj-JS-VP9" firstAttribute="trailing" secondItem="FVL-Qs-abq" secondAttribute="trailing" id="biY-Yf-iE0"/>
+                            <constraint firstItem="FVL-Qs-abq" firstAttribute="bottom" secondItem="u2y-49-TFl" secondAttribute="bottom" constant="40" id="hFY-PB-ZLA"/>
+                            <constraint firstItem="ucg-l4-jPc" firstAttribute="top" secondItem="FVL-Qs-abq" secondAttribute="top" constant="70" id="hnt-8b-UUh"/>
+                            <constraint firstItem="ucg-l4-jPc" firstAttribute="centerX" secondItem="FVL-Qs-abq" secondAttribute="centerX" id="sHz-vf-B5S"/>
+                            <constraint firstItem="u2y-49-TFl" firstAttribute="top" secondItem="ksK-J6-3ft" secondAttribute="bottom" constant="30" id="tE9-SS-I0s"/>
+                            <constraint firstItem="az8-do-Aug" firstAttribute="centerY" secondItem="ksK-J6-3ft" secondAttribute="centerY" id="tFQ-ni-GwQ"/>
+                            <constraint firstItem="ksK-J6-3ft" firstAttribute="leading" secondItem="FVL-Qs-abq" secondAttribute="leading" constant="140" id="w2m-bJ-tO6"/>
+                            <constraint firstItem="ksK-J6-3ft" firstAttribute="centerX" secondItem="FVL-Qs-abq" secondAttribute="centerX" id="yJk-HU-2BQ"/>
+                            <constraint firstItem="az8-do-Aug" firstAttribute="leading" secondItem="ksK-J6-3ft" secondAttribute="leading" constant="10" id="yl2-Zi-I32"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="XXR-bN-m1b"/>
                     <connections>
                         <outlet property="closeButton" destination="u2y-49-TFl" id="O8b-cI-Jqu"/>
                         <outlet property="whiteTransBg" destination="az8-do-Aug" id="TW9-NF-kJW"/>
@@ -371,7 +466,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mhF-ZI-Xqi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1255" y="1176"/>
+            <point key="canvasLocation" x="-1255.2763819095478" y="1175.5395683453239"/>
         </scene>
         <!--Select Chapter-->
         <scene sceneID="XJ6-zc-kfA">
@@ -432,7 +527,6 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                     </preferredSymbolConfiguration>
                                 </state>
                                 <connections>
-                                    <action selector="buttBackTapped:" destination="W0c-Rr-nTu" eventType="touchUpInside" id="0H6-eh-Max"/>
                                     <segue destination="d7g-t6-UMX" kind="presentation" modalPresentationStyle="fullScreen" id="D82-pD-idJ"/>
                                 </connections>
                             </button>
@@ -555,7 +649,6 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                     </preferredSymbolConfiguration>
                                 </state>
                                 <connections>
-                                    <action selector="pauseButtTapped:" destination="84a-rU-kNd" eventType="touchUpInside" id="eZx-AK-7Ty"/>
                                     <segue destination="BnN-NG-d2s" kind="presentation" modalPresentationStyle="fullScreen" id="eGu-f1-vgZ"/>
                                 </connections>
                             </button>
@@ -567,7 +660,6 @@ Parents are expected to participate in monitoring and limiting the time that chi
                         <outlet property="alphabetTitle" destination="wrm-XK-BW0" id="zRT-hv-rC9"/>
                         <outlet property="bodyText" destination="c80-1i-E0q" id="Yr9-vh-zko"/>
                         <outlet property="nextButton" destination="ogp-wH-ciR" id="n4h-n8-a9c"/>
-                        <outlet property="pauseButton" destination="w8J-7H-BC9" id="QQL-IW-eZs"/>
                         <outlet property="prevButton" destination="572-tQ-2gs" id="dbS-vp-61B"/>
                         <outlet property="whiteTransBg" destination="MNX-XZ-icg" id="RrI-0Y-MMF"/>
                     </connections>
@@ -606,7 +698,6 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                 </state>
                                 <connections>
                                     <action selector="closePausedMenu:" destination="BnN-NG-d2s" eventType="touchUpInside" id="y2N-Nc-ZMJ"/>
-                                    <action selector="contButtonTapped:" destination="BnN-NG-d2s" eventType="touchUpInside" id="Bm4-2R-Nrt"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eex-UY-WCi">
@@ -618,9 +709,6 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                 <state key="normal" title="Naration Voice">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                                <connections>
-                                    <action selector="narrButtonTapped:" destination="BnN-NG-d2s" eventType="touchUpInside" id="6Jm-Gb-oVb"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aFT-qf-A4m">
                                 <rect key="frame" x="298" y="510" width="600" height="110"/>
@@ -632,7 +720,6 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="mainMenuButtonTapped:" destination="BnN-NG-d2s" eventType="touchUpInside" id="1df-LV-Kki"/>
                                     <segue destination="d7g-t6-UMX" kind="presentation" modalPresentationStyle="fullScreen" id="mfO-3s-wQd"/>
                                 </connections>
                             </button>
@@ -646,7 +733,6 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="quitButtonTapped:" destination="BnN-NG-d2s" eventType="touchUpInside" id="DwZ-vS-opx"/>
                                     <segue destination="W0c-Rr-nTu" kind="presentation" modalPresentationStyle="fullScreen" id="jVJ-km-ovP"/>
                                 </connections>
                             </button>
@@ -693,6 +779,11 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                 <rect key="frame" x="454" y="316" width="286" height="267"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fNY-5C-owS">
+                                <rect key="frame" x="656" y="604" width="433" height="197"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.19215686274509802" green="0.40392156862745099" blue="0.47058823529411764" alpha="0.56999999999999995" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BPk-5K-bdW">
                                 <rect key="frame" x="454" y="330" width="286" height="239"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -700,6 +791,11 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                 <color key="textColor" red="0.64537519219999995" green="0.087355382740000001" blue="0.10584814100000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1YS-Fc-zgY">
+                                <rect key="frame" x="676" y="625" width="392" height="157"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.19215686274509802" green="0.40392156862745099" blue="0.47058823529411764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LOo-0d-Tmd">
                                 <rect key="frame" x="140" y="648" width="350" height="110"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -738,20 +834,6 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="startSpeech:" destination="xS4-qk-oIT" eventType="touchUpInside" id="f42-Td-ADG"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VIq-6P-uBn" userLabel="Pause Button">
-                                <rect key="frame" x="1092" y="38" width="62" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" image="gearshape.fill" catalog="system">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
-                                        <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="50"/>
-                                    </preferredSymbolConfiguration>
-                                </state>
-                                <connections>
-                                    <action selector="pauseButtTapped:" destination="xS4-qk-oIT" eventType="touchUpInside" id="puh-C8-7tM"/>
-                                    <segue destination="BnN-NG-d2s" kind="presentation" modalPresentationStyle="fullScreen" id="Qjc-NZ-5YA"/>
                                 </connections>
                             </button>
                             <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nzs-ry-SFc">
@@ -818,14 +900,28 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                     </view>
                                 </subviews>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VIq-6P-uBn">
+                                <rect key="frame" x="1092" y="38" width="62" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" image="gearshape.fill" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
+                                        <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="50"/>
+                                    </preferredSymbolConfiguration>
+                                </state>
+                                <connections>
+                                    <segue destination="BnN-NG-d2s" kind="presentation" modalPresentationStyle="fullScreen" id="Qjc-NZ-5YA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2te-4f-XsQ"/>
                         <color key="backgroundColor" red="0.9994472861" green="1" blue="0.89802503590000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <connections>
-                        <outlet property="pauseButton" destination="VIq-6P-uBn" id="Aj3-Tg-UCN"/>
                         <outlet property="playAudio" destination="LOo-0d-Tmd" id="zqz-VQ-YYR"/>
                         <outlet property="recognizeAlphabet" destination="uRt-3b-Sda" id="Zjp-xW-3eA"/>
+                        <outlet property="recordShadow1" destination="1YS-Fc-zgY" id="FgL-Gq-MKT"/>
+                        <outlet property="recordShadow2" destination="fNY-5C-owS" id="ojX-13-fqy"/>
                         <outlet property="sayIt" destination="IqI-n8-Kon" id="hhT-So-5XT"/>
                         <outlet property="theAlphabet" destination="BPk-5K-bdW" id="iMe-4h-bAn"/>
                         <outlet property="tryAgainButton" destination="fN6-dc-TEM" id="CPh-Kh-r7U"/>
@@ -892,7 +988,6 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                     </preferredSymbolConfiguration>
                                 </state>
                                 <connections>
-                                    <action selector="pauseMenuTapped:" destination="4yQ-mZ-Yd1" eventType="touchUpInside" id="inJ-uc-Rdh"/>
                                     <segue destination="BnN-NG-d2s" kind="presentation" modalPresentationStyle="fullScreen" id="Alw-4D-88y"/>
                                 </connections>
                             </button>
@@ -910,7 +1005,6 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="nextButtTapped:" destination="4yQ-mZ-Yd1" eventType="touchUpInside" id="05d-uc-VGl"/>
                                     <segue destination="BCD-9E-8AO" kind="presentation" modalPresentationStyle="fullScreen" id="1ZQ-O7-5Ap"/>
                                 </connections>
                             </button>
@@ -978,7 +1072,6 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="nextButtTapped:" destination="BCD-9E-8AO" eventType="touchUpInside" id="O4q-72-OcD"/>
                                     <segue destination="bEj-nL-yAD" kind="presentation" modalPresentationStyle="fullScreen" id="nBO-Jh-uP3"/>
                                 </connections>
                             </button>
@@ -992,7 +1085,6 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                     </preferredSymbolConfiguration>
                                 </state>
                                 <connections>
-                                    <action selector="pauseButtTapped:" destination="BCD-9E-8AO" eventType="touchUpInside" id="3Jt-xG-Hje"/>
                                     <segue destination="BnN-NG-d2s" kind="presentation" modalPresentationStyle="fullScreen" id="k9M-DK-gzl"/>
                                 </connections>
                             </button>
@@ -1078,7 +1170,6 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                     </preferredSymbolConfiguration>
                                 </state>
                                 <connections>
-                                    <action selector="pauseButtTapped:" destination="bEj-nL-yAD" eventType="touchUpInside" id="tHm-37-ueD"/>
                                     <segue destination="BnN-NG-d2s" kind="presentation" modalPresentationStyle="fullScreen" id="iSJ-4G-zhb"/>
                                 </connections>
                             </button>
@@ -1096,7 +1187,6 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="nextButtTapped:" destination="bEj-nL-yAD" eventType="touchUpInside" id="Duo-o9-28L"/>
                                     <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="SKi-Rg-hAD"/>
                                 </connections>
                             </button>
@@ -1171,7 +1261,6 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                     </preferredSymbolConfiguration>
                                 </state>
                                 <connections>
-                                    <action selector="pauseButtTapped:" destination="bgU-8J-ozd" eventType="touchUpInside" id="Sfs-xI-vTe"/>
                                     <segue destination="BnN-NG-d2s" kind="presentation" modalPresentationStyle="fullScreen" id="zSH-PC-aQ5"/>
                                 </connections>
                             </button>
@@ -1189,7 +1278,6 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="tryButtTapped:" destination="bgU-8J-ozd" eventType="touchUpInside" id="MUO-ig-BHI"/>
                                     <segue destination="eXP-UT-rvH" kind="presentation" modalPresentationStyle="fullScreen" id="POl-6w-7f2"/>
                                 </connections>
                             </button>
@@ -1233,7 +1321,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                 <color key="textColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6mv-Kd-sKw" userLabel="Pause Button">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6mv-Kd-sKw">
                                 <rect key="frame" x="1092" y="38" width="62" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1243,7 +1331,6 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                     </preferredSymbolConfiguration>
                                 </state>
                                 <connections>
-                                    <action selector="pauseButtTapped:" destination="eXP-UT-rvH" eventType="touchUpInside" id="YfD-zZ-Bza"/>
                                     <segue destination="BnN-NG-d2s" kind="presentation" modalPresentationStyle="fullScreen" id="PkE-Fx-Sc4"/>
                                 </connections>
                             </button>
@@ -1319,7 +1406,6 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="tryAgain:" destination="eXP-UT-rvH" eventType="touchUpInside" id="cNp-kR-tls"/>
-                                                    <action selector="tryAgainYesTapped:" destination="eXP-UT-rvH" eventType="touchUpInside" id="Gty-CR-VZa"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a7N-jp-usX">
@@ -1336,7 +1422,6 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="tryAgainNextTapped:" destination="eXP-UT-rvH" eventType="touchUpInside" id="3Hu-1Z-TIU"/>
                                                     <segue destination="OHZ-3s-64H" kind="presentation" modalPresentationStyle="fullScreen" id="294-gv-xQz"/>
                                                 </connections>
                                             </button>
@@ -1430,7 +1515,6 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                     </preferredSymbolConfiguration>
                                 </state>
                                 <connections>
-                                    <action selector="pauseButtTapped:" destination="1gF-Z3-NB0" eventType="touchUpInside" id="gtZ-lS-6n1"/>
                                     <segue destination="BnN-NG-d2s" kind="presentation" modalPresentationStyle="fullScreen" id="hde-os-pJd"/>
                                 </connections>
                             </button>
@@ -1448,7 +1532,6 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="nextButtTapped:" destination="1gF-Z3-NB0" eventType="touchUpInside" id="KRL-VN-gNn"/>
                                     <segue destination="OHZ-3s-64H" kind="presentation" modalPresentationStyle="fullScreen" id="6dA-gq-VYn"/>
                                 </connections>
                             </button>
@@ -1495,7 +1578,6 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                     </preferredSymbolConfiguration>
                                 </state>
                                 <connections>
-                                    <action selector="pauseButtTapped:" destination="OHZ-3s-64H" eventType="touchUpInside" id="vYV-Fw-byV"/>
                                     <segue destination="BnN-NG-d2s" kind="presentation" modalPresentationStyle="fullScreen" id="d2T-ed-V2o"/>
                                 </connections>
                             </button>
@@ -1535,10 +1617,10 @@ Parents are expected to participate in monitoring and limiting the time that chi
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="294-gv-xQz"/>
-        <segue reference="1ZQ-O7-5Ap"/>
-        <segue reference="zSH-PC-aQ5"/>
+        <segue reference="PMj-bG-2xs"/>
+        <segue reference="eGu-f1-vgZ"/>
         <segue reference="A9y-8I-ua6"/>
-        <segue reference="D82-pD-idJ"/>
+        <segue reference="WGK-U7-Tf6"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="AlphabetBox" width="296" height="277"/>
@@ -1549,6 +1631,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
         <image name="BadgeTheExpert" width="102" height="148"/>
         <image name="BadgeTheExplorer" width="101" height="148"/>
         <image name="GirlDidIt" width="307" height="379"/>
+        <image name="Guide" width="282" height="308"/>
         <image name="MeetDuckyBg" width="1265" height="418"/>
         <image name="Piala" width="58" height="58"/>
         <image name="bg0" width="1265" height="418"/>
