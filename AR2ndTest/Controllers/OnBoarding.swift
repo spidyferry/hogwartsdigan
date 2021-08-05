@@ -9,41 +9,10 @@ import UIKit
 import CoreData
 import AVFoundation
 
-
-//Singleton untuk BGM
-//class AudioModel{
-//    static let shared = AudioModel()
-//
-//    var bgMusic = AVAudioPlayer()
-//
-//    func playSound(){
-//        let bgmMusic = NSURL(fileURLWithPath: Bundle.main.path(forResource: "s_bgm", ofType: "wav")!)
-//        bgMusic = try! AVAudioPlayer(contentsOf: bgmMusic as URL)
-//        bgMusic.prepareToPlay()
-//        bgMusic.numberOfLoops = -1
-//        bgMusic.play()
-//        bgMusic.volume = 0.5
-//    }
-//
-//    func stopSound(){
-//        bgMusic.stop()
-//    }
-//
-//    func pauseSound(){
-//        bgMusic.pause()
-//    }
-//
-//    func startSound(){
-//        bgMusic.play()
-//        bgMusic.volume = 0.5
-//    }
-//}
-
 class OnBoarding: UIViewController {
     
     var userName = "Duck-Duck DC"
-//    var audioPlayer = AVAudioPlayer()
-    
+  
     let defaults = UserDefaults.standard
     let theAlphabets = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
     let theWords = ["Apple", "Basket", "Chocolate", "Duck", "Elephant", "Feather", "Girrafe", "Hen", "Ice Cream", "Jelly", "Kiwi", "Lion", "Mango", "Nib", "Orange", "Penguin", "Queen", "Rooster", "Star", "Tree", "Umbrella", "Vase", "Well", "Xylophone", "Yoghurt", "Zebra"]
@@ -62,15 +31,6 @@ class OnBoarding: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //BGM
-//        let AssortedMusics = NSURL(fileURLWithPath: Bundle.main.path(forResource: "s_bgm", ofType: "wav")!)
-//        audioPlayer = try! AVAudioPlayer(contentsOf: AssortedMusics as URL)
-//        audioPlayer.prepareToPlay()
-//        audioPlayer.numberOfLoops = -1
-//        audioPlayer.play()
-//        audioPlayer.volume = 0.5
-        
-//      Audio BGM Start
         AudioBGM.shared.playSound()
         
         defaults.set(alphabetCompleted, forKey: "alphabetCompleted")

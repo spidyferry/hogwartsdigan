@@ -21,6 +21,7 @@ class WordHint: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        AudioBGM.shared.playSound()
 
         let currentAlphabet = UserDefaults.standard.string(forKey: "currentAlphabet")!
         wordSupposedToBe = getValueForRecognition(alphabetName: currentAlphabet)
@@ -54,6 +55,7 @@ class WordHint: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     @IBAction func nextButtTapped(_ sender: Any) {
+        AudioBGM.shared.stopSound()
         AudioNextTapped.shared.playSound()
     }
     
