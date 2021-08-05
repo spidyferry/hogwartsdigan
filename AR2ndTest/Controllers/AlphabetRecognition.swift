@@ -19,7 +19,7 @@ class AlphabetRecognition: UIViewController, SFSpeechRecognizerDelegate {
     private var recognitionRequest: SFSpeechAudioBufferRecognitionRequest?
     private var recognitionTask: SFSpeechRecognitionTask?
     private let audioEngine = AVAudioEngine()
-//    var alphabetCompleted:[AlphabetTable]?
+    var alphabetCompleted:[AlphabetTable]?
     var alphabet = ""
     var alphabetSupposedToBe:String = ""
 
@@ -31,7 +31,6 @@ class AlphabetRecognition: UIViewController, SFSpeechRecognizerDelegate {
     @IBOutlet weak var recognizeAlphabet: UIButton!
     @IBOutlet weak var recordShadow1: UIView!
     @IBOutlet weak var recordShadow2: UIView!
-//    var soundPlayer : AVAudioPlayer!
     @IBOutlet weak var pauseButton: UIButton!
     
     override func viewDidLoad() {
@@ -149,7 +148,7 @@ class AlphabetRecognition: UIViewController, SFSpeechRecognizerDelegate {
     }
     
     func checkingAlphabet(){
-//        let firstLetter = alphabet.prefix(1)
+        let firstLetter = alphabet.prefix(1)
         
             print(alphabet)
         

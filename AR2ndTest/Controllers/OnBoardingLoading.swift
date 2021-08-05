@@ -10,19 +10,12 @@ import AVFoundation
 
 class OnBoardingLoading: UIViewController {
 
-//    var onBoardingAudio = AVAudioPlayer()
     let storyBoard: UIStoryboard = UIStoryboard(name: "OnBoarding", bundle: nil)
     var isFirst = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        BGM
-//        let onBoardAudio = NSURL(fileURLWithPath: Bundle.main.path(forResource: "s_launch", ofType: "mp3")!)
-//        onBoardingAudio = try! AVAudioPlayer(contentsOf: onBoardAudio as URL)
-//        onBoardingAudio.prepareToPlay()
-//        onBoardingAudio.numberOfLoops = 0
-//        onBoardingAudio.play()
-//        onBoardingAudio.volume = 1
+
     }
     
     override func viewDidAppear(_ animated: Bool) {
