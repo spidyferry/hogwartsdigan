@@ -222,14 +222,57 @@
                         <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg2" translatesAutoresizingMaskIntoConstraints="NO" id="hEG-K2-ik9">
-                                <rect key="frame" x="0.0" y="315" width="1194" height="521"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg2" translatesAutoresizingMaskIntoConstraints="NO" id="hEG-K2-ik9">
+                                <rect key="frame" x="0.0" y="317" width="1194" height="517"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hEG-K2-ik9" secondAttribute="height" multiplier="1194:517" id="llx-Q8-Dyq"/>
+                                </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="12O-yn-IAD">
-                                <rect key="frame" x="297" y="415" width="600" height="160"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hHj-pP-Hlf">
+                                <rect key="frame" x="1096" y="30" width="58" height="58"/>
+                                <color key="tintColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" image="Piala">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
+                                        <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="50"/>
+                                    </preferredSymbolConfiguration>
+                                </state>
+                                <connections>
+                                    <action selector="usernameButtonTapped:" destination="d7g-t6-UMX" eventType="touchUpInside" id="wCH-0S-bHt"/>
+                                    <segue destination="qLN-sv-1O5" kind="presentation" modalPresentationStyle="fullScreen" id="nXZ-Tj-uPv"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ducky's Friend" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RTu-CY-7TH">
+                                <rect key="frame" x="964.5" y="40" width="121.5" height="38"/>
+                                <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="18"/>
+                                <color key="textColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j6P-EJ-81Z">
+                                <rect key="frame" x="1021" y="701" width="133" height="172"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="172" id="RVC-Rn-aEC"/>
+                                    <constraint firstAttribute="width" secondItem="j6P-EJ-81Z" secondAttribute="height" multiplier="133:172" id="ezw-l8-enw"/>
+                                </constraints>
+                                <state key="normal" image="Guide"/>
+                                <connections>
+                                    <action selector="guideButtonTapped:" destination="d7g-t6-UMX" eventType="touchUpInside" id="bPp-jn-coJ"/>
+                                    <segue destination="iiH-6N-EZi" kind="presentation" modalPresentationStyle="fullScreen" id="QRY-Sm-UHa"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AppleBhet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A21-nj-YEC">
+                                <rect key="frame" x="236" y="206" width="722" height="180"/>
+                                <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="150"/>
+                                <color key="textColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="12O-yn-IAD">
+                                <rect key="frame" x="297" y="486" width="600" height="160"/>
                                 <color key="backgroundColor" red="0.95837527509999998" green="0.52888590099999999" blue="0.20380106570000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="S61-QA-C3p"/>
+                                    <constraint firstAttribute="width" constant="600" id="fhq-Gy-08R"/>
+                                    <constraint firstAttribute="width" secondItem="12O-yn-IAD" secondAttribute="height" multiplier="15:4" id="lRY-JP-e99"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="100"/>
                                 <state key="normal" title="Start">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -244,46 +287,25 @@
                                     <action selector="startButtonPressed:" destination="d7g-t6-UMX" eventType="touchUpInside" id="SOO-s8-EO3"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hHj-pP-Hlf">
-                                <rect key="frame" x="1096" y="35" width="58" height="58"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" image="Piala">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
-                                        <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="50"/>
-                                    </preferredSymbolConfiguration>
-                                </state>
-                                <connections>
-                                    <action selector="usernameButtonTapped:" destination="d7g-t6-UMX" eventType="touchUpInside" id="wCH-0S-bHt"/>
-                                    <segue destination="qLN-sv-1O5" kind="presentation" modalPresentationStyle="fullScreen" id="nXZ-Tj-uPv"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ducky's Friend" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RTu-CY-7TH">
-                                <rect key="frame" x="682" y="54" width="404" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="18"/>
-                                <color key="textColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j6P-EJ-81Z">
-                                <rect key="frame" x="1021" y="701" width="133" height="172"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="Guide"/>
-                                <connections>
-                                    <action selector="guideButtonTapped:" destination="d7g-t6-UMX" eventType="touchUpInside" id="bPp-jn-coJ"/>
-                                    <segue destination="iiH-6N-EZi" kind="presentation" modalPresentationStyle="fullScreen" id="QRY-Sm-UHa"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="AppleBhet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A21-nj-YEC">
-                                <rect key="frame" x="236" y="150" width="722" height="180"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="150"/>
-                                <color key="textColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5nV-FW-8hS"/>
                         <color key="backgroundColor" red="0.9994472861" green="1" blue="0.89802503590000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="A21-nj-YEC" firstAttribute="top" secondItem="5nV-FW-8hS" secondAttribute="top" constant="206" id="09c-Te-yKg"/>
+                            <constraint firstItem="j6P-EJ-81Z" firstAttribute="bottom" secondItem="5nV-FW-8hS" secondAttribute="bottom" constant="59" id="AqO-3h-pML"/>
+                            <constraint firstItem="A21-nj-YEC" firstAttribute="centerX" secondItem="5nV-FW-8hS" secondAttribute="centerX" id="CG5-ox-m84"/>
+                            <constraint firstItem="RTu-CY-7TH" firstAttribute="centerY" secondItem="hHj-pP-Hlf" secondAttribute="centerY" id="GmO-JE-WSg"/>
+                            <constraint firstItem="hHj-pP-Hlf" firstAttribute="leading" secondItem="RTu-CY-7TH" secondAttribute="trailing" constant="10" id="JAS-WC-Xu6"/>
+                            <constraint firstItem="12O-yn-IAD" firstAttribute="top" secondItem="A21-nj-YEC" secondAttribute="bottom" constant="100" id="Mrw-3p-lxr"/>
+                            <constraint firstItem="hHj-pP-Hlf" firstAttribute="top" secondItem="5nV-FW-8hS" secondAttribute="top" constant="30" id="P46-N0-f72"/>
+                            <constraint firstAttribute="bottom" secondItem="hEG-K2-ik9" secondAttribute="bottom" id="TwW-tH-x4J"/>
+                            <constraint firstItem="12O-yn-IAD" firstAttribute="centerX" secondItem="5nV-FW-8hS" secondAttribute="centerX" id="XRu-sv-phh"/>
+                            <constraint firstItem="5nV-FW-8hS" firstAttribute="trailing" secondItem="hHj-pP-Hlf" secondAttribute="trailing" constant="40" id="Yh5-pu-1g3"/>
+                            <constraint firstItem="RTu-CY-7TH" firstAttribute="top" secondItem="5nV-FW-8hS" secondAttribute="top" constant="40" id="jyS-FV-YBC"/>
+                            <constraint firstItem="5nV-FW-8hS" firstAttribute="trailing" secondItem="j6P-EJ-81Z" secondAttribute="trailing" constant="40" id="kAe-8O-79C"/>
+                            <constraint firstItem="hEG-K2-ik9" firstAttribute="trailing" secondItem="5nV-FW-8hS" secondAttribute="trailing" id="qcb-PK-I37"/>
+                            <constraint firstItem="hEG-K2-ik9" firstAttribute="leading" secondItem="5nV-FW-8hS" secondAttribute="leading" id="uBB-9v-BJx"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="zom-Lz-73D"/>
                     <connections>
