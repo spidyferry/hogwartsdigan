@@ -624,7 +624,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="c80-1i-E0q">
-                                <rect key="frame" x="160" y="419.5" width="874" height="71"/>
+                                <rect key="frame" x="150" y="419.5" width="894" height="71"/>
                                 <color key="textColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="46"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -714,9 +714,9 @@ Parents are expected to participate in monitoring and limiting the time that chi
                             <constraint firstItem="ruh-uZ-AVQ" firstAttribute="trailing" secondItem="ogp-wH-ciR" secondAttribute="trailing" constant="140" id="JFe-m7-le6"/>
                             <constraint firstItem="ruh-uZ-AVQ" firstAttribute="trailing" secondItem="MNX-XZ-icg" secondAttribute="trailing" constant="140" id="N9O-Vo-rPZ"/>
                             <constraint firstItem="MNX-XZ-icg" firstAttribute="leading" secondItem="ruh-uZ-AVQ" secondAttribute="leading" constant="140" id="PNX-xP-w43"/>
-                            <constraint firstItem="c80-1i-E0q" firstAttribute="trailing" secondItem="MNX-XZ-icg" secondAttribute="trailing" constant="-20" id="QnT-vg-ENK"/>
+                            <constraint firstItem="c80-1i-E0q" firstAttribute="trailing" secondItem="MNX-XZ-icg" secondAttribute="trailing" constant="-10" id="QnT-vg-ENK"/>
                             <constraint firstItem="w8J-7H-BC9" firstAttribute="top" secondItem="ruh-uZ-AVQ" secondAttribute="top" constant="30" id="S5u-nf-ABr"/>
-                            <constraint firstItem="c80-1i-E0q" firstAttribute="leading" secondItem="MNX-XZ-icg" secondAttribute="leading" constant="20" id="Yqj-P3-v73"/>
+                            <constraint firstItem="c80-1i-E0q" firstAttribute="leading" secondItem="MNX-XZ-icg" secondAttribute="leading" constant="10" id="Yqj-P3-v73"/>
                             <constraint firstItem="c80-1i-E0q" firstAttribute="centerY" secondItem="MNX-XZ-icg" secondAttribute="centerY" id="bEb-ns-bJL"/>
                             <constraint firstItem="ruh-uZ-AVQ" firstAttribute="bottom" secondItem="572-tQ-2gs" secondAttribute="bottom" constant="40" id="bmd-0m-fq7"/>
                             <constraint firstItem="wrm-XK-BW0" firstAttribute="centerX" secondItem="ruh-uZ-AVQ" secondAttribute="centerX" id="n1S-bd-ghy"/>
@@ -748,21 +748,29 @@ Parents are expected to participate in monitoring and limiting the time that chi
                         <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg2" translatesAutoresizingMaskIntoConstraints="NO" id="27y-9j-x2L">
-                                <rect key="frame" x="0.0" y="315" width="1194" height="522"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg2" translatesAutoresizingMaskIntoConstraints="NO" id="27y-9j-x2L">
+                                <rect key="frame" x="0.0" y="320" width="1194" height="517"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="27y-9j-x2L" secondAttribute="height" multiplier="1194:517" id="psf-Hb-9gl"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Game Paused" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cvq-JW-t8t">
-                                <rect key="frame" x="222" y="82" width="752" height="144"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Paused" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cvq-JW-t8t">
+                                <rect key="frame" x="221" y="82" width="752" height="144"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Cvq-JW-t8t" secondAttribute="height" multiplier="47:9" id="L8g-ft-Wkj"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="120"/>
                                 <color key="textColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fsz-i1-YR2">
-                                <rect key="frame" x="298" y="254" width="600" height="110"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fsz-i1-YR2">
+                                <rect key="frame" x="297" y="254" width="600" height="110"/>
                                 <color key="backgroundColor" red="0.95837527509999998" green="0.52888590099999999" blue="0.20380106570000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Fsz-i1-YR2" secondAttribute="height" multiplier="60:11" id="Mk3-bW-50k"/>
+                                    <constraint firstAttribute="height" constant="110" id="OVA-sx-XG6"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="600" id="UvL-tG-i33"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="60"/>
                                 <inset key="titleEdgeInsets" minX="30" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Continue">
@@ -773,10 +781,14 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                     <action selector="contButtonTapped:" destination="BnN-NG-d2s" eventType="touchUpInside" id="mb9-hA-vdj"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eex-UY-WCi">
-                                <rect key="frame" x="298" y="382" width="600" height="110"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eex-UY-WCi">
+                                <rect key="frame" x="297" y="382" width="600" height="110"/>
                                 <color key="backgroundColor" red="0.95837527509999998" green="0.52888590099999999" blue="0.20380106570000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="600" id="2SI-wI-ep2"/>
+                                    <constraint firstAttribute="width" secondItem="Eex-UY-WCi" secondAttribute="height" multiplier="60:11" id="Sko-S8-fyW"/>
+                                    <constraint firstAttribute="height" constant="110" id="f4C-vO-eS3"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="60"/>
                                 <inset key="titleEdgeInsets" minX="30" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Naration Voice">
@@ -786,10 +798,14 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                     <action selector="narrButtonTapped:" destination="BnN-NG-d2s" eventType="touchUpInside" id="IEz-1W-5by"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aFT-qf-A4m">
-                                <rect key="frame" x="298" y="510" width="600" height="110"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aFT-qf-A4m">
+                                <rect key="frame" x="297" y="510" width="600" height="110"/>
                                 <color key="backgroundColor" red="0.95837527509999998" green="0.52888590099999999" blue="0.20380106570000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="600" id="5D8-YA-UqU"/>
+                                    <constraint firstAttribute="height" constant="110" id="Bbu-dj-tuM"/>
+                                    <constraint firstAttribute="width" secondItem="aFT-qf-A4m" secondAttribute="height" multiplier="60:11" id="G3g-TN-ar7"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="60"/>
                                 <inset key="titleEdgeInsets" minX="30" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Main Menu">
@@ -800,10 +816,14 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                     <segue destination="d7g-t6-UMX" kind="presentation" modalPresentationStyle="fullScreen" id="mfO-3s-wQd"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TEO-Rr-CYg">
-                                <rect key="frame" x="298" y="638" width="600" height="110"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TEO-Rr-CYg">
+                                <rect key="frame" x="297" y="638" width="600" height="110"/>
                                 <color key="backgroundColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="600" id="4hC-Bz-ALO"/>
+                                    <constraint firstAttribute="height" constant="110" id="5lP-8z-mv9"/>
+                                    <constraint firstAttribute="width" secondItem="TEO-Rr-CYg" secondAttribute="height" multiplier="60:11" id="aJK-AR-IH9"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="60"/>
                                 <inset key="titleEdgeInsets" minX="30" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Quit">
@@ -814,14 +834,35 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                     <segue destination="W0c-Rr-nTu" kind="presentation" modalPresentationStyle="fullScreen" id="jVJ-km-ovP"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="speaker" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="DRz-Hc-GM7">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="speaker" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="DRz-Hc-GM7">
                                 <rect key="frame" x="818" y="408.5" width="60" height="58"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="FBW-uZ-zH7"/>
+                                    <constraint firstAttribute="width" constant="60" id="Zck-cN-d8C"/>
+                                    <constraint firstAttribute="width" secondItem="DRz-Hc-GM7" secondAttribute="height" multiplier="60:61" id="l4c-Yr-ISM"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="JoX-9a-l8g"/>
                         <color key="backgroundColor" red="0.9994472861" green="1" blue="0.89802503590000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="27y-9j-x2L" firstAttribute="trailing" secondItem="JoX-9a-l8g" secondAttribute="trailing" id="0Lt-Ua-zqi"/>
+                            <constraint firstItem="27y-9j-x2L" firstAttribute="leading" secondItem="JoX-9a-l8g" secondAttribute="leading" id="6wC-Cd-rCT"/>
+                            <constraint firstItem="Eex-UY-WCi" firstAttribute="centerX" secondItem="voa-jr-qJi" secondAttribute="centerX" id="6xo-tz-bGx"/>
+                            <constraint firstItem="Eex-UY-WCi" firstAttribute="trailing" secondItem="DRz-Hc-GM7" secondAttribute="trailing" constant="19" id="7Jn-A9-9uP"/>
+                            <constraint firstItem="aFT-qf-A4m" firstAttribute="top" secondItem="Eex-UY-WCi" secondAttribute="bottom" constant="18" id="MA2-y8-lHJ"/>
+                            <constraint firstItem="TEO-Rr-CYg" firstAttribute="centerX" secondItem="voa-jr-qJi" secondAttribute="centerX" id="Vxr-NU-OlG"/>
+                            <constraint firstItem="TEO-Rr-CYg" firstAttribute="top" secondItem="aFT-qf-A4m" secondAttribute="bottom" constant="18" id="aXH-b5-SGR"/>
+                            <constraint firstAttribute="bottom" secondItem="27y-9j-x2L" secondAttribute="bottom" constant="-3" id="dWn-Zh-eiy"/>
+                            <constraint firstItem="Fsz-i1-YR2" firstAttribute="top" secondItem="Cvq-JW-t8t" secondAttribute="bottom" constant="28" id="fXY-JK-TNr"/>
+                            <constraint firstItem="Eex-UY-WCi" firstAttribute="top" secondItem="Fsz-i1-YR2" secondAttribute="bottom" constant="18" id="gGO-Kj-uFU"/>
+                            <constraint firstItem="Cvq-JW-t8t" firstAttribute="centerX" secondItem="voa-jr-qJi" secondAttribute="centerX" id="kEa-Sc-1qG"/>
+                            <constraint firstItem="aFT-qf-A4m" firstAttribute="centerX" secondItem="voa-jr-qJi" secondAttribute="centerX" id="lae-Sr-9Zr"/>
+                            <constraint firstItem="DRz-Hc-GM7" firstAttribute="top" secondItem="Fsz-i1-YR2" secondAttribute="bottom" constant="43" id="nyM-5V-oPP"/>
+                            <constraint firstItem="Fsz-i1-YR2" firstAttribute="centerX" secondItem="voa-jr-qJi" secondAttribute="centerX" id="sPI-el-8dB"/>
+                            <constraint firstItem="Cvq-JW-t8t" firstAttribute="top" secondItem="JoX-9a-l8g" secondAttribute="top" constant="82" id="tJb-sc-lQ9"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="continueButton" destination="Fsz-i1-YR2" id="MLj-UY-UdR"/>
@@ -845,11 +886,8 @@ Parents are expected to participate in monitoring and limiting the time that chi
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg2" translatesAutoresizingMaskIntoConstraints="NO" id="gza-ds-UWZ">
                                 <rect key="frame" x="0.0" y="320" width="1194" height="517"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="gza-ds-UWZ" secondAttribute="height" multiplier="1194:517" id="lbB-X3-td8"/>
+                                    <constraint firstAttribute="width" secondItem="gza-ds-UWZ" secondAttribute="height" multiplier="1194:517" id="1g6-3v-KGx"/>
                                 </constraints>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="AlphabetBox" translatesAutoresizingMaskIntoConstraints="NO" id="ix2-3O-cIq">
-                                <rect key="frame" x="454" y="298" width="286" height="267"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Say it!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IqI-n8-Kon">
                                 <rect key="frame" x="427" y="84" width="340" height="144"/>
@@ -857,30 +895,45 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                 <color key="textColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="AlphabetBox" translatesAutoresizingMaskIntoConstraints="NO" id="ix2-3O-cIq">
+                                <rect key="frame" x="454" y="298" width="286" height="267"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fNY-5C-owS">
                                 <rect key="frame" x="382" y="604" width="430" height="190"/>
                                 <color key="backgroundColor" red="0.19215686274509802" green="0.40392156862745099" blue="0.47058823529411764" alpha="0.56999999999999995" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="190" id="HD4-c1-uk8"/>
-                                    <constraint firstAttribute="width" constant="430" id="PRB-Y8-21g"/>
-                                    <constraint firstAttribute="width" secondItem="fNY-5C-owS" secondAttribute="height" multiplier="43:19" id="cTf-Kx-0mr"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1YS-Fc-zgY">
-                                <rect key="frame" x="402" y="624" width="390" height="150"/>
-                                <color key="backgroundColor" red="0.19215686274509802" green="0.40392156862745099" blue="0.47058823529411764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="1YS-Fc-zgY" secondAttribute="height" multiplier="13:5" id="F9B-Qf-pnX"/>
-                                    <constraint firstAttribute="width" constant="390" id="kvU-W9-Dba"/>
-                                    <constraint firstAttribute="height" constant="150" id="yV3-OM-MMx"/>
+                                    <constraint firstAttribute="height" constant="190" id="21z-90-SU7"/>
+                                    <constraint firstAttribute="width" secondItem="fNY-5C-owS" secondAttribute="height" multiplier="43:19" id="VEb-xY-1cR"/>
+                                    <constraint firstAttribute="width" constant="430" id="nsR-Ze-Abc"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BPk-5K-bdW">
-                                <rect key="frame" x="489" y="340" width="217" height="206"/>
+                                <rect key="frame" x="477" y="327" width="239" height="210"/>
                                 <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="200"/>
                                 <color key="textColor" red="0.64537519219999995" green="0.087355382740000001" blue="0.10584814100000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bd7-kS-McD">
+                                <rect key="frame" x="664" y="491" width="61" height="59"/>
+                                <color key="tintColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" image="play.circle" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
+                                        <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="50"/>
+                                    </preferredSymbolConfiguration>
+                                </state>
+                                <connections>
+                                    <action selector="playAudio:" destination="xS4-qk-oIT" eventType="touchUpInside" id="ydO-Tt-eqx"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1YS-Fc-zgY">
+                                <rect key="frame" x="402" y="624" width="390" height="150"/>
+                                <color key="backgroundColor" red="0.19215686274509802" green="0.40392156862745099" blue="0.47058823529411764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="8rl-P1-Dg4"/>
+                                    <constraint firstAttribute="width" secondItem="1YS-Fc-zgY" secondAttribute="height" multiplier="13:5" id="ax1-0R-3Hf"/>
+                                    <constraint firstAttribute="width" constant="390" id="l8f-hR-mYc"/>
+                                </constraints>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VIq-6P-uBn" userLabel="Pause Button">
                                 <rect key="frame" x="1092" y="30" width="62" height="60"/>
                                 <color key="tintColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -895,12 +948,12 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uRt-3b-Sda">
-                                <rect key="frame" x="422" y="644" width="350" height="110"/>
+                                <rect key="frame" x="422" y="648" width="350" height="110"/>
                                 <color key="backgroundColor" red="0.95837527509999998" green="0.52888590099999999" blue="0.20380106570000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="350" id="axc-Sw-AMF"/>
-                                    <constraint firstAttribute="height" constant="110" id="l7g-tt-U1v"/>
-                                    <constraint firstAttribute="width" secondItem="uRt-3b-Sda" secondAttribute="height" multiplier="35:11" id="zbe-HY-VE0"/>
+                                    <constraint firstAttribute="width" constant="350" id="Vov-El-req"/>
+                                    <constraint firstAttribute="height" constant="110" id="Yfo-sj-usH"/>
+                                    <constraint firstAttribute="width" secondItem="uRt-3b-Sda" secondAttribute="height" multiplier="35:11" id="nPx-ml-Yss"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -918,42 +971,29 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                     <action selector="startSpeech:" destination="xS4-qk-oIT" eventType="touchUpInside" id="f42-Td-ADG"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2cc-Xm-vgb">
-                                <rect key="frame" x="674" y="499" width="61" height="59"/>
-                                <color key="tintColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" image="play.circle" catalog="system">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
-                                        <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="50"/>
-                                    </preferredSymbolConfiguration>
-                                </state>
-                                <connections>
-                                    <action selector="playAudio:" destination="xS4-qk-oIT" eventType="touchUpInside" id="3VZ-bv-O8v"/>
-                                </connections>
-                            </button>
-                            <view hidden="YES" contentMode="scaleToFill" id="sAx-3g-5ap">
-                                <rect key="frame" x="0.0" y="-2" width="1194" height="837"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZaN-Ks-xh7">
+                                <rect key="frame" x="0.0" y="-2" width="1194" height="838"/>
                                 <subviews>
-                                    <view alpha="0.64999997615814209" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qx7-wb-1UH">
+                                    <view alpha="0.64999997615814209" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NcM-dk-73f">
                                         <rect key="frame" x="0.0" y="0.0" width="1194" height="837"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i5a-hg-fFT">
-                                        <rect key="frame" x="357" y="177" width="480" height="464"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DQy-vl-9dh">
+                                        <rect key="frame" x="358" y="174" width="478" height="485"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Try Again?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iX7-13-uxa">
-                                                <rect key="frame" x="95.5" y="40" width="289" height="72"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Try Again?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="700-XQ-ZGB">
+                                                <rect key="frame" x="96" y="45" width="289" height="72"/>
                                                 <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="60"/>
                                                 <color key="textColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CJq-vm-pcY">
-                                                <rect key="frame" x="65" y="177" width="350" height="110"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AUg-cO-ILt">
+                                                <rect key="frame" x="64" y="187.5" width="350" height="110"/>
                                                 <color key="backgroundColor" red="0.95837527509999998" green="0.52888590099999999" blue="0.20380106570000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" secondItem="CJq-vm-pcY" secondAttribute="height" multiplier="35:11" id="15m-W3-pfu"/>
-                                                    <constraint firstAttribute="height" constant="110" id="4MD-5A-6aK"/>
-                                                    <constraint firstAttribute="width" constant="350" id="n9J-I2-nkV"/>
+                                                    <constraint firstAttribute="width" constant="350" id="3Z9-kJ-K6v"/>
+                                                    <constraint firstAttribute="width" secondItem="AUg-cO-ILt" secondAttribute="height" multiplier="35:11" id="72t-lb-hoD"/>
+                                                    <constraint firstAttribute="height" constant="110" id="xCP-g7-EJH"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="60"/>
                                                 <state key="normal" title="Yes">
@@ -965,16 +1005,17 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="tryAgain:" destination="xS4-qk-oIT" eventType="touchUpInside" id="C7O-HF-z3i"/>
+                                                    <action selector="tryAgain:" destination="6oq-5T-dmM" eventType="touchUpInside" id="T3h-0O-wVs"/>
+                                                    <action selector="tryAgain:" destination="xS4-qk-oIT" eventType="touchUpInside" id="je2-aW-qNg"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="war-rm-J9b">
-                                                <rect key="frame" x="65" y="327" width="350" height="110"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qci-H1-2Cr">
+                                                <rect key="frame" x="64" y="337.5" width="350" height="110"/>
                                                 <color key="backgroundColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="350" id="8dD-d9-MiJ"/>
-                                                    <constraint firstAttribute="height" constant="110" id="Lc7-Y9-Y55"/>
-                                                    <constraint firstAttribute="width" secondItem="war-rm-J9b" secondAttribute="height" multiplier="35:11" id="tQY-ZX-U9K"/>
+                                                    <constraint firstAttribute="height" constant="110" id="3E3-wV-Xsd"/>
+                                                    <constraint firstAttribute="width" constant="350" id="D4X-GS-Hfo"/>
+                                                    <constraint firstAttribute="width" secondItem="qci-H1-2Cr" secondAttribute="height" multiplier="35:11" id="WKu-mk-zwB"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="60"/>
                                                 <state key="normal" title="Next">
@@ -986,18 +1027,18 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="nextPage:" destination="xS4-qk-oIT" eventType="touchUpInside" id="kxk-g4-6Iu"/>
+                                                    <action selector="nextPage:" destination="xS4-qk-oIT" eventType="touchUpInside" id="7Ul-rD-Om1"/>
                                                 </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.9994472861" green="1" blue="0.89802503590000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
-                                            <constraint firstItem="CJq-vm-pcY" firstAttribute="centerY" secondItem="i5a-hg-fFT" secondAttribute="centerY" id="71d-jc-adh"/>
-                                            <constraint firstItem="iX7-13-uxa" firstAttribute="centerX" secondItem="i5a-hg-fFT" secondAttribute="centerX" id="8mO-IK-c7O"/>
-                                            <constraint firstItem="CJq-vm-pcY" firstAttribute="top" secondItem="iX7-13-uxa" secondAttribute="bottom" constant="65" id="LeW-Ce-S3h"/>
-                                            <constraint firstItem="war-rm-J9b" firstAttribute="top" secondItem="CJq-vm-pcY" secondAttribute="bottom" constant="40" id="MOR-ph-jwa"/>
-                                            <constraint firstItem="war-rm-J9b" firstAttribute="centerX" secondItem="i5a-hg-fFT" secondAttribute="centerX" id="Zye-lN-cQc"/>
-                                            <constraint firstItem="CJq-vm-pcY" firstAttribute="centerX" secondItem="i5a-hg-fFT" secondAttribute="centerX" id="oF8-bt-WW0"/>
+                                            <constraint firstItem="AUg-cO-ILt" firstAttribute="centerY" secondItem="DQy-vl-9dh" secondAttribute="centerY" id="7OB-Bp-wOV"/>
+                                            <constraint firstItem="qci-H1-2Cr" firstAttribute="top" secondItem="AUg-cO-ILt" secondAttribute="bottom" constant="40" id="VZc-Yi-Gal"/>
+                                            <constraint firstItem="AUg-cO-ILt" firstAttribute="top" secondItem="700-XQ-ZGB" secondAttribute="bottom" constant="70" id="byJ-qv-gKX"/>
+                                            <constraint firstItem="700-XQ-ZGB" firstAttribute="centerX" secondItem="DQy-vl-9dh" secondAttribute="centerX" id="ePi-oe-b4I"/>
+                                            <constraint firstItem="qci-H1-2Cr" firstAttribute="centerX" secondItem="DQy-vl-9dh" secondAttribute="centerX" id="gQu-SW-0DF"/>
+                                            <constraint firstItem="AUg-cO-ILt" firstAttribute="centerX" secondItem="DQy-vl-9dh" secondAttribute="centerX" id="l3X-id-NSY"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -1006,54 +1047,58 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
-                                <viewLayoutGuide key="safeArea" id="SM2-S3-4h0"/>
                                 <constraints>
-                                    <constraint firstItem="Qx7-wb-1UH" firstAttribute="top" secondItem="SM2-S3-4h0" secondAttribute="top" id="aWN-Yh-m7e"/>
+                                    <constraint firstItem="DQy-vl-9dh" firstAttribute="top" secondItem="ZaN-Ks-xh7" secondAttribute="top" constant="174" id="0bJ-Xi-obo"/>
+                                    <constraint firstAttribute="bottom" secondItem="DQy-vl-9dh" secondAttribute="bottom" constant="179" id="Lf1-tp-1m0"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2te-4f-XsQ"/>
                         <color key="backgroundColor" red="0.9994472861" green="1" blue="0.89802503590000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="gza-ds-UWZ" firstAttribute="leading" secondItem="2te-4f-XsQ" secondAttribute="leading" id="3dW-BE-KgV"/>
-                            <constraint firstItem="gza-ds-UWZ" firstAttribute="bottom" secondItem="2te-4f-XsQ" secondAttribute="bottom" constant="23" id="4IX-mj-9Zy"/>
-                            <constraint firstItem="2te-4f-XsQ" firstAttribute="bottom" secondItem="1YS-Fc-zgY" secondAttribute="bottom" constant="40" id="ECi-JF-eth"/>
-                            <constraint firstItem="IqI-n8-Kon" firstAttribute="top" secondItem="2te-4f-XsQ" secondAttribute="top" constant="84" id="Eis-yV-WCJ"/>
-                            <constraint firstItem="2cc-Xm-vgb" firstAttribute="trailing" secondItem="ix2-3O-cIq" secondAttribute="trailing" constant="-15" id="KWe-Q1-SpJ"/>
-                            <constraint firstItem="2te-4f-XsQ" firstAttribute="bottom" secondItem="uRt-3b-Sda" secondAttribute="bottom" constant="60" id="M8Y-Mz-Fga"/>
-                            <constraint firstItem="2te-4f-XsQ" firstAttribute="bottom" secondItem="fNY-5C-owS" secondAttribute="bottom" constant="20" id="Or3-qO-4xB"/>
-                            <constraint firstItem="ix2-3O-cIq" firstAttribute="centerX" secondItem="2te-4f-XsQ" secondAttribute="centerX" id="Rnp-Ny-2DH"/>
-                            <constraint firstItem="uRt-3b-Sda" firstAttribute="centerX" secondItem="2te-4f-XsQ" secondAttribute="centerX" id="Saq-Lm-8sa"/>
-                            <constraint firstItem="1YS-Fc-zgY" firstAttribute="centerX" secondItem="2te-4f-XsQ" secondAttribute="centerX" id="Tb2-dw-wnE"/>
-                            <constraint firstItem="Qx7-wb-1UH" firstAttribute="bottom" secondItem="2te-4f-XsQ" secondAttribute="bottom" constant="21" id="Tiu-MK-8fe"/>
-                            <constraint firstItem="2te-4f-XsQ" firstAttribute="bottom" secondItem="i5a-hg-fFT" secondAttribute="bottom" constant="175" id="UEm-ex-eKV"/>
-                            <constraint firstItem="i5a-hg-fFT" firstAttribute="leading" secondItem="2te-4f-XsQ" secondAttribute="leading" constant="357" id="Vdt-Xb-5vU"/>
-                            <constraint firstItem="ix2-3O-cIq" firstAttribute="top" secondItem="IqI-n8-Kon" secondAttribute="bottom" constant="70" id="X5y-bt-b0Y"/>
-                            <constraint firstItem="2cc-Xm-vgb" firstAttribute="bottom" secondItem="ix2-3O-cIq" secondAttribute="bottom" constant="-15" id="X7a-PW-cAI"/>
-                            <constraint firstItem="fNY-5C-owS" firstAttribute="centerX" secondItem="2te-4f-XsQ" secondAttribute="centerX" id="cZz-1X-yMd"/>
-                            <constraint firstItem="VIq-6P-uBn" firstAttribute="top" secondItem="2te-4f-XsQ" secondAttribute="top" constant="30" id="h7i-1L-uHs"/>
-                            <constraint firstItem="i5a-hg-fFT" firstAttribute="top" secondItem="2te-4f-XsQ" secondAttribute="top" constant="175" id="luM-aq-Ap4"/>
-                            <constraint firstItem="BPk-5K-bdW" firstAttribute="centerY" secondItem="ix2-3O-cIq" secondAttribute="centerY" id="mxf-Sn-NaB"/>
-                            <constraint firstItem="gza-ds-UWZ" firstAttribute="centerX" secondItem="2te-4f-XsQ" secondAttribute="centerX" id="oCp-Oq-sM4"/>
-                            <constraint firstItem="2te-4f-XsQ" firstAttribute="trailing" secondItem="i5a-hg-fFT" secondAttribute="trailing" constant="357" id="oS9-cT-SmT"/>
-                            <constraint firstItem="IqI-n8-Kon" firstAttribute="centerX" secondItem="2te-4f-XsQ" secondAttribute="centerX" id="pog-EG-BT8"/>
-                            <constraint firstItem="2te-4f-XsQ" firstAttribute="trailing" secondItem="VIq-6P-uBn" secondAttribute="trailing" constant="40" id="qce-NC-13w"/>
-                            <constraint firstItem="BPk-5K-bdW" firstAttribute="centerX" secondItem="ix2-3O-cIq" secondAttribute="centerX" id="tfg-4S-syG"/>
-                            <constraint firstItem="2te-4f-XsQ" firstAttribute="trailing" secondItem="Qx7-wb-1UH" secondAttribute="trailing" id="wE5-YY-Lta"/>
-                            <constraint firstItem="gza-ds-UWZ" firstAttribute="trailing" secondItem="2te-4f-XsQ" secondAttribute="trailing" id="yPR-kC-7Av"/>
-                            <constraint firstItem="Qx7-wb-1UH" firstAttribute="leading" secondItem="2te-4f-XsQ" secondAttribute="leading" id="z4x-T7-t8L"/>
+                            <constraint firstItem="ZaN-Ks-xh7" firstAttribute="leading" secondItem="gza-ds-UWZ" secondAttribute="leading" id="16D-yX-bBj"/>
+                            <constraint firstItem="IqI-n8-Kon" firstAttribute="top" secondItem="2te-4f-XsQ" secondAttribute="top" constant="84" id="1k7-3N-zLp"/>
+                            <constraint firstItem="gza-ds-UWZ" firstAttribute="centerX" secondItem="2te-4f-XsQ" secondAttribute="centerX" id="1ot-BC-pNO"/>
+                            <constraint firstItem="NcM-dk-73f" firstAttribute="leading" secondItem="2te-4f-XsQ" secondAttribute="leading" id="2QQ-lV-Axm"/>
+                            <constraint firstItem="2te-4f-XsQ" firstAttribute="trailing" secondItem="NcM-dk-73f" secondAttribute="trailing" id="3At-FW-VV6"/>
+                            <constraint firstItem="gza-ds-UWZ" firstAttribute="bottom" secondItem="2te-4f-XsQ" secondAttribute="bottom" constant="23" id="78V-ah-EwS"/>
+                            <constraint firstItem="BPk-5K-bdW" firstAttribute="centerX" secondItem="ix2-3O-cIq" secondAttribute="centerX" id="8K4-MX-EZ3"/>
+                            <constraint firstItem="DQy-vl-9dh" firstAttribute="leading" secondItem="2te-4f-XsQ" secondAttribute="leading" constant="358" id="Dck-fT-L5n"/>
+                            <constraint firstItem="Bd7-kS-McD" firstAttribute="bottom" secondItem="ix2-3O-cIq" secondAttribute="bottom" constant="-15" id="EfU-7i-aOj"/>
+                            <constraint firstItem="2te-4f-XsQ" firstAttribute="bottom" secondItem="uRt-3b-Sda" secondAttribute="bottom" constant="56" id="GIy-gr-rCK"/>
+                            <constraint firstItem="2te-4f-XsQ" firstAttribute="bottom" secondItem="fNY-5C-owS" secondAttribute="bottom" constant="20" id="HrP-L4-rxG"/>
+                            <constraint firstItem="1YS-Fc-zgY" firstAttribute="centerX" secondItem="2te-4f-XsQ" secondAttribute="centerX" id="KRg-3Y-iiL"/>
+                            <constraint firstItem="ZaN-Ks-xh7" firstAttribute="top" secondItem="p5C-DE-iC4" secondAttribute="topMargin" constant="-2" id="KbG-6G-hF5"/>
+                            <constraint firstItem="uRt-3b-Sda" firstAttribute="centerX" secondItem="2te-4f-XsQ" secondAttribute="centerX" id="LcM-J9-GpQ"/>
+                            <constraint firstItem="2te-4f-XsQ" firstAttribute="trailing" secondItem="DQy-vl-9dh" secondAttribute="trailing" constant="358" id="Lm4-do-hUB"/>
+                            <constraint firstItem="NcM-dk-73f" firstAttribute="bottom" secondItem="2te-4f-XsQ" secondAttribute="bottom" constant="21" id="OdH-A5-fkV"/>
+                            <constraint firstItem="2te-4f-XsQ" firstAttribute="top" secondItem="NcM-dk-73f" secondAttribute="top" constant="2" id="P7f-yc-SCp"/>
+                            <constraint firstItem="gza-ds-UWZ" firstAttribute="leading" secondItem="2te-4f-XsQ" secondAttribute="leading" id="Qk8-Ad-fLm"/>
+                            <constraint firstItem="BPk-5K-bdW" firstAttribute="centerY" secondItem="ix2-3O-cIq" secondAttribute="centerY" id="RD0-tK-5hT"/>
+                            <constraint firstItem="gza-ds-UWZ" firstAttribute="trailing" secondItem="2te-4f-XsQ" secondAttribute="trailing" id="Rci-aY-VXb"/>
+                            <constraint firstItem="2te-4f-XsQ" firstAttribute="bottom" secondItem="1YS-Fc-zgY" secondAttribute="bottom" constant="40" id="SSg-66-mIE"/>
+                            <constraint firstItem="2te-4f-XsQ" firstAttribute="trailing" secondItem="VIq-6P-uBn" secondAttribute="trailing" constant="40" id="UuA-cn-lr3"/>
+                            <constraint firstItem="Bd7-kS-McD" firstAttribute="trailing" secondItem="ix2-3O-cIq" secondAttribute="trailing" constant="-15" id="VHd-0o-HE4"/>
+                            <constraint firstItem="ZaN-Ks-xh7" firstAttribute="trailing" secondItem="gza-ds-UWZ" secondAttribute="trailing" id="dSB-Go-TgV"/>
+                            <constraint firstItem="ix2-3O-cIq" firstAttribute="top" secondItem="IqI-n8-Kon" secondAttribute="bottom" constant="70" id="erQ-tF-JgG"/>
+                            <constraint firstItem="fNY-5C-owS" firstAttribute="centerX" secondItem="2te-4f-XsQ" secondAttribute="centerX" id="iQg-B4-EPe"/>
+                            <constraint firstItem="ix2-3O-cIq" firstAttribute="centerX" secondItem="2te-4f-XsQ" secondAttribute="centerX" id="lLg-Zh-55Q"/>
+                            <constraint firstItem="VIq-6P-uBn" firstAttribute="top" secondItem="2te-4f-XsQ" secondAttribute="top" constant="30" id="pE6-oU-709"/>
+                            <constraint firstItem="IqI-n8-Kon" firstAttribute="centerX" secondItem="2te-4f-XsQ" secondAttribute="centerX" id="qgv-gg-e8s"/>
+                            <constraint firstItem="ZaN-Ks-xh7" firstAttribute="centerY" secondItem="p5C-DE-iC4" secondAttribute="centerY" id="s13-hH-Iwa"/>
+                            <constraint firstItem="DQy-vl-9dh" firstAttribute="centerX" secondItem="2te-4f-XsQ" secondAttribute="centerX" id="w4c-IU-UWk"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="pauseButton" destination="VIq-6P-uBn" id="yvt-aD-7bD"/>
-                        <outlet property="playAudio" destination="2cc-Xm-vgb" id="hgX-xX-CXE"/>
+                        <outlet property="playAudio" destination="Bd7-kS-McD" id="aY3-JN-nPy"/>
                         <outlet property="recognizeAlphabet" destination="uRt-3b-Sda" id="Zjp-xW-3eA"/>
                         <outlet property="recordShadow1" destination="1YS-Fc-zgY" id="FgL-Gq-MKT"/>
                         <outlet property="recordShadow2" destination="fNY-5C-owS" id="ojX-13-fqy"/>
                         <outlet property="sayIt" destination="IqI-n8-Kon" id="hhT-So-5XT"/>
                         <outlet property="theAlphabet" destination="BPk-5K-bdW" id="iMe-4h-bAn"/>
-                        <outlet property="tryAgainButton" destination="CJq-vm-pcY" id="TGf-fm-Bes"/>
-                        <outlet property="tryagainNotification" destination="sAx-3g-5ap" id="lNU-jU-Jh1"/>
+                        <outlet property="tryAgainButton" destination="AUg-cO-ILt" id="kg0-gf-3K6"/>
+                        <outlet property="tryagainNotification" destination="ZaN-Ks-xh7" id="bCE-TF-5Rd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WHu-5i-hdc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1071,11 +1116,12 @@ Parents are expected to participate in monitoring and limiting the time that chi
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg2" translatesAutoresizingMaskIntoConstraints="NO" id="5zA-dB-xkZ">
                                 <rect key="frame" x="0.0" y="315" width="1194" height="522"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="5zA-dB-xkZ" secondAttribute="height" multiplier="199:87" id="L0k-cN-J4a"/>
+                                    <constraint firstAttribute="width" secondItem="5zA-dB-xkZ" secondAttribute="height" multiplier="199:87" id="3fR-nY-HBg"/>
                                 </constraints>
                             </imageView>
-                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kO8-D7-XTE">
-                                <rect key="frame" x="140" y="308" width="914" height="294"/>
+                            <view alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kO8-D7-XTE">
+                                <rect key="frame" x="141" y="316" width="914" height="286"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -1083,20 +1129,25 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Piz-jW-LKf">
-                                <rect key="frame" x="160" y="411" width="874" height="88"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Piz-jW-LKf">
+                                <rect key="frame" x="147" y="380" width="900" height="159.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="60"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congratulations!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7aF-RI-gBd">
-                                <rect key="frame" x="137.5" y="84" width="919" height="144"/>
+                                <rect key="frame" x="137.5" y="82" width="919" height="144"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="7aF-RI-gBd" secondAttribute="height" multiplier="919:144" id="fP6-u9-bh6"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="120"/>
                                 <color key="textColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c2S-gu-5rV">
-                                <rect key="frame" x="973" y="523" width="61" height="59"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c2S-gu-5rV">
+                                <rect key="frame" x="987" y="536" width="61" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" image="play.circle" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
@@ -1105,7 +1156,12 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IV9-5C-qAh">
-                                <rect key="frame" x="1092" y="30" width="62" height="60"/>
+                                <rect key="frame" x="1092" y="38" width="62" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="IV9-5C-qAh" secondAttribute="height" multiplier="31:30" id="2SQ-g7-31q"/>
+                                    <constraint firstAttribute="height" constant="60" id="wFT-2E-ec9"/>
+                                    <constraint firstAttribute="width" constant="62" id="ypk-zr-t5r"/>
+                                </constraints>
                                 <color key="tintColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" image="gearshape.fill" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
@@ -1118,12 +1174,12 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QaA-qR-Zyf">
-                                <rect key="frame" x="422" y="664" width="350" height="110"/>
+                                <rect key="frame" x="422" y="648" width="350" height="110"/>
                                 <color key="backgroundColor" red="0.95837527509999998" green="0.52888590099999999" blue="0.20380106570000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="350" id="1H3-r8-j0M"/>
-                                    <constraint firstAttribute="width" secondItem="QaA-qR-Zyf" secondAttribute="height" multiplier="35:11" id="GOn-6M-CKh"/>
-                                    <constraint firstAttribute="height" constant="110" id="wqk-hD-gpc"/>
+                                    <constraint firstAttribute="width" constant="350" id="8re-04-Ea8"/>
+                                    <constraint firstAttribute="height" constant="110" id="hPn-Yy-luE"/>
+                                    <constraint firstAttribute="width" secondItem="QaA-qR-Zyf" secondAttribute="height" multiplier="35:11" id="sg2-5A-Z3U"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="60"/>
                                 <state key="normal" title="Next">
@@ -1143,26 +1199,15 @@ Parents are expected to participate in monitoring and limiting the time that chi
                         <viewLayoutGuide key="safeArea" id="4lz-uF-J1T"/>
                         <color key="backgroundColor" red="0.9994472861" green="1" blue="0.89802503590000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="4lz-uF-J1T" firstAttribute="trailing" secondItem="IV9-5C-qAh" secondAttribute="trailing" constant="40" id="3i6-q0-gpb"/>
-                            <constraint firstItem="5zA-dB-xkZ" firstAttribute="trailing" secondItem="4lz-uF-J1T" secondAttribute="trailing" id="7cg-8r-8sg"/>
-                            <constraint firstItem="5zA-dB-xkZ" firstAttribute="leading" secondItem="4lz-uF-J1T" secondAttribute="leading" id="7kS-09-3uo"/>
-                            <constraint firstItem="5zA-dB-xkZ" firstAttribute="bottom" secondItem="4lz-uF-J1T" secondAttribute="bottom" constant="23" id="AAQ-qF-7St"/>
-                            <constraint firstItem="c2S-gu-5rV" firstAttribute="trailing" secondItem="kO8-D7-XTE" secondAttribute="trailing" constant="-20" id="BxR-ag-r8e"/>
-                            <constraint firstItem="Piz-jW-LKf" firstAttribute="centerY" secondItem="kO8-D7-XTE" secondAttribute="centerY" id="Jdx-1A-NDo"/>
-                            <constraint firstItem="QaA-qR-Zyf" firstAttribute="centerX" secondItem="4lz-uF-J1T" secondAttribute="centerX" id="KYS-rs-MVu"/>
-                            <constraint firstItem="7aF-RI-gBd" firstAttribute="centerX" secondItem="4lz-uF-J1T" secondAttribute="centerX" id="LUa-lz-H8G"/>
-                            <constraint firstItem="QaA-qR-Zyf" firstAttribute="top" secondItem="kO8-D7-XTE" secondAttribute="bottom" constant="62" id="M1K-a8-a5p"/>
-                            <constraint firstItem="kO8-D7-XTE" firstAttribute="leading" secondItem="4lz-uF-J1T" secondAttribute="leading" constant="140" id="Ogh-F0-qKZ"/>
-                            <constraint firstItem="kO8-D7-XTE" firstAttribute="top" secondItem="7aF-RI-gBd" secondAttribute="bottom" constant="80" id="SFX-7g-4bT"/>
-                            <constraint firstItem="c2S-gu-5rV" firstAttribute="bottom" secondItem="kO8-D7-XTE" secondAttribute="bottom" constant="-20" id="UUY-gA-AcS"/>
-                            <constraint firstItem="Piz-jW-LKf" firstAttribute="leading" secondItem="kO8-D7-XTE" secondAttribute="leading" constant="20" id="W4w-rG-FkO"/>
-                            <constraint firstItem="4lz-uF-J1T" firstAttribute="bottom" secondItem="QaA-qR-Zyf" secondAttribute="bottom" constant="40" id="dOo-gm-QFe"/>
-                            <constraint firstItem="kO8-D7-XTE" firstAttribute="centerX" secondItem="4lz-uF-J1T" secondAttribute="centerX" id="eJV-f5-eXp"/>
-                            <constraint firstItem="4lz-uF-J1T" firstAttribute="trailing" secondItem="kO8-D7-XTE" secondAttribute="trailing" constant="140" id="efz-aO-R3b"/>
-                            <constraint firstItem="5zA-dB-xkZ" firstAttribute="centerX" secondItem="4lz-uF-J1T" secondAttribute="centerX" id="o0j-Jc-Scu"/>
-                            <constraint firstItem="7aF-RI-gBd" firstAttribute="top" secondItem="4lz-uF-J1T" secondAttribute="top" constant="84" id="taU-f9-mLW"/>
-                            <constraint firstItem="IV9-5C-qAh" firstAttribute="top" secondItem="4lz-uF-J1T" secondAttribute="top" constant="30" id="v7L-Fs-qWS"/>
-                            <constraint firstItem="Piz-jW-LKf" firstAttribute="trailing" secondItem="kO8-D7-XTE" secondAttribute="trailing" constant="-20" id="yST-zK-7Js"/>
+                            <constraint firstItem="4lz-uF-J1T" firstAttribute="trailing" secondItem="IV9-5C-qAh" secondAttribute="trailing" constant="40" id="4BX-Rp-mL4"/>
+                            <constraint firstItem="5zA-dB-xkZ" firstAttribute="leading" secondItem="4lz-uF-J1T" secondAttribute="leading" id="K5E-Dh-ONL"/>
+                            <constraint firstItem="IV9-5C-qAh" firstAttribute="top" secondItem="4lz-uF-J1T" secondAttribute="top" constant="38" id="LBt-w2-Vfv"/>
+                            <constraint firstItem="QaA-qR-Zyf" firstAttribute="centerX" secondItem="Tvz-tR-HGG" secondAttribute="centerX" id="Mba-Qw-eeA"/>
+                            <constraint firstAttribute="bottom" secondItem="5zA-dB-xkZ" secondAttribute="bottom" constant="-3" id="cNA-jB-aNK"/>
+                            <constraint firstItem="7aF-RI-gBd" firstAttribute="centerX" secondItem="Tvz-tR-HGG" secondAttribute="centerX" id="d1S-il-Wku"/>
+                            <constraint firstItem="4lz-uF-J1T" firstAttribute="bottom" secondItem="QaA-qR-Zyf" secondAttribute="bottom" constant="56" id="vgg-Y8-8LJ"/>
+                            <constraint firstItem="7aF-RI-gBd" firstAttribute="top" secondItem="4lz-uF-J1T" secondAttribute="top" constant="82" id="vzw-aL-a6w"/>
+                            <constraint firstItem="5zA-dB-xkZ" firstAttribute="trailing" secondItem="4lz-uF-J1T" secondAttribute="trailing" id="zu8-Hm-I2l"/>
                         </constraints>
                     </view>
                     <connections>
@@ -1173,7 +1218,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UVg-zr-XUn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1992.964824120603" y="364.02877697841728"/>
+            <point key="canvasLocation" x="1993" y="365"/>
         </scene>
         <!--Word Hint-->
         <scene sceneID="Z6p-tl-ncA">
@@ -1183,21 +1228,29 @@ Parents are expected to participate in monitoring and limiting the time that chi
                         <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg2" translatesAutoresizingMaskIntoConstraints="NO" id="tc4-22-5so">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg2" translatesAutoresizingMaskIntoConstraints="NO" id="tc4-22-5so">
                                 <rect key="frame" x="0.0" y="315" width="1194" height="522"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="tc4-22-5so" secondAttribute="height" multiplier="199:87" id="Sma-lx-pob"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hint!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xoF-tr-Cz9">
-                                <rect key="frame" x="465" y="82" width="267" height="144"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hint!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xoF-tr-Cz9">
+                                <rect key="frame" x="463.5" y="82" width="267" height="144"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="xoF-tr-Cz9" secondAttribute="height" multiplier="89:48" id="0rQ-gV-m21"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="120"/>
                                 <color key="textColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tqp-Q3-UYF">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tqp-Q3-UYF">
                                 <rect key="frame" x="140" y="648" width="350" height="110"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Tqp-Q3-UYF" secondAttribute="height" multiplier="35:11" id="63F-hG-6XQ"/>
+                                    <constraint firstAttribute="height" constant="110" id="kI5-1L-oDr"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="350" id="tBf-Zw-nbs"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="60"/>
                                 <state key="normal" title="Previous">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1211,10 +1264,14 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                     <action selector="prevScreen:" destination="BCD-9E-8AO" eventType="touchUpInside" id="xJI-J1-Epj"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uo3-Sz-UdJ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uo3-Sz-UdJ">
                                 <rect key="frame" x="697" y="648" width="350" height="110"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.95837527509999998" green="0.52888590099999999" blue="0.20380106570000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="uo3-Sz-UdJ" secondAttribute="height" multiplier="35:11" id="WsS-qK-B0u"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="350" id="g5o-vN-yOV"/>
+                                    <constraint firstAttribute="height" constant="110" id="sgW-6i-27X"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="60"/>
                                 <state key="normal" title="Next">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1229,9 +1286,13 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                     <segue destination="bEj-nL-yAD" kind="presentation" modalPresentationStyle="fullScreen" id="nBO-Jh-uP3"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Amq-B1-vVL">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Amq-B1-vVL">
                                 <rect key="frame" x="1092" y="38" width="62" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Amq-B1-vVL" secondAttribute="height" multiplier="31:30" id="FYn-ub-q3m"/>
+                                    <constraint firstAttribute="height" constant="60" id="JkG-0p-BH6"/>
+                                    <constraint firstAttribute="width" constant="62" id="tIZ-dF-oNF"/>
+                                </constraints>
                                 <color key="tintColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" image="gearshape.fill" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
@@ -1243,20 +1304,42 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                     <segue destination="BnN-NG-d2s" kind="presentation" modalPresentationStyle="fullScreen" id="k9M-DK-gzl"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qZA-Sm-3uJ">
-                                <rect key="frame" x="148" y="234" width="900" height="159.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WhT-Pf-XBQ">
+                                <rect key="frame" x="477" y="359" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="WhT-Pf-XBQ" secondAttribute="height" multiplier="1:1" id="2OZ-hx-04U"/>
+                                    <constraint firstAttribute="width" constant="240" id="6oV-Ry-haI"/>
+                                    <constraint firstAttribute="height" constant="240" id="YNS-cj-l9d"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qZA-Sm-3uJ">
+                                <rect key="frame" x="224" y="234" width="746" height="100"/>
                                 <color key="textColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="60"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WhT-Pf-XBQ">
-                                <rect key="frame" x="477" y="362" width="240" height="240"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eGq-gY-Yak"/>
                         <color key="backgroundColor" red="0.9994472861" green="1" blue="0.89802503590000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="WhT-Pf-XBQ" firstAttribute="centerX" secondItem="4bs-zf-5wt" secondAttribute="centerX" id="0wC-yc-Bu3"/>
+                            <constraint firstItem="WhT-Pf-XBQ" firstAttribute="centerY" secondItem="4bs-zf-5wt" secondAttribute="centerY" constant="62" id="6IC-Bw-Jrl"/>
+                            <constraint firstItem="eGq-gY-Yak" firstAttribute="trailing" secondItem="uo3-Sz-UdJ" secondAttribute="trailing" constant="147" id="BEb-hq-PUk"/>
+                            <constraint firstItem="qZA-Sm-3uJ" firstAttribute="centerX" secondItem="xoF-tr-Cz9" secondAttribute="centerX" id="Dda-GC-uhI"/>
+                            <constraint firstAttribute="bottom" secondItem="tc4-22-5so" secondAttribute="bottom" constant="-3" id="Ely-YQ-Wfu"/>
+                            <constraint firstItem="eGq-gY-Yak" firstAttribute="bottom" secondItem="uo3-Sz-UdJ" secondAttribute="bottom" constant="56" id="JSV-lz-ndU"/>
+                            <constraint firstItem="qZA-Sm-3uJ" firstAttribute="leading" secondItem="eGq-gY-Yak" secondAttribute="leading" constant="224" id="KAq-Dk-enw"/>
+                            <constraint firstItem="tc4-22-5so" firstAttribute="trailing" secondItem="eGq-gY-Yak" secondAttribute="trailing" id="cN8-J9-ehy"/>
+                            <constraint firstItem="xoF-tr-Cz9" firstAttribute="top" secondItem="eGq-gY-Yak" secondAttribute="top" constant="82" id="gqR-QJ-mTp"/>
+                            <constraint firstItem="qZA-Sm-3uJ" firstAttribute="top" secondItem="xoF-tr-Cz9" secondAttribute="bottom" constant="8" symbolic="YES" id="qjq-iy-HVq"/>
+                            <constraint firstItem="eGq-gY-Yak" firstAttribute="bottom" secondItem="Tqp-Q3-UYF" secondAttribute="bottom" constant="56" id="rL6-Ma-7gr"/>
+                            <constraint firstItem="tc4-22-5so" firstAttribute="leading" secondItem="eGq-gY-Yak" secondAttribute="leading" id="rhT-Z3-voN"/>
+                            <constraint firstItem="eGq-gY-Yak" firstAttribute="trailing" secondItem="Amq-B1-vVL" secondAttribute="trailing" constant="40" id="wIB-gV-dyf"/>
+                            <constraint firstItem="Tqp-Q3-UYF" firstAttribute="leading" secondItem="eGq-gY-Yak" secondAttribute="leading" constant="140" id="y5q-ea-2ei"/>
+                            <constraint firstItem="WhT-Pf-XBQ" firstAttribute="top" secondItem="qZA-Sm-3uJ" secondAttribute="bottom" constant="25" id="yIr-07-aMY"/>
+                            <constraint firstItem="Amq-B1-vVL" firstAttribute="top" secondItem="eGq-gY-Yak" secondAttribute="top" constant="38" id="yP9-Fz-ADf"/>
+                            <constraint firstItem="xoF-tr-Cz9" firstAttribute="centerX" secondItem="4bs-zf-5wt" secondAttribute="centerX" id="zoO-0x-DGY"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="hint" destination="qZA-Sm-3uJ" id="rwU-NB-CU2"/>
@@ -1277,9 +1360,11 @@ Parents are expected to participate in monitoring and limiting the time that chi
                         <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MeetDuckyBg" translatesAutoresizingMaskIntoConstraints="NO" id="5nu-Ca-Mtu">
-                                <rect key="frame" x="-57" y="388" width="1268" height="476"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MeetDuckyBg" translatesAutoresizingMaskIntoConstraints="NO" id="5nu-Ca-Mtu">
+                                <rect key="frame" x="0.0" y="390" width="1194" height="471"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="5nu-Ca-Mtu" secondAttribute="height" multiplier="398:157" id="PXU-RV-yqh"/>
+                                </constraints>
                             </imageView>
                             <view alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bh9-uB-6SO">
                                 <rect key="frame" x="141" y="316" width="914" height="286"/>
@@ -1291,20 +1376,12 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="IRD-hc-orK">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" scrollEnabled="NO" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="IRD-hc-orK">
                                 <rect key="frame" x="212" y="380" width="771.5" height="159.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="60"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iba-PR-0kb">
-                                <rect key="frame" x="598" y="82" width="0.0" height="0.0"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="120"/>
-                                <color key="textColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="exT-NA-Sib">
                                 <rect key="frame" x="987" y="536" width="61" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1315,24 +1392,14 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                     </preferredSymbolConfiguration>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LCk-f2-rXB">
-                                <rect key="frame" x="1092" y="38" width="62" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" image="gearshape.fill" catalog="system">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
-                                        <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="50"/>
-                                    </preferredSymbolConfiguration>
-                                </state>
-                                <connections>
-                                    <action selector="pauseButtTapped:" destination="bEj-nL-yAD" eventType="touchUpInside" id="iFU-tW-utB"/>
-                                    <segue destination="BnN-NG-d2s" kind="presentation" modalPresentationStyle="fullScreen" id="iSJ-4G-zhb"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ePK-L6-LaI">
-                                <rect key="frame" x="402" y="648" width="350" height="110"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ePK-L6-LaI">
+                                <rect key="frame" x="422" y="648" width="350" height="110"/>
                                 <color key="backgroundColor" red="0.95837527509999998" green="0.52888590099999999" blue="0.20380106570000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="6Wk-Nd-kS6"/>
+                                    <constraint firstAttribute="width" secondItem="ePK-L6-LaI" secondAttribute="height" multiplier="35:11" id="DS8-p7-L47"/>
+                                    <constraint firstAttribute="width" constant="350" id="o4d-Lb-hyR"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="60"/>
                                 <state key="normal" title="Next">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1347,9 +1414,45 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                     <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="SKi-Rg-hAD"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LCk-f2-rXB">
+                                <rect key="frame" x="1092" y="38" width="62" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="LCk-f2-rXB" secondAttribute="height" multiplier="31:30" id="IFU-DF-2ZU"/>
+                                    <constraint firstAttribute="width" constant="62" id="ac3-E9-AtO"/>
+                                    <constraint firstAttribute="height" constant="60" id="cNF-kV-geQ"/>
+                                </constraints>
+                                <color key="tintColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" image="gearshape.fill" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
+                                        <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="50"/>
+                                    </preferredSymbolConfiguration>
+                                </state>
+                                <connections>
+                                    <action selector="pauseButtTapped:" destination="bEj-nL-yAD" eventType="touchUpInside" id="iFU-tW-utB"/>
+                                    <segue destination="BnN-NG-d2s" kind="presentation" modalPresentationStyle="fullScreen" id="iSJ-4G-zhb"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iba-PR-0kb">
+                                <rect key="frame" x="359" y="75" width="478" height="144"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="120"/>
+                                <color key="textColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="H14-IR-aZA"/>
                         <color key="backgroundColor" red="0.9994472861" green="1" blue="0.89802503590000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="LCk-f2-rXB" firstAttribute="top" secondItem="H14-IR-aZA" secondAttribute="top" constant="38" id="9R3-UA-Wt2"/>
+                            <constraint firstItem="H14-IR-aZA" firstAttribute="bottom" secondItem="ePK-L6-LaI" secondAttribute="bottom" constant="56" id="Kjd-PB-m5a"/>
+                            <constraint firstItem="IRD-hc-orK" firstAttribute="leading" secondItem="H14-IR-aZA" secondAttribute="leading" constant="212" id="LBO-yR-AQj"/>
+                            <constraint firstAttribute="bottom" secondItem="5nu-Ca-Mtu" secondAttribute="bottom" constant="-27" id="Nag-jK-Cuk"/>
+                            <constraint firstItem="H14-IR-aZA" firstAttribute="trailing" secondItem="LCk-f2-rXB" secondAttribute="trailing" constant="40" id="Qpu-tL-6qU"/>
+                            <constraint firstItem="5nu-Ca-Mtu" firstAttribute="trailing" secondItem="H14-IR-aZA" secondAttribute="trailing" id="Tjv-OK-Ly8"/>
+                            <constraint firstItem="5nu-Ca-Mtu" firstAttribute="leading" secondItem="H14-IR-aZA" secondAttribute="leading" id="cOg-7t-ro8"/>
+                            <constraint firstItem="ePK-L6-LaI" firstAttribute="centerX" secondItem="Wh6-ww-fMA" secondAttribute="centerX" id="d5C-Pq-wNX"/>
+                            <constraint firstItem="H14-IR-aZA" firstAttribute="trailing" secondItem="IRD-hc-orK" secondAttribute="trailing" constant="210.5" id="tfy-Ug-6U0"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="alphabetTitle" destination="Iba-PR-0kb" id="BeX-D1-TnG"/>
@@ -1360,7 +1463,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KCr-8I-Pdb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3293" y="364"/>
+            <point key="canvasLocation" x="3292.9648241206032" y="363.30935251798564"/>
         </scene>
         <!--Success-->
         <scene sceneID="T8h-6W-m7N">
@@ -1370,9 +1473,11 @@ Parents are expected to participate in monitoring and limiting the time that chi
                         <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg2" translatesAutoresizingMaskIntoConstraints="NO" id="jFj-zy-s5d">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg2" translatesAutoresizingMaskIntoConstraints="NO" id="jFj-zy-s5d">
                                 <rect key="frame" x="0.0" y="315" width="1194" height="522"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="jFj-zy-s5d" secondAttribute="height" multiplier="199:87" id="oX4-Jt-cx2"/>
+                                </constraints>
                             </imageView>
                             <view alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gm5-Fq-DZ4">
                                 <rect key="frame" x="141" y="316" width="914" height="286"/>
@@ -1391,9 +1496,11 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                 <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="60"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Congratulations!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UAg-Lu-VT7">
-                                <rect key="frame" x="139" y="82" width="919" height="144"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congratulations!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UAg-Lu-VT7">
+                                <rect key="frame" x="137.5" y="82" width="919" height="144"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="UAg-Lu-VT7" secondAttribute="height" multiplier="919:144" id="ubh-kt-84y"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="120"/>
                                 <color key="textColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -1408,9 +1515,13 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                     </preferredSymbolConfiguration>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KQp-lc-Imb">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KQp-lc-Imb">
                                 <rect key="frame" x="1092" y="38" width="62" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="KQp-lc-Imb" secondAttribute="height" multiplier="31:30" id="JdU-d1-t8P"/>
+                                    <constraint firstAttribute="width" constant="62" id="L9Q-Nv-yIC"/>
+                                    <constraint firstAttribute="height" constant="60" id="Qbc-n9-vUR"/>
+                                </constraints>
                                 <color key="tintColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" image="gearshape.fill" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
@@ -1422,10 +1533,14 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                     <segue destination="BnN-NG-d2s" kind="presentation" modalPresentationStyle="fullScreen" id="zSH-PC-aQ5"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oMH-Em-wzb">
-                                <rect key="frame" x="423" y="648" width="350" height="110"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oMH-Em-wzb">
+                                <rect key="frame" x="422" y="648" width="350" height="110"/>
                                 <color key="backgroundColor" red="0.95837527509999998" green="0.52888590099999999" blue="0.20380106570000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="oMH-Em-wzb" secondAttribute="height" multiplier="35:11" id="SFl-IU-ScQ"/>
+                                    <constraint firstAttribute="height" constant="110" id="VJm-jS-t2i"/>
+                                    <constraint firstAttribute="width" constant="350" id="dlg-QU-4Cj"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="60"/>
                                 <state key="normal" title="Try">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1443,6 +1558,17 @@ Parents are expected to participate in monitoring and limiting the time that chi
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="iQb-5F-qz9"/>
                         <color key="backgroundColor" red="0.9994472861" green="1" blue="0.89802503590000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="iQb-5F-qz9" firstAttribute="bottom" secondItem="oMH-Em-wzb" secondAttribute="bottom" constant="56" id="0Yu-QA-ysN"/>
+                            <constraint firstItem="jFj-zy-s5d" firstAttribute="trailing" secondItem="iQb-5F-qz9" secondAttribute="trailing" id="8OT-iT-Vgx"/>
+                            <constraint firstItem="oMH-Em-wzb" firstAttribute="centerX" secondItem="Ocb-Ek-IpZ" secondAttribute="centerX" id="F6p-nJ-c72"/>
+                            <constraint firstItem="jFj-zy-s5d" firstAttribute="leading" secondItem="iQb-5F-qz9" secondAttribute="leading" id="HKe-4p-k56"/>
+                            <constraint firstItem="KQp-lc-Imb" firstAttribute="top" secondItem="iQb-5F-qz9" secondAttribute="top" constant="38" id="KzA-6a-74P"/>
+                            <constraint firstItem="UAg-Lu-VT7" firstAttribute="centerX" secondItem="Ocb-Ek-IpZ" secondAttribute="centerX" id="ObM-ph-UWS"/>
+                            <constraint firstItem="UAg-Lu-VT7" firstAttribute="top" secondItem="iQb-5F-qz9" secondAttribute="top" constant="82" id="QRf-eb-oZL"/>
+                            <constraint firstAttribute="bottom" secondItem="jFj-zy-s5d" secondAttribute="bottom" constant="-3" id="e1C-bD-Bbj"/>
+                            <constraint firstItem="iQb-5F-qz9" firstAttribute="trailing" secondItem="KQp-lc-Imb" secondAttribute="trailing" constant="40" id="hPN-Zx-Aeh"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="bodyText" destination="Isz-7F-4H5" id="d91-Dt-Edh"/>
@@ -1629,9 +1755,11 @@ Parents are expected to participate in monitoring and limiting the time that chi
                         <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg2" translatesAutoresizingMaskIntoConstraints="NO" id="EUq-qh-N1y">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg2" translatesAutoresizingMaskIntoConstraints="NO" id="EUq-qh-N1y">
                                 <rect key="frame" x="0.0" y="315" width="1194" height="522"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="EUq-qh-N1y" secondAttribute="height" multiplier="199:87" id="PmY-H2-hSc"/>
+                                </constraints>
                             </imageView>
                             <view alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fx1-Qk-mvk">
                                 <rect key="frame" x="141" y="316" width="914" height="286"/>
@@ -1650,9 +1778,11 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                 <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="60"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Congratulations!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bs2-Xb-yFz">
-                                <rect key="frame" x="139" y="82" width="919" height="144"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congratulations!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bs2-Xb-yFz">
+                                <rect key="frame" x="137.5" y="82" width="919" height="144"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Bs2-Xb-yFz" secondAttribute="height" multiplier="919:144" id="qdH-4w-Ddo"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="120"/>
                                 <color key="textColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -1667,9 +1797,13 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                     </preferredSymbolConfiguration>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EgM-Ng-Yfm">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EgM-Ng-Yfm">
                                 <rect key="frame" x="1092" y="38" width="62" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Kiu-0h-YTQ"/>
+                                    <constraint firstAttribute="width" constant="62" id="LBM-0H-idH"/>
+                                    <constraint firstAttribute="width" secondItem="EgM-Ng-Yfm" secondAttribute="height" multiplier="31:30" id="d5b-3f-Hhz"/>
+                                </constraints>
                                 <color key="tintColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" image="gearshape.fill" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
@@ -1681,10 +1815,14 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                     <segue destination="BnN-NG-d2s" kind="presentation" modalPresentationStyle="fullScreen" id="hde-os-pJd"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PHF-qv-59Q">
-                                <rect key="frame" x="423" y="648" width="350" height="110"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PHF-qv-59Q">
+                                <rect key="frame" x="422" y="648" width="350" height="110"/>
                                 <color key="backgroundColor" red="0.95837527509999998" green="0.52888590099999999" blue="0.20380106570000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="6fi-x2-Qj0"/>
+                                    <constraint firstAttribute="width" constant="350" id="ZlN-LF-1HX"/>
+                                    <constraint firstAttribute="width" secondItem="PHF-qv-59Q" secondAttribute="height" multiplier="35:11" id="vTs-aS-9w9"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="60"/>
                                 <state key="normal" title="Next">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1702,6 +1840,17 @@ Parents are expected to participate in monitoring and limiting the time that chi
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="FAS-ds-MHT"/>
                         <color key="backgroundColor" red="0.9994472861" green="1" blue="0.89802503590000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="EgM-Ng-Yfm" firstAttribute="top" secondItem="FAS-ds-MHT" secondAttribute="top" constant="38" id="14B-6E-fFy"/>
+                            <constraint firstItem="PHF-qv-59Q" firstAttribute="centerX" secondItem="gDc-sT-01s" secondAttribute="centerX" id="253-NH-qq9"/>
+                            <constraint firstItem="EUq-qh-N1y" firstAttribute="leading" secondItem="FAS-ds-MHT" secondAttribute="leading" id="6nZ-Gs-aFj"/>
+                            <constraint firstAttribute="bottom" secondItem="EUq-qh-N1y" secondAttribute="bottom" constant="-3" id="8Yw-ne-68S"/>
+                            <constraint firstItem="FAS-ds-MHT" firstAttribute="trailing" secondItem="EgM-Ng-Yfm" secondAttribute="trailing" constant="40" id="Ak6-f9-kKe"/>
+                            <constraint firstItem="Bs2-Xb-yFz" firstAttribute="centerX" secondItem="gDc-sT-01s" secondAttribute="centerX" id="dxx-ME-Evv"/>
+                            <constraint firstItem="FAS-ds-MHT" firstAttribute="bottom" secondItem="PHF-qv-59Q" secondAttribute="bottom" constant="56" id="mNj-aH-qUt"/>
+                            <constraint firstItem="EUq-qh-N1y" firstAttribute="trailing" secondItem="FAS-ds-MHT" secondAttribute="trailing" id="mfd-Rg-s48"/>
+                            <constraint firstItem="Bs2-Xb-yFz" firstAttribute="top" secondItem="FAS-ds-MHT" secondAttribute="top" constant="82" id="mjs-Om-cVy"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="bodyText" destination="15U-fN-ot0" id="fgs-8a-6XT"/>
@@ -1721,20 +1870,19 @@ Parents are expected to participate in monitoring and limiting the time that chi
                         <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg0" translatesAutoresizingMaskIntoConstraints="NO" id="hwj-ES-PGi">
-                                <rect key="frame" x="-57" y="388" width="1268" height="476"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You did it !" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LKO-cb-0m0">
-                                <rect key="frame" x="320" y="82" width="558" height="144"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You did it !" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LKO-cb-0m0">
+                                <rect key="frame" x="318" y="82" width="558" height="144.5"/>
                                 <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="120"/>
                                 <color key="textColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pmu-pA-cSs">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pmu-pA-cSs">
                                 <rect key="frame" x="1092" y="38" width="62" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="62" id="NGb-Fz-0nd"/>
+                                    <constraint firstAttribute="height" constant="60" id="SEG-ql-bmu"/>
+                                    <constraint firstAttribute="width" secondItem="pmu-pA-cSs" secondAttribute="height" multiplier="31:30" id="ulq-yS-Vlx"/>
+                                </constraints>
                                 <color key="tintColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" image="gearshape.fill" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
@@ -1746,10 +1894,26 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                     <segue destination="BnN-NG-d2s" kind="presentation" modalPresentationStyle="fullScreen" id="d2T-ed-V2o"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mK0-sh-Ezz">
-                                <rect key="frame" x="402" y="648" width="350" height="110"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="hwj-ES-PGi">
+                                <rect key="frame" x="0.0" y="435" width="1194" height="417"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hwj-ES-PGi" secondAttribute="height" multiplier="398:139" id="4u6-q4-vLE"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GirlDidIt" translatesAutoresizingMaskIntoConstraints="NO" id="Csb-4i-IQX">
+                                <rect key="frame" x="443.5" y="227.5" width="307" height="379"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Csb-4i-IQX" secondAttribute="height" multiplier="77:95" id="rev-Ep-H6C"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mK0-sh-Ezz">
+                                <rect key="frame" x="422" y="648" width="350" height="110"/>
                                 <color key="backgroundColor" red="0.95837527509999998" green="0.52888590099999999" blue="0.20380106570000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="350" id="Egi-8D-sBH"/>
+                                    <constraint firstAttribute="width" secondItem="mK0-sh-Ezz" secondAttribute="height" multiplier="35:11" id="svd-qO-7P5"/>
+                                    <constraint firstAttribute="height" constant="110" id="wKQ-iS-b2s"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="60"/>
                                 <state key="normal" title="Finish">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1763,13 +1927,23 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                     <action selector="finishPerAlphabet:" destination="OHZ-3s-64H" eventType="touchUpInside" id="RoU-3V-Rts"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="GirlDidIt" translatesAutoresizingMaskIntoConstraints="NO" id="Csb-4i-IQX">
-                                <rect key="frame" x="423" y="227" width="308" height="380"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ucL-Pn-1M6"/>
                         <color key="backgroundColor" red="0.9994472861" green="1" blue="0.89802503590000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="LKO-cb-0m0" firstAttribute="centerX" secondItem="FtK-Vs-3hC" secondAttribute="centerX" id="2H1-B1-dZG"/>
+                            <constraint firstItem="hwj-ES-PGi" firstAttribute="leading" secondItem="ucL-Pn-1M6" secondAttribute="leading" id="6L8-g3-Lzp"/>
+                            <constraint firstItem="Csb-4i-IQX" firstAttribute="top" secondItem="LKO-cb-0m0" secondAttribute="bottom" constant="1" id="GAo-eY-JXz"/>
+                            <constraint firstItem="LKO-cb-0m0" firstAttribute="top" secondItem="ucL-Pn-1M6" secondAttribute="top" constant="82" id="Gw6-qI-9J8"/>
+                            <constraint firstItem="mK0-sh-Ezz" firstAttribute="centerX" secondItem="FtK-Vs-3hC" secondAttribute="centerX" id="I8a-Ph-nmI"/>
+                            <constraint firstItem="ucL-Pn-1M6" firstAttribute="trailing" secondItem="pmu-pA-cSs" secondAttribute="trailing" constant="40" id="Pwi-pV-C6n"/>
+                            <constraint firstItem="hwj-ES-PGi" firstAttribute="trailing" secondItem="ucL-Pn-1M6" secondAttribute="trailing" id="PxB-WG-u0x"/>
+                            <constraint firstItem="Csb-4i-IQX" firstAttribute="centerY" secondItem="FtK-Vs-3hC" secondAttribute="centerY" id="Qra-Q3-qqS"/>
+                            <constraint firstItem="pmu-pA-cSs" firstAttribute="top" secondItem="ucL-Pn-1M6" secondAttribute="top" constant="38" id="YVZ-CN-T4Z"/>
+                            <constraint firstAttribute="bottom" secondItem="hwj-ES-PGi" secondAttribute="bottom" constant="-18" id="cud-Dr-0Ar"/>
+                            <constraint firstItem="ucL-Pn-1M6" firstAttribute="bottom" secondItem="mK0-sh-Ezz" secondAttribute="bottom" constant="56" id="iaj-Zh-UhN"/>
+                            <constraint firstItem="Csb-4i-IQX" firstAttribute="centerX" secondItem="FtK-Vs-3hC" secondAttribute="centerX" id="lAJ-Cw-uwv"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="finishButton" destination="mK0-sh-Ezz" id="7MT-nu-ySC"/>
@@ -1777,14 +1951,188 @@ Parents are expected to participate in monitoring and limiting the time that chi
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6F8-Aj-EJ1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1993" y="1236"/>
+            <point key="canvasLocation" x="1992.964824120603" y="1235.9712230215828"/>
+        </scene>
+        <!--Alphabet Recognition-->
+        <scene sceneID="Wrx-Hv-Lkq">
+            <objects>
+                <viewController id="6oq-5T-dmM" customClass="AlphabetRecognition" customModule="AR2ndTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="39g-ju-ler">
+                        <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg2" translatesAutoresizingMaskIntoConstraints="NO" id="y0b-Nl-uJt">
+                                <rect key="frame" x="0.0" y="315" width="1194" height="522"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Say it!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mai-0f-9pw">
+                                <rect key="frame" x="428" y="82" width="340" height="144"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="120"/>
+                                <color key="textColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="AlphabetBox" translatesAutoresizingMaskIntoConstraints="NO" id="AYr-lJ-G5k">
+                                <rect key="frame" x="454" y="316" width="286" height="267"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Mc-zX-Cya">
+                                <rect key="frame" x="656" y="604" width="433" height="197"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.19215686269999999" green="0.4039215686" blue="0.47058823529999999" alpha="0.56999999999999995" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Yh-RC-iF9">
+                                <rect key="frame" x="454" y="330" width="286" height="239"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="200"/>
+                                <color key="textColor" red="0.64537519219999995" green="0.087355382740000001" blue="0.10584814100000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EXI-zP-zyh">
+                                <rect key="frame" x="676" y="625" width="392" height="157"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.19215686269999999" green="0.4039215686" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bwf-gU-rxN">
+                                <rect key="frame" x="140" y="648" width="350" height="110"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.95837527509999998" green="0.52888590099999999" blue="0.20380106570000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="play.fill" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
+                                        <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="60"/>
+                                    </preferredSymbolConfiguration>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="playAudio:" destination="6oq-5T-dmM" eventType="touchUpInside" id="MgA-od-X2J"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MLa-B0-i1J" userLabel="Pause Button">
+                                <rect key="frame" x="1092" y="38" width="62" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" image="gearshape.fill" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
+                                        <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="50"/>
+                                    </preferredSymbolConfiguration>
+                                </state>
+                                <connections>
+                                    <action selector="pauseButtTapped:" destination="6oq-5T-dmM" eventType="touchUpInside" id="ZU0-Td-3zT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AK8-Km-IGe">
+                                <rect key="frame" x="697" y="648" width="350" height="110"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.95837527509999998" green="0.52888590099999999" blue="0.20380106570000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="mic.fill" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
+                                        <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="60"/>
+                                    </preferredSymbolConfiguration>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="startSpeech:" destination="6oq-5T-dmM" eventType="touchUpInside" id="JCC-wH-LIH"/>
+                                </connections>
+                            </button>
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z02-ID-xw0">
+                                <rect key="frame" x="0.0" y="0.0" width="1194" height="837"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view alpha="0.64999997615814209" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JDN-ZJ-tNi">
+                                        <rect key="frame" x="0.0" y="0.0" width="1194" height="837"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cF8-RQ-9w2">
+                                        <rect key="frame" x="356" y="174" width="480" height="484"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Try Again?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Bl-xY-kdb">
+                                                <rect key="frame" x="96" y="40" width="289" height="72"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="60"/>
+                                                <color key="textColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="adq-m8-nQK">
+                                                <rect key="frame" x="65" y="205" width="350" height="110"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.95837527509999998" green="0.52888590099999999" blue="0.20380106570000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="60"/>
+                                                <state key="normal" title="Yes">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="tryAgain:" destination="6oq-5T-dmM" eventType="touchUpInside" id="rY1-lC-Izc"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sj4-NZ-f7k">
+                                                <rect key="frame" x="65" y="338" width="350" height="110"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="60"/>
+                                                <state key="normal" title="Next">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.9994472861" green="1" blue="0.89802503590000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ZzG-YI-qb4"/>
+                        <color key="backgroundColor" red="0.9994472861" green="1" blue="0.89802503590000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                    <connections>
+                        <outlet property="pauseButton" destination="MLa-B0-i1J" id="gfU-0T-WmT"/>
+                        <outlet property="playAudio" destination="bwf-gU-rxN" id="M6T-B5-ucC"/>
+                        <outlet property="recognizeAlphabet" destination="AK8-Km-IGe" id="FBR-FY-A6i"/>
+                        <outlet property="recordShadow1" destination="EXI-zP-zyh" id="zXP-hF-cua"/>
+                        <outlet property="recordShadow2" destination="6Mc-zX-Cya" id="u8q-cn-e5C"/>
+                        <outlet property="sayIt" destination="Mai-0f-9pw" id="Kap-PU-6lI"/>
+                        <outlet property="theAlphabet" destination="1Yh-RC-iF9" id="VQG-gZ-vdF"/>
+                        <outlet property="tryAgainButton" destination="adq-m8-nQK" id="59b-PA-ZYW"/>
+                        <outlet property="tryagainNotification" destination="Z02-ID-xw0" id="0oU-Dg-2Ou"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="54T-RU-jGb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1348" y="1158"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="294-gv-xQz"/>
-        <segue reference="Alw-4D-88y"/>
-        <segue reference="A9y-8I-ua6"/>
-        <segue reference="D82-pD-idJ"/>
+        <segue reference="6dA-gq-VYn"/>
+        <segue reference="Qjc-NZ-5YA"/>
+        <segue reference="jVJ-km-ovP"/>
+        <segue reference="mfO-3s-wQd"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="AlphabetBox" width="296" height="277"/>
@@ -1797,9 +2145,8 @@ Parents are expected to participate in monitoring and limiting the time that chi
         <image name="BadgeTheExplorer" width="101" height="148"/>
         <image name="GirlDidIt" width="307" height="379"/>
         <image name="Guide" width="282" height="308"/>
-        <image name="MeetDuckyBg" width="1265" height="418"/>
+        <image name="MeetDuckyBg" width="1194" height="417"/>
         <image name="Piala" width="58" height="58"/>
-        <image name="bg0" width="1265" height="418"/>
         <image name="bg2" width="1194" height="517"/>
         <image name="chevron.left.circle" catalog="system" width="128" height="121"/>
         <image name="gearshape.fill" catalog="system" width="128" height="121"/>
