@@ -1358,9 +1358,8 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                     <constraint firstAttribute="width" secondItem="5nu-Ca-Mtu" secondAttribute="height" multiplier="398:157" id="PXU-RV-yqh"/>
                                 </constraints>
                             </imageView>
-                            <view alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bh9-uB-6SO">
-                                <rect key="frame" x="141" y="316" width="914" height="286"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bh9-uB-6SO">
+                                <rect key="frame" x="140" y="164" width="914" height="438"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -1368,15 +1367,17 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" scrollEnabled="NO" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="IRD-hc-orK">
-                                <rect key="frame" x="212" y="380" width="771.5" height="159.5"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="IRD-hc-orK">
+                                <rect key="frame" x="150" y="339" width="894" height="88"/>
                                 <color key="textColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="60"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="exT-NA-Sib">
-                                <rect key="frame" x="987" y="536" width="61" height="59"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="exT-NA-Sib">
+                                <rect key="frame" x="973" y="523" width="61" height="59"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="59" id="3qc-Y2-VbM"/>
+                                </constraints>
                                 <color key="tintColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" image="play.circle" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
@@ -1385,7 +1386,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ePK-L6-LaI">
-                                <rect key="frame" x="422" y="648" width="350" height="110"/>
+                                <rect key="frame" x="422" y="664" width="350" height="110"/>
                                 <color key="backgroundColor" red="0.95837527509999998" green="0.52888590099999999" blue="0.20380106570000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="110" id="6Wk-Nd-kS6"/>
@@ -1407,7 +1408,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LCk-f2-rXB">
-                                <rect key="frame" x="1092" y="38" width="62" height="60"/>
+                                <rect key="frame" x="1092" y="30" width="62" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="LCk-f2-rXB" secondAttribute="height" multiplier="31:30" id="IFU-DF-2ZU"/>
                                     <constraint firstAttribute="width" constant="62" id="ac3-E9-AtO"/>
@@ -1424,9 +1425,8 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                     <segue destination="BnN-NG-d2s" kind="presentation" modalPresentationStyle="fullScreen" id="iSJ-4G-zhb"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iba-PR-0kb">
-                                <rect key="frame" x="359" y="75" width="478" height="144"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iba-PR-0kb">
+                                <rect key="frame" x="597" y="84" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="120"/>
                                 <color key="textColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -1435,15 +1435,25 @@ Parents are expected to participate in monitoring and limiting the time that chi
                         <viewLayoutGuide key="safeArea" id="H14-IR-aZA"/>
                         <color key="backgroundColor" red="0.9994472861" green="1" blue="0.89802503590000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="LCk-f2-rXB" firstAttribute="top" secondItem="H14-IR-aZA" secondAttribute="top" constant="38" id="9R3-UA-Wt2"/>
-                            <constraint firstItem="H14-IR-aZA" firstAttribute="bottom" secondItem="ePK-L6-LaI" secondAttribute="bottom" constant="56" id="Kjd-PB-m5a"/>
-                            <constraint firstItem="IRD-hc-orK" firstAttribute="leading" secondItem="H14-IR-aZA" secondAttribute="leading" constant="212" id="LBO-yR-AQj"/>
+                            <constraint firstItem="IRD-hc-orK" firstAttribute="centerY" secondItem="bh9-uB-6SO" secondAttribute="centerY" id="0M2-Z2-wvO"/>
+                            <constraint firstItem="bh9-uB-6SO" firstAttribute="leading" secondItem="H14-IR-aZA" secondAttribute="leading" constant="140" id="3R9-JU-0Ca"/>
+                            <constraint firstItem="bh9-uB-6SO" firstAttribute="centerX" secondItem="H14-IR-aZA" secondAttribute="centerX" id="72z-sO-VK9"/>
+                            <constraint firstItem="LCk-f2-rXB" firstAttribute="top" secondItem="H14-IR-aZA" secondAttribute="top" constant="30" id="9R3-UA-Wt2"/>
+                            <constraint firstItem="Iba-PR-0kb" firstAttribute="top" secondItem="H14-IR-aZA" secondAttribute="top" constant="84" id="A3M-GN-9Ye"/>
+                            <constraint firstItem="H14-IR-aZA" firstAttribute="bottom" secondItem="ePK-L6-LaI" secondAttribute="bottom" constant="40" id="Kjd-PB-m5a"/>
                             <constraint firstAttribute="bottom" secondItem="5nu-Ca-Mtu" secondAttribute="bottom" constant="-27" id="Nag-jK-Cuk"/>
                             <constraint firstItem="H14-IR-aZA" firstAttribute="trailing" secondItem="LCk-f2-rXB" secondAttribute="trailing" constant="40" id="Qpu-tL-6qU"/>
+                            <constraint firstItem="IRD-hc-orK" firstAttribute="trailing" secondItem="bh9-uB-6SO" secondAttribute="trailing" constant="-10" id="T0Y-m0-kgk"/>
                             <constraint firstItem="5nu-Ca-Mtu" firstAttribute="trailing" secondItem="H14-IR-aZA" secondAttribute="trailing" id="Tjv-OK-Ly8"/>
+                            <constraint firstItem="bh9-uB-6SO" firstAttribute="top" secondItem="Iba-PR-0kb" secondAttribute="bottom" constant="80" id="UMM-SG-yDR"/>
+                            <constraint firstItem="H14-IR-aZA" firstAttribute="trailing" secondItem="bh9-uB-6SO" secondAttribute="trailing" constant="140" id="VCY-J3-HJs"/>
                             <constraint firstItem="5nu-Ca-Mtu" firstAttribute="leading" secondItem="H14-IR-aZA" secondAttribute="leading" id="cOg-7t-ro8"/>
                             <constraint firstItem="ePK-L6-LaI" firstAttribute="centerX" secondItem="Wh6-ww-fMA" secondAttribute="centerX" id="d5C-Pq-wNX"/>
-                            <constraint firstItem="H14-IR-aZA" firstAttribute="trailing" secondItem="IRD-hc-orK" secondAttribute="trailing" constant="210.5" id="tfy-Ug-6U0"/>
+                            <constraint firstItem="ePK-L6-LaI" firstAttribute="top" secondItem="bh9-uB-6SO" secondAttribute="bottom" constant="62" id="e1p-mG-bDZ"/>
+                            <constraint firstItem="IRD-hc-orK" firstAttribute="leading" secondItem="bh9-uB-6SO" secondAttribute="leading" constant="10" id="f4h-ez-yB7"/>
+                            <constraint firstItem="exT-NA-Sib" firstAttribute="bottom" secondItem="bh9-uB-6SO" secondAttribute="bottom" constant="-20" id="gN0-yu-ePD"/>
+                            <constraint firstItem="Iba-PR-0kb" firstAttribute="centerX" secondItem="H14-IR-aZA" secondAttribute="centerX" id="hXj-Iz-68d"/>
+                            <constraint firstItem="exT-NA-Sib" firstAttribute="trailing" secondItem="bh9-uB-6SO" secondAttribute="trailing" constant="-20" id="mmh-ud-451"/>
                         </constraints>
                     </view>
                     <connections>
@@ -1948,7 +1958,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="6dA-gq-VYn"/>
-        <segue reference="k9M-DK-gzl"/>
+        <segue reference="iSJ-4G-zhb"/>
         <segue reference="A9y-8I-ua6"/>
         <segue reference="mfO-3s-wQd"/>
     </inferredMetricsTieBreakers>
