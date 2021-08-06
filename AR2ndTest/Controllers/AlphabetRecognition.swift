@@ -15,10 +15,12 @@ class AlphabetRecognition: UIViewController, SFSpeechRecognizerDelegate {
     var soundPlayer : AVAudioPlayer!
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
     private let speechRecognizer = SFSpeechRecognizer(locale: Locale(identifier: "en-US"))!
     private var recognitionRequest: SFSpeechAudioBufferRecognitionRequest?
     private var recognitionTask: SFSpeechRecognitionTask?
     private let audioEngine = AVAudioEngine()
+    
     var alphabetCompleted:[AlphabetTable]?
     var alphabet = ""
     var alphabetSupposedToBe:String = ""
@@ -36,13 +38,14 @@ class AlphabetRecognition: UIViewController, SFSpeechRecognizerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let currentAlphabet = UserDefaults.standard.string(forKey: "currentAlphabet")!
-        theAlphabet.text = currentAlphabet
-        alphabetSupposedToBe = getValueForRecognition(alphabetName: currentAlphabet)
-        print(alphabetSupposedToBe)
-        speechRecognizer.delegate = self
+        let currentAlphabet         = UserDefaults.standard.string(forKey: "currentAlphabet")!
+        theAlphabet.text            = currentAlphabet
+        alphabetSupposedToBe        = getValueForRecognition(alphabetName: currentAlphabet)
+        speechRecognizer.delegate   = self
+        
         prepareAudioPlayer()
         
+        // Set record shadow corner radius
         recordShadow1.layer.cornerRadius = 20
         recordShadow2.layer.cornerRadius = 20
         
@@ -106,7 +109,6 @@ class AlphabetRecognition: UIViewController, SFSpeechRecognizerDelegate {
         
         audioEngine.prepare()
         try audioEngine.start()
-        
     }
     
     @IBAction func startSpeech(_ sender: Any) {
@@ -123,7 +125,7 @@ class AlphabetRecognition: UIViewController, SFSpeechRecognizerDelegate {
                 Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { timer in
                     self.audioEngine.stop()
                     self.recognitionRequest?.endAudio()
-//                    self.stopRecordAnimation()
+                    self.stopRecordAnimation()
                 }
                 
             } catch {
@@ -136,36 +138,32 @@ class AlphabetRecognition: UIViewController, SFSpeechRecognizerDelegate {
         soundPlayer.play()
     }
     
-    func prepareAudioPlayer(){
+    func prepareAudioPlayer() {
         let url = Bundle.main.url(forResource: "A", withExtension: "mp3")
         
         do{
             soundPlayer = try AVAudioPlayer(contentsOf: url!)
             soundPlayer.prepareToPlay()
-        }catch{
+        } catch{
             print(error.localizedDescription)
         }
     }
     
-    func checkingAlphabet(){
-        let firstLetter = alphabet.prefix(1)
+    func checkingAlphabet() {
+//        let firstLetter = alphabet.prefix(1)
         
             print(alphabet)
         
-        if (alphabet == alphabetSupposedToBe){
-            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let MainScreen = storyBoard.instantiateViewController(withIdentifier: "AlphabetSuccess") as! AlphabetSuccess
-            MainScreen.modalPresentationStyle = .fullScreen
-            self.present(MainScreen, animated: false, completion: nil)
+        if (alphabet == alphabetSupposedToBe) {
+            self.nextPage()
         } else {
-//            self.stopRecordAnimation()
+            self.stopRecordAnimation()
             tryagainNotification.isHidden = false
         }
     }
 
     @IBAction func tryAgain(_ sender: Any) {
         tryagainNotification.isHidden = true
-        sayIt.isHidden = true
     }
     
     func getValueForRecognition(alphabetName:String) -> String{
@@ -202,7 +200,8 @@ class AlphabetRecognition: UIViewController, SFSpeechRecognizerDelegate {
                 //
             }
         }
-        
+    }
+    
     func stopRecordAnimation() {
         UIView.animate(withDuration: 0.3, delay: 0, options: []) {
             self.recordShadow2.layer.opacity = 0
@@ -214,7 +213,18 @@ class AlphabetRecognition: UIViewController, SFSpeechRecognizerDelegate {
             }
         }
     }
-}
+    
+    @IBAction func nextPage(_ sender: Any) {
+        self.nextPage()
+    }
+    
+    func nextPage() {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let AlphabetSuccessVC = storyBoard.instantiateViewController(withIdentifier: "AlphabetSuccess") as! AlphabetSuccess
+        AlphabetSuccessVC.modalPresentationStyle = .fullScreen
+        self.present(AlphabetSuccessVC, animated: false, completion: nil)
+    }
+    
     @IBAction func pauseButtTapped(_ sender: Any) {
         AudioNextTapped.shared.playSound()
         AudioPausedTheme.shared.playSound()
