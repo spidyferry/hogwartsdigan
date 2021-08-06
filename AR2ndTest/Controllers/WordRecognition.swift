@@ -19,6 +19,8 @@ class WordRecognition: UIViewController {
     @IBOutlet weak var sayIt: UILabel!
     @IBOutlet weak var tryagainNotification: UIView!
     @IBOutlet weak var wordHint: UIImageView!
+    @IBOutlet weak var recordShadow1: UIView!
+    @IBOutlet weak var recordShadow2: UIView!
     
     var audioPlayer:AVAudioPlayer!
     
@@ -38,6 +40,14 @@ class WordRecognition: UIViewController {
         print(wordSupposedToBe)
         sayIt.text = wordSupposedToBe
         wordHint.image = UIImage(named: "A")
+        
+        // Set record shadow corner radius
+        recordShadow1.layer.cornerRadius = 20
+        recordShadow2.layer.cornerRadius = 20
+        
+        // Hide record shadow
+        self.recordShadow1.layer.opacity = 0
+        self.recordShadow2.layer.opacity = 0
     }
     
     func getValueForRecognition(alphabetName:String) -> String{
@@ -75,11 +85,13 @@ class WordRecognition: UIViewController {
         } else {
             do {
                 try startRecording()
-                sayIt.isHidden = false
+//                sayIt.isHidden = false
+                self.startRecordAnimation()
 
                 Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { timer in
                     self.audioEngine.stop()
                     self.recognitionRequest?.endAudio()
+                    self.stopRecordAnimation()
                 }
                 
             } catch {
@@ -143,18 +155,49 @@ class WordRecognition: UIViewController {
         
         audioEngine.prepare()
         try audioEngine.start()
-        
-        //test
     }
     
     func checkingWord(){
         if (word == wordSupposedToBe){
-            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let MainScreen = storyBoard.instantiateViewController(withIdentifier: "WordSuccess") as! WordSuccess
-            MainScreen.modalPresentationStyle = .fullScreen
-            self.present(MainScreen, animated: false, completion: nil)
+            self.nextPage()
         } else {
             tryagainNotification.isHidden = false
+            self.stopRecordAnimation()
+        }
+    }
+    
+    func startRecordAnimation() {
+        UIView.animateKeyframes(withDuration: 1.0, delay: 0, options: [.repeat]) {
+            // 1st Keyframe
+            UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 0.0) {
+                self.wordRecognize.backgroundColor = UIColor(red: 25.0/255.0, green: 67.0/255.0, blue: 80/255.0, alpha: 1)
+            }
+
+            // 2nd Keyframe
+            UIView.addKeyframe(withRelativeStartTime: 0.3, relativeDuration: 0.3) {
+                self.recordShadow1.layer.opacity = 1
+            }
+
+            // 3rd Keyframe
+            UIView.addKeyframe(withRelativeStartTime: 0.6, relativeDuration: 0.6) {
+                self.recordShadow2.layer.opacity = 1
+            }
+        } completion: { isComplete in
+            if isComplete {
+                //
+            }
+        }
+    }
+    
+    func stopRecordAnimation() {
+        UIView.animate(withDuration: 0.3, delay: 0, options: []) {
+            self.recordShadow2.layer.opacity = 0
+            self.recordShadow1.layer.opacity = 0
+            self.wordRecognize.backgroundColor = UIColor(red: 245.0/255.0, green: 134.0/255.0, blue: 52/255.0, alpha: 1)
+        } completion: { isComplete in
+            if isComplete {
+                //
+            }
         }
     }
     
@@ -162,6 +205,17 @@ class WordRecognition: UIViewController {
         AudioNextTapped.shared.playSound()
         tryagainNotification.isHidden = true
         sayIt.isHidden = true
+    }
+    
+    @IBAction func nextPage(_ sender: Any) {
+        self.nextPage()
+    }
+    
+    func nextPage() {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let WordSuccessVC = storyBoard.instantiateViewController(withIdentifier: "WordSuccess") as! WordSuccess
+        WordSuccessVC.modalPresentationStyle = .fullScreen
+        self.present(WordSuccessVC, animated: false, completion: nil)
     }
     
     @IBAction func pauseButtTapped(_ sender: Any) {
