@@ -1481,9 +1481,8 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                     <constraint firstAttribute="width" secondItem="jFj-zy-s5d" secondAttribute="height" multiplier="199:87" id="oX4-Jt-cx2"/>
                                 </constraints>
                             </imageView>
-                            <view alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gm5-Fq-DZ4">
-                                <rect key="frame" x="141" y="316" width="914" height="286"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gm5-Fq-DZ4">
+                                <rect key="frame" x="140" y="308" width="914" height="294"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -1491,25 +1490,20 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Isz-7F-4H5">
-                                <rect key="frame" x="147" y="380" width="900" height="159.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Isz-7F-4H5">
+                                <rect key="frame" x="147" y="375" width="900" height="159.5"/>
                                 <color key="textColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="60"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congratulations!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UAg-Lu-VT7">
-                                <rect key="frame" x="137.5" y="82" width="919" height="144"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="UAg-Lu-VT7" secondAttribute="height" multiplier="919:144" id="ubh-kt-84y"/>
-                                </constraints>
+                                <rect key="frame" x="137.5" y="84" width="919" height="144"/>
                                 <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="120"/>
                                 <color key="textColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ASn-xD-mfQ">
-                                <rect key="frame" x="987" y="536" width="61" height="59"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ASn-xD-mfQ">
+                                <rect key="frame" x="973" y="523" width="61" height="59"/>
                                 <color key="tintColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" image="play.circle" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
@@ -1518,7 +1512,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KQp-lc-Imb">
-                                <rect key="frame" x="1092" y="38" width="62" height="60"/>
+                                <rect key="frame" x="1092" y="30" width="62" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="KQp-lc-Imb" secondAttribute="height" multiplier="31:30" id="JdU-d1-t8P"/>
                                     <constraint firstAttribute="width" constant="62" id="L9Q-Nv-yIC"/>
@@ -1536,7 +1530,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oMH-Em-wzb">
-                                <rect key="frame" x="422" y="648" width="350" height="110"/>
+                                <rect key="frame" x="422" y="664" width="350" height="110"/>
                                 <color key="backgroundColor" red="0.95837527509999998" green="0.52888590099999999" blue="0.20380106570000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="oMH-Em-wzb" secondAttribute="height" multiplier="35:11" id="SFl-IU-ScQ"/>
@@ -1561,13 +1555,23 @@ Parents are expected to participate in monitoring and limiting the time that chi
                         <viewLayoutGuide key="safeArea" id="iQb-5F-qz9"/>
                         <color key="backgroundColor" red="0.9994472861" green="1" blue="0.89802503590000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="iQb-5F-qz9" firstAttribute="bottom" secondItem="oMH-Em-wzb" secondAttribute="bottom" constant="56" id="0Yu-QA-ysN"/>
+                            <constraint firstItem="iQb-5F-qz9" firstAttribute="bottom" secondItem="oMH-Em-wzb" secondAttribute="bottom" constant="40" id="0Yu-QA-ysN"/>
+                            <constraint firstItem="oMH-Em-wzb" firstAttribute="top" secondItem="Gm5-Fq-DZ4" secondAttribute="bottom" constant="62" id="1zo-gA-UQM"/>
                             <constraint firstItem="jFj-zy-s5d" firstAttribute="trailing" secondItem="iQb-5F-qz9" secondAttribute="trailing" id="8OT-iT-Vgx"/>
+                            <constraint firstItem="iQb-5F-qz9" firstAttribute="trailing" secondItem="Gm5-Fq-DZ4" secondAttribute="trailing" constant="140" id="B2Z-t2-m7G"/>
+                            <constraint firstItem="Gm5-Fq-DZ4" firstAttribute="leading" secondItem="iQb-5F-qz9" secondAttribute="leading" constant="140" id="Bqj-4j-39j"/>
                             <constraint firstItem="oMH-Em-wzb" firstAttribute="centerX" secondItem="Ocb-Ek-IpZ" secondAttribute="centerX" id="F6p-nJ-c72"/>
                             <constraint firstItem="jFj-zy-s5d" firstAttribute="leading" secondItem="iQb-5F-qz9" secondAttribute="leading" id="HKe-4p-k56"/>
-                            <constraint firstItem="KQp-lc-Imb" firstAttribute="top" secondItem="iQb-5F-qz9" secondAttribute="top" constant="38" id="KzA-6a-74P"/>
+                            <constraint firstItem="Gm5-Fq-DZ4" firstAttribute="centerY" secondItem="Isz-7F-4H5" secondAttribute="centerY" id="Ijg-d6-q8C"/>
+                            <constraint firstItem="Gm5-Fq-DZ4" firstAttribute="centerX" secondItem="iQb-5F-qz9" secondAttribute="centerX" id="JUG-Cs-tcC"/>
+                            <constraint firstItem="ASn-xD-mfQ" firstAttribute="trailing" secondItem="Gm5-Fq-DZ4" secondAttribute="trailing" constant="-20" id="JgZ-BS-zKN"/>
+                            <constraint firstItem="KQp-lc-Imb" firstAttribute="top" secondItem="iQb-5F-qz9" secondAttribute="top" constant="30" id="KzA-6a-74P"/>
+                            <constraint firstItem="ASn-xD-mfQ" firstAttribute="bottom" secondItem="Gm5-Fq-DZ4" secondAttribute="bottom" constant="-20" id="M8t-wy-zmr"/>
                             <constraint firstItem="UAg-Lu-VT7" firstAttribute="centerX" secondItem="Ocb-Ek-IpZ" secondAttribute="centerX" id="ObM-ph-UWS"/>
-                            <constraint firstItem="UAg-Lu-VT7" firstAttribute="top" secondItem="iQb-5F-qz9" secondAttribute="top" constant="82" id="QRf-eb-oZL"/>
+                            <constraint firstItem="UAg-Lu-VT7" firstAttribute="top" secondItem="iQb-5F-qz9" secondAttribute="top" constant="84" id="QRf-eb-oZL"/>
+                            <constraint firstItem="Gm5-Fq-DZ4" firstAttribute="top" secondItem="UAg-Lu-VT7" secondAttribute="bottom" constant="80" id="R7Z-YC-0PQ"/>
+                            <constraint firstItem="Isz-7F-4H5" firstAttribute="trailing" secondItem="Gm5-Fq-DZ4" secondAttribute="trailing" constant="-10" id="V04-OS-BmZ"/>
+                            <constraint firstItem="Isz-7F-4H5" firstAttribute="leading" secondItem="Gm5-Fq-DZ4" secondAttribute="leading" constant="10" id="dWp-0u-Buq"/>
                             <constraint firstAttribute="bottom" secondItem="jFj-zy-s5d" secondAttribute="bottom" constant="-3" id="e1C-bD-Bbj"/>
                             <constraint firstItem="iQb-5F-qz9" firstAttribute="trailing" secondItem="KQp-lc-Imb" secondAttribute="trailing" constant="40" id="hPN-Zx-Aeh"/>
                         </constraints>
