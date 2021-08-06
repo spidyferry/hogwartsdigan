@@ -19,8 +19,17 @@ class ChapterIntro: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let currentAlphabet = UserDefaults.standard.string(forKey: "currentAlphabet")!
 //        Start Narration
-        AudioNarration.shared.playSound()
+        if (currentAlphabet == "A"){
+        AudioNarration.shared.playSound(file: "narr_A")
+        }
+        else if (currentAlphabet == "B"){
+            AudioNarration.shared.playSound(file: "narr_B")
+        }
+        else if (currentAlphabet == "C"){
+            AudioNarration.shared.playSound(file: "narr_C")
+        }
 
         let alphabetIntro:String = UserDefaults.standard.string(forKey: "alphabetIntro")!
         let line = self.loadtext(file: alphabetIntro)

@@ -80,8 +80,8 @@ class AudioNarration{
     
     var narrAudio = AVAudioPlayer()
     
-    func playSound(){
-        let narrationAudio = NSURL(fileURLWithPath: Bundle.main.path(forResource: "s_narr_A", ofType: "mp3")!)
+    func playSound(file: String){
+        let narrationAudio = NSURL(fileURLWithPath: Bundle.main.path(forResource: file, ofType: "mp3")!)
         narrAudio = try! AVAudioPlayer(contentsOf: narrationAudio as URL)
         narrAudio.prepareToPlay()
         narrAudio.numberOfLoops = 0
