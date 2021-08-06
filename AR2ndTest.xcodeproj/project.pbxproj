@@ -51,6 +51,10 @@
 		367AB2C926A7DAA700A6789E /* W.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 367AB2AE26A7DAA700A6789E /* W.mp3 */; };
 		367AB2CA26A7DAA700A6789E /* Z.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 367AB2AF26A7DAA700A6789E /* Z.mp3 */; };
 		367AB2CC26A7DAA700A6789E /* I.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 367AB2B126A7DAA700A6789E /* I.mp3 */; };
+		8044031926BBCA99005572CE /* ObjectDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8044031826BBCA99005572CE /* ObjectDetailViewController.swift */; };
+		80A68D8426BA831E0042C5B6 /* 3DView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80A68D8326BA831E0042C5B6 /* 3DView.storyboard */; };
+		80A68D8826BA88230042C5B6 /* ObjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A68D8726BA88230042C5B6 /* ObjectViewController.swift */; };
+		80A68D8F26BA92B00042C5B6 /* Apple.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 80A68D8E26BA92B00042C5B6 /* Apple.usdz */; };
 		8AB1322226A94E8100DF114B /* ChapterPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB1322126A94E8100DF114B /* ChapterPage.swift */; };
 		8AB1322726A955D800DF114B /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB1322626A955D800DF114B /* Page.swift */; };
 		8AB1322926A9C33400DF114B /* Chapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB1322826A9C33400DF114B /* Chapter.swift */; };
@@ -149,6 +153,10 @@
 		367AB2AE26A7DAA700A6789E /* W.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = W.mp3; sourceTree = "<group>"; };
 		367AB2AF26A7DAA700A6789E /* Z.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Z.mp3; sourceTree = "<group>"; };
 		367AB2B126A7DAA700A6789E /* I.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = I.mp3; sourceTree = "<group>"; };
+		8044031826BBCA99005572CE /* ObjectDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectDetailViewController.swift; sourceTree = "<group>"; };
+		80A68D8326BA831E0042C5B6 /* 3DView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = 3DView.storyboard; sourceTree = "<group>"; };
+		80A68D8726BA88230042C5B6 /* ObjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectViewController.swift; sourceTree = "<group>"; };
+		80A68D8E26BA92B00042C5B6 /* Apple.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Apple.usdz; sourceTree = "<group>"; };
 		8AB1322126A94E8100DF114B /* ChapterPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterPage.swift; sourceTree = "<group>"; };
 		8AB1322626A955D800DF114B /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 		8AB1322826A9C33400DF114B /* Chapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter.swift; sourceTree = "<group>"; };
@@ -227,6 +235,14 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		80A68D8926BA90D10042C5B6 /* Object */ = {
+			isa = PBXGroup;
+			children = (
+				80A68D8E26BA92B00042C5B6 /* Apple.usdz */,
+			);
+			path = Object;
+			sourceTree = "<group>";
+		};
 		8AB1322326A9557E00DF114B /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -265,6 +281,7 @@
 		8C0B601F269D72460027FDAA /* AR2ndTest */ = {
 			isa = PBXGroup;
 			children = (
+				80A68D8926BA90D10042C5B6 /* Object */,
 				8C045B6026A31F2700003F45 /* Extensions */,
 				8AB1322326A9557E00DF114B /* Models */,
 				8C25588326A92AB8009987C6 /* Stories */,
@@ -358,6 +375,7 @@
 				8C0B602B269D72470027FDAA /* LaunchScreen.storyboard */,
 				8C9431D6269F1F77006369F9 /* OnBoarding.storyboard */,
 				8C0B6026269D72460027FDAA /* Main.storyboard */,
+				80A68D8326BA831E0042C5B6 /* 3DView.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -386,6 +404,8 @@
 				8C401FC226A1720400A07ED7 /* LaunchScreen.swift */,
 				8AFD49D326AAB41500D30FB8 /* Profile.swift */,
 				8C401FB026A0884E00A07ED7 /* GamePaused.swift */,
+				80A68D8726BA88230042C5B6 /* ObjectViewController.swift */,
+				8044031826BBCA99005572CE /* ObjectDetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -506,10 +526,12 @@
 				8C43409826AFE8EC0008906A /* CalphabetSuccess.txt in Resources */,
 				363E6C4426AFC47100DC9D8F /* s_butt_GFP.mp3 in Resources */,
 				367AB2BD26A7DAA700A6789E /* K.mp3 in Resources */,
+				80A68D8426BA831E0042C5B6 /* 3DView.storyboard in Resources */,
 				3620361A26A95D6B00066EFB /* s_butt_pressed.mp3 in Resources */,
 				367AB2C826A7DAA700A6789E /* A.mp3 in Resources */,
 				367AB2C126A7DAA700A6789E /* T.mp3 in Resources */,
 				367AB2C226A7DAA700A6789E /* O.mp3 in Resources */,
+				80A68D8F26BA92B00042C5B6 /* Apple.usdz in Resources */,
 				367AB2B226A7DAA700A6789E /* N.mp3 in Resources */,
 				8C43409726AFE8EC0008906A /* CwordSuccess.txt in Resources */,
 				8C43408D26AFBA830008906A /* BwordSuccess.txt in Resources */,
@@ -542,8 +564,10 @@
 				8C401FB726A164F500A07ED7 /* WordHint.swift in Sources */,
 				8C401FAB26A07F7E00A07ED7 /* ParentGuide.swift in Sources */,
 				8AB1322226A94E8100DF114B /* ChapterPage.swift in Sources */,
+				80A68D8826BA88230042C5B6 /* ObjectViewController.swift in Sources */,
 				8C07070526A01A1900B83A34 /* inputName.swift in Sources */,
 				8C045B6226A31F4500003F45 /* Extensions.swift in Sources */,
+				8044031926BBCA99005572CE /* ObjectDetailViewController.swift in Sources */,
 				8C401FA926A07D6200A07ED7 /* SelectChapter.swift in Sources */,
 				8C401FB526A1647D00A07ED7 /* AlphabetSuccess.swift in Sources */,
 				8C9431DC269F2EE3006369F9 /* OnBoarding.swift in Sources */,
