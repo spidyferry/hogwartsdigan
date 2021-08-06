@@ -13,7 +13,6 @@ class WordHint: UIViewController {
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     @IBOutlet weak var prevButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
-    @IBOutlet weak var hint: UITextView!
     @IBOutlet weak var imageHint: UIImageView!
     var wordSupposedToBe:String = ""
     var dash:String = ""
@@ -30,7 +29,6 @@ class WordHint: UIViewController {
             dash.append(" _")
         }
         
-        hint.text = "\(wordSupposedToBe.prefix(1))\(dash)"
         imageHint.image = UIImage(named: "A")
     }
     
