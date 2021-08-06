@@ -502,12 +502,11 @@ Parents are expected to participate in monitoring and limiting the time that chi
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mlL-hW-FMY">
-                                <rect key="frame" x="30" y="362" width="90" height="90"/>
+                                <rect key="frame" x="30" y="372" width="90" height="90"/>
                                 <color key="backgroundColor" red="0.95837527509999998" green="0.52888590099999999" blue="0.20380106570000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="mlL-hW-FMY" secondAttribute="height" multiplier="1:1" id="6Wq-Sc-iBH"/>
-                                    <constraint firstAttribute="width" constant="90" id="6rf-U3-cmC"/>
-                                    <constraint firstAttribute="height" constant="90" id="MxK-mN-7aT"/>
+                                    <constraint firstAttribute="height" constant="90" id="0Wo-Fs-8fZ"/>
+                                    <constraint firstAttribute="width" constant="90" id="OxX-Lz-yHe"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="90"/>
                                 <state key="normal" title="&lt;">
@@ -523,12 +522,11 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c9t-34-JNN">
-                                <rect key="frame" x="1074" y="362" width="90" height="90"/>
+                                <rect key="frame" x="1074" y="372" width="90" height="90"/>
                                 <color key="backgroundColor" red="0.95837527509999998" green="0.52888590099999999" blue="0.20380106570000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="90" id="2G7-zR-UaI"/>
-                                    <constraint firstAttribute="height" constant="90" id="Igz-Vk-KsE"/>
-                                    <constraint firstAttribute="width" secondItem="c9t-34-JNN" secondAttribute="height" multiplier="1:1" id="uPt-GS-yWg"/>
+                                    <constraint firstAttribute="width" constant="90" id="jws-YJ-bH0"/>
+                                    <constraint firstAttribute="height" constant="90" id="rk3-ba-Qoy"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="90"/>
                                 <state key="normal" title="&gt;">
@@ -566,14 +564,14 @@ Parents are expected to participate in monitoring and limiting the time that chi
                         <viewLayoutGuide key="safeArea" id="fvG-U7-4jE"/>
                         <color key="backgroundColor" red="0.9994472861" green="1" blue="0.89802503590000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="c9t-34-JNN" firstAttribute="centerY" secondItem="ENn-nZ-c57" secondAttribute="centerY" id="0OQ-HL-lXr"/>
                             <constraint firstItem="6HM-Yd-wGE" firstAttribute="top" secondItem="fvG-U7-4jE" secondAttribute="top" constant="84" id="4pb-oo-xMh"/>
                             <constraint firstItem="frj-UK-AbO" firstAttribute="leading" secondItem="fvG-U7-4jE" secondAttribute="leading" constant="40" id="H4c-jL-NRt"/>
-                            <constraint firstItem="mlL-hW-FMY" firstAttribute="leading" secondItem="fvG-U7-4jE" secondAttribute="leading" constant="30" id="NUq-k4-Oee"/>
-                            <constraint firstItem="mlL-hW-FMY" firstAttribute="centerY" secondItem="fvG-U7-4jE" secondAttribute="centerY" id="NZe-AZ-oy7"/>
+                            <constraint firstItem="mlL-hW-FMY" firstAttribute="leading" secondItem="fvG-U7-4jE" secondAttribute="leading" constant="30" id="R42-gz-gVt"/>
                             <constraint firstItem="frj-UK-AbO" firstAttribute="top" secondItem="fvG-U7-4jE" secondAttribute="top" constant="30" id="fvy-gU-4ev"/>
                             <constraint firstItem="6HM-Yd-wGE" firstAttribute="centerX" secondItem="fvG-U7-4jE" secondAttribute="centerX" id="p6S-7S-LOF"/>
-                            <constraint firstItem="c9t-34-JNN" firstAttribute="centerY" secondItem="fvG-U7-4jE" secondAttribute="centerY" id="rcB-Wy-x6t"/>
-                            <constraint firstItem="fvG-U7-4jE" firstAttribute="trailing" secondItem="c9t-34-JNN" secondAttribute="trailing" constant="30" id="zQ0-CB-ICr"/>
+                            <constraint firstItem="mlL-hW-FMY" firstAttribute="centerY" secondItem="ENn-nZ-c57" secondAttribute="centerY" id="xFX-Q9-OIz"/>
+                            <constraint firstItem="fvG-U7-4jE" firstAttribute="trailing" secondItem="c9t-34-JNN" secondAttribute="trailing" constant="30" id="xd8-6j-kgP"/>
                         </constraints>
                     </view>
                     <connections>
@@ -2052,7 +2050,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
     <inferredMetricsTieBreakers>
         <segue reference="PkE-Fx-Sc4"/>
         <segue reference="jVJ-km-ovP"/>
-        <segue reference="mfO-3s-wQd"/>
+        <segue reference="D82-pD-idJ"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="AlphabetBox" width="296" height="277"/>
