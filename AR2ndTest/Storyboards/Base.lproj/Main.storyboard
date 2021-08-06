@@ -755,16 +755,13 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Paused" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cvq-JW-t8t">
-                                <rect key="frame" x="221" y="82" width="752" height="144"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="Cvq-JW-t8t" secondAttribute="height" multiplier="47:9" id="L8g-ft-Wkj"/>
-                                </constraints>
+                                <rect key="frame" x="221" y="84" width="752" height="144"/>
                                 <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="120"/>
                                 <color key="textColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fsz-i1-YR2">
-                                <rect key="frame" x="297" y="254" width="600" height="110"/>
+                                <rect key="frame" x="297" y="258" width="600" height="110"/>
                                 <color key="backgroundColor" red="0.95837527509999998" green="0.52888590099999999" blue="0.20380106570000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Fsz-i1-YR2" secondAttribute="height" multiplier="60:11" id="Mk3-bW-50k"/>
@@ -776,13 +773,18 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                 <state key="normal" title="Continue">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="closePausedMenu:" destination="BnN-NG-d2s" eventType="touchUpInside" id="y2N-Nc-ZMJ"/>
                                     <action selector="contButtonTapped:" destination="BnN-NG-d2s" eventType="touchUpInside" id="mb9-hA-vdj"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eex-UY-WCi">
-                                <rect key="frame" x="297" y="382" width="600" height="110"/>
+                                <rect key="frame" x="297" y="388" width="600" height="110"/>
                                 <color key="backgroundColor" red="0.95837527509999998" green="0.52888590099999999" blue="0.20380106570000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="600" id="2SI-wI-ep2"/>
@@ -794,12 +796,17 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                 <state key="normal" title="Naration Voice">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="narrButtonTapped:" destination="BnN-NG-d2s" eventType="touchUpInside" id="IEz-1W-5by"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aFT-qf-A4m">
-                                <rect key="frame" x="297" y="510" width="600" height="110"/>
+                                <rect key="frame" x="297" y="518" width="600" height="110"/>
                                 <color key="backgroundColor" red="0.95837527509999998" green="0.52888590099999999" blue="0.20380106570000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="600" id="5D8-YA-UqU"/>
@@ -811,13 +818,18 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                 <state key="normal" title="Main Menu">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="mainMenuButtonTapped:" destination="BnN-NG-d2s" eventType="touchUpInside" id="Zua-Ss-o7d"/>
                                     <segue destination="d7g-t6-UMX" kind="presentation" modalPresentationStyle="fullScreen" id="mfO-3s-wQd"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TEO-Rr-CYg">
-                                <rect key="frame" x="297" y="638" width="600" height="110"/>
+                                <rect key="frame" x="297" y="648" width="600" height="110"/>
                                 <color key="backgroundColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="600" id="4hC-Bz-ALO"/>
@@ -829,13 +841,18 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                 <state key="normal" title="Quit">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="quitButtonTapped:" destination="BnN-NG-d2s" eventType="touchUpInside" id="TeG-w5-FFk"/>
                                     <segue destination="W0c-Rr-nTu" kind="presentation" modalPresentationStyle="fullScreen" id="jVJ-km-ovP"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="speaker" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="DRz-Hc-GM7">
-                                <rect key="frame" x="818" y="408.5" width="60" height="58"/>
+                                <rect key="frame" x="818" y="412.5" width="60" height="58"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="61" id="FBW-uZ-zH7"/>
@@ -851,17 +868,17 @@ Parents are expected to participate in monitoring and limiting the time that chi
                             <constraint firstItem="27y-9j-x2L" firstAttribute="leading" secondItem="JoX-9a-l8g" secondAttribute="leading" id="6wC-Cd-rCT"/>
                             <constraint firstItem="Eex-UY-WCi" firstAttribute="centerX" secondItem="voa-jr-qJi" secondAttribute="centerX" id="6xo-tz-bGx"/>
                             <constraint firstItem="Eex-UY-WCi" firstAttribute="trailing" secondItem="DRz-Hc-GM7" secondAttribute="trailing" constant="19" id="7Jn-A9-9uP"/>
-                            <constraint firstItem="aFT-qf-A4m" firstAttribute="top" secondItem="Eex-UY-WCi" secondAttribute="bottom" constant="18" id="MA2-y8-lHJ"/>
+                            <constraint firstItem="aFT-qf-A4m" firstAttribute="top" secondItem="Eex-UY-WCi" secondAttribute="bottom" constant="20" id="MA2-y8-lHJ"/>
                             <constraint firstItem="TEO-Rr-CYg" firstAttribute="centerX" secondItem="voa-jr-qJi" secondAttribute="centerX" id="Vxr-NU-OlG"/>
-                            <constraint firstItem="TEO-Rr-CYg" firstAttribute="top" secondItem="aFT-qf-A4m" secondAttribute="bottom" constant="18" id="aXH-b5-SGR"/>
+                            <constraint firstItem="TEO-Rr-CYg" firstAttribute="top" secondItem="aFT-qf-A4m" secondAttribute="bottom" constant="20" id="aXH-b5-SGR"/>
                             <constraint firstAttribute="bottom" secondItem="27y-9j-x2L" secondAttribute="bottom" constant="-3" id="dWn-Zh-eiy"/>
-                            <constraint firstItem="Fsz-i1-YR2" firstAttribute="top" secondItem="Cvq-JW-t8t" secondAttribute="bottom" constant="28" id="fXY-JK-TNr"/>
-                            <constraint firstItem="Eex-UY-WCi" firstAttribute="top" secondItem="Fsz-i1-YR2" secondAttribute="bottom" constant="18" id="gGO-Kj-uFU"/>
+                            <constraint firstItem="Fsz-i1-YR2" firstAttribute="top" secondItem="Cvq-JW-t8t" secondAttribute="bottom" constant="30" id="fXY-JK-TNr"/>
+                            <constraint firstItem="Eex-UY-WCi" firstAttribute="top" secondItem="Fsz-i1-YR2" secondAttribute="bottom" constant="20" id="gGO-Kj-uFU"/>
                             <constraint firstItem="Cvq-JW-t8t" firstAttribute="centerX" secondItem="voa-jr-qJi" secondAttribute="centerX" id="kEa-Sc-1qG"/>
                             <constraint firstItem="aFT-qf-A4m" firstAttribute="centerX" secondItem="voa-jr-qJi" secondAttribute="centerX" id="lae-Sr-9Zr"/>
                             <constraint firstItem="DRz-Hc-GM7" firstAttribute="top" secondItem="Fsz-i1-YR2" secondAttribute="bottom" constant="43" id="nyM-5V-oPP"/>
                             <constraint firstItem="Fsz-i1-YR2" firstAttribute="centerX" secondItem="voa-jr-qJi" secondAttribute="centerX" id="sPI-el-8dB"/>
-                            <constraint firstItem="Cvq-JW-t8t" firstAttribute="top" secondItem="JoX-9a-l8g" secondAttribute="top" constant="82" id="tJb-sc-lQ9"/>
+                            <constraint firstItem="Cvq-JW-t8t" firstAttribute="top" secondItem="JoX-9a-l8g" secondAttribute="top" constant="84" id="tJb-sc-lQ9"/>
                         </constraints>
                     </view>
                     <connections>
@@ -1962,8 +1979,8 @@ Parents are expected to participate in monitoring and limiting the time that chi
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="6dA-gq-VYn"/>
-        <segue reference="iSJ-4G-zhb"/>
-        <segue reference="A9y-8I-ua6"/>
+        <segue reference="hde-os-pJd"/>
+        <segue reference="jVJ-km-ovP"/>
         <segue reference="mfO-3s-wQd"/>
     </inferredMetricsTieBreakers>
     <resources>
