@@ -17,11 +17,9 @@ class WordSuccess: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let AssortedMusics = NSURL(fileURLWithPath: Bundle.main.path(forResource: "s_bgm", ofType: "wav")!)
-        audioPlayer = try! AVAudioPlayer(contentsOf: AssortedMusics as URL)
-        audioPlayer.prepareToPlay()
-        audioPlayer.numberOfLoops = -1
-        audioPlayer.play()
+        AudioCongrat.shared.playSound()
+        AudioBGM.shared.playSound()
+        
         let wordSuccess:String = UserDefaults.standard.string(forKey: "wordSuccess")!
         let line = self.loadtext(file: wordSuccess)
         let fields = line.split(separator: ";").map {String($0)}
@@ -43,4 +41,12 @@ class WordSuccess: UIViewController {
         return content
     }
 
+    @IBAction func pauseButtTapped(_ sender: Any) {
+        AudioPausedTheme.shared.playSound()
+    }
+    
+    @IBAction func nextButtTapped(_ sender: Any) {
+        AudioNextTapped.shared.playSound()
+    }
+    
 }

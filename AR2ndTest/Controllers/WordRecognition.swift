@@ -159,8 +159,20 @@ class WordRecognition: UIViewController {
     }
     
     @IBAction func tryAgain(_ sender: Any) {
+        AudioNextTapped.shared.playSound()
         tryagainNotification.isHidden = true
         sayIt.isHidden = true
     }
     
+    @IBAction func pauseButtTapped(_ sender: Any) {
+        AudioPausedTheme.shared.playSound()
+    }
+    
+    @IBAction func tryAgainYesTapped(_ sender: Any) {
+        AudioNextTapped.shared.playSound()
+    }
+    
+    @IBAction func tryAgainNextTapped(_ sender: Any) {
+        AudioNextTapped.shared.playSound()
+    }
 }

@@ -38,5 +38,13 @@ class ARWordMission: UIViewController {
             let content = try? String(contentsOfFile: path) else {return "no files"}
         return content
     }
-
+    
+    @IBAction func pauseButtTapped(_ sender: Any) {
+        AudioPausedTheme.shared.playSound()
+    }
+    
+    @IBAction func nextButtTapped(_ sender: Any) {
+        AudioNextTapped.shared.playSound()
+    }
+    
 }

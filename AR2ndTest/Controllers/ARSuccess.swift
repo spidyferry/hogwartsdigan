@@ -37,4 +37,11 @@ class ARSuccess: UIViewController {
         return content
     }
 
+    @IBAction func pauseButtTapped(_ sender: Any) {
+        AudioPausedTheme.shared.playSound()
+    }
+    
+    @IBAction func tryButtTapped(_ sender: Any) {
+        AudioNextTapped.shared.playSound()
+    }
 }
