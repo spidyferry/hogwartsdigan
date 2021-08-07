@@ -15,6 +15,7 @@ class ChapterIntro: UIViewController {
     @IBOutlet weak var prevButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var pauseButton: UIButton!
+    @IBOutlet weak var repeatButton: UIButton!
     
     var countTimer = 0
     var timer = Timer()
@@ -32,13 +33,10 @@ class ChapterIntro: UIViewController {
         else if (currentAlphabet == "C"){
             AudioNarration.shared.playSound(file: "narr_C")
         }
-
         
     }
+    
     override func viewDidAppear(_ animated: Bool) {
-        
-       
-        
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(getSentece),userInfo: nil,repeats: true)
         timer.fire()
 //        startNaration(script: sentence)
@@ -54,7 +52,9 @@ class ChapterIntro: UIViewController {
         if countTimer/3 < sentence.count{
             self.bodyText.text = sentence[countTimer/3]
         }
-        
+        if countTimer/3 > sentence.count{
+            repeatButton.isHidden = false
+        }
     }
     
     

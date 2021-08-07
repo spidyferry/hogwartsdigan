@@ -33,5 +33,10 @@
     "libraryIdentifier" : "a9e65d279432986b09efe40c86e5f567",
     "format" : "model",
     "displayName" : "Fence.usdz"
+  },
+  {
+    "libraryIdentifier" : "2c2501551341535bdb995783f0619c2c",
+    "format" : "model",
+    "displayName" : "Banana.usdz"
   }
 ]
