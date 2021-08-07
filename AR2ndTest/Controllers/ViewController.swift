@@ -14,12 +14,21 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        let currentAlphabet:String = UserDefaults.standard.string(forKey: "currentAlphabet")!
         // Load the "Box" scene from the "Experience" Reality File
-        let boxAnchor = try! Experience.loadBox()
-        boxAnchor.actions.sayApple.onAction = prints(_:)
-        // Add the box anchor to the scene
-        arView.scene.anchors.append(boxAnchor)
+        
+        if(currentAlphabet == "A"){
+            let boxAnchor = try! Experience.loadApple()
+            boxAnchor.actions.sayApple.onAction = prints(_:)
+            // Add the box anchor to the scene
+            arView.scene.anchors.append(boxAnchor)
+        }else if(currentAlphabet == "B"){
+            let boxAnchor = try! Experience.loadBasket()
+            boxAnchor.actions.sayApple.onAction = prints(_:)
+            // Add the box anchor to the scene
+            arView.scene.anchors.append(boxAnchor)
+        }
+        
         
     }
     

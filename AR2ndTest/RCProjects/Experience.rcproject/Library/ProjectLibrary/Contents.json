@@ -23,5 +23,15 @@
     "libraryIdentifier" : "49e7dfbae1f93d1eb307edf495fa7cd2",
     "format" : "model",
     "displayName" : "Basket.usdz"
+  },
+  {
+    "libraryIdentifier" : "7cbf7ee5af71ede863bc5ec4e65c98fe",
+    "format" : "model",
+    "displayName" : "Land2.usdz"
+  },
+  {
+    "libraryIdentifier" : "a9e65d279432986b09efe40c86e5f567",
+    "format" : "model",
+    "displayName" : "Fence.usdz"
   }
 ]
