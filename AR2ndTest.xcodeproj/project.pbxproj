@@ -54,11 +54,11 @@
 		367AB2C926A7DAA700A6789E /* W.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 367AB2AE26A7DAA700A6789E /* W.mp3 */; };
 		367AB2CA26A7DAA700A6789E /* Z.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 367AB2AF26A7DAA700A6789E /* Z.mp3 */; };
 		367AB2CC26A7DAA700A6789E /* I.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 367AB2B126A7DAA700A6789E /* I.mp3 */; };
+		36CB4CFC26B83FA6003DCD14 /* s_narr_A.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 36CB4CFB26B83FA6003DCD14 /* s_narr_A.mp3 */; };
 		8044031926BBCA99005572CE /* ObjectDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8044031826BBCA99005572CE /* ObjectDetailViewController.swift */; };
 		80A68D8426BA831E0042C5B6 /* 3DView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80A68D8326BA831E0042C5B6 /* 3DView.storyboard */; };
 		80A68D8826BA88230042C5B6 /* ObjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A68D8726BA88230042C5B6 /* ObjectViewController.swift */; };
 		80A68D8F26BA92B00042C5B6 /* Apple.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 80A68D8E26BA92B00042C5B6 /* Apple.usdz */; };
-		36CB4CFC26B83FA6003DCD14 /* s_narr_A.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 36CB4CFB26B83FA6003DCD14 /* s_narr_A.mp3 */; };
 		8AB1322226A94E8100DF114B /* ChapterPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB1322126A94E8100DF114B /* ChapterPage.swift */; };
 		8AB1322726A955D800DF114B /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB1322626A955D800DF114B /* Page.swift */; };
 		8AB1322926A9C33400DF114B /* Chapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB1322826A9C33400DF114B /* Chapter.swift */; };
@@ -160,11 +160,11 @@
 		367AB2AE26A7DAA700A6789E /* W.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = W.mp3; sourceTree = "<group>"; };
 		367AB2AF26A7DAA700A6789E /* Z.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Z.mp3; sourceTree = "<group>"; };
 		367AB2B126A7DAA700A6789E /* I.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = I.mp3; sourceTree = "<group>"; };
+		36CB4CFB26B83FA6003DCD14 /* s_narr_A.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = s_narr_A.mp3; sourceTree = "<group>"; };
 		8044031826BBCA99005572CE /* ObjectDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectDetailViewController.swift; sourceTree = "<group>"; };
 		80A68D8326BA831E0042C5B6 /* 3DView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = 3DView.storyboard; sourceTree = "<group>"; };
 		80A68D8726BA88230042C5B6 /* ObjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectViewController.swift; sourceTree = "<group>"; };
 		80A68D8E26BA92B00042C5B6 /* Apple.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Apple.usdz; sourceTree = "<group>"; };
-		36CB4CFB26B83FA6003DCD14 /* s_narr_A.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = s_narr_A.mp3; sourceTree = "<group>"; };
 		8AB1322126A94E8100DF114B /* ChapterPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterPage.swift; sourceTree = "<group>"; };
 		8AB1322626A955D800DF114B /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 		8AB1322826A9C33400DF114B /* Chapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter.swift; sourceTree = "<group>"; };
@@ -748,7 +748,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_TEAM = B3HYPPHXBP;
+				DEVELOPMENT_TEAM = VYG4M66448;
 				INFOPLIST_FILE = AR2ndTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -769,7 +769,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_TEAM = B3HYPPHXBP;
+				DEVELOPMENT_TEAM = VYG4M66448;
 				INFOPLIST_FILE = AR2ndTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
