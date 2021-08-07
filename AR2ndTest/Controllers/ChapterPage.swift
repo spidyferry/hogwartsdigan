@@ -53,10 +53,13 @@ class ChapterPage: UIViewController {
     
     func showChapterCard() {
         // Card Chapter Left
+        let pageControllerWidth = UIScreen.main.bounds.size.width-(150*2)
+        let pageControllerHeight = (451)-20
+        
         let chapterLeftDone     = self.fetchCompleted(index: page.chapterStart - 1)
         let chapterLeftTitle    = "CardChapter\(page.chapterStart)\(chapterLeftDone ? "Done" : "")"
         
-        cardChapterLeft = UIButton(frame: CGRect(x: 6, y: 10, width: 280, height: 450))
+        cardChapterLeft = UIButton(frame: CGRect(x: 0, y: 10, width:  Int(pageControllerWidth)/3, height: pageControllerHeight))
         cardChapterLeft?.setImage(UIImage(named: chapterLeftTitle), for: .normal)
         cardChapterLeft.tag = page.chapterStart
         cardChapterLeft.addTarget(self, action: #selector(buttonChapter), for: .touchUpInside)
@@ -65,18 +68,18 @@ class ChapterPage: UIViewController {
         // Card Chapter Middle
         let chapterMiddleDone     = self.fetchCompleted(index: page.chapterStart)
         let chapterMiddleTitle    = "CardChapter\(page.chapterStart + 1)\(chapterMiddleDone ? "Done" : "")"
-        
-        cardChapterMiddle = UIButton(frame: CGRect(x: 310, y: 10, width: 280, height: 450))
+
+        cardChapterMiddle = UIButton(frame: CGRect(x: (pageControllerWidth/3), y: 10, width: pageControllerWidth/3, height: CGFloat(pageControllerHeight)))
         cardChapterMiddle?.setImage(UIImage(named: chapterMiddleTitle), for: .normal)
         cardChapterMiddle.tag = page.chapterStart + 1
         cardChapterMiddle.addTarget(self, action: #selector(buttonChapter), for: .touchUpInside)
         self.view.addSubview(cardChapterMiddle!)
-        
-        // Card Chapter Right
+//
+//        // Card Chapter Right
         let chapterRightDone     = self.fetchCompleted(index: page.chapterStart + 1)
         let chapterRightTitle    = "CardChapter\(page.chapterStart + 2)\(chapterRightDone ? "Done" : "")"
-        
-        cardChapterRight = UIButton(frame: CGRect(x: 613, y: 10, width: 280, height: 450))
+
+        cardChapterRight = UIButton(frame: CGRect(x: (pageControllerWidth/3)*2, y: 10, width: pageControllerWidth/3, height: CGFloat(pageControllerHeight)))
         cardChapterRight?.setImage(UIImage(named: chapterRightTitle), for: .normal)
         cardChapterRight.tag = page.chapterStart + 2
         cardChapterRight.addTarget(self, action: #selector(buttonChapter), for: .touchUpInside)
