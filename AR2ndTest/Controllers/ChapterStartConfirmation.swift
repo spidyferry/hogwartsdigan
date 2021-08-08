@@ -11,6 +11,8 @@ import CoreData
 class ChapterStartConfirmation: UIViewController{
     
     var alphabet = ""
+    var reset: Bool = false
+    var alphabetToReset: [String] = []
     var titleChapter: String = ""
     
     let defaults = UserDefaults.standard
@@ -62,17 +64,19 @@ class ChapterStartConfirmation: UIViewController{
         let thirdIsComplete = fetchAlphabet(alphabetName: third)
         
         if (firstIsComplete == false && secondIsComplete == false && thirdIsComplete == false) {
-            alphabet                = first
-            instructionText.text    = "Are you ready to start?"
+            self.alphabet                = first
+            self.instructionText.text    = "Are you ready to start?"
         } else if (firstIsComplete == true && secondIsComplete == false && thirdIsComplete == false) {
-            alphabet                = second
-            instructionText.text    = "Do you want to continue?"
+            self.alphabet                = second
+            self.instructionText.text    = "Do you want to continue?"
         } else if (firstIsComplete == true && secondIsComplete == true && thirdIsComplete == false) {
-            alphabet                = third
-            instructionText.text    = "Do you want to continue?"
+            self.alphabet                = third
+            self.instructionText.text    = "Do you want to continue?"
         } else {
-            alphabet                = first
-            instructionText.text    = "Do you want to repeat?"
+            self.alphabet                = first
+            self.reset                   = true
+            self.alphabetToReset        = [first, second, third]
+            self.instructionText.text    = "Do you want to repeat?"
         }
         
         defaults.set(alphabet, forKey: "currentAlphabet")
@@ -98,9 +102,40 @@ class ChapterStartConfirmation: UIViewController{
         return alphabetFinished![0].isCompleted
     }
     
+    func resetChapter() {
+        do {
+            let request = AlphabetTable.fetchRequest() as NSFetchRequest<AlphabetTable>
+            
+            for item in self.alphabetToReset {
+                let predicate       = NSPredicate(format: "alphabet CONTAINS %@", item)
+                request.predicate   = predicate
+                
+                let alphabet = try context.fetch(request)
+                
+                if(alphabet.count != 0) {
+                    let item            = alphabet[0]
+                    item.isCompleted    = false
+                    
+                    try context.save()
+                }
+                
+                else {
+                    print("Cannot find alphabet \(item)")
+                }
+            }
+
+        } catch {
+            print("Failed to set complete: \(error.localizedDescription)")
+        }
+    }
+    
     @IBAction func gotoNext(_ sender: Any) {
         AudioNextTapped.shared.playSound()
         AudioBGM.shared.stopSound()
+        
+        if reset {
+            self.resetChapter()
+        }
         
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let ChapterIntroVC = storyBoard.instantiateViewController(withIdentifier: "ChapterIntro") as! ChapterIntro
