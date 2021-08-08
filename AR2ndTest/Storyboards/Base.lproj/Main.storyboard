@@ -1749,7 +1749,6 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="tryAgain:" destination="eXP-UT-rvH" eventType="touchUpInside" id="EXk-dX-Jim"/>
-                                                    <action selector="tryAgainYesTapped:" destination="eXP-UT-rvH" eventType="touchUpInside" id="tUD-S0-Sbe"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z3T-Vn-kOA">
@@ -2064,7 +2063,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="zSH-PC-aQ5"/>
+        <segue reference="PkE-Fx-Sc4"/>
         <segue reference="A9y-8I-ua6"/>
         <segue reference="WGK-U7-Tf6"/>
     </inferredMetricsTieBreakers>

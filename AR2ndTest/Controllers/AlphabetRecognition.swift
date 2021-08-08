@@ -163,6 +163,7 @@ class AlphabetRecognition: UIViewController, SFSpeechRecognizerDelegate {
     }
 
     @IBAction func tryAgain(_ sender: Any) {
+        AudioNextTapped.shared.playSound()
         tryagainNotification.isHidden = true
     }
     
@@ -215,6 +216,7 @@ class AlphabetRecognition: UIViewController, SFSpeechRecognizerDelegate {
     }
     
     @IBAction func nextPage(_ sender: Any) {
+        AudioNextTapped.shared.playSound()
         self.nextPage()
     }
     
