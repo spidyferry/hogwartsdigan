@@ -679,13 +679,13 @@ Parents are expected to participate in monitoring and limiting the time that chi
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bHU-AS-aK7">
                                 <rect key="frame" x="987" y="536" width="61" height="59"/>
                                 <color key="tintColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" image="play.circle.fill" catalog="system">
+                                <state key="normal" image="play.circle" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
                                         <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="50"/>
                                     </preferredSymbolConfiguration>
                                 </state>
                                 <connections>
-                                    <action selector="playButtonTapped:" destination="84a-rU-kNd" eventType="touchUpInside" id="SkX-7l-g75"/>
+                                    <action selector="replayButtonTapped:" destination="84a-rU-kNd" eventType="touchUpInside" id="V4c-gK-ClX"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w8J-7H-BC9">
@@ -1161,14 +1161,17 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                 <color key="textColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c2S-gu-5rV">
-                                <rect key="frame" x="966" y="526.5" width="68" height="55.5"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c2S-gu-5rV">
+                                <rect key="frame" x="973.5" y="523.5" width="60.5" height="58.5"/>
                                 <color key="tintColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" image="repeat" catalog="system">
+                                <state key="normal" image="play.circle" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
                                         <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="50"/>
                                     </preferredSymbolConfiguration>
                                 </state>
+                                <connections>
+                                    <action selector="replayButtonTapped:" destination="4yQ-mZ-Yd1" eventType="touchUpInside" id="HVW-iY-aug"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IV9-5C-qAh">
                                 <rect key="frame" x="1092" y="30" width="62" height="60"/>
@@ -1206,7 +1209,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="nextButtTapped:" destination="4yQ-mZ-Yd1" eventType="touchUpInside" id="5RH-KJ-IS5"/>
+                                    <action selector="nextButtonTapped:" destination="4yQ-mZ-Yd1" eventType="touchUpInside" id="cik-RL-VLD"/>
                                     <segue destination="BCD-9E-8AO" kind="presentation" modalPresentationStyle="fullScreen" id="1ZQ-O7-5Ap"/>
                                 </connections>
                             </button>
@@ -1238,6 +1241,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
                     <connections>
                         <outlet property="bodyText" destination="Piz-jW-LKf" id="Tnn-C6-bBO"/>
                         <outlet property="nextButton" destination="QaA-qR-Zyf" id="Uvs-3d-z4A"/>
+                        <outlet property="replayButton" destination="c2S-gu-5rV" id="H5E-Ie-3OS"/>
                         <outlet property="whiteTransBg" destination="kO8-D7-XTE" id="AeM-vf-Klc"/>
                     </connections>
                 </viewController>
@@ -2052,7 +2056,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="eGu-f1-vgZ"/>
+        <segue reference="Alw-4D-88y"/>
         <segue reference="A9y-8I-ua6"/>
         <segue reference="WGK-U7-Tf6"/>
     </inferredMetricsTieBreakers>
@@ -2074,7 +2078,6 @@ Parents are expected to participate in monitoring and limiting the time that chi
         <image name="gearshape.fill" catalog="system" width="128" height="121"/>
         <image name="mic.fill" catalog="system" width="108" height="128"/>
         <image name="play.circle" catalog="system" width="128" height="121"/>
-        <image name="play.circle.fill" catalog="system" width="128" height="121"/>
         <image name="repeat" catalog="system" width="128" height="99"/>
         <image name="speaker" catalog="system" width="128" height="124"/>
     </resources>
