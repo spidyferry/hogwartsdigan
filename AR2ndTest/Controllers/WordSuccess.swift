@@ -52,11 +52,11 @@ class WordSuccess: UIViewController {
         return content
     }
 
-    @IBAction func pauseButtTapped(_ sender: Any) {
+    @IBAction func pauseButtonTapped(_ sender: Any) {
         AudioPausedTheme.shared.playSound()
     }
     
-    @IBAction func nextButtTapped(_ sender: Any) {
+    @IBAction func nextButtonTapped(_ sender: Any) {
         AudioNextTapped.shared.playSound()
     }
     
