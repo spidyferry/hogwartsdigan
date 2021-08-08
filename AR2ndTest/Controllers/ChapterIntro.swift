@@ -25,7 +25,7 @@ class ChapterIntro: UIViewController {
         let currentAlphabet = UserDefaults.standard.string(forKey: "currentAlphabet")!
 //        Start Narration
         if (currentAlphabet == "A"){
-        AudioNarration.shared.playSound(file: "narr_A")
+            AudioNarration.shared.playSound(file: "narr_A")
         }
         else if (currentAlphabet == "B"){
             AudioNarration.shared.playSound(file: "narr_B")
@@ -33,7 +33,6 @@ class ChapterIntro: UIViewController {
         else if (currentAlphabet == "C"){
             AudioNarration.shared.playSound(file: "narr_C")
         }
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -49,6 +48,7 @@ class ChapterIntro: UIViewController {
         let alphabetIntro:String = UserDefaults.standard.string(forKey: "alphabetIntro")!
         let line = self.loadtext(file: alphabetIntro)
         let sentence = line.split(separator: ";").map {String($0)}
+        
         if countTimer/3 < sentence.count{
             self.bodyText.text = sentence[countTimer/3]
         }
@@ -58,7 +58,7 @@ class ChapterIntro: UIViewController {
     }
     
     
-    func startNaration(script:Array<String>){
+//    func startNaration(script:Array<String>){
 //        for (index, element) in script.enumerated() {
 //
 //            DispatchQueue.main.asyncAfter(deadline: .now() + 3.0*Double(index)) {
@@ -74,7 +74,7 @@ class ChapterIntro: UIViewController {
 //            self.bodyText.text = script[1]
 //        }
         
-    }
+//    }
 
     @IBAction func prevScreen(_ sender: Any) {
         AudioNextTapped.shared.playSound()

@@ -25,6 +25,7 @@ class GamePaused: UIViewController {
     @IBAction func contButtonTapped(_ sender: Any) {
         AudioNextTapped.shared.playSound()
         AudioPausedTheme.shared.stopSound()
+//        AudioNarration.shared.playSound(file: "")
     }
     
     @IBAction func narrButtonTapped(_ sender: Any) {

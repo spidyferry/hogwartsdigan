@@ -27,9 +27,12 @@ class ViewController: UIViewController {
             boxAnchor.actions.sayApple.onAction = prints(_:)
             // Add the box anchor to the scene
             arView.scene.anchors.append(boxAnchor)
+        }else if(currentAlphabet == "C"){
+            let boxAnchor = try! Experience.loadChocolate()
+            boxAnchor.actions.sayApple.onAction = prints(_:)
+            // Add the box anchor to the scene
+            arView.scene.anchors.append(boxAnchor)
         }
-        
-        
     }
     
     func prints(_ entity:Entity?){
