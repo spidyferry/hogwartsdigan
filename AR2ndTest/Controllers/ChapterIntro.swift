@@ -52,9 +52,9 @@ class ChapterIntro: UIViewController {
         if countTimer/3 < sentence.count{
             self.bodyText.text = sentence[countTimer/3]
         }
-        if countTimer/3 > sentence.count{
-            repeatButton.isHidden = false
-        }
+//        if countTimer/3 > sentence.count{
+//            repeatButton.isHidden = false
+//        }
     }
     
     
