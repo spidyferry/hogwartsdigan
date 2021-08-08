@@ -15,71 +15,47 @@ class ChapterIntro: UIViewController {
     @IBOutlet weak var prevButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var pauseButton: UIButton!
-    @IBOutlet weak var repeatButton: UIButton!
+    @IBOutlet weak var replayButton: UIButton!
     
     var titleChapter: String = ""
+    var currentAlphabet: String = ""
     var countTimer = 0
     var timer = Timer()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let currentAlphabet = UserDefaults.standard.string(forKey: "currentAlphabet")!
         
+        self.currentAlphabet    = UserDefaults.standard.string(forKey: "currentAlphabet")!
         self.alphabetTitle.text = titleChapter
         
-//        Start Narration
-        if (currentAlphabet == "A"){
-        AudioNarration.shared.playSound(file: "narr_A")
+        // Start Narration
+        if(currentAlphabet != "") {
+            AudioNarration.shared.playSound(file: "narr_\(currentAlphabet)")
         }
-        else if (currentAlphabet == "B"){
-            AudioNarration.shared.playSound(file: "narr_B")
-        }
-        else if (currentAlphabet == "C"){
-            AudioNarration.shared.playSound(file: "narr_C")
-        }
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(getSentece),userInfo: nil,repeats: true)
         timer.fire()
-//        startNaration(script: sentence)
     }
     
-    @objc
-    func getSentece(){
-        countTimer+=1
+    @objc func getSentece() {
+        countTimer += 1
         
         let alphabetIntro:String = UserDefaults.standard.string(forKey: "alphabetIntro")!
-        let line = self.loadtext(file: alphabetIntro)
+        let line = self.loadNarrationText(file: alphabetIntro)
         let sentence = line.split(separator: ";").map {String($0)}
+        
         if countTimer/3 < sentence.count{
             self.bodyText.text = sentence[countTimer/3]
         }
+        
         if countTimer/3 > sentence.count{
-            repeatButton.isHidden = false
+            replayButton.isHidden = false
+            timer.invalidate()
         }
     }
     
-    
-    func startNaration(script:Array<String>){
-//        for (index, element) in script.enumerated() {
-//
-//            DispatchQueue.main.asyncAfter(deadline: .now() + 3.0*Double(index)) {
-//                print("Item \(index): \(element)")
-//                self.bodyText.text = script[index]
-//            }
-//        }
-        
-//        Timer.scheduledTimer(withTimeInterval: 0.1, repeats: false) { timer in
-//            self.bodyText.text = script[0]
-//        }
-//        Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { timer in
-//            self.bodyText.text = script[1]
-//        }
-        
-    }
-
     @IBAction func prevScreen(_ sender: Any) {
         AudioNextTapped.shared.playSound()
         AudioNarration.shared.stopSound()
@@ -92,17 +68,29 @@ class ChapterIntro: UIViewController {
         AudioNarration.shared.stopSound()
     }
     
-    @IBAction func pauseButtTapped(_ sender: Any) {
+    @IBAction func pauseButtonTapped(_ sender: Any) {
         AudioNextTapped.shared.playSound()
         AudioNarration.shared.pauseSound()
         AudioPausedTheme.shared.playSound()
         timer.invalidate()
     }
     
-    func loadtext(file:String) -> String{
-        guard let path = Bundle.main.path(forResource: file, ofType: "txt"),
-            let content = try? String(contentsOfFile: path) else {return "no files"}
-        return content
+    @IBAction func playButtonTapped(_ sender: Any) {
+        if(currentAlphabet != "") {
+            AudioNarration.shared.playSound(file: "narr_\(currentAlphabet)")
+        }
+        
+        countTimer = 0
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(getSentece),userInfo: nil,repeats: true)
+        timer.fire()
+        
+        replayButton.isHidden = true
     }
     
+    func loadNarrationText(file:String) -> String{
+        guard let path = Bundle.main.path(forResource: file, ofType: "txt"),
+            let content = try? String(contentsOfFile: path) else {return "There is no file for narration"}
+        
+        return content
+    }
 }

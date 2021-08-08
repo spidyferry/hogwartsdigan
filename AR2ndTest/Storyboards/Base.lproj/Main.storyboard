@@ -679,11 +679,14 @@ Parents are expected to participate in monitoring and limiting the time that chi
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bHU-AS-aK7">
                                 <rect key="frame" x="987" y="536" width="61" height="59"/>
                                 <color key="tintColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" image="repeat" catalog="system">
+                                <state key="normal" image="play.circle.fill" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
                                         <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="50"/>
                                     </preferredSymbolConfiguration>
                                 </state>
+                                <connections>
+                                    <action selector="playButtonTapped:" destination="84a-rU-kNd" eventType="touchUpInside" id="SkX-7l-g75"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w8J-7H-BC9">
                                 <rect key="frame" x="1092" y="30" width="62" height="60"/>
@@ -694,7 +697,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                     </preferredSymbolConfiguration>
                                 </state>
                                 <connections>
-                                    <action selector="pauseButtTapped:" destination="84a-rU-kNd" eventType="touchUpInside" id="BxJ-2G-bn1"/>
+                                    <action selector="pauseButtonTapped:" destination="84a-rU-kNd" eventType="touchUpInside" id="lHO-ba-flg"/>
                                     <segue destination="BnN-NG-d2s" kind="presentation" modalPresentationStyle="fullScreen" id="eGu-f1-vgZ"/>
                                 </connections>
                             </button>
@@ -731,7 +734,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
                         <outlet property="nextButton" destination="ogp-wH-ciR" id="n4h-n8-a9c"/>
                         <outlet property="pauseButton" destination="w8J-7H-BC9" id="gEr-rL-FUc"/>
                         <outlet property="prevButton" destination="572-tQ-2gs" id="dbS-vp-61B"/>
-                        <outlet property="repeatButton" destination="bHU-AS-aK7" id="dmR-bA-SVb"/>
+                        <outlet property="replayButton" destination="bHU-AS-aK7" id="Jkr-il-LVA"/>
                         <outlet property="whiteTransBg" destination="MNX-XZ-icg" id="RrI-0Y-MMF"/>
                     </connections>
                 </viewController>
@@ -2071,6 +2074,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
         <image name="gearshape.fill" catalog="system" width="128" height="121"/>
         <image name="mic.fill" catalog="system" width="108" height="128"/>
         <image name="play.circle" catalog="system" width="128" height="121"/>
+        <image name="play.circle.fill" catalog="system" width="128" height="121"/>
         <image name="repeat" catalog="system" width="128" height="99"/>
         <image name="speaker" catalog="system" width="128" height="124"/>
     </resources>
