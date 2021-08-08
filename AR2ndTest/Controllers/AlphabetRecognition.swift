@@ -76,8 +76,7 @@ class AlphabetRecognition: UIViewController, SFSpeechRecognizerDelegate {
             recognitionRequest.requiresOnDeviceRecognition = false
         }
         
-        // Create a recognition task for the speech recognition session.
-        // Keep a reference to the task so that it can be canceled.
+        // Create a recognition task for the speech recognition session. Keep a reference to the task so that it can be canceled.
         
         recognitionTask = speechRecognizer.recognitionTask(with: recognitionRequest) { result, error in
             var isFinal = false
@@ -85,11 +84,9 @@ class AlphabetRecognition: UIViewController, SFSpeechRecognizerDelegate {
             if let result = result {
                 isFinal = result.isFinal
                 self.alphabet = result.bestTranscription.formattedString
-                print("hasil teks \(self.alphabet)")
+                print("Result: \(self.alphabet)")
                 self.checkingAlphabet()
             }
-            
-            
             
             if error != nil || isFinal {
                 // Stop recognizing speech if there is a problem.
@@ -150,15 +147,14 @@ class AlphabetRecognition: UIViewController, SFSpeechRecognizerDelegate {
     }
     
     func checkingAlphabet() {
-//        let firstLetter = alphabet.prefix(1)
-        
-            print(alphabet)
-        
         if (alphabet == alphabetSupposedToBe) {
             self.nextPage()
         } else {
             self.stopRecordAnimation()
             tryagainNotification.isHidden = false
+            
+            self.audioEngine.stop()
+            self.recognitionRequest?.endAudio()
         }
     }
 
