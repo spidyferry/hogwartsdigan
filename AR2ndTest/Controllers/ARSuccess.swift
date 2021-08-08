@@ -12,28 +12,38 @@ class ARSuccess: UIViewController {
     @IBOutlet weak var bodyText: UITextView!
     @IBOutlet weak var whiteTransBg: UIView!
     @IBOutlet weak var tryButton: UIButton!
+    @IBOutlet weak var replayButton: UIButton!
+    
+    var ARSuccessText: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let ARSuccess:String = UserDefaults.standard.string(forKey: "ARSuccess")!
-        let line = self.loadtext(file: ARSuccess)
-        let sentence = line.split(separator: ";").map {String($0)}
-        startNaration(script: sentence)
+        self.ARSuccessText = UserDefaults.standard.string(forKey: "ARSuccess")!
+        self.startNaration()
     }
     
-    func startNaration(script:Array<String>){
-        for (index, element) in script.enumerated() {
-          print("Item \(index): \(element)")
-                
+    func startNaration() {
+        let line = self.loadNarrationText(file: self.ARSuccessText)
+        var sentence = line.split(separator: ";").map {String($0)}
+        
+        sentence.removeLast()
+        
+        for (index, element) in sentence.enumerated() {
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.0*Double(index)) {
-                self.bodyText.text = script[index]
+                self.bodyText.text = element
+                
+                if index == (sentence.count - 1) {
+                    self.replayButton.isHidden = false
+                }
             }
         }
     }
     
-    func loadtext(file:String) -> String{
+    func loadNarrationText(file:String) -> String{
         guard let path = Bundle.main.path(forResource: file, ofType: "txt"),
-            let content = try? String(contentsOfFile: path) else {return "no files"}
+            let content = try? String(contentsOfFile: path) else {return "There is no file for narration"}
+        
         return content
     }
 
@@ -43,5 +53,10 @@ class ARSuccess: UIViewController {
     
     @IBAction func tryButtTapped(_ sender: Any) {
         AudioNextTapped.shared.playSound()
+    }
+    
+    @IBAction func replayButtonTapped(_ sender: Any) {
+        self.replayButton.isHidden = true
+        self.startNaration()
     }
 }
