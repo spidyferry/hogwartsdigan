@@ -13,38 +13,54 @@ class ARWordMission: UIViewController {
     @IBOutlet weak var whiteTransBG: UIView!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var bodyText: UITextView!
+    @IBOutlet weak var replayButton: UIButton!
+    
+    var ARMissionText: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let currentAlphabet = UserDefaults.standard.string(forKey: "currentAlphabet")!
-        alphabetTitle.text = "The \(currentAlphabet)"
-        let ARMission:String = UserDefaults.standard.string(forKey: "ARMission")!
-        let line = self.loadtext(file: ARMission)
-        let sentence = line.split(separator: ";").map {String($0)}
-        startNaration(script: sentence)
+        
+        let currentAlphabet     = UserDefaults.standard.string(forKey: "currentAlphabet")!
+        self.alphabetTitle.text = "The \(currentAlphabet)"
+        
+        self.ARMissionText = UserDefaults.standard.string(forKey: "ARMission")!
+        self.startNaration()
     }
     
-    func startNaration(script:Array<String>){
-        for (index, element) in script.enumerated() {
-          print("Item \(index): \(element)")
-                
+    func startNaration() {
+        let line = self.loadNarrationText(file: self.ARMissionText)
+        var sentence = line.split(separator: ";").map {String($0)}
+        
+        sentence.removeLast()
+        
+        for (index, element) in sentence.enumerated() {
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.0*Double(index)) {
-                self.bodyText.text = script[index]
+                self.bodyText.text = element
+                
+                if index == (sentence.count - 1) {
+                    self.replayButton.isHidden = false
+                }
             }
         }
     }
     
-    func loadtext(file:String) -> String{
+    func loadNarrationText(file:String) -> String{
         guard let path = Bundle.main.path(forResource: file, ofType: "txt"),
-            let content = try? String(contentsOfFile: path) else {return "no files"}
+            let content = try? String(contentsOfFile: path) else {return "There is no file for narration"}
+        
         return content
     }
-    
-    @IBAction func pauseButtTapped(_ sender: Any) {
+
+    @IBAction func pauseButtonTapped(_ sender: Any) {
         AudioPausedTheme.shared.playSound()
     }
     
-    @IBAction func nextButtTapped(_ sender: Any) {
+    @IBAction func nextButtonTapped(_ sender: Any) {
         AudioNextTapped.shared.playSound()
     }
     
+    @IBAction func replayButtonTapped(_ sender: Any) {
+        self.replayButton.isHidden = true
+        self.startNaration()
+    }
 }

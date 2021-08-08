@@ -24,6 +24,7 @@ class AlphabetRecognition: UIViewController, SFSpeechRecognizerDelegate {
     var alphabetCompleted:[AlphabetTable]?
     var alphabet = ""
     var alphabetSupposedToBe:String = ""
+    var success: Bool = false
 
     @IBOutlet weak var theAlphabet: UILabel!
     @IBOutlet weak var tryAgainButton: UIButton!
@@ -76,8 +77,7 @@ class AlphabetRecognition: UIViewController, SFSpeechRecognizerDelegate {
             recognitionRequest.requiresOnDeviceRecognition = false
         }
         
-        // Create a recognition task for the speech recognition session.
-        // Keep a reference to the task so that it can be canceled.
+        // Create a recognition task for the speech recognition session. Keep a reference to the task so that it can be canceled.
         
         recognitionTask = speechRecognizer.recognitionTask(with: recognitionRequest) { result, error in
             var isFinal = false
@@ -85,11 +85,9 @@ class AlphabetRecognition: UIViewController, SFSpeechRecognizerDelegate {
             if let result = result {
                 isFinal = result.isFinal
                 self.alphabet = result.bestTranscription.formattedString
-                print("hasil teks \(self.alphabet)")
+                print("Result: \(self.alphabet)")
                 self.checkingAlphabet()
             }
-            
-            
             
             if error != nil || isFinal {
                 // Stop recognizing speech if there is a problem.
@@ -150,12 +148,14 @@ class AlphabetRecognition: UIViewController, SFSpeechRecognizerDelegate {
     }
     
     func checkingAlphabet() {
-//        let firstLetter = alphabet.prefix(1)
-        
-            print(alphabet)
+        self.audioEngine.stop()
+        self.recognitionRequest?.endAudio()
         
         if (alphabet == alphabetSupposedToBe) {
-            self.nextPage()
+            if self.success == false {
+                self.nextPage()
+                self.success = true
+            }
         } else {
             self.stopRecordAnimation()
             tryagainNotification.isHidden = false
@@ -163,6 +163,7 @@ class AlphabetRecognition: UIViewController, SFSpeechRecognizerDelegate {
     }
 
     @IBAction func tryAgain(_ sender: Any) {
+        AudioNextTapped.shared.playSound()
         tryagainNotification.isHidden = true
     }
     
@@ -215,6 +216,7 @@ class AlphabetRecognition: UIViewController, SFSpeechRecognizerDelegate {
     }
     
     @IBAction func nextPage(_ sender: Any) {
+        AudioNextTapped.shared.playSound()
         self.nextPage()
     }
     

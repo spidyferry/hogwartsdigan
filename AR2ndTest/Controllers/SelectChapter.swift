@@ -27,13 +27,14 @@ class SelectChapter: UIViewController {
     }
     
     private func setupPageController() {
+        let staticImageSize = (451 + 20)
         self.pageController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
         
         self.pageController?.dataSource             = self
         self.pageController?.delegate               = self
         self.pageController?.view.backgroundColor   = .clear
         
-        self.pageController?.view.frame = CGRect(x: 145, y: 259, width: 901,height: 509)
+        self.pageController?.view.frame = CGRect(x: 150, y: Int(UIScreen.main.bounds.size.width) / Int(4), width: Int(UIScreen.main.bounds.size.width) - (150 * 2), height: staticImageSize + 20)
         
         self.addChild(self.pageController!)
         self.view.addSubview(self.pageController!.view)

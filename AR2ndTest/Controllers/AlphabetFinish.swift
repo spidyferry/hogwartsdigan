@@ -58,7 +58,7 @@ class AlphabetFinish: UIViewController {
         }
     }
 
-    @IBAction func pauseButtTapped(_ sender: Any) {
+    @IBAction func pauseButtonTapped(_ sender: Any) {
         AudioPausedTheme.shared.playSound()
     }
 }

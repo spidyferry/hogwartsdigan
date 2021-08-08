@@ -30,6 +30,7 @@ class WordRecognition: UIViewController {
     private let audioEngine = AVAudioEngine()
     var wordSupposedToBe:String = ""
     var word = ""
+    var success: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -85,7 +86,6 @@ class WordRecognition: UIViewController {
         } else {
             do {
                 try startRecording()
-//                sayIt.isHidden = false
                 self.startRecordAnimation()
 
                 Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { timer in
@@ -122,8 +122,7 @@ class WordRecognition: UIViewController {
             recognitionRequest.requiresOnDeviceRecognition = false
         }
         
-        // Create a recognition task for the speech recognition session.
-        // Keep a reference to the task so that it can be canceled.
+        // Create a recognition task for the speech recognition session. Keep a reference to the task so that it can be canceled.
         
         recognitionTask = speechRecognizer.recognitionTask(with: recognitionRequest) { result, error in
             var isFinal = false
@@ -131,11 +130,9 @@ class WordRecognition: UIViewController {
             if let result = result {
                 isFinal = result.isFinal
                 self.word = result.bestTranscription.formattedString
-                print("hasil teks \(self.word)")
+                print("Result: \(self.word)")
                 self.checkingWord()
             }
-            
-            
             
             if error != nil || isFinal {
                 // Stop recognizing speech if there is a problem.
@@ -158,8 +155,14 @@ class WordRecognition: UIViewController {
     }
     
     func checkingWord(){
+        self.audioEngine.stop()
+        self.recognitionRequest?.endAudio()
+        
         if (word == wordSupposedToBe){
-            self.nextPage()
+            if self.success == false {
+                self.success = true
+                self.nextPage()
+            }
         } else {
             tryagainNotification.isHidden = false
             self.stopRecordAnimation()
@@ -204,10 +207,10 @@ class WordRecognition: UIViewController {
     @IBAction func tryAgain(_ sender: Any) {
         AudioNextTapped.shared.playSound()
         tryagainNotification.isHidden = true
-        sayIt.isHidden = true
     }
     
     @IBAction func nextPage(_ sender: Any) {
+        AudioNextTapped.shared.playSound()
         self.nextPage()
     }
     
@@ -220,13 +223,5 @@ class WordRecognition: UIViewController {
     
     @IBAction func pauseButtTapped(_ sender: Any) {
         AudioPausedTheme.shared.playSound()
-    }
-    
-    @IBAction func tryAgainYesTapped(_ sender: Any) {
-        AudioNextTapped.shared.playSound()
-    }
-    
-    @IBAction func tryAgainNextTapped(_ sender: Any) {
-        AudioNextTapped.shared.playSound()
     }
 }

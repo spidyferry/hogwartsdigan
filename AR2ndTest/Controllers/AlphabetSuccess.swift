@@ -19,7 +19,9 @@ class AlphabetSuccess: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         AudioCongrat.shared.playSound()
+        AudioBGM.shared.playSound()
         
         let alphabetSuccess:String = UserDefaults.standard.string(forKey: "alphabetSuccess")!
         let line = self.loadtext(file: alphabetSuccess)
@@ -58,18 +60,24 @@ class AlphabetSuccess: UIViewController {
 //        }
 //    }
     
-    func loadtext(file:String) -> String{
+    func loadNarrationText(file:String) -> String{
         guard let path = Bundle.main.path(forResource: file, ofType: "txt"),
-            let content = try? String(contentsOfFile: path) else {return "no files"}
+            let content = try? String(contentsOfFile: path) else {return "There is no file for narration"}
+        
         return content
     }
+    
     @IBAction func pauseMenuTapped(_ sender: Any) {
         AudioNextTapped.shared.playSound()
         AudioPausedTheme.shared.playSound()
     }
     
-    @IBAction func nextButtTapped(_ sender: Any) {
+    @IBAction func nextButtonTapped(_ sender: Any) {
         AudioNextTapped.shared.playSound()
     }
     
+    @IBAction func replayButtonTapped(_ sender: Any) {
+        self.replayButton.isHidden = true
+        self.startNaration()
+    }
 }
