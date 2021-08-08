@@ -1391,22 +1391,25 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="IRD-hc-orK">
-                                <rect key="frame" x="150" y="339" width="894" height="88"/>
+                                <rect key="frame" x="160" y="339" width="874" height="88"/>
                                 <color key="textColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="60"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="exT-NA-Sib">
-                                <rect key="frame" x="966" y="523" width="68" height="59"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="exT-NA-Sib">
+                                <rect key="frame" x="973.5" y="523" width="60.5" height="59"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="59" id="3qc-Y2-VbM"/>
                                 </constraints>
                                 <color key="tintColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" image="repeat" catalog="system">
+                                <state key="normal" image="play.circle" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
                                         <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="50"/>
                                     </preferredSymbolConfiguration>
                                 </state>
+                                <connections>
+                                    <action selector="replayButtonTapped:" destination="bEj-nL-yAD" eventType="touchUpInside" id="AVC-Ww-cNr"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ePK-L6-LaI">
                                 <rect key="frame" x="422" y="664" width="350" height="110"/>
@@ -1426,7 +1429,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="nextButtTapped:" destination="bEj-nL-yAD" eventType="touchUpInside" id="26j-rR-IMA"/>
+                                    <action selector="nextButtonTapped:" destination="bEj-nL-yAD" eventType="touchUpInside" id="ug6-FG-3SD"/>
                                     <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="SKi-Rg-hAD"/>
                                 </connections>
                             </button>
@@ -1444,7 +1447,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                     </preferredSymbolConfiguration>
                                 </state>
                                 <connections>
-                                    <action selector="pauseButtTapped:" destination="bEj-nL-yAD" eventType="touchUpInside" id="iFU-tW-utB"/>
+                                    <action selector="pauseButtonTapped:" destination="bEj-nL-yAD" eventType="touchUpInside" id="bed-x9-clz"/>
                                     <segue destination="BnN-NG-d2s" kind="presentation" modalPresentationStyle="fullScreen" id="iSJ-4G-zhb"/>
                                 </connections>
                             </button>
@@ -1466,14 +1469,14 @@ Parents are expected to participate in monitoring and limiting the time that chi
                             <constraint firstItem="H14-IR-aZA" firstAttribute="bottom" secondItem="ePK-L6-LaI" secondAttribute="bottom" constant="40" id="Kjd-PB-m5a"/>
                             <constraint firstAttribute="bottom" secondItem="5nu-Ca-Mtu" secondAttribute="bottom" constant="-27" id="Nag-jK-Cuk"/>
                             <constraint firstItem="H14-IR-aZA" firstAttribute="trailing" secondItem="LCk-f2-rXB" secondAttribute="trailing" constant="40" id="Qpu-tL-6qU"/>
-                            <constraint firstItem="IRD-hc-orK" firstAttribute="trailing" secondItem="bh9-uB-6SO" secondAttribute="trailing" constant="-10" id="T0Y-m0-kgk"/>
+                            <constraint firstItem="IRD-hc-orK" firstAttribute="trailing" secondItem="bh9-uB-6SO" secondAttribute="trailing" constant="-20" id="T0Y-m0-kgk"/>
                             <constraint firstItem="5nu-Ca-Mtu" firstAttribute="trailing" secondItem="H14-IR-aZA" secondAttribute="trailing" id="Tjv-OK-Ly8"/>
                             <constraint firstItem="bh9-uB-6SO" firstAttribute="top" secondItem="Iba-PR-0kb" secondAttribute="bottom" constant="80" id="UMM-SG-yDR"/>
                             <constraint firstItem="H14-IR-aZA" firstAttribute="trailing" secondItem="bh9-uB-6SO" secondAttribute="trailing" constant="140" id="VCY-J3-HJs"/>
                             <constraint firstItem="5nu-Ca-Mtu" firstAttribute="leading" secondItem="H14-IR-aZA" secondAttribute="leading" id="cOg-7t-ro8"/>
                             <constraint firstItem="ePK-L6-LaI" firstAttribute="centerX" secondItem="Wh6-ww-fMA" secondAttribute="centerX" id="d5C-Pq-wNX"/>
                             <constraint firstItem="ePK-L6-LaI" firstAttribute="top" secondItem="bh9-uB-6SO" secondAttribute="bottom" constant="62" id="e1p-mG-bDZ"/>
-                            <constraint firstItem="IRD-hc-orK" firstAttribute="leading" secondItem="bh9-uB-6SO" secondAttribute="leading" constant="10" id="f4h-ez-yB7"/>
+                            <constraint firstItem="IRD-hc-orK" firstAttribute="leading" secondItem="bh9-uB-6SO" secondAttribute="leading" constant="20" id="f4h-ez-yB7"/>
                             <constraint firstItem="exT-NA-Sib" firstAttribute="bottom" secondItem="bh9-uB-6SO" secondAttribute="bottom" constant="-20" id="gN0-yu-ePD"/>
                             <constraint firstItem="Iba-PR-0kb" firstAttribute="centerX" secondItem="H14-IR-aZA" secondAttribute="centerX" id="hXj-Iz-68d"/>
                             <constraint firstItem="exT-NA-Sib" firstAttribute="trailing" secondItem="bh9-uB-6SO" secondAttribute="trailing" constant="-20" id="mmh-ud-451"/>
@@ -1483,6 +1486,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
                         <outlet property="alphabetTitle" destination="Iba-PR-0kb" id="BeX-D1-TnG"/>
                         <outlet property="bodyText" destination="IRD-hc-orK" id="FAQ-z5-bwB"/>
                         <outlet property="nextButton" destination="ePK-L6-LaI" id="wWG-aZ-7fj"/>
+                        <outlet property="replayButton" destination="exT-NA-Sib" id="V9O-Xy-kbI"/>
                         <outlet property="whiteTransBG" destination="bh9-uB-6SO" id="pUE-rt-VaD"/>
                     </connections>
                 </viewController>
@@ -2056,7 +2060,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="k9M-DK-gzl"/>
+        <segue reference="iSJ-4G-zhb"/>
         <segue reference="A9y-8I-ua6"/>
         <segue reference="WGK-U7-Tf6"/>
     </inferredMetricsTieBreakers>
