@@ -17,12 +17,16 @@ class ChapterIntro: UIViewController {
     @IBOutlet weak var pauseButton: UIButton!
     @IBOutlet weak var repeatButton: UIButton!
     
+    var titleChapter: String = ""
     var countTimer = 0
     var timer = Timer()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         let currentAlphabet = UserDefaults.standard.string(forKey: "currentAlphabet")!
+        
+        self.alphabetTitle.text = titleChapter
+        
 //        Start Narration
         if (currentAlphabet == "A"){
         AudioNarration.shared.playSound(file: "narr_A")
