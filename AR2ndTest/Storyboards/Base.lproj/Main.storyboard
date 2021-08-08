@@ -1150,7 +1150,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Piz-jW-LKf">
-                                <rect key="frame" x="150" y="375" width="894" height="160"/>
+                                <rect key="frame" x="160" y="375" width="874" height="160"/>
                                 <color key="textColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="60"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -1223,7 +1223,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
                             <constraint firstItem="IV9-5C-qAh" firstAttribute="top" secondItem="4lz-uF-J1T" secondAttribute="top" constant="30" id="LBt-w2-Vfv"/>
                             <constraint firstItem="QaA-qR-Zyf" firstAttribute="centerX" secondItem="Tvz-tR-HGG" secondAttribute="centerX" id="Mba-Qw-eeA"/>
                             <constraint firstItem="kO8-D7-XTE" firstAttribute="top" secondItem="7aF-RI-gBd" secondAttribute="bottom" constant="80" id="OBe-o1-7za"/>
-                            <constraint firstItem="Piz-jW-LKf" firstAttribute="trailing" secondItem="kO8-D7-XTE" secondAttribute="trailing" constant="-10" id="Rq9-wb-Bpn"/>
+                            <constraint firstItem="Piz-jW-LKf" firstAttribute="trailing" secondItem="kO8-D7-XTE" secondAttribute="trailing" constant="-20" id="Rq9-wb-Bpn"/>
                             <constraint firstItem="kO8-D7-XTE" firstAttribute="centerX" secondItem="4lz-uF-J1T" secondAttribute="centerX" id="V15-1q-5zg"/>
                             <constraint firstAttribute="bottom" secondItem="5zA-dB-xkZ" secondAttribute="bottom" constant="-3" id="cNA-jB-aNK"/>
                             <constraint firstItem="7aF-RI-gBd" firstAttribute="centerX" secondItem="Tvz-tR-HGG" secondAttribute="centerX" id="d1S-il-Wku"/>
@@ -1231,7 +1231,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
                             <constraint firstItem="4lz-uF-J1T" firstAttribute="trailing" secondItem="kO8-D7-XTE" secondAttribute="trailing" constant="140" id="h7J-bL-uam"/>
                             <constraint firstItem="c2S-gu-5rV" firstAttribute="bottom" secondItem="kO8-D7-XTE" secondAttribute="bottom" constant="-20" id="i47-p5-CQo"/>
                             <constraint firstItem="kO8-D7-XTE" firstAttribute="leading" secondItem="4lz-uF-J1T" secondAttribute="leading" constant="140" id="lzC-Py-YAu"/>
-                            <constraint firstItem="Piz-jW-LKf" firstAttribute="leading" secondItem="kO8-D7-XTE" secondAttribute="leading" constant="10" id="sjT-5Y-qbB"/>
+                            <constraint firstItem="Piz-jW-LKf" firstAttribute="leading" secondItem="kO8-D7-XTE" secondAttribute="leading" constant="20" id="sjT-5Y-qbB"/>
                             <constraint firstItem="4lz-uF-J1T" firstAttribute="bottom" secondItem="QaA-qR-Zyf" secondAttribute="bottom" constant="40" id="vgg-Y8-8LJ"/>
                             <constraint firstItem="7aF-RI-gBd" firstAttribute="top" secondItem="4lz-uF-J1T" secondAttribute="top" constant="84" id="vzw-aL-a6w"/>
                             <constraint firstItem="c2S-gu-5rV" firstAttribute="trailing" secondItem="kO8-D7-XTE" secondAttribute="trailing" constant="-20" id="wX6-SI-MJm"/>

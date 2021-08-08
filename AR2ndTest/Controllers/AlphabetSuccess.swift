@@ -21,14 +21,16 @@ class AlphabetSuccess: UIViewController {
         
         self.alphabetSuccess = UserDefaults.standard.string(forKey: "alphabetSuccess")!
         
-        startNaration()
+        self.startNaration()
     }
     
     func startNaration() {
         AudioCongrat.shared.playSound()
         
         let line = self.loadNarrationText(file: self.alphabetSuccess)
-        let sentence = line.split(separator: ";").map {String($0)}
+        var sentence = line.split(separator: ";").map {String($0)}
+        
+        sentence.removeLast()
         
         for (index, element) in sentence.enumerated() {
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.0*Double(index)) {
@@ -58,6 +60,7 @@ class AlphabetSuccess: UIViewController {
     }
     
     @IBAction func replayButtonTapped(_ sender: Any) {
+        self.replayButton.isHidden = true
         self.startNaration()
     }
 }
