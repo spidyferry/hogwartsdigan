@@ -24,6 +24,7 @@ class AlphabetRecognition: UIViewController, SFSpeechRecognizerDelegate {
     var alphabetCompleted:[AlphabetTable]?
     var alphabet = ""
     var alphabetSupposedToBe:String = ""
+    var success: Bool = false
 
     @IBOutlet weak var theAlphabet: UILabel!
     @IBOutlet weak var tryAgainButton: UIButton!
@@ -147,14 +148,17 @@ class AlphabetRecognition: UIViewController, SFSpeechRecognizerDelegate {
     }
     
     func checkingAlphabet() {
+        self.audioEngine.stop()
+        self.recognitionRequest?.endAudio()
+        
         if (alphabet == alphabetSupposedToBe) {
-            self.nextPage()
+            if self.success == false {
+                self.nextPage()
+                self.success = true
+            }
         } else {
             self.stopRecordAnimation()
             tryagainNotification.isHidden = false
-            
-            self.audioEngine.stop()
-            self.recognitionRequest?.endAudio()
         }
     }
 

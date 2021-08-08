@@ -20,7 +20,6 @@ class AlphabetSuccess: UIViewController {
         super.viewDidLoad()
         
         self.alphabetSuccess = UserDefaults.standard.string(forKey: "alphabetSuccess")!
-        
         self.startNaration()
     }
     
