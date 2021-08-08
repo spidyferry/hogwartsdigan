@@ -19,13 +19,14 @@ class AlphabetSuccess: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        AudioCongrat.shared.playSound()
+        AudioBGM.shared.playSound()
+        
         self.alphabetSuccess = UserDefaults.standard.string(forKey: "alphabetSuccess")!
         self.startNaration()
     }
     
     func startNaration() {
-        AudioCongrat.shared.playSound()
-        
         let line = self.loadNarrationText(file: self.alphabetSuccess)
         var sentence = line.split(separator: ";").map {String($0)}
         

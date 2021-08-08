@@ -18,6 +18,9 @@ class ARSuccess: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        AudioCongrat.shared.playSound()
+        AudioBGM.shared.playSound()
 
         self.ARSuccessText = UserDefaults.standard.string(forKey: "ARSuccess")!
         self.startNaration()
