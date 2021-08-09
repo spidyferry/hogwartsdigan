@@ -35,9 +35,7 @@ class ChapterIntro: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        AudioNarration.shared.startSound()
-        self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(getSentece),userInfo: nil,repeats: true)
-        self.timer.fire()
+        self.playNarration()
     }
     
     @objc func getSentece() {
@@ -98,6 +96,17 @@ class ChapterIntro: UIViewController {
     }
     
     @IBAction func replayButtonTapped(_ sender: Any) {
+        self.playNarration()
+    }
+    
+    func loadNarrationText(file:String) -> String{
+        guard let path = Bundle.main.path(forResource: file, ofType: "txt"),
+            let content = try? String(contentsOfFile: path) else {return "There is no file for narration"}
+        
+        return content
+    }
+    
+    func playNarration() {
         if(self.currentAlphabet != "") {
             AudioNarration.shared.playSound(file: "narr_\(self.currentAlphabet)")
         }
@@ -107,12 +116,5 @@ class ChapterIntro: UIViewController {
         self.timer.fire()
         
         self.replayButton.isHidden = true
-    }
-    
-    func loadNarrationText(file:String) -> String{
-        guard let path = Bundle.main.path(forResource: file, ofType: "txt"),
-            let content = try? String(contentsOfFile: path) else {return "There is no file for narration"}
-        
-        return content
     }
 }

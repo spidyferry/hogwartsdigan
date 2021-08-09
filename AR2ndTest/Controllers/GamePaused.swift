@@ -18,14 +18,11 @@ class GamePaused: UIViewController {
         
     }
     
-    @IBAction func closePausedMenu(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-    }
-    
     @IBAction func contButtonTapped(_ sender: Any) {
         AudioNextTapped.shared.playSound()
         AudioPausedTheme.shared.stopSound()
-//        AudioNarration.shared.playSound(file: "")
+        
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func narrButtonTapped(_ sender: Any) {
