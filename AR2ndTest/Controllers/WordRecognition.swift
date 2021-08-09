@@ -51,6 +51,7 @@ class WordRecognition: UIViewController {
         self.recordShadow2.layer.opacity = 0
     }
     
+    
     func getValueForRecognition(alphabetName:String) -> String{
         var alphabetToRecognize:[AlphabetTable]?
         do {

@@ -27,6 +27,10 @@ class ARWordMission: UIViewController {
         self.startNaration()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        AudioBGM.shared.startSound()
+    }
+    
     func startNaration() {
         let line = self.loadNarrationText(file: self.ARMissionText)
         var sentence = line.split(separator: ";").map {String($0)}
@@ -52,7 +56,9 @@ class ARWordMission: UIViewController {
     }
 
     @IBAction func pauseButtonTapped(_ sender: Any) {
+        AudioNextTapped.shared.playSound()
         AudioPausedTheme.shared.playSound()
+        AudioBGM.shared.pauseSound()
     }
     
     @IBAction func nextButtonTapped(_ sender: Any) {

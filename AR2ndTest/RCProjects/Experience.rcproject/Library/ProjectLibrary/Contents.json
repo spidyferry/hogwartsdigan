@@ -10,11 +10,6 @@
     "displayName" : "s_congrat.mp3"
   },
   {
-    "libraryIdentifier" : "576c5878e64d3e44c83e01f62b16d856",
-    "format" : "model",
-    "displayName" : "Tree.usdz"
-  },
-  {
     "libraryIdentifier" : "75e23eb37eedba0cd8cf65438182667d",
     "format" : "model",
     "displayName" : "Land.usdz"
@@ -38,5 +33,50 @@
     "libraryIdentifier" : "2c2501551341535bdb995783f0619c2c",
     "format" : "model",
     "displayName" : "Banana.usdz"
+  },
+  {
+    "libraryIdentifier" : "e2ae9ac60d0dcc2400318ef1a184c9e3",
+    "format" : "model",
+    "displayName" : "House.usdz"
+  },
+  {
+    "libraryIdentifier" : "a34a4b88614b6220770850f5f994c8e0",
+    "format" : "model",
+    "displayName" : "Table.usdz"
+  },
+  {
+    "libraryIdentifier" : "3538d9c4bc0eb3cb5d9360619e0ed5f2",
+    "format" : "model",
+    "displayName" : "Bush.usdz"
+  },
+  {
+    "libraryIdentifier" : "66158f2452f82cf0c7669c9de70226a5",
+    "format" : "model",
+    "displayName" : "Land2.usdz"
+  },
+  {
+    "libraryIdentifier" : "c90cfcdeb03e8917e315a4b69350fe24",
+    "format" : "model",
+    "displayName" : "Chocolate.usdz"
+  },
+  {
+    "libraryIdentifier" : "fd9e1d5749205474731dd64aaf2ddebc",
+    "format" : "model",
+    "displayName" : "Tree.usdz"
+  },
+  {
+    "libraryIdentifier" : "06d45e328cff420bc8a5a457e22752e4",
+    "format" : "model",
+    "displayName" : "Duck.usdz"
+  },
+  {
+    "libraryIdentifier" : "fb82ad45072d88354f24d959333815d5",
+    "format" : "model",
+    "displayName" : "Elephant.usdz"
+  },
+  {
+    "libraryIdentifier" : "16a1613b852ea74a2c4b2e8cf133b590",
+    "format" : "model",
+    "displayName" : "Feather.usdz"
   }
 ]

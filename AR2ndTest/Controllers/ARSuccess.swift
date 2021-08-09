@@ -26,6 +26,10 @@ class ARSuccess: UIViewController {
         self.startNaration()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        AudioBGM.shared.startSound()
+    }
+    
     func startNaration() {
         let line = self.loadNarrationText(file: self.ARSuccessText)
         var sentence = line.split(separator: ";").map {String($0)}
@@ -51,11 +55,14 @@ class ARSuccess: UIViewController {
     }
 
     @IBAction func pauseButtonTapped(_ sender: Any) {
+        AudioNextTapped.shared.playSound()
         AudioPausedTheme.shared.playSound()
+        AudioBGM.shared.pauseSound()
     }
     
     @IBAction func tryButtonTapped(_ sender: Any) {
         AudioNextTapped.shared.playSound()
+        AudioBGM.shared.stopSound()
     }
     
     @IBAction func replayButtonTapped(_ sender: Any) {

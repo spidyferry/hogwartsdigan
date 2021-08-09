@@ -33,6 +33,10 @@ class AlphabetFinish: UIViewController {
         indexChapter    = UserDefaults.standard.string(forKey: "indexChapter")!
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        AudioBGM.shared.startSound()
+    }
+    
     @IBAction func finishPerAlphabet(_ sender: Any) {
         AudioNextTapped.shared.playSound()
         
@@ -75,6 +79,8 @@ class AlphabetFinish: UIViewController {
     }
 
     @IBAction func pauseButtonTapped(_ sender: Any) {
+        AudioNextTapped.shared.playSound()
         AudioPausedTheme.shared.playSound()
+        AudioBGM.shared.pauseSound()
     }
 }

@@ -9,6 +9,7 @@ import UIKit
 
 class AlphabetSuccess: UIViewController {
 
+    @IBOutlet weak var headerTitle: UILabel!
     @IBOutlet weak var bodyText: UITextView!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var whiteTransBg: UIView!
@@ -24,6 +25,10 @@ class AlphabetSuccess: UIViewController {
         
         self.alphabetSuccess = UserDefaults.standard.string(forKey: "alphabetSuccess")!
         self.startNaration()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        AudioBGM.shared.startSound()
     }
     
     func startNaration() {
@@ -53,6 +58,7 @@ class AlphabetSuccess: UIViewController {
     @IBAction func pauseMenuTapped(_ sender: Any) {
         AudioNextTapped.shared.playSound()
         AudioPausedTheme.shared.playSound()
+        AudioBGM.shared.pauseSound()
     }
     
     @IBAction func nextButtonTapped(_ sender: Any) {

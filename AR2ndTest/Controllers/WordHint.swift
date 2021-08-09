@@ -22,7 +22,7 @@ class WordHint: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        AudioBGM.shared.playSound()
+//        AudioBGM.shared.playSound()
 
         let currentAlphabet = UserDefaults.standard.string(forKey: "currentAlphabet")!
         wordSupposedToBe = getValueForRecognition(alphabetName: currentAlphabet)
@@ -32,6 +32,10 @@ class WordHint: UIViewController {
         }
         
         imageHint.image = UIImage(named: "A")
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        AudioBGM.shared.startSound()
     }
     
     func getValueForRecognition(alphabetName:String) -> String{
@@ -50,7 +54,9 @@ class WordHint: UIViewController {
     }
     
     @IBAction func pauseButtTapped(_ sender: Any) {
+        AudioNextTapped.shared.playSound()
         AudioPausedTheme.shared.playSound()
+        AudioBGM.shared.pauseSound()
     }
     
     @IBAction func prevScreen(_ sender: Any) {
@@ -60,7 +66,7 @@ class WordHint: UIViewController {
     }
     
     @IBAction func nextButtTapped(_ sender: Any) {
-        AudioBGM.shared.stopSound()
+//        AudioBGM.shared.stopSound()
         AudioNextTapped.shared.playSound()
     }
 }
