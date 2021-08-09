@@ -38,12 +38,13 @@ class AlphabetFinish: UIViewController {
         
         self.setToComplete()
         
-        let goToNextChapter = self.nextAlphabet == "" ? true : false
+        let nextChapterAvailable = self.nextChapter != "" ? self.chapter[Int(self.indexChapter)! + 1].available : false
+        let goToNextChapter      = self.nextAlphabet == "" ? true : false
         
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let SelectChapterVC = storyBoard.instantiateViewController(withIdentifier: "ChapterStartConfirmation") as! ChapterStartConfirmation
-        SelectChapterVC.titleChapter = goToNextChapter ? self.nextChapter : self.currentChapter
-        SelectChapterVC.indexChapter = (goToNextChapter ? Int(self.indexChapter)! + 1 : Int(self.indexChapter))!
+        SelectChapterVC.titleChapter = nextChapterAvailable && goToNextChapter ? self.nextChapter : self.currentChapter
+        SelectChapterVC.indexChapter = (nextChapterAvailable && goToNextChapter ? Int(self.indexChapter)! + 1 : Int(self.indexChapter))!
         SelectChapterVC.modalPresentationStyle = .fullScreen
         self.present(SelectChapterVC, animated: false, completion: nil)
     }

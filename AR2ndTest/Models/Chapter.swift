@@ -86,4 +86,27 @@ enum Chapter: CaseIterable {
                 return 9
         }
     }
+    
+    var available: Bool {
+        switch self {
+            case .chapter1:
+                return true
+            case .chapter2:
+                return false
+            case .chapter3:
+                return false
+            case .chapter4:
+                return false
+            case .chapter5:
+                return false
+            case .chapter6:
+                return false
+            case .chapter7:
+                return false
+            case .chapter8:
+                return false
+            case .chapter9:
+                return false
+        }
+    }
 }
