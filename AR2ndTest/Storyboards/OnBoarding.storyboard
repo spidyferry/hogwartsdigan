@@ -37,6 +37,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="udV-hQ-6Hw" secondAttribute="height" multiplier="617:69" id="RbH-7W-vlF"/>
                                 </constraints>
+                                <color key="textColor" red="0.10196078431372549" green="0.2627450980392157" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="SFProRounded-Regular" family="SF Pro Rounded" pointSize="50"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
