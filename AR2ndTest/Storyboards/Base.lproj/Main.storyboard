@@ -1240,6 +1240,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
                     </view>
                     <connections>
                         <outlet property="bodyText" destination="Piz-jW-LKf" id="Tnn-C6-bBO"/>
+                        <outlet property="headerTitle" destination="7aF-RI-gBd" id="AKS-6u-Xbh"/>
                         <outlet property="nextButton" destination="QaA-qR-Zyf" id="Uvs-3d-z4A"/>
                         <outlet property="replayButton" destination="c2S-gu-5rV" id="H5E-Ie-3OS"/>
                         <outlet property="whiteTransBg" destination="kO8-D7-XTE" id="AeM-vf-Klc"/>
@@ -2067,7 +2068,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="eGu-f1-vgZ"/>
+        <segue reference="Qjc-NZ-5YA"/>
         <segue reference="A9y-8I-ua6"/>
         <segue reference="D82-pD-idJ"/>
     </inferredMetricsTieBreakers>
