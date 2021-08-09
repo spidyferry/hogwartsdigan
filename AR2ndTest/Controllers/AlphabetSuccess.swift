@@ -12,7 +12,7 @@ class AlphabetSuccess: UIViewController {
     @IBOutlet weak var bodyText: UITextView!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var whiteTransBg: UIView!
-    @IBOutlet weak var repeatButton: UIButton!
+    @IBOutlet weak var replayButton: UIButton!
     
     var countTimer = 0
     var timer = Timer()
@@ -23,9 +23,9 @@ class AlphabetSuccess: UIViewController {
         AudioCongrat.shared.playSound()
         AudioBGM.shared.playSound()
         
-        let alphabetSuccess:String = UserDefaults.standard.string(forKey: "alphabetSuccess")!
-        let line = self.loadtext(file: alphabetSuccess)
-        let sentence = line.split(separator: ";").map {String($0)}
+//        let alphabetSuccess:String = UserDefaults.standard.string(forKey: "alphabetSuccess")!
+//        let line = self.loadNarrationText(file: alphabetSuccess)
+//        let sentence = line.split(separator: ";").map {String($0)}
 //        startNaration(script: sentence)
     }
     
@@ -40,14 +40,14 @@ class AlphabetSuccess: UIViewController {
         countTimer+=1
         
         let alphabetIntro:String = UserDefaults.standard.string(forKey: "alphabetIntro")!
-        let line = self.loadtext(file: alphabetIntro)
+        let line = self.loadNarrationText(file: alphabetIntro)
         let sentence = line.split(separator: ";").map {String($0)}
         if countTimer/3 < sentence.count{
             self.bodyText.text = sentence[countTimer/3]
         }
-        if countTimer/3 > sentence.count{
-            repeatButton.isHidden = false
-        }
+//        if countTimer/3 > sentence.count{
+//            repeatButton.isHidden = false
+//        }
     }
     
 //    func startNaration(script:Array<String>){
@@ -78,6 +78,6 @@ class AlphabetSuccess: UIViewController {
     
     @IBAction func replayButtonTapped(_ sender: Any) {
         self.replayButton.isHidden = true
-        self.startNaration()
+//        self.startNaration()
     }
 }
