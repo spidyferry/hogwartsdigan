@@ -781,7 +781,6 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="closePausedMenu:" destination="BnN-NG-d2s" eventType="touchUpInside" id="y2N-Nc-ZMJ"/>
                                     <action selector="contButtonTapped:" destination="BnN-NG-d2s" eventType="touchUpInside" id="mb9-hA-vdj"/>
                                 </connections>
                             </button>
@@ -2068,8 +2067,8 @@ Parents are expected to participate in monitoring and limiting the time that chi
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="eGu-f1-vgZ"/>
-        <segue reference="A9y-8I-ua6"/>
-        <segue reference="D82-pD-idJ"/>
+        <segue reference="jVJ-km-ovP"/>
+        <segue reference="mfO-3s-wQd"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="AlphabetBox" width="296" height="277"/>
