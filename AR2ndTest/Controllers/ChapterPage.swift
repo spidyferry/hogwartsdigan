@@ -48,6 +48,7 @@ class ChapterPage: UIViewController {
         
         ChapterStartVC.modalPresentationStyle = .fullScreen
         ChapterStartVC.titleChapter = chapter[index - 1].title
+        ChapterStartVC.indexChapter = index - 1
         self.present(ChapterStartVC, animated: true, completion: nil)
     }
     

@@ -11,13 +11,16 @@ import CoreData
 class ChapterStartConfirmation: UIViewController{
     
     var alphabet = ""
+    var alphabets: [String] = []
     var reset: Bool = false
     var alphabetToReset: [String] = []
     var titleChapter: String = ""
+    var indexChapter: Int = 0
     
     let defaults = UserDefaults.standard
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var alphabetCompleted:[AlphabetTable]?
+    var chapter : [Chapter] = Chapter.allCases
 
     @IBOutlet weak var whiteTransBg: UIView!
     @IBOutlet weak var confirmButton: UIButton!
@@ -32,30 +35,8 @@ class ChapterStartConfirmation: UIViewController{
         // Change title chapter
         self.titleLabel.text = titleChapter
         
-        let selectedChapter = UserDefaults.standard.integer(forKey: "chapterSelected")
-        switch selectedChapter{
-            case 1 :
-                prepareDataforCurrentChapter(first: "A", second: "B", third: "C")
-            case 2 :
-                prepareDataforCurrentChapter(first: "D", second: "E", third: "F")
-            case 3 :
-                prepareDataforCurrentChapter(first: "G", second: "H", third: "I")
-            case 4 :
-                prepareDataforCurrentChapter(first: "J", second: "K", third: "L")
-            case 5 :
-                prepareDataforCurrentChapter(first: "M", second: "N", third: "O")
-            case 6 :
-                prepareDataforCurrentChapter(first: "P", second: "Q", third: "R")
-            case 7 :
-                prepareDataforCurrentChapter(first: "S", second: "T", third: "U")
-            case 8 :
-                prepareDataforCurrentChapter(first: "V", second: "W", third: "X")
-            case 9 :
-                prepareDataforCurrentChapter(first: "Y", second: "Z", third: "Z")
-                
-            default:
-                print("default")
-        }
+        self.alphabets = self.chapter[indexChapter].alphabets
+        self.prepareDataforCurrentChapter(first: alphabets[0], second: alphabets[1], third: (alphabets.count == 3 ? alphabets[2] : alphabets[1]))
     }
     
     func prepareDataforCurrentChapter (first:String, second:String, third: String){
@@ -63,28 +44,38 @@ class ChapterStartConfirmation: UIViewController{
         let secondIsComplete = fetchAlphabet(alphabetName: second)
         let thirdIsComplete = fetchAlphabet(alphabetName: third)
         
+        var nextAlphabet: String = ""
+        
         if (firstIsComplete == false && secondIsComplete == false && thirdIsComplete == false) {
             self.alphabet                = first
             self.instructionText.text    = "Are you ready to start?"
+            
+            nextAlphabet = self.alphabets[1]
         } else if (firstIsComplete == true && secondIsComplete == false && thirdIsComplete == false) {
             self.alphabet                = second
             self.instructionText.text    = "Do you want to continue?"
+            
+            nextAlphabet = self.alphabets.count == 3 ? self.alphabets[2] : ""
         } else if (firstIsComplete == true && secondIsComplete == true && thirdIsComplete == false) {
             self.alphabet                = third
             self.instructionText.text    = "Do you want to continue?"
         } else {
             self.alphabet                = first
             self.reset                   = true
-            self.alphabetToReset        = [first, second, third]
+            self.alphabetToReset         = self.alphabets
             self.instructionText.text    = "Do you want to repeat?"
         }
         
-        defaults.set(alphabet, forKey: "currentAlphabet")
-        defaults.set("\(alphabet)alphabetIntro", forKey: "alphabetIntro")
-        defaults.set("\(alphabet)alphabetSuccess", forKey: "alphabetSuccess")
-        defaults.set("\(alphabet)ARMission", forKey: "ARMission")
-        defaults.set("\(alphabet)ARSuccess", forKey: "ARSuccess")
-        defaults.set("\(alphabet)wordSuccess", forKey: "wordSuccess")
+        defaults.set(self.indexChapter, forKey: "indexChapter")
+        defaults.set(self.alphabet, forKey: "currentAlphabet")
+        defaults.set(self.titleChapter, forKey: "currentChapter")
+        defaults.set(nextAlphabet, forKey: "nextAlphabet")
+        defaults.set((self.chapter.count != self.indexChapter ? self.chapter[self.indexChapter + 1].title : ""), forKey: "nextChapter")
+        defaults.set("\(self.alphabet)alphabetIntro", forKey: "alphabetIntro")
+        defaults.set("\(self.alphabet)alphabetSuccess", forKey: "alphabetSuccess")
+        defaults.set("\(self.alphabet)ARMission", forKey: "ARMission")
+        defaults.set("\(self.alphabet)ARSuccess", forKey: "ARSuccess")
+        defaults.set("\(self.alphabet)wordSuccess", forKey: "wordSuccess")
     }
     
     func fetchAlphabet(alphabetName:String) -> Bool{
