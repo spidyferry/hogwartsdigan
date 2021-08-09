@@ -64,6 +64,8 @@ class ChapterStartConfirmation: UIViewController{
             self.reset                   = true
             self.alphabetToReset         = self.alphabets
             self.instructionText.text    = "Do you want to repeat?"
+            
+            nextAlphabet = self.alphabets[1]
         }
         
         defaults.set(self.indexChapter, forKey: "indexChapter")
