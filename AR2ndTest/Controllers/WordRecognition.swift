@@ -164,8 +164,11 @@ class WordRecognition: UIViewController {
                 self.nextPage()
             }
         } else {
-            tryagainNotification.isHidden = false
             self.stopRecordAnimation()
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                self.tryagainNotification.isHidden = false
+            }
         }
     }
     

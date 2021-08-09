@@ -78,7 +78,6 @@ class AlphabetRecognition: UIViewController, SFSpeechRecognizerDelegate {
         }
         
         // Create a recognition task for the speech recognition session. Keep a reference to the task so that it can be canceled.
-        
         recognitionTask = speechRecognizer.recognitionTask(with: recognitionRequest) { result, error in
             var isFinal = false
             
@@ -158,7 +157,10 @@ class AlphabetRecognition: UIViewController, SFSpeechRecognizerDelegate {
             }
         } else {
             self.stopRecordAnimation()
-            tryagainNotification.isHidden = false
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                self.tryagainNotification.isHidden = false
+            }
         }
     }
 
