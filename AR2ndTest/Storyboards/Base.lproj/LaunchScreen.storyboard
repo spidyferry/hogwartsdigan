@@ -16,36 +16,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Path" translatesAutoresizingMaskIntoConstraints="NO" id="RST-Ve-9f9">
-                                <rect key="frame" x="400" y="261.5" width="394" height="311"/>
+                                <rect key="frame" x="400" y="200" width="394" height="311"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Developed by:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6b-j4-IyI">
-                                <rect key="frame" x="534.5" y="637" width="125.5" height="33.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="f6b-j4-IyI" secondAttribute="height" multiplier="15:4" id="gAK-VH-g28"/>
-                                </constraints>
+                                <rect key="frame" x="534.5" y="611" width="125.5" height="23"/>
                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="20"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.021954018620000001" green="0.1699518263" blue="0.545129478" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order of the Pheonix" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KNt-ZR-vC6">
-                                <rect key="frame" x="458.5" y="676" width="277" height="62.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="KNt-ZR-vC6" secondAttribute="height" multiplier="40:9" id="0Pw-ZY-wts"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="30"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="404.5" y="664" width="385.5" height="101.5"/>
+                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="30"/>
+                                <color key="textColor" red="0.031999990339999999" green="0.2324326038" blue="0.64709484579999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.9994472861" green="1" blue="0.89802503590000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="f6b-j4-IyI" firstAttribute="top" secondItem="RST-Ve-9f9" secondAttribute="bottom" constant="64.5" id="ApJ-5N-xOu"/>
-                            <constraint firstItem="f6b-j4-IyI" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="aYV-Pn-y8r"/>
-                            <constraint firstItem="KNt-ZR-vC6" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="bd1-oA-NPw"/>
-                            <constraint firstItem="KNt-ZR-vC6" firstAttribute="top" secondItem="f6b-j4-IyI" secondAttribute="bottom" constant="5.5" id="gTx-WF-fEZ"/>
-                            <constraint firstItem="RST-Ve-9f9" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="scC-Qx-Yta"/>
-                            <constraint firstItem="RST-Ve-9f9" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="xmw-1m-cXx"/>
+                            <constraint firstItem="RST-Ve-9f9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="375-MC-3Bh"/>
+                            <constraint firstItem="RST-Ve-9f9" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Lgl-Jg-t2v"/>
+                            <constraint firstItem="f6b-j4-IyI" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="UJp-q1-gld"/>
+                            <constraint firstItem="KNt-ZR-vC6" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="lR0-rU-g68"/>
+                            <constraint firstItem="KNt-ZR-vC6" firstAttribute="top" secondItem="f6b-j4-IyI" secondAttribute="bottom" constant="30" id="pec-A6-SQP"/>
+                            <constraint firstItem="f6b-j4-IyI" firstAttribute="top" secondItem="RST-Ve-9f9" secondAttribute="bottom" constant="100" id="ykc-L8-tHW"/>
                         </constraints>
                     </view>
                 </viewController>
