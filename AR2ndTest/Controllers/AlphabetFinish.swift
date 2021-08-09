@@ -13,13 +13,24 @@ class AlphabetFinish: UIViewController {
     let context         = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     let defaults        = UserDefaults.standard
     var currentAlphabet = UserDefaults.standard.string(forKey: "currentAlphabet")!
+    var currentChapter  = UserDefaults.standard.string(forKey: "currentChapter")!
+    var nextAlphabet    = UserDefaults.standard.string(forKey: "nextAlphabet")!
+    var nextChapter     = UserDefaults.standard.string(forKey: "nextChapter")!
+    var indexChapter     = UserDefaults.standard.string(forKey: "indexChapter")!
+    
+    var chapter : [Chapter] = Chapter.allCases
     
     @IBOutlet weak var finishButton: UIButton!
     var alphabetToRecognize:[AlphabetTable]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         currentAlphabet = UserDefaults.standard.string(forKey: "currentAlphabet")!
+        currentChapter  = UserDefaults.standard.string(forKey: "currentChapter")!
+        nextAlphabet    = UserDefaults.standard.string(forKey: "nextAlphabet")!
+        nextChapter     = UserDefaults.standard.string(forKey: "nextChapter")!
+        indexChapter    = UserDefaults.standard.string(forKey: "indexChapter")!
     }
     
     @IBAction func finishPerAlphabet(_ sender: Any) {
@@ -27,8 +38,13 @@ class AlphabetFinish: UIViewController {
         
         self.setToComplete()
         
+        let nextChapterAvailable = self.nextChapter != "" ? self.chapter[Int(self.indexChapter)! + 1].available : false
+        let goToNextChapter      = self.nextAlphabet == "" ? true : false
+        
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let SelectChapterVC = storyBoard.instantiateViewController(withIdentifier: "ChapterStartConfirmation") as! ChapterStartConfirmation
+        SelectChapterVC.titleChapter = nextChapterAvailable && goToNextChapter ? self.nextChapter : self.currentChapter
+        SelectChapterVC.indexChapter = (nextChapterAvailable && goToNextChapter ? Int(self.indexChapter)! + 1 : Int(self.indexChapter))!
         SelectChapterVC.modalPresentationStyle = .fullScreen
         self.present(SelectChapterVC, animated: false, completion: nil)
     }
