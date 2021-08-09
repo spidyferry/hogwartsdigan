@@ -35,7 +35,10 @@ class ChapterIntro: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        self.playNarration()
+        print("hoi bebek \(countTimer)")
+        AudioNarration.shared.startSound()
+        self.timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(getSentece),userInfo: nil,repeats: true)
+        self.timer.fire()
     }
     
     @objc func getSentece() {
@@ -45,11 +48,11 @@ class ChapterIntro: UIViewController {
         let line = self.loadNarrationText(file: alphabetIntro)
         let sentence = line.split(separator: ";").map {String($0)}
         
-        if countTimer/3 < sentence.count{
-            self.bodyText.text = sentence[countTimer/3]
+        if countTimer/30 < sentence.count{
+            self.bodyText.text = sentence[countTimer/30]
         }
         
-        if countTimer/3 > sentence.count{
+        if countTimer/30 > sentence.count{
             self.replayButton.isHidden = false
             self.timer.invalidate()
         }
@@ -112,7 +115,7 @@ class ChapterIntro: UIViewController {
         }
         
         self.countTimer = 0
-        self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(getSentece),userInfo: nil,repeats: true)
+        self.timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(getSentece),userInfo: nil,repeats: true)
         self.timer.fire()
         
         self.replayButton.isHidden = true

@@ -28,6 +28,10 @@ class WordSuccess: UIViewController {
         self.startNaration()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        AudioBGM.shared.startSound()
+    }
+    
     func startNaration() {
         let line = self.loadNarrationText(file: self.wordSuccessText)
         var sentence = line.split(separator: ";").map {String($0)}
@@ -52,8 +56,9 @@ class WordSuccess: UIViewController {
         return content
     }
 
-    @IBAction func pauseButtonTapped(_ sender: Any) {
+    @IBAction func pauseButtonTapped(_ sender: Any) {AudioNextTapped.shared.playSound()
         AudioPausedTheme.shared.playSound()
+        AudioBGM.shared.pauseSound()
     }
     
     @IBAction func nextButtonTapped(_ sender: Any) {
