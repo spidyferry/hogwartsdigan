@@ -34,13 +34,14 @@ class OnBoarding: UIViewController {
         AudioBGM.shared.playSound()
         
         defaults.set(alphabetCompleted, forKey: "alphabetCompleted")
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        if(!appDelegate.hasAlreadyLaunched){
+        let name = UserDefaults.standard.string(forKey: "userName") ?? nil
+
+        if !appDelegate.hasAlreadyLaunched || name == nil {
             appDelegate.sethasAlreadyLaunched()
-        }else{
+        } else {
             let MainScreen = storyBoard.instantiateViewController(withIdentifier: "MainScreen") as! MainScreen
             MainScreen.modalPresentationStyle = .fullScreen
             self.present(MainScreen, animated: false, completion: nil)
@@ -48,18 +49,19 @@ class OnBoarding: UIViewController {
     }
     
     @IBAction func saveUserName(_ sender: Any) {
-        if(inputName.text?.isEmpty == true){
+        if inputName.text?.isEmpty == true {
             let MainScreen = storyBoard.instantiateViewController(withIdentifier: "MainScreen") as! MainScreen
             MainScreen.modalPresentationStyle = .fullScreen
             self.present(MainScreen, animated: true, completion: nil)
+            
             saveDefaults(name: userName)
-        }else{
+        } else {
             let MainScreen = storyBoard.instantiateViewController(withIdentifier: "MainScreen") as! MainScreen
             MainScreen.modalPresentationStyle = .fullScreen
             self.present(MainScreen, animated: true, completion: nil)
+            
             let inputText = inputName.text
             userName = inputText!
-            print("ini send dari button : \(userName)")
             saveDefaults(name: userName)
         }
     }
@@ -69,18 +71,18 @@ class OnBoarding: UIViewController {
         
         for (index, element) in theAlphabets.enumerated() {
             let newRecords = AlphabetTable(context: self.context)
-            newRecords.alphabet = element
-            newRecords.date = Date()
-            newRecords.isCompleted = false
-            newRecords.alphabetRec = alphaRec[index]
-            newRecords.wordRec = WRec[index]
-            newRecords.word = theWords[index]
-            do{
+            newRecords.alphabet     = element
+            newRecords.date         = Date()
+            newRecords.isCompleted  = false
+            newRecords.alphabetRec  = alphaRec[index]
+            newRecords.wordRec      = WRec[index]
+            newRecords.word         = theWords[index]
+            
+            do {
                 try self.context.save()
-            }catch{
+            } catch {
                 print("error init database \(error.localizedDescription)")
             }
         }
     }
-    
 }
