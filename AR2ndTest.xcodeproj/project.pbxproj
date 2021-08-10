@@ -171,7 +171,7 @@
 		8AFD49D326AAB41500D30FB8 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		8C045B6126A31F4500003F45 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		8C07070426A01A1900B83A34 /* inputName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = inputName.swift; sourceTree = "<group>"; };
-		8C0B601D269D72460027FDAA /* AR2ndTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AR2ndTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C0B601D269D72460027FDAA /* Yomukids.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yomukids.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C0B6020269D72460027FDAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C0B6022269D72460027FDAA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8C0B6027269D72460027FDAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -281,7 +281,7 @@
 		8C0B601E269D72460027FDAA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8C0B601D269D72460027FDAA /* AR2ndTest.app */,
+				8C0B601D269D72460027FDAA /* Yomukids.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -433,9 +433,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8C0B601C269D72460027FDAA /* AR2ndTest */ = {
+		8C0B601C269D72460027FDAA /* Yomukids */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8C0B6031269D72470027FDAA /* Build configuration list for PBXNativeTarget "AR2ndTest" */;
+			buildConfigurationList = 8C0B6031269D72470027FDAA /* Build configuration list for PBXNativeTarget "Yomukids" */;
 			buildPhases = (
 				8C0B6019269D72460027FDAA /* Sources */,
 				8C0B601A269D72460027FDAA /* Frameworks */,
@@ -445,9 +445,9 @@
 			);
 			dependencies = (
 			);
-			name = AR2ndTest;
+			name = Yomukids;
 			productName = AR2ndTest;
-			productReference = 8C0B601D269D72460027FDAA /* AR2ndTest.app */;
+			productReference = 8C0B601D269D72460027FDAA /* Yomukids.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -477,7 +477,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8C0B601C269D72460027FDAA /* AR2ndTest */,
+				8C0B601C269D72460027FDAA /* Yomukids */,
 			);
 		};
 /* End PBXProject section */
@@ -747,8 +747,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_TEAM = ZMJ8X3L72S;
+				CURRENT_PROJECT_VERSION = 4;
+				DEVELOPMENT_TEAM = VYG4M66448;
 				INFOPLIST_FILE = AR2ndTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -768,8 +768,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_TEAM = ZMJ8X3L72S;
+				CURRENT_PROJECT_VERSION = 4;
+				DEVELOPMENT_TEAM = VYG4M66448;
 				INFOPLIST_FILE = AR2ndTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -795,7 +795,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8C0B6031269D72470027FDAA /* Build configuration list for PBXNativeTarget "AR2ndTest" */ = {
+		8C0B6031269D72470027FDAA /* Build configuration list for PBXNativeTarget "Yomukids" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8C0B6032269D72470027FDAA /* Debug */,

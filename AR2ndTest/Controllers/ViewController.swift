@@ -16,6 +16,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         let currentAlphabet:String = UserDefaults.standard.string(forKey: "currentAlphabet")!
         // Load the "Box" scene from the "Experience" Reality File
+        arView.scene.anchors.removeAll()
         
         if(currentAlphabet == "A"){
             let boxAnchor = try! Experience.loadApple()

@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8C0B601C269D72460027FDAA"
-               BuildableName = "AR2ndTest.app"
-               BlueprintName = "AR2ndTest"
+               BuildableName = "Yomukids.app"
+               BlueprintName = "Yomukids"
                ReferencedContainer = "container:AR2ndTest.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,8 +45,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8C0B601C269D72460027FDAA"
-            BuildableName = "AR2ndTest.app"
-            BlueprintName = "AR2ndTest"
+            BuildableName = "Yomukids.app"
+            BlueprintName = "Yomukids"
             ReferencedContainer = "container:AR2ndTest.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -62,8 +62,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8C0B601C269D72460027FDAA"
-            BuildableName = "AR2ndTest.app"
-            BlueprintName = "AR2ndTest"
+            BuildableName = "Yomukids.app"
+            BlueprintName = "Yomukids"
             ReferencedContainer = "container:AR2ndTest.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
