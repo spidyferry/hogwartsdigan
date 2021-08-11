@@ -38,6 +38,7 @@ class OnBoarding: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         let name = UserDefaults.standard.string(forKey: "userName") ?? nil
+        defaults.set("1", forKey: "navigationVoice")
 
         if !appDelegate.hasAlreadyLaunched || name == nil {
             appDelegate.sethasAlreadyLaunched()

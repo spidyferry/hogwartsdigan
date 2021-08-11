@@ -324,7 +324,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AppleBhet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A21-nj-YEC">
-                                <rect key="frame" x="236.5" y="206" width="721.5" height="179.5"/>
+                                <rect key="frame" x="236" y="206" width="722" height="179.5"/>
                                 <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="150"/>
                                 <color key="textColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -819,6 +819,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="mainMenuButtonTapped:" destination="BnN-NG-d2s" eventType="touchUpInside" id="Zua-Ss-o7d"/>
+                                    <segue destination="d7g-t6-UMX" kind="presentation" modalPresentationStyle="fullScreen" id="cSd-eO-tj9"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TEO-Rr-CYg">
@@ -844,8 +845,8 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                     <segue destination="W0c-Rr-nTu" kind="presentation" modalPresentationStyle="fullScreen" id="jVJ-km-ovP"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="speaker" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="DRz-Hc-GM7">
-                                <rect key="frame" x="818" y="412" width="60" height="58"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="speaker.wave.3.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="DRz-Hc-GM7">
+                                <rect key="frame" x="818" y="411" width="60" height="59.5"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="61" id="FBW-uZ-zH7"/>
@@ -878,6 +879,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
                         <outlet property="continueButton" destination="Fsz-i1-YR2" id="MLj-UY-UdR"/>
                         <outlet property="mainMenuButton" destination="aFT-qf-A4m" id="EZv-h5-f5o"/>
                         <outlet property="narationButton" destination="Eex-UY-WCi" id="tFU-NY-Nsa"/>
+                        <outlet property="narrationSymbol" destination="DRz-Hc-GM7" id="yJV-8v-qNY"/>
                         <outlet property="quitButton" destination="TEO-Rr-CYg" id="ce7-vC-l97"/>
                     </connections>
                 </viewController>
@@ -2073,6 +2075,6 @@ Parents are expected to participate in monitoring and limiting the time that chi
         <image name="gearshape.fill" catalog="system" width="128" height="121"/>
         <image name="mic.fill" catalog="system" width="108" height="128"/>
         <image name="play.circle" catalog="system" width="128" height="121"/>
-        <image name="speaker" catalog="system" width="128" height="124"/>
+        <image name="speaker.wave.3.fill" catalog="system" width="128" height="86"/>
     </resources>
 </document>
