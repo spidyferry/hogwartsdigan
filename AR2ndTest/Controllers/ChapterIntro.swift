@@ -21,6 +21,8 @@ class ChapterIntro: UIViewController {
     var currentAlphabet: String = ""
     var countTimer = 0
     var timer = Timer()
+    
+    var chapter : [Chapter] = Chapter.allCases
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -82,6 +84,8 @@ class ChapterIntro: UIViewController {
         AudioNarration.shared.stopSound()
         AudioBGM.shared.playSound()
         
+        let index = UserDefaults.standard.string(forKey: "indexChapter")!
+        
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let ChapterIntroVC = storyBoard.instantiateViewController(withIdentifier: "ChapterIntro") as! ChapterIntro
         let ChapterStartVC = storyBoard.instantiateViewController(withIdentifier: "ChapterStartConfirmation") as! ChapterStartConfirmation
@@ -91,6 +95,8 @@ class ChapterIntro: UIViewController {
         appDelegate.window?.rootViewController = navigationController
         
         ChapterStartVC.modalPresentationStyle = .fullScreen
+        ChapterStartVC.titleChapter = chapter[Int(index) ?? 0].title
+        ChapterStartVC.indexChapter = Int(index) ?? 0
         navigationController.pushViewController(ChapterStartVC, animated: true)
         navigationController.isNavigationBarHidden = true
     }
