@@ -35,8 +35,8 @@ class ChapterIntro: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        print("hoi bebek \(countTimer)")
         AudioNarration.shared.startSound()
+        
         self.timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(getSentece),userInfo: nil,repeats: true)
         self.timer.fire()
     }
@@ -82,7 +82,17 @@ class ChapterIntro: UIViewController {
         AudioNarration.shared.stopSound()
         AudioBGM.shared.playSound()
         
-        dismiss(animated: true, completion: nil)
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let ChapterIntroVC = storyBoard.instantiateViewController(withIdentifier: "ChapterIntro") as! ChapterIntro
+        let ChapterStartVC = storyBoard.instantiateViewController(withIdentifier: "ChapterStartConfirmation") as! ChapterStartConfirmation
+        let navigationController = UINavigationController(rootViewController: ChapterIntroVC)
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        appDelegate.window?.rootViewController = navigationController
+        
+        ChapterStartVC.modalPresentationStyle = .fullScreen
+        navigationController.pushViewController(ChapterStartVC, animated: true)
+        navigationController.isNavigationBarHidden = true
     }
     
     @IBAction func nextButtonTapped(_ sender: Any) {
@@ -90,9 +100,9 @@ class ChapterIntro: UIViewController {
         AudioNarration.shared.stopSound()
         
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let ChapterStartVC = storyBoard.instantiateViewController(withIdentifier: "ChapterStartConfirmation") as! ChapterStartConfirmation
+        let ChapterIntroVC = storyBoard.instantiateViewController(withIdentifier: "ChapterIntro") as! ChapterIntro
         let AlphabetRecognitionVC = storyBoard.instantiateViewController(withIdentifier: "AlphabetRecognition") as! AlphabetRecognition
-        let navigationController = UINavigationController(rootViewController: ChapterStartVC)
+        let navigationController = UINavigationController(rootViewController: ChapterIntroVC)
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         
         appDelegate.window?.rootViewController = navigationController

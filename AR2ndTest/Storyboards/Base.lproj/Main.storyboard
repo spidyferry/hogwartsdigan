@@ -63,7 +63,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="gotoNext:" destination="1i0-Jg-gpf" eventType="touchUpInside" id="GPt-eJ-NGe"/>
-                                    <segue destination="84a-rU-kNd" kind="presentation" modalPresentationStyle="fullScreen" id="eRL-cF-ExL"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xro-un-whm">
@@ -2055,7 +2054,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="k9M-DK-gzl"/>
+        <segue reference="PkE-Fx-Sc4"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="AlphabetBox" width="296" height="277"/>

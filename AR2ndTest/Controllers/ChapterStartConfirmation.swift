@@ -68,16 +68,18 @@ class ChapterStartConfirmation: UIViewController{
             nextAlphabet = self.alphabets[1]
         }
         
-        defaults.set(self.indexChapter, forKey: "indexChapter")
-        defaults.set(self.alphabet, forKey: "currentAlphabet")
-        defaults.set(self.titleChapter, forKey: "currentChapter")
-        defaults.set(nextAlphabet, forKey: "nextAlphabet")
-        defaults.set((self.chapter.count != self.indexChapter ? self.chapter[self.indexChapter + 1].title : ""), forKey: "nextChapter")
-        defaults.set("\(self.alphabet)alphabetIntro", forKey: "alphabetIntro")
-        defaults.set("\(self.alphabet)alphabetSuccess", forKey: "alphabetSuccess")
-        defaults.set("\(self.alphabet)ARMission", forKey: "ARMission")
-        defaults.set("\(self.alphabet)ARSuccess", forKey: "ARSuccess")
-        defaults.set("\(self.alphabet)wordSuccess", forKey: "wordSuccess")
+        if titleChapter != "" {
+            defaults.set(self.indexChapter, forKey: "indexChapter")
+            defaults.set(self.alphabet, forKey: "currentAlphabet")
+            defaults.set(self.titleChapter, forKey: "currentChapter")
+            defaults.set(nextAlphabet, forKey: "nextAlphabet")
+            defaults.set((self.chapter.count != self.indexChapter ? self.chapter[self.indexChapter + 1].title : ""), forKey: "nextChapter")
+            defaults.set("\(self.alphabet)alphabetIntro", forKey: "alphabetIntro")
+            defaults.set("\(self.alphabet)alphabetSuccess", forKey: "alphabetSuccess")
+            defaults.set("\(self.alphabet)ARMission", forKey: "ARMission")
+            defaults.set("\(self.alphabet)ARSuccess", forKey: "ARSuccess")
+            defaults.set("\(self.alphabet)wordSuccess", forKey: "wordSuccess")
+        }
     }
     
     func fetchAlphabet(alphabetName:String) -> Bool{
@@ -131,25 +133,32 @@ class ChapterStartConfirmation: UIViewController{
         }
         
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let ChapterStartVC = storyBoard.instantiateViewController(withIdentifier: "ChapterStartConfirmation") as! ChapterStartConfirmation
         let ChapterIntroVC = storyBoard.instantiateViewController(withIdentifier: "ChapterIntro") as! ChapterIntro
+        let navigationController = UINavigationController(rootViewController: ChapterStartVC)
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        appDelegate.window?.rootViewController = navigationController
+        
         ChapterIntroVC.modalPresentationStyle = .fullScreen
         ChapterIntroVC.titleChapter = titleChapter
-        self.present(ChapterIntroVC, animated: true, completion: nil)
+        navigationController.pushViewController(ChapterIntroVC, animated: true)
+        navigationController.isNavigationBarHidden = true
     }
     
     @IBAction func cancelChapter(_ sender: Any) {
         AudioPrevTapped.shared.playSound()
         
-//        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//        let ChapterStartVC = storyBoard.instantiateViewController(withIdentifier: "ChapterStartConfirmation") as! ChapterStartConfirmation
-//        let SelectChapterVC = storyBoard.instantiateViewController(withIdentifier: "SelectChapter") as! SelectChapter
-//        let navigationController = UINavigationController(rootViewController: ChapterStartVC)
-//        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-//        
-//        appDelegate.window?.rootViewController = navigationController
-//        
-//        SelectChapterVC.modalPresentationStyle = .fullScreen
-//        navigationController.pushViewController(SelectChapterVC, animated: true)
-//        navigationController.isNavigationBarHidden = true
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let ChapterStartVC = storyBoard.instantiateViewController(withIdentifier: "ChapterStartConfirmation") as! ChapterStartConfirmation
+        let SelectChapterVC = storyBoard.instantiateViewController(withIdentifier: "SelectChapter") as! SelectChapter
+        let navigationController = UINavigationController(rootViewController: ChapterStartVC)
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        appDelegate.window?.rootViewController = navigationController
+        
+        SelectChapterVC.modalPresentationStyle = .fullScreen
+        navigationController.pushViewController(SelectChapterVC, animated: true)
+        navigationController.isNavigationBarHidden = true
     }
 }
