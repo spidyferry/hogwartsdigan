@@ -67,23 +67,26 @@ class WordRecognition: UIViewController {
     
     func prepareAudioPlayer(){
         let url = Bundle.main.url(forResource: "AppleTest", withExtension: "mp3")
-        do{
+        
+        do {
             audioPlayer = try AVAudioPlayer(contentsOf: url!)
             audioPlayer.prepareToPlay()
-        }catch{
+        }catch {
             print(error.localizedDescription)
         }
     }
 
     @IBAction func playWordButton(_ sender: Any) {
+        AudioSession.shared.setAudioSession(active: true)
         audioPlayer.play()
     }
     
     
     @IBAction func startSpeech(_ sender: Any) {
-        if audioEngine.isRunning {
-            audioEngine.stop()
-            recognitionRequest?.endAudio()
+        if self.audioEngine.isRunning {
+            self.audioEngine.stop()
+            self.recognitionRequest?.endAudio()
+            self.stopRecordAnimation()
         } else {
             do {
                 try startRecording()
@@ -91,6 +94,7 @@ class WordRecognition: UIViewController {
 
                 Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { timer in
                     self.audioEngine.stop()
+                    self.audioEngine.inputNode.removeTap(onBus: 0)
                     self.recognitionRequest?.endAudio()
                     self.stopRecordAnimation()
                 }
@@ -152,7 +156,12 @@ class WordRecognition: UIViewController {
         }
         
         audioEngine.prepare()
-        try audioEngine.start()
+        
+        do {
+            try audioEngine.start()
+        } catch let error {
+            print("Error on start recording: \(error)")
+        }
     }
     
     func checkingWord(){

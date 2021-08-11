@@ -57,9 +57,6 @@ class AlphabetFinish: UIViewController {
         ChapterStartConfirmationVC.titleChapter = nextChapterAvailable && goToNextChapter ? self.nextChapter : self.currentChapter
         ChapterStartConfirmationVC.indexChapter = (nextChapterAvailable && goToNextChapter ? Int(self.indexChapter)! + 1 : Int(self.indexChapter))!
         
-        print("Here")
-        print(UserDefaults.standard.string(forKey: "currentChapter")!)
-        print(self.currentChapter)
         navigationController.pushViewController(ChapterStartConfirmationVC, animated: true)
         navigationController.isNavigationBarHidden = true
     }

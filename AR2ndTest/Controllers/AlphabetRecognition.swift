@@ -23,7 +23,7 @@ class AlphabetRecognition: UIViewController, SFSpeechRecognizerDelegate {
     
     var alphabetCompleted:[AlphabetTable]?
     var alphabet = ""
-    var alphabetSupposedToBe:String = ""
+    var alphabetSupposedToBe: String = ""
     var success: Bool = false
 
     @IBOutlet weak var theAlphabet: UILabel!
@@ -56,7 +56,6 @@ class AlphabetRecognition: UIViewController, SFSpeechRecognizerDelegate {
     }
     
     private func startRecording() throws {
-        
         // Cancel the previous task if it's running.
         recognitionTask?.cancel()
         self.recognitionTask = nil
@@ -77,7 +76,8 @@ class AlphabetRecognition: UIViewController, SFSpeechRecognizerDelegate {
             recognitionRequest.requiresOnDeviceRecognition = false
         }
         
-        // Create a recognition task for the speech recognition session. Keep a reference to the task so that it can be canceled.
+        // Create a recognition task for the speech recognition session.
+        // Keep a reference to the task so that it can be canceled.
         recognitionTask = speechRecognizer.recognitionTask(with: recognitionRequest) { result, error in
             var isFinal = false
             
@@ -88,8 +88,8 @@ class AlphabetRecognition: UIViewController, SFSpeechRecognizerDelegate {
                 self.checkingAlphabet()
             }
             
+            // Stop recognizing speech if there is a problem.
             if error != nil || isFinal {
-                // Stop recognizing speech if there is a problem.
                 self.audioEngine.stop()
                 inputNode.removeTap(onBus: 0)
 
@@ -105,26 +105,30 @@ class AlphabetRecognition: UIViewController, SFSpeechRecognizerDelegate {
         }
         
         audioEngine.prepare()
-        try audioEngine.start()
+        
+        do {
+            try audioEngine.start()
+        } catch let error {
+            print("Error on start recording: \(error)")
+        }
     }
     
     @IBAction func startSpeech(_ sender: Any) {
-        if audioEngine.isRunning {
-            audioEngine.stop()
-            recognitionRequest?.endAudio()
+        if self.audioEngine.isRunning {
+            self.audioEngine.stop()
+            self.recognitionRequest?.endAudio()
+            self.stopRecordAnimation()
         } else {
             do {
                 try startRecording()
-                
-                sayIt.isHidden = false
                 self.startRecordAnimation()
 
                 Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { timer in
                     self.audioEngine.stop()
+                    self.audioEngine.inputNode.removeTap(onBus: 0)
                     self.recognitionRequest?.endAudio()
                     self.stopRecordAnimation()
                 }
-                
             } catch {
                 print(error.localizedDescription)
             }
@@ -132,16 +136,17 @@ class AlphabetRecognition: UIViewController, SFSpeechRecognizerDelegate {
     }
     
     @IBAction func playAudio(_ sender: Any) {
-        soundPlayer.play()
+        AudioSession.shared.setAudioSession(active: true)
+        self.soundPlayer.play()
     }
     
     func prepareAudioPlayer() {
         let url = Bundle.main.url(forResource: "A", withExtension: "mp3")
         
-        do{
+        do {
             soundPlayer = try AVAudioPlayer(contentsOf: url!)
             soundPlayer.prepareToPlay()
-        } catch{
+        } catch {
             print(error.localizedDescription)
         }
     }
@@ -149,6 +154,7 @@ class AlphabetRecognition: UIViewController, SFSpeechRecognizerDelegate {
     func checkingAlphabet() {
         self.audioEngine.stop()
         self.recognitionRequest?.endAudio()
+        self.stopRecordAnimation()
         
         if (alphabet == alphabetSupposedToBe) {
             if self.success == false {
@@ -171,6 +177,7 @@ class AlphabetRecognition: UIViewController, SFSpeechRecognizerDelegate {
     
     func getValueForRecognition(alphabetName:String) -> String{
         var alphabetToRecognize:[AlphabetTable]?
+        
         do {
             let request = AlphabetTable.fetchRequest() as NSFetchRequest<AlphabetTable>
             let pred = NSPredicate(format: "alphabet == %@", alphabetName)
@@ -179,10 +186,13 @@ class AlphabetRecognition: UIViewController, SFSpeechRecognizerDelegate {
         } catch {
             print(error.localizedDescription)
         }
+        
         return alphabetToRecognize![0].alphabetRec!
     }
     
     func startRecordAnimation() {
+        self.recognizeAlphabet.isEnabled = false
+        
         UIView.animateKeyframes(withDuration: 1.0, delay: 0, options: [.repeat]) {
             // 1st Keyframe
             UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 0.0) {
@@ -206,6 +216,8 @@ class AlphabetRecognition: UIViewController, SFSpeechRecognizerDelegate {
     }
     
     func stopRecordAnimation() {
+        self.recognizeAlphabet.isEnabled = true
+        
         UIView.animate(withDuration: 0.3, delay: 0, options: []) {
             self.recordShadow2.layer.opacity = 0
             self.recordShadow1.layer.opacity = 0

@@ -1924,7 +1924,6 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="nextButtonTapped:" destination="1gF-Z3-NB0" eventType="touchUpInside" id="uTK-sP-hfk"/>
-                                    <segue destination="OHZ-3s-64H" kind="presentation" modalPresentationStyle="fullScreen" id="6dA-gq-VYn"/>
                                 </connections>
                             </button>
                         </subviews>

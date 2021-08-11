@@ -81,6 +81,8 @@ class AudioNarration{
     var narrAudio = AVAudioPlayer()
     
     func playSound(file: String){
+        AudioSession.shared.setAudioSession(active: true)
+        
         let narrationAudio = NSURL(fileURLWithPath: Bundle.main.path(forResource: file, ofType: "mp3")!)
         narrAudio = try! AVAudioPlayer(contentsOf: narrationAudio as URL)
         narrAudio.prepareToPlay()
@@ -101,6 +103,7 @@ class AudioNarration{
 //    }
     
     func startSound(){
+        AudioSession.shared.setAudioSession(active: true)
         narrAudio.play()
     }
 }
@@ -112,6 +115,8 @@ class AudioPausedTheme{
     var pausedTheme = AVAudioPlayer()
     
     func playSound(){
+        AudioSession.shared.setAudioSession(active: true)
+        
         let pausedThemeAudio = NSURL(fileURLWithPath: Bundle.main.path(forResource: "s_paused_theme", ofType: "mp3")!)
         pausedTheme = try! AVAudioPlayer(contentsOf: pausedThemeAudio as URL)
         pausedTheme.prepareToPlay()
@@ -121,6 +126,7 @@ class AudioPausedTheme{
     }
       
     func startSound(){
+        AudioSession.shared.setAudioSession(active: true)
         pausedTheme.play()
     }
     func stopSound(){
@@ -135,6 +141,8 @@ class AudioCongrat{
     var congratAudio = AVAudioPlayer()
     
     func playSound(){
+        AudioSession.shared.setAudioSession(active: true)
+        
         let audioCongrat = NSURL(fileURLWithPath: Bundle.main.path(forResource: "s_congrat", ofType: "mp3")!)
         congratAudio = try! AVAudioPlayer(contentsOf: audioCongrat as URL)
         congratAudio.prepareToPlay()
@@ -144,9 +152,26 @@ class AudioCongrat{
     }
       
     func startSound(){
+        AudioSession.shared.setAudioSession(active: true)
         congratAudio.play()
     }
     func stopSound(){
         congratAudio.stop()
+    }
+}
+
+// Singleton Audio Session
+class AudioSession {
+    static let shared = AudioSession()
+
+    func setAudioSession(active: Bool) {
+        let audioSession = AVAudioSession.sharedInstance()
+
+        do {
+            try audioSession.setCategory(AVAudioSession.Category.soloAmbient)
+            try audioSession.setActive(active, options: .notifyOthersOnDeactivation)
+        } catch {
+            print("Error set audio session: \(error)")
+        }
     }
 }
