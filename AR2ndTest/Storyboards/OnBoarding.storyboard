@@ -101,23 +101,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Path" translatesAutoresizingMaskIntoConstraints="NO" id="f3V-7S-lFU">
-                                <rect key="frame" x="400" y="316" width="394" height="202"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="APP ICON - Launch Screen" translatesAutoresizingMaskIntoConstraints="NO" id="f3V-7S-lFU">
+                                <rect key="frame" x="460" y="289.5" width="274" height="255"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="274" id="Ijm-kV-4ig"/>
+                                    <constraint firstAttribute="height" constant="255" id="ZRp-Va-6v8"/>
+                                </constraints>
                             </imageView>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order of the Peonix" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6kR-iM-ap4">
-                                <rect key="frame" x="475.5" y="546" width="243" height="68"/>
-                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="20"/>
-                                <nil key="textColor"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order of the Peonix" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6kR-iM-ap4">
+                                <rect key="frame" x="423" y="564.5" width="348.5" height="48"/>
+                                <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="40"/>
+                                <color key="textColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zrf-lB-crY"/>
                         <color key="backgroundColor" red="0.9994472861" green="1" blue="0.89802503590000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="6kR-iM-ap4" firstAttribute="top" secondItem="f3V-7S-lFU" secondAttribute="bottom" constant="28" id="4xB-EW-SoS"/>
+                            <constraint firstItem="6kR-iM-ap4" firstAttribute="top" secondItem="f3V-7S-lFU" secondAttribute="bottom" constant="20" id="4xB-EW-SoS"/>
                             <constraint firstItem="f3V-7S-lFU" firstAttribute="centerX" secondItem="V6P-YK-VSH" secondAttribute="centerX" id="9DY-45-Wkm"/>
                             <constraint firstItem="f3V-7S-lFU" firstAttribute="centerY" secondItem="V6P-YK-VSH" secondAttribute="centerY" id="IIh-xv-WlG"/>
-                            <constraint firstItem="f3V-7S-lFU" firstAttribute="top" secondItem="zrf-lB-crY" secondAttribute="top" constant="316" id="qpD-Xh-PTT"/>
                             <constraint firstItem="6kR-iM-ap4" firstAttribute="centerX" secondItem="V6P-YK-VSH" secondAttribute="centerX" id="yFa-cV-4Ve"/>
                         </constraints>
                     </view>
@@ -146,7 +149,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Path" width="394" height="311"/>
+        <image name="APP ICON - Launch Screen" width="426" height="426"/>
         <image name="arrow.right" catalog="system" width="128" height="98"/>
         <image name="bg_onbo" width="1194" height="417"/>
         <image name="textfieldName" width="617" height="84"/>
