@@ -220,7 +220,7 @@ class WordRecognition: UIViewController {
     
     func nextPage() {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let WordRecognitionVC = storyBoard.instantiateViewController(withIdentifier: "WordRecognition") as! WordRecognition
+        let WordRecognitionVC = UIViewController()
         let WordSuccessVC = storyBoard.instantiateViewController(withIdentifier: "WordSuccess") as! WordSuccess
         let navigationController = UINavigationController(rootViewController: WordRecognitionVC)
         let appDelegate = UIApplication.shared.delegate as! AppDelegate

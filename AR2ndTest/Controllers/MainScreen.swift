@@ -31,7 +31,7 @@ class MainScreen: UIViewController {
         AudioNextTapped.shared.playSound()
         
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let MainScreenVC = storyBoard.instantiateViewController(withIdentifier: "MainScreen") as! MainScreen
+        let MainScreenVC = UIViewController()
         let SelectChapterVC = storyBoard.instantiateViewController(withIdentifier: "SelectChapter") as! SelectChapter
         let navigationController = UINavigationController(rootViewController: MainScreenVC)
         let appDelegate = UIApplication.shared.delegate as! AppDelegate

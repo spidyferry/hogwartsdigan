@@ -43,7 +43,7 @@ class ViewController: UIViewController {
         arView.scene.anchors.removeAll()
         
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let ARVC = storyBoard.instantiateViewController(withIdentifier: "ARViewController") as! ViewController
+        let ARVC = UIViewController()
         let ARSuccessVC = storyBoard.instantiateViewController(withIdentifier: "ARSuccess") as! ARSuccess
         let navigationController = UINavigationController(rootViewController: ARVC)
         let appDelegate = UIApplication.shared.delegate as! AppDelegate

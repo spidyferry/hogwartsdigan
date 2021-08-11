@@ -43,7 +43,7 @@ class ChapterPage: UIViewController {
         let index = sender.tag
         
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let SelectChapterVC = storyBoard.instantiateViewController(withIdentifier: "SelectChapter") as! SelectChapter
+        let SelectChapterVC = UIViewController()
         let ChapterStartVC = storyBoard.instantiateViewController(withIdentifier: "ChapterStartConfirmation") as! ChapterStartConfirmation
         let navigationController = UINavigationController(rootViewController: SelectChapterVC)
         let appDelegate = UIApplication.shared.delegate as! AppDelegate

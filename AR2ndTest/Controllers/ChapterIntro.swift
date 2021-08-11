@@ -106,7 +106,7 @@ class ChapterIntro: UIViewController {
         AudioNarration.shared.stopSound()
         
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let ChapterIntroVC = storyBoard.instantiateViewController(withIdentifier: "ChapterIntro") as! ChapterIntro
+        let ChapterIntroVC = UIViewController()
         let AlphabetRecognitionVC = storyBoard.instantiateViewController(withIdentifier: "AlphabetRecognition") as! AlphabetRecognition
         let navigationController = UINavigationController(rootViewController: ChapterIntroVC)
         let appDelegate = UIApplication.shared.delegate as! AppDelegate

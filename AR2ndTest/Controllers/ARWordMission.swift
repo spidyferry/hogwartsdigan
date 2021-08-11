@@ -65,7 +65,7 @@ class ARWordMission: UIViewController {
         AudioNextTapped.shared.playSound()
         
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let ARWordMissionVC = storyBoard.instantiateViewController(withIdentifier: "ARWordMission") as! ARWordMission
+        let ARWordMissionVC = UIViewController()
         let ARVC = storyBoard.instantiateViewController(withIdentifier: "ARViewController") as! ViewController
         let navigationController = UINavigationController(rootViewController: ARWordMissionVC)
         let appDelegate = UIApplication.shared.delegate as! AppDelegate

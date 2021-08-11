@@ -65,7 +65,7 @@ class AlphabetSuccess: UIViewController {
         AudioNextTapped.shared.playSound()
         
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let AlphabetSuccessVC = storyBoard.instantiateViewController(withIdentifier: "AlphabetSuccess") as! AlphabetSuccess
+        let AlphabetSuccessVC = UIViewController()
         let WordHintVC = storyBoard.instantiateViewController(withIdentifier: "WordHint") as! WordHint
         let navigationController = UINavigationController(rootViewController: AlphabetSuccessVC)
         let appDelegate = UIApplication.shared.delegate as! AppDelegate

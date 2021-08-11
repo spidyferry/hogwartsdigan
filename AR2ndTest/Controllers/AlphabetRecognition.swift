@@ -224,7 +224,7 @@ class AlphabetRecognition: UIViewController, SFSpeechRecognizerDelegate {
     
     func nextPage() {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let AlphabetRecognitionVC = storyBoard.instantiateViewController(withIdentifier: "AlphabetRecognition") as! AlphabetRecognition
+        let AlphabetRecognitionVC = UIViewController()
         let AlphabetSuccessVC = storyBoard.instantiateViewController(withIdentifier: "AlphabetSuccess") as! AlphabetSuccess
         let navigationController = UINavigationController(rootViewController: AlphabetRecognitionVC)
         let appDelegate = UIApplication.shared.delegate as! AppDelegate

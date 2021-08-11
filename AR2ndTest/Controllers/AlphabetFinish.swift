@@ -46,7 +46,7 @@ class AlphabetFinish: UIViewController {
         let goToNextChapter      = self.nextAlphabet == "" ? true : false
         
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let AlphabetFinishVC = storyBoard.instantiateViewController(withIdentifier: "AlphabetFinish") as! AlphabetFinish
+        let AlphabetFinishVC = UIViewController()
         let ChapterStartConfirmationVC = storyBoard.instantiateViewController(withIdentifier: "ChapterStartConfirmation") as! ChapterStartConfirmation
         let navigationController = UINavigationController(rootViewController: AlphabetFinishVC)
         let appDelegate = UIApplication.shared.delegate as! AppDelegate

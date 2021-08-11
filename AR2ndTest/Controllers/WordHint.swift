@@ -63,16 +63,15 @@ class WordHint: UIViewController {
         AudioPrevTapped.shared.playSound()
         
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        
-        let ARWordMissionVC = storyBoard.instantiateViewController(withIdentifier: "ARWordMission") as! ARWordMission
-        let WordHintVC = storyBoard.instantiateViewController(withIdentifier: "WordHint") as! WordHint
-        let navigationController = UINavigationController(rootViewController: ARWordMissionVC)
+        let WordHintVC = UIViewController()
+        let AlphabetSuccessVC = storyBoard.instantiateViewController(withIdentifier: "AlphabetSuccess") as! AlphabetSuccess
+        let navigationController = UINavigationController(rootViewController: WordHintVC)
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         
         appDelegate.window?.rootViewController = navigationController
         
-        WordHintVC.modalPresentationStyle = .fullScreen
-        navigationController.pushViewController(WordHintVC, animated: true)
+        AlphabetSuccessVC.modalPresentationStyle = .fullScreen
+        navigationController.pushViewController(AlphabetSuccessVC, animated: true)
         navigationController.isNavigationBarHidden = true
     }
     
@@ -81,7 +80,7 @@ class WordHint: UIViewController {
         AudioNextTapped.shared.playSound()
         
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let WordHintVC = storyBoard.instantiateViewController(withIdentifier: "WordHint") as! WordHint
+        let WordHintVC = UIViewController()
         let ARWordMissionVC = storyBoard.instantiateViewController(withIdentifier: "ARWordMission") as! ARWordMission
         let navigationController = UINavigationController(rootViewController: WordHintVC)
         let appDelegate = UIApplication.shared.delegate as! AppDelegate

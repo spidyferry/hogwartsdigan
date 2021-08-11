@@ -19,7 +19,7 @@ class OnBoardingLoading: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {        
         let storyBoard: UIStoryboard = UIStoryboard(name: "OnBoarding", bundle: nil)
-        let OnBoardingLoadingVC = storyBoard.instantiateViewController(withIdentifier: "OnBoardingLoading") as! OnBoardingLoading
+        let OnBoardingLoadingVC = UIViewController()
         let OnBoardingVC = storyBoard.instantiateViewController(withIdentifier: "OnBoarding") as! OnBoarding
         let navigationController = UINavigationController(rootViewController: OnBoardingLoadingVC)
         let appDelegate = UIApplication.shared.delegate as! AppDelegate

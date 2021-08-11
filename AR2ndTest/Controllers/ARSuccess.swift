@@ -65,7 +65,7 @@ class ARSuccess: UIViewController {
         AudioBGM.shared.stopSound()
         
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let ARSuccessVC = storyBoard.instantiateViewController(withIdentifier: "ARSuccess") as! ARSuccess
+        let ARSuccessVC = UIViewController()
         let WordRecognitionVC = storyBoard.instantiateViewController(withIdentifier: "WordRecognition") as! WordRecognition
         let navigationController = UINavigationController(rootViewController: ARSuccessVC)
         let appDelegate = UIApplication.shared.delegate as! AppDelegate

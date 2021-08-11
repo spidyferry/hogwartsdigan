@@ -133,7 +133,7 @@ class ChapterStartConfirmation: UIViewController{
         }
         
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let ChapterStartVC = storyBoard.instantiateViewController(withIdentifier: "ChapterStartConfirmation") as! ChapterStartConfirmation
+        let ChapterStartVC = UIViewController()
         let ChapterIntroVC = storyBoard.instantiateViewController(withIdentifier: "ChapterIntro") as! ChapterIntro
         let navigationController = UINavigationController(rootViewController: ChapterStartVC)
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -150,7 +150,7 @@ class ChapterStartConfirmation: UIViewController{
         AudioPrevTapped.shared.playSound()
         
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let ChapterStartVC = storyBoard.instantiateViewController(withIdentifier: "ChapterStartConfirmation") as! ChapterStartConfirmation
+        let ChapterStartVC = UIViewController()
         let SelectChapterVC = storyBoard.instantiateViewController(withIdentifier: "SelectChapter") as! SelectChapter
         let navigationController = UINavigationController(rootViewController: ChapterStartVC)
         let appDelegate = UIApplication.shared.delegate as! AppDelegate

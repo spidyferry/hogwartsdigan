@@ -42,10 +42,9 @@ class OnBoarding: UIViewController {
         if !appDelegate.hasAlreadyLaunched || name == nil {
             appDelegate.sethasAlreadyLaunched()
         } else {
-            let onBoardingStoryBoard: UIStoryboard = UIStoryboard(name: "OnBoarding", bundle: nil)
-            let mainStoryBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let OnBoardingVC = onBoardingStoryBoard.instantiateViewController(withIdentifier: "OnBoarding") as! OnBoarding
-            let MainScreenVC = mainStoryBoard.instantiateViewController(withIdentifier: "MainScreen") as! MainScreen
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let OnBoardingVC = UIViewController()
+            let MainScreenVC = storyBoard.instantiateViewController(withIdentifier: "MainScreen") as! MainScreen
             let navigationController = UINavigationController(rootViewController: OnBoardingVC)
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
 
