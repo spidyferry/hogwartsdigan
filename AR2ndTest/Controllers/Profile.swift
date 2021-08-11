@@ -85,5 +85,7 @@ class Profile: UIViewController {
     
     @IBAction func okButtonTapped(_ sender: Any) {
         AudioNextTapped.shared.playSound()
+        
+        dismiss(animated: true, completion: nil)
     }
 }
