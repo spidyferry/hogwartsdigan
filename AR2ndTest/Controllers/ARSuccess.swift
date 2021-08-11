@@ -63,6 +63,18 @@ class ARSuccess: UIViewController {
     @IBAction func tryButtonTapped(_ sender: Any) {
         AudioNextTapped.shared.playSound()
         AudioBGM.shared.stopSound()
+        
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let ARSuccessVC = storyBoard.instantiateViewController(withIdentifier: "ARSuccess") as! ARSuccess
+        let WordRecognitionVC = storyBoard.instantiateViewController(withIdentifier: "WordRecognition") as! WordRecognition
+        let navigationController = UINavigationController(rootViewController: ARSuccessVC)
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        appDelegate.window?.rootViewController = navigationController
+        
+        WordRecognitionVC.modalPresentationStyle = .fullScreen
+        navigationController.pushViewController(WordRecognitionVC, animated: true)
+        navigationController.isNavigationBarHidden = true
     }
     
     @IBAction func replayButtonTapped(_ sender: Any) {

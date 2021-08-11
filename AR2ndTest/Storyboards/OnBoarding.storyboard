@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BvM-4o-8UN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iGn-w6-mnL">
     <device id="ipad11_0rounded" orientation="landscape" layout="fullscreen" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -18,7 +18,7 @@
         <!--On Boarding-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="OnBoarding" id="Y6W-OH-hqX" customClass="OnBoarding" customModule="AR2ndTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OnBoarding" id="Y6W-OH-hqX" customClass="OnBoarding" customModule="Yomukids" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -32,7 +32,7 @@
                                 <color key="textColor" red="0.95837527509999998" green="0.52888590099999999" blue="0.20380106570000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Duck-Duck DC" textAlignment="natural" minimumFontSize="17" background="textfieldName" translatesAutoresizingMaskIntoConstraints="NO" id="udV-hQ-6Hw" customClass="inputName" customModule="AR2ndTest" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Duck-Duck DC" textAlignment="natural" minimumFontSize="17" background="textfieldName" translatesAutoresizingMaskIntoConstraints="NO" id="udV-hQ-6Hw" customClass="inputName" customModule="Yomukids" customModuleProvider="target">
                                 <rect key="frame" x="279.5" y="321" width="635" height="71"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="udV-hQ-6Hw" secondAttribute="height" multiplier="617:69" id="RbH-7W-vlF"/>
@@ -91,21 +91,21 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.65829145728642" y="115.82733812949641"/>
+            <point key="canvasLocation" x="2238" y="-650"/>
         </scene>
         <!--On Boarding Loading-->
         <scene sceneID="qUF-xp-Ynd">
             <objects>
-                <viewController id="BvM-4o-8UN" customClass="OnBoardingLoading" customModule="AR2ndTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OnBoardingLoading" id="BvM-4o-8UN" customClass="OnBoardingLoading" customModule="Yomukids" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="V6P-YK-VSH">
                         <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Path" translatesAutoresizingMaskIntoConstraints="NO" id="f3V-7S-lFU">
-                                <rect key="frame" x="400" y="316" width="394" height="202"/>
+                                <rect key="frame" x="400" y="366" width="394" height="102"/>
                             </imageView>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order of the Peonix" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6kR-iM-ap4">
-                                <rect key="frame" x="475.5" y="546" width="243" height="68"/>
+                                <rect key="frame" x="475.5" y="496" width="243" height="68"/>
                                 <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -121,10 +121,29 @@
                             <constraint firstItem="6kR-iM-ap4" firstAttribute="centerX" secondItem="V6P-YK-VSH" secondAttribute="centerX" id="yFa-cV-4Ve"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="BzF-eA-pI4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LoD-C7-3Sg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="-650"/>
+            <point key="canvasLocation" x="1546.7336683417086" y="-650.35971223021591"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cYY-z4-5jK">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iGn-w6-mnL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LAH-rS-kuR">
+                        <rect key="frame" x="0.0" y="0.0" width="1194" height="50"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BvM-4o-8UN" kind="relationship" relationship="rootViewController" id="n6s-J0-G8q"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qNw-OL-0LN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="839.1959798994975" y="-650.35971223021591"/>
         </scene>
     </scenes>
     <resources>

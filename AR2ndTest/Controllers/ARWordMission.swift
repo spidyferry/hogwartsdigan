@@ -63,6 +63,19 @@ class ARWordMission: UIViewController {
     
     @IBAction func nextButtonTapped(_ sender: Any) {
         AudioNextTapped.shared.playSound()
+        
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let ARWordMissionVC = storyBoard.instantiateViewController(withIdentifier: "ARWordMission") as! ARWordMission
+        let ARVC = storyBoard.instantiateViewController(withIdentifier: "ARViewController") as! ViewController
+        let navigationController = UINavigationController(rootViewController: ARWordMissionVC)
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        appDelegate.window?.rootViewController = navigationController
+        appDelegate.window?.makeKeyAndVisible()
+        
+        ARVC.modalPresentationStyle = .fullScreen
+        navigationController.pushViewController(ARVC, animated: true)
+        navigationController.isNavigationBarHidden = true
     }
     
     @IBAction func replayButtonTapped(_ sender: Any) {

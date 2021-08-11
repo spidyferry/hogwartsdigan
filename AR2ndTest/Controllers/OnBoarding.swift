@@ -42,9 +42,18 @@ class OnBoarding: UIViewController {
         if !appDelegate.hasAlreadyLaunched || name == nil {
             appDelegate.sethasAlreadyLaunched()
         } else {
-            let MainScreen = storyBoard.instantiateViewController(withIdentifier: "MainScreen") as! MainScreen
-            MainScreen.modalPresentationStyle = .fullScreen
-            self.present(MainScreen, animated: false, completion: nil)
+            let onBoardingStoryBoard: UIStoryboard = UIStoryboard(name: "OnBoarding", bundle: nil)
+            let mainStoryBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let OnBoardingVC = onBoardingStoryBoard.instantiateViewController(withIdentifier: "OnBoarding") as! OnBoarding
+            let MainScreenVC = mainStoryBoard.instantiateViewController(withIdentifier: "MainScreen") as! MainScreen
+            let navigationController = UINavigationController(rootViewController: OnBoardingVC)
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+
+            appDelegate.window?.rootViewController = navigationController
+
+            MainScreenVC.modalPresentationStyle = .fullScreen
+            navigationController.pushViewController(MainScreenVC, animated: true)
+            navigationController.isNavigationBarHidden = true
         }
     }
     

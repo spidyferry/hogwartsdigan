@@ -218,11 +218,18 @@ class WordRecognition: UIViewController {
         self.nextPage()
     }
     
-    func nextPage() {
+    func nextPage() {        
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let WordRecognitionVC = storyBoard.instantiateViewController(withIdentifier: "WordRecognition") as! WordRecognition
         let WordSuccessVC = storyBoard.instantiateViewController(withIdentifier: "WordSuccess") as! WordSuccess
+        let navigationController = UINavigationController(rootViewController: WordRecognitionVC)
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        appDelegate.window?.rootViewController = navigationController
+        
         WordSuccessVC.modalPresentationStyle = .fullScreen
-        self.present(WordSuccessVC, animated: false, completion: nil)
+        navigationController.pushViewController(WordSuccessVC, animated: true)
+        navigationController.isNavigationBarHidden = true
     }
     
     @IBAction func pauseButtTapped(_ sender: Any) {

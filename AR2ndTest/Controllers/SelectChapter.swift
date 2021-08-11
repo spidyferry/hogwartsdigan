@@ -62,8 +62,20 @@ class SelectChapter: UIViewController {
         }
     }
     
-    @IBAction func buttBackTapped(_ sender: Any) {
+    @IBAction func backButtonTapped(_ sender: Any) {
         AudioPrevTapped.shared.playSound()
+
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let SelectChapterVC = storyBoard.instantiateViewController(withIdentifier: "SelectChapter") as! SelectChapter
+        let MainScreenVC = storyBoard.instantiateViewController(withIdentifier: "MainScreen") as! MainScreen
+        let navigationController = UINavigationController(rootViewController: SelectChapterVC)
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        appDelegate.window?.rootViewController = navigationController
+        
+        MainScreenVC.modalPresentationStyle = .fullScreen
+        navigationController.pushViewController(MainScreenVC, animated: true)
+        navigationController.isNavigationBarHidden = true
     }
     
     func movePage(index: Int, isForward: Bool) {

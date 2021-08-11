@@ -17,9 +17,17 @@ class OnBoardingLoading: UIViewController {
         super.viewDidLoad()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {        
+        let storyBoard: UIStoryboard = UIStoryboard(name: "OnBoarding", bundle: nil)
+        let OnBoardingLoadingVC = storyBoard.instantiateViewController(withIdentifier: "OnBoardingLoading") as! OnBoardingLoading
         let OnBoardingVC = storyBoard.instantiateViewController(withIdentifier: "OnBoarding") as! OnBoarding
+        let navigationController = UINavigationController(rootViewController: OnBoardingLoadingVC)
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        appDelegate.window?.rootViewController = navigationController
+        
         OnBoardingVC.modalPresentationStyle = .fullScreen
-        self.present(OnBoardingVC, animated: false, completion: nil)
+        navigationController.pushViewController(OnBoardingVC, animated: true)
+        navigationController.isNavigationBarHidden = true
     }
 }

@@ -88,6 +88,18 @@ class ChapterIntro: UIViewController {
     @IBAction func nextButtonTapped(_ sender: Any) {
         AudioNextTapped.shared.playSound()
         AudioNarration.shared.stopSound()
+        
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let ChapterStartVC = storyBoard.instantiateViewController(withIdentifier: "ChapterStartConfirmation") as! ChapterStartConfirmation
+        let AlphabetRecognitionVC = storyBoard.instantiateViewController(withIdentifier: "AlphabetRecognition") as! AlphabetRecognition
+        let navigationController = UINavigationController(rootViewController: ChapterStartVC)
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        appDelegate.window?.rootViewController = navigationController
+        
+        AlphabetRecognitionVC.modalPresentationStyle = .fullScreen
+        navigationController.pushViewController(AlphabetRecognitionVC, animated: true)
+        navigationController.isNavigationBarHidden = true
     }
     
     @IBAction func pauseButtonTapped(_ sender: Any) {

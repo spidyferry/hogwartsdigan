@@ -16,7 +16,7 @@ class AlphabetFinish: UIViewController {
     var currentChapter  = UserDefaults.standard.string(forKey: "currentChapter")!
     var nextAlphabet    = UserDefaults.standard.string(forKey: "nextAlphabet")!
     var nextChapter     = UserDefaults.standard.string(forKey: "nextChapter")!
-    var indexChapter     = UserDefaults.standard.string(forKey: "indexChapter")!
+    var indexChapter    = UserDefaults.standard.string(forKey: "indexChapter")!
     
     var chapter : [Chapter] = Chapter.allCases
     
@@ -46,11 +46,22 @@ class AlphabetFinish: UIViewController {
         let goToNextChapter      = self.nextAlphabet == "" ? true : false
         
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let SelectChapterVC = storyBoard.instantiateViewController(withIdentifier: "ChapterStartConfirmation") as! ChapterStartConfirmation
-        SelectChapterVC.titleChapter = nextChapterAvailable && goToNextChapter ? self.nextChapter : self.currentChapter
-        SelectChapterVC.indexChapter = (nextChapterAvailable && goToNextChapter ? Int(self.indexChapter)! + 1 : Int(self.indexChapter))!
-        SelectChapterVC.modalPresentationStyle = .fullScreen
-        self.present(SelectChapterVC, animated: false, completion: nil)
+        let AlphabetFinishVC = storyBoard.instantiateViewController(withIdentifier: "AlphabetFinish") as! AlphabetFinish
+        let ChapterStartConfirmationVC = storyBoard.instantiateViewController(withIdentifier: "ChapterStartConfirmation") as! ChapterStartConfirmation
+        let navigationController = UINavigationController(rootViewController: AlphabetFinishVC)
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        appDelegate.window?.rootViewController = navigationController
+        
+        ChapterStartConfirmationVC.modalPresentationStyle = .fullScreen
+        ChapterStartConfirmationVC.titleChapter = nextChapterAvailable && goToNextChapter ? self.nextChapter : self.currentChapter
+        ChapterStartConfirmationVC.indexChapter = (nextChapterAvailable && goToNextChapter ? Int(self.indexChapter)! + 1 : Int(self.indexChapter))!
+        
+        print("Here")
+        print(UserDefaults.standard.string(forKey: "currentChapter")!)
+        print(self.currentChapter)
+        navigationController.pushViewController(ChapterStartConfirmationVC, animated: true)
+        navigationController.isNavigationBarHidden = true
     }
     
     func setToComplete() {

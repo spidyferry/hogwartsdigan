@@ -41,15 +41,20 @@ class ChapterPage: UIViewController {
     
     @objc func buttonChapter(sender: UIButton) {
         let index = sender.tag
-        defaults.set(index, forKey: "chapterSelected")
         
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let SelectChapterVC = storyBoard.instantiateViewController(withIdentifier: "SelectChapter") as! SelectChapter
         let ChapterStartVC = storyBoard.instantiateViewController(withIdentifier: "ChapterStartConfirmation") as! ChapterStartConfirmation
+        let navigationController = UINavigationController(rootViewController: SelectChapterVC)
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        appDelegate.window?.rootViewController = navigationController
         
         ChapterStartVC.modalPresentationStyle = .fullScreen
         ChapterStartVC.titleChapter = chapter[index - 1].title
         ChapterStartVC.indexChapter = index - 1
-        self.present(ChapterStartVC, animated: true, completion: nil)
+        navigationController.pushViewController(ChapterStartVC, animated: true)
+        navigationController.isNavigationBarHidden = true
     }
     
     func showChapterCard() {

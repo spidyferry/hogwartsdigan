@@ -18,7 +18,7 @@
         <!--Chapter Start Confirmation-->
         <scene sceneID="2Ry-tc-g36">
             <objects>
-                <viewController storyboardIdentifier="ChapterStartConfirmation" id="1i0-Jg-gpf" customClass="ChapterStartConfirmation" customModule="AR2ndTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChapterStartConfirmation" id="1i0-Jg-gpf" customClass="ChapterStartConfirmation" customModule="Yomukids" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Emk-ml-s42">
                         <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -63,6 +63,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="gotoNext:" destination="1i0-Jg-gpf" eventType="touchUpInside" id="GPt-eJ-NGe"/>
+                                    <segue destination="84a-rU-kNd" kind="presentation" modalPresentationStyle="fullScreen" id="eRL-cF-ExL"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xro-un-whm">
@@ -84,7 +85,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="cancelChapter:" destination="1i0-Jg-gpf" eventType="touchUpInside" id="RoT-A6-iUk"/>
-                                    <segue destination="W0c-Rr-nTu" kind="presentation" modalPresentationStyle="fullScreen" id="A9y-8I-ua6"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The ABC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="58m-xA-r8M">
@@ -125,12 +125,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HV4-oG-dr3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="50.753768844221106" y="365.46762589928062"/>
+            <point key="canvasLocation" x="62" y="363"/>
         </scene>
         <!--ARView-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" userLabel="ARView" customClass="ViewController" customModule="AR2ndTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ARViewController" id="BYZ-38-t0r" userLabel="ARView" customClass="ViewController" customModule="Yomukids" customModuleProvider="target" sceneMemberID="viewController">
                     <arView key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -142,12 +142,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3944" y="365"/>
+            <point key="canvasLocation" x="4990.4522613065328" y="392.80575539568349"/>
         </scene>
         <!--Profile-->
         <scene sceneID="vYc-zq-Z9n">
             <objects>
-                <viewController storyboardIdentifier="Profile" id="qLN-sv-1O5" customClass="Profile" customModule="AR2ndTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Profile" id="qLN-sv-1O5" customClass="Profile" customModule="Yomukids" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="k6I-i9-MpT">
                         <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -179,7 +179,6 @@
                                 <connections>
                                     <action selector="closeGuide:" destination="iiH-6N-EZi" eventType="touchUpInside" id="UeF-eK-Fyf"/>
                                     <action selector="okButtonTapped:" destination="qLN-sv-1O5" eventType="touchUpInside" id="KPI-31-aue"/>
-                                    <segue destination="d7g-t6-UMX" kind="presentation" modalPresentationStyle="fullScreen" id="WGK-U7-Tf6"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Achievements" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4kg-mK-eQy">
@@ -295,7 +294,7 @@
         <!--Main Screen-->
         <scene sceneID="7DL-Fv-0HD">
             <objects>
-                <viewController storyboardIdentifier="MainScreen" id="d7g-t6-UMX" customClass="MainScreen" customModule="AR2ndTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainScreen" id="d7g-t6-UMX" customClass="MainScreen" customModule="Yomukids" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eBY-oy-bfG">
                         <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -349,7 +348,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="getIsFinish:" destination="d7g-t6-UMX" eventType="touchUpInside" id="G2g-gF-VqV"/>
                                     <action selector="startButtonPressed:" destination="d7g-t6-UMX" eventType="touchUpInside" id="SOO-s8-EO3"/>
                                 </connections>
                             </button>
@@ -398,12 +396,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N4i-KE-RZ2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1255.2763819095478" y="364.02877697841728"/>
+            <point key="canvasLocation" x="-1255" y="363"/>
         </scene>
         <!--Parent Guide-->
         <scene sceneID="eKj-DT-ASi">
             <objects>
-                <viewController id="iiH-6N-EZi" customClass="ParentGuide" customModule="AR2ndTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="iiH-6N-EZi" customClass="ParentGuide" customModule="Yomukids" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="s0B-jl-Xjt">
                         <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -494,7 +492,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
         <!--Select Chapter-->
         <scene sceneID="XJ6-zc-kfA">
             <objects>
-                <viewController storyboardIdentifier="SelectChapter" id="W0c-Rr-nTu" customClass="SelectChapter" customModule="AR2ndTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SelectChapter" id="W0c-Rr-nTu" customClass="SelectChapter" customModule="Yomukids" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ENn-nZ-c57">
                         <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -548,8 +546,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                     </preferredSymbolConfiguration>
                                 </state>
                                 <connections>
-                                    <action selector="buttBackTapped:" destination="W0c-Rr-nTu" eventType="touchUpInside" id="o93-Sw-gjj"/>
-                                    <segue destination="d7g-t6-UMX" kind="presentation" modalPresentationStyle="fullScreen" id="D82-pD-idJ"/>
+                                    <action selector="backButtonTapped:" destination="W0c-Rr-nTu" eventType="touchUpInside" id="wFF-hX-CJ5"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Chapter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6HM-Yd-wGE">
@@ -579,12 +576,12 @@ Parents are expected to participate in monitoring and limiting the time that chi
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SW2-iv-UlT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-602.0100502512563" y="364.02877697841728"/>
+            <point key="canvasLocation" x="-602" y="363"/>
         </scene>
         <!--Chapter Page-->
         <scene sceneID="LAI-7G-Tz5">
             <objects>
-                <viewController storyboardIdentifier="ChapterPage" id="5yg-sS-ft6" customClass="ChapterPage" customModule="AR2ndTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChapterPage" id="5yg-sS-ft6" customClass="ChapterPage" customModule="Yomukids" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qRx-Or-JFp">
                         <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -599,7 +596,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
         <!--Chapter Intro-->
         <scene sceneID="lyN-Sr-H21">
             <objects>
-                <viewController storyboardIdentifier="ChapterIntro" id="84a-rU-kNd" customClass="ChapterIntro" customModule="AR2ndTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChapterIntro" id="84a-rU-kNd" customClass="ChapterIntro" customModule="Yomukids" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Eyj-W3-osN">
                         <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -671,7 +668,6 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="nextButtonTapped:" destination="84a-rU-kNd" eventType="touchUpInside" id="kXp-eB-DhX"/>
-                                    <segue destination="xS4-qk-oIT" kind="presentation" modalPresentationStyle="fullScreen" id="9ml-UV-Htw"/>
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bHU-AS-aK7">
@@ -738,12 +734,12 @@ Parents are expected to participate in monitoring and limiting the time that chi
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uvl-Pf-9uu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="700.5025125628141" y="365.46762589928062"/>
+            <point key="canvasLocation" x="740" y="363"/>
         </scene>
         <!--Game Paused-->
         <scene sceneID="ERR-Vn-Aph">
             <objects>
-                <viewController storyboardIdentifier="GamePaused" id="BnN-NG-d2s" customClass="GamePaused" customModule="AR2ndTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GamePaused" id="BnN-NG-d2s" customClass="GamePaused" customModule="Yomukids" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="voa-jr-qJi">
                         <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -824,7 +820,6 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="mainMenuButtonTapped:" destination="BnN-NG-d2s" eventType="touchUpInside" id="Zua-Ss-o7d"/>
-                                    <segue destination="d7g-t6-UMX" kind="presentation" modalPresentationStyle="fullScreen" id="mfO-3s-wQd"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TEO-Rr-CYg">
@@ -894,7 +889,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
         <!--Alphabet Recognition-->
         <scene sceneID="3Oy-pY-kGg">
             <objects>
-                <viewController id="xS4-qk-oIT" customClass="AlphabetRecognition" customModule="AR2ndTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AlphabetRecognition" id="xS4-qk-oIT" customClass="AlphabetRecognition" customModule="Yomukids" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="p5C-DE-iC4">
                         <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1121,12 +1116,12 @@ Parents are expected to participate in monitoring and limiting the time that chi
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WHu-5i-hdc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1347.7386934673366" y="364.02877697841728"/>
+            <point key="canvasLocation" x="1423" y="363"/>
         </scene>
         <!--Alphabet Success-->
         <scene sceneID="wee-yU-qtX">
             <objects>
-                <viewController storyboardIdentifier="AlphabetSuccess" id="4yQ-mZ-Yd1" customClass="AlphabetSuccess" customModule="AR2ndTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AlphabetSuccess" id="4yQ-mZ-Yd1" customClass="AlphabetSuccess" customModule="Yomukids" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Tvz-tR-HGG">
                         <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1207,7 +1202,6 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="nextButtonTapped:" destination="4yQ-mZ-Yd1" eventType="touchUpInside" id="cik-RL-VLD"/>
-                                    <segue destination="BCD-9E-8AO" kind="presentation" modalPresentationStyle="fullScreen" id="1ZQ-O7-5Ap"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1244,12 +1238,12 @@ Parents are expected to participate in monitoring and limiting the time that chi
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UVg-zr-XUn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1992.964824120603" y="364.02877697841728"/>
+            <point key="canvasLocation" x="2121" y="363"/>
         </scene>
         <!--Word Hint-->
         <scene sceneID="Z6p-tl-ncA">
             <objects>
-                <viewController id="BCD-9E-8AO" customClass="WordHint" customModule="AR2ndTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WordHint" id="BCD-9E-8AO" customClass="WordHint" customModule="Yomukids" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4bs-zf-5wt">
                         <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1300,7 +1294,6 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="nextButtTapped:" destination="BCD-9E-8AO" eventType="touchUpInside" id="qrd-NB-eFT"/>
-                                    <segue destination="bEj-nL-yAD" kind="presentation" modalPresentationStyle="fullScreen" id="nBO-Jh-uP3"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Amq-B1-vVL">
@@ -1362,12 +1355,12 @@ Parents are expected to participate in monitoring and limiting the time that chi
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Vj-TS-JEx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2644.7236180904524" y="364.02877697841728"/>
+            <point key="canvasLocation" x="2818" y="363"/>
         </scene>
         <!--Word Mission-->
         <scene sceneID="q2w-7m-8xw">
             <objects>
-                <viewController id="bEj-nL-yAD" customClass="ARWordMission" customModule="AR2ndTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ARWordMission" id="bEj-nL-yAD" customClass="ARWordMission" customModule="Yomukids" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wh6-ww-fMA">
                         <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1427,7 +1420,6 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="nextButtonTapped:" destination="bEj-nL-yAD" eventType="touchUpInside" id="ug6-FG-3SD"/>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="wJE-Tv-FPr"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LCk-f2-rXB">
@@ -1489,12 +1481,12 @@ Parents are expected to participate in monitoring and limiting the time that chi
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KCr-8I-Pdb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3292.9648241206032" y="363.30935251798564"/>
+            <point key="canvasLocation" x="3515" y="363"/>
         </scene>
         <!--Success-->
         <scene sceneID="T8h-6W-m7N">
             <objects>
-                <viewController storyboardIdentifier="ARSuccess" id="bgU-8J-ozd" customClass="ARSuccess" customModule="AR2ndTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ARSuccess" id="bgU-8J-ozd" customClass="ARSuccess" customModule="Yomukids" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ocb-Ek-IpZ">
                         <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1575,7 +1567,6 @@ Parents are expected to participate in monitoring and limiting the time that chi
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="tryButtonTapped:" destination="bgU-8J-ozd" eventType="touchUpInside" id="SHr-e5-Vk9"/>
-                                    <segue destination="eXP-UT-rvH" kind="presentation" modalPresentationStyle="fullScreen" id="POl-6w-7f2"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1612,12 +1603,12 @@ Parents are expected to participate in monitoring and limiting the time that chi
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oON-hQ-eLH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3944" y="1236"/>
+            <point key="canvasLocation" x="3515" y="1176"/>
         </scene>
         <!--Word Recognition-->
         <scene sceneID="huU-kd-tnQ">
             <objects>
-                <viewController id="eXP-UT-rvH" customClass="WordRecognition" customModule="AR2ndTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WordRecognition" id="eXP-UT-rvH" customClass="WordRecognition" customModule="Yomukids" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ycf-Qs-Y2A">
                         <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1848,12 +1839,12 @@ Parents are expected to participate in monitoring and limiting the time that chi
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KMr-B8-2bt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3292.9648241206032" y="1235.9712230215828"/>
+            <point key="canvasLocation" x="2818" y="1176"/>
         </scene>
         <!--Word Success-->
         <scene sceneID="rRr-Ev-6bO">
             <objects>
-                <viewController storyboardIdentifier="WordSuccess" id="1gF-Z3-NB0" customClass="WordSuccess" customModule="AR2ndTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WordSuccess" id="1gF-Z3-NB0" customClass="WordSuccess" customModule="Yomukids" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gDc-sT-01s">
                         <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1970,12 +1961,12 @@ Parents are expected to participate in monitoring and limiting the time that chi
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8nb-y1-mZn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2645" y="1236"/>
+            <point key="canvasLocation" x="2121" y="1176"/>
         </scene>
         <!--Alphabet Finish-->
         <scene sceneID="ivk-nh-XOD">
             <objects>
-                <viewController storyboardIdentifier="AlphabetFinish" id="OHZ-3s-64H" customClass="AlphabetFinish" customModule="AR2ndTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AlphabetFinish" id="OHZ-3s-64H" customClass="AlphabetFinish" customModule="Yomukids" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FtK-Vs-3hC">
                         <rect key="frame" x="0.0" y="0.0" width="1194" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2060,13 +2051,11 @@ Parents are expected to participate in monitoring and limiting the time that chi
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6F8-Aj-EJ1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1992.964824120603" y="1235.9712230215828"/>
+            <point key="canvasLocation" x="1423" y="1176"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="iSJ-4G-zhb"/>
-        <segue reference="jVJ-km-ovP"/>
-        <segue reference="mfO-3s-wQd"/>
+        <segue reference="k9M-DK-gzl"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="AlphabetBox" width="296" height="277"/>

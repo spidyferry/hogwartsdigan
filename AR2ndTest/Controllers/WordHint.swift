@@ -62,11 +62,34 @@ class WordHint: UIViewController {
     @IBAction func prevScreen(_ sender: Any) {
         AudioPrevTapped.shared.playSound()
         
-        dismiss(animated: true, completion: nil)
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let ARWordMissionVC = storyBoard.instantiateViewController(withIdentifier: "ARWordMission") as! ARWordMission
+        let WordHintVC = storyBoard.instantiateViewController(withIdentifier: "WordHint") as! WordHint
+        let navigationController = UINavigationController(rootViewController: ARWordMissionVC)
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        appDelegate.window?.rootViewController = navigationController
+        
+        WordHintVC.modalPresentationStyle = .fullScreen
+        navigationController.pushViewController(WordHintVC, animated: true)
+        navigationController.isNavigationBarHidden = true
     }
     
     @IBAction func nextButtTapped(_ sender: Any) {
 //        AudioBGM.shared.stopSound()
         AudioNextTapped.shared.playSound()
+        
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let WordHintVC = storyBoard.instantiateViewController(withIdentifier: "WordHint") as! WordHint
+        let ARWordMissionVC = storyBoard.instantiateViewController(withIdentifier: "ARWordMission") as! ARWordMission
+        let navigationController = UINavigationController(rootViewController: WordHintVC)
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        appDelegate.window?.rootViewController = navigationController
+        
+        ARWordMissionVC.modalPresentationStyle = .fullScreen
+        navigationController.pushViewController(ARWordMissionVC, animated: true)
+        navigationController.isNavigationBarHidden = true
     }
 }

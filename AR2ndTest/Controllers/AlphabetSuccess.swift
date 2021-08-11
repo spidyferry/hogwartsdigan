@@ -63,6 +63,18 @@ class AlphabetSuccess: UIViewController {
     
     @IBAction func nextButtonTapped(_ sender: Any) {
         AudioNextTapped.shared.playSound()
+        
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let AlphabetSuccessVC = storyBoard.instantiateViewController(withIdentifier: "AlphabetSuccess") as! AlphabetSuccess
+        let WordHintVC = storyBoard.instantiateViewController(withIdentifier: "WordHint") as! WordHint
+        let navigationController = UINavigationController(rootViewController: AlphabetSuccessVC)
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        appDelegate.window?.rootViewController = navigationController
+        
+        WordHintVC.modalPresentationStyle = .fullScreen
+        navigationController.pushViewController(WordHintVC, animated: true)
+        navigationController.isNavigationBarHidden = true
     }
     
     @IBAction func replayButtonTapped(_ sender: Any) {

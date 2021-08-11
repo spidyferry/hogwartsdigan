@@ -224,9 +224,16 @@ class AlphabetRecognition: UIViewController, SFSpeechRecognizerDelegate {
     
     func nextPage() {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let AlphabetRecognitionVC = storyBoard.instantiateViewController(withIdentifier: "AlphabetRecognition") as! AlphabetRecognition
         let AlphabetSuccessVC = storyBoard.instantiateViewController(withIdentifier: "AlphabetSuccess") as! AlphabetSuccess
+        let navigationController = UINavigationController(rootViewController: AlphabetRecognitionVC)
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        appDelegate.window?.rootViewController = navigationController
+        
         AlphabetSuccessVC.modalPresentationStyle = .fullScreen
-        self.present(AlphabetSuccessVC, animated: false, completion: nil)
+        navigationController.pushViewController(AlphabetSuccessVC, animated: true)
+        navigationController.isNavigationBarHidden = true
     }
     
     @IBAction func pauseButtTapped(_ sender: Any) {

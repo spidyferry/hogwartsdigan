@@ -139,5 +139,17 @@ class ChapterStartConfirmation: UIViewController{
     
     @IBAction func cancelChapter(_ sender: Any) {
         AudioPrevTapped.shared.playSound()
+        
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let ChapterStartVC = storyBoard.instantiateViewController(withIdentifier: "ChapterStartConfirmation") as! ChapterStartConfirmation
+        let SelectChapterVC = storyBoard.instantiateViewController(withIdentifier: "SelectChapter") as! SelectChapter
+        let navigationController = UINavigationController(rootViewController: ChapterStartVC)
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        appDelegate.window?.rootViewController = navigationController
+        
+        SelectChapterVC.modalPresentationStyle = .fullScreen
+        navigationController.pushViewController(SelectChapterVC, animated: true)
+        navigationController.isNavigationBarHidden = true
     }
 }

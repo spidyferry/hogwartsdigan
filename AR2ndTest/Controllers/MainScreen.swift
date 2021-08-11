@@ -27,16 +27,20 @@ class MainScreen: UIViewController {
         userName.text = "Hi, \(name)"
     }
     
-    @IBAction func getIsFinish(_ sender: Any) {
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let SelectChapterVC = storyBoard.instantiateViewController(withIdentifier: "SelectChapter") as! SelectChapter
-        SelectChapterVC.modalPresentationStyle = .fullScreen
-        self.present(SelectChapterVC, animated: true, completion: nil)
-
-    }
-    
     @IBAction func startButtonPressed(_ sender: Any) {
         AudioNextTapped.shared.playSound()
+        
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let MainScreenVC = storyBoard.instantiateViewController(withIdentifier: "MainScreen") as! MainScreen
+        let SelectChapterVC = storyBoard.instantiateViewController(withIdentifier: "SelectChapter") as! SelectChapter
+        let navigationController = UINavigationController(rootViewController: MainScreenVC)
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        appDelegate.window?.rootViewController = navigationController
+        
+        SelectChapterVC.modalPresentationStyle = .fullScreen
+        navigationController.pushViewController(SelectChapterVC, animated: true)
+        navigationController.isNavigationBarHidden = true
     }
     
     @IBAction func guideButtonTapped(_ sender: Any) {

@@ -39,10 +39,18 @@ class ViewController: UIViewController {
     func prints(_ entity:Entity?){
         guard let entity = entity else {return}
         print(entity)
+        
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let MainScreen = storyBoard.instantiateViewController(withIdentifier: "ARSuccess") as! ARSuccess
-        MainScreen.modalPresentationStyle = .fullScreen
-        self.present(MainScreen, animated: false, completion: nil)
+        let ARVC = storyBoard.instantiateViewController(withIdentifier: "ARViewController") as! ViewController
+        let ARSuccessVC = storyBoard.instantiateViewController(withIdentifier: "ARSuccess") as! ARSuccess
+        let navigationController = UINavigationController(rootViewController: ARVC)
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        appDelegate.window?.rootViewController = navigationController
+        
+        ARSuccessVC.modalPresentationStyle = .fullScreen
+        navigationController.pushViewController(ARSuccessVC, animated: true)
+        navigationController.isNavigationBarHidden = true
     }
     
 }
