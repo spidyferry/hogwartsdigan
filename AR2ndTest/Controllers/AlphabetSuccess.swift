@@ -16,6 +16,7 @@ class AlphabetSuccess: UIViewController {
     @IBOutlet weak var replayButton: UIButton!
     
     var alphabetSuccess: String = ""
+    var currentAlphabet: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,8 +24,13 @@ class AlphabetSuccess: UIViewController {
         AudioCongrat.shared.playSound()
         AudioBGM.shared.playSound()
         
+        self.currentAlphabet    = UserDefaults.standard.string(forKey: "currentAlphabet")!
         self.alphabetSuccess = UserDefaults.standard.string(forKey: "alphabetSuccess")!
         self.startNaration()
+        
+        if(self.currentAlphabet != "") {
+            AudioNarration.shared.playSound(file: "s_congrat_\(self.currentAlphabet)")
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -63,6 +69,7 @@ class AlphabetSuccess: UIViewController {
     
     @IBAction func nextButtonTapped(_ sender: Any) {
         AudioNextTapped.shared.playSound()
+        AudioNarration.shared.stopSound()
         
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let AlphabetSuccessVC = UIViewController()
@@ -78,6 +85,10 @@ class AlphabetSuccess: UIViewController {
     }
     
     @IBAction func replayButtonTapped(_ sender: Any) {
+        if(self.currentAlphabet != "") {
+            AudioNarration.shared.playSound(file: "s_congrat_\(self.currentAlphabet)")
+        }
+        
         self.replayButton.isHidden = true
         self.startNaration()
     }

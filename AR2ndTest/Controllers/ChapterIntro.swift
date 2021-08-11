@@ -30,25 +30,26 @@ class ChapterIntro: UIViewController {
         self.currentAlphabet    = UserDefaults.standard.string(forKey: "currentAlphabet")!
         self.alphabetTitle.text = titleChapter
         
-//         Start Narration
         if(self.currentAlphabet != "") {
-            AudioNarration.shared.playSound(file: "narr_\(self.currentAlphabet)")
+            AudioNarration.shared.playSound(file: "s_narr_\(self.currentAlphabet)")
         }
     }
     
     override func viewDidAppear(_ animated: Bool) {
         AudioNarration.shared.startSound()
         
-        self.timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(getSentece),userInfo: nil,repeats: true)
+        self.timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(getSentence),userInfo: nil,repeats: true)
         self.timer.fire()
     }
     
-    @objc func getSentece() {
+    @objc func getSentence() {
         countTimer += 1
         
         let alphabetIntro:String = UserDefaults.standard.string(forKey: "alphabetIntro")!
         let line = self.loadNarrationText(file: alphabetIntro)
-        let sentence = line.split(separator: ";").map {String($0)}
+        var sentence = line.split(separator: ";").map {String($0)}
+        
+        sentence.removeLast()
         
         if countTimer/30 < sentence.count{
             self.bodyText.text = sentence[countTimer/30]
@@ -59,7 +60,6 @@ class ChapterIntro: UIViewController {
             self.timer.invalidate()
         }
     }
-    
     
 //    func startNaration(script:Array<String>){
 //        for (index, element) in script.enumerated() {
@@ -139,11 +139,11 @@ class ChapterIntro: UIViewController {
     
     func playNarration() {
         if(self.currentAlphabet != "") {
-            AudioNarration.shared.playSound(file: "narr_\(self.currentAlphabet)")
+            AudioNarration.shared.playSound(file: "s_narr_\(self.currentAlphabet)")
         }
         
         self.countTimer = 0
-        self.timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(getSentece),userInfo: nil,repeats: true)
+        self.timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(getSentence),userInfo: nil,repeats: true)
         self.timer.fire()
         
         self.replayButton.isHidden = true

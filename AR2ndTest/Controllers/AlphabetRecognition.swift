@@ -25,6 +25,7 @@ class AlphabetRecognition: UIViewController, SFSpeechRecognizerDelegate {
     var alphabet = ""
     var alphabetSupposedToBe: String = ""
     var success: Bool = false
+    var currentAlphabet: String = ""
 
     @IBOutlet weak var theAlphabet: UILabel!
     @IBOutlet weak var tryAgainButton: UIButton!
@@ -39,7 +40,7 @@ class AlphabetRecognition: UIViewController, SFSpeechRecognizerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let currentAlphabet         = UserDefaults.standard.string(forKey: "currentAlphabet")!
+        currentAlphabet             = UserDefaults.standard.string(forKey: "currentAlphabet")!
         theAlphabet.text            = currentAlphabet
         alphabetSupposedToBe        = getValueForRecognition(alphabetName: currentAlphabet)
         speechRecognizer.delegate   = self
@@ -141,7 +142,7 @@ class AlphabetRecognition: UIViewController, SFSpeechRecognizerDelegate {
     }
     
     func prepareAudioPlayer() {
-        let url = Bundle.main.url(forResource: "A", withExtension: "mp3")
+        let url = Bundle.main.url(forResource: self.currentAlphabet, withExtension: "mp3")
         
         do {
             soundPlayer = try AVAudioPlayer(contentsOf: url!)
