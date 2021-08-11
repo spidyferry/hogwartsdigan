@@ -40,6 +40,8 @@ class ViewController: UIViewController {
         guard let entity = entity else {return}
         print(entity)
         
+        arView.scene.anchors.removeAll()
+        
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let ARVC = storyBoard.instantiateViewController(withIdentifier: "ARViewController") as! ViewController
         let ARSuccessVC = storyBoard.instantiateViewController(withIdentifier: "ARSuccess") as! ARSuccess
