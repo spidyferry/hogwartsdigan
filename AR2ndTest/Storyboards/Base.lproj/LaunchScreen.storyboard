@@ -24,22 +24,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="APP ICON - Launch Screen" translatesAutoresizingMaskIntoConstraints="NO" id="RST-Ve-9f9">
-                                <rect key="frame" x="384" y="200" width="426" height="426"/>
+                                <rect key="frame" x="384" y="200" width="426" height="434"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Developed by:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6b-j4-IyI">
-                                <rect key="frame" x="549.5" y="749" width="95" height="18"/>
+                                <rect key="frame" x="549.5" y="757" width="95" height="18"/>
                                 <fontDescription key="fontDescription" name="SFProRounded-Semibold" family="SF Pro Rounded" pointSize="15"/>
                                 <color key="textColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order of the Pheonix" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KNt-ZR-vC6">
-                                <rect key="frame" x="457.5" y="767" width="279.5" height="36"/>
+                                <rect key="frame" x="457.5" y="775" width="279.5" height="36"/>
                                 <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="30"/>
                                 <color key="textColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ootp" translatesAutoresizingMaskIntoConstraints="NO" id="vxs-OS-rRY">
-                                <rect key="frame" x="554.5" y="696" width="85" height="45"/>
+                                <rect key="frame" x="554.5" y="704" width="85" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="F3K-ch-qJj"/>
                                     <constraint firstAttribute="width" constant="85" id="J1R-px-ruc"/>
@@ -55,6 +55,7 @@
                             <constraint firstItem="RST-Ve-9f9" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Lgl-Jg-t2v"/>
                             <constraint firstItem="f6b-j4-IyI" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="UJp-q1-gld"/>
                             <constraint firstItem="vxs-OS-rRY" firstAttribute="top" secondItem="RST-Ve-9f9" secondAttribute="bottom" constant="70" id="d0f-VA-OOT"/>
+                            <constraint firstItem="RST-Ve-9f9" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="gel-wS-nGy"/>
                             <constraint firstItem="KNt-ZR-vC6" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="lR0-rU-g68"/>
                             <constraint firstItem="KNt-ZR-vC6" firstAttribute="top" secondItem="f6b-j4-IyI" secondAttribute="bottom" id="pec-A6-SQP"/>
                         </constraints>
