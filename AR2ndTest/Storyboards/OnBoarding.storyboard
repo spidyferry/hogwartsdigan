@@ -102,10 +102,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Path" translatesAutoresizingMaskIntoConstraints="NO" id="f3V-7S-lFU">
-                                <rect key="frame" x="400" y="366" width="394" height="102"/>
+                                <rect key="frame" x="400" y="316" width="394" height="202"/>
                             </imageView>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order of the Peonix" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6kR-iM-ap4">
-                                <rect key="frame" x="475.5" y="496" width="243" height="68"/>
+                                <rect key="frame" x="475.5" y="546" width="243" height="68"/>
                                 <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -130,10 +130,9 @@
         <!--Navigation Controller-->
         <scene sceneID="cYY-z4-5jK">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iGn-w6-mnL" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="iGn-w6-mnL" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="LAH-rS-kuR">
-                        <rect key="frame" x="0.0" y="0.0" width="1194" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
