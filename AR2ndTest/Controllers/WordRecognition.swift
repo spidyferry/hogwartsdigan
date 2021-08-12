@@ -40,7 +40,7 @@ class WordRecognition: UIViewController {
         prepareAudioPlayer()
         print(wordSupposedToBe)
         sayIt.text = wordSupposedToBe
-        wordHint.image = UIImage(named: "A")
+        wordHint.image = UIImage(named: currentAlphabet)
         
         // Set record shadow corner radius
         recordShadow1.layer.cornerRadius = 20
@@ -66,7 +66,8 @@ class WordRecognition: UIViewController {
     }
     
     func prepareAudioPlayer(){
-        let url = Bundle.main.url(forResource: "AppleTest", withExtension: "mp3")
+        let currentAlphabet = UserDefaults.standard.string(forKey: "currentAlphabet")!
+        let url = Bundle.main.url(forResource: "s_say_\(currentAlphabet)", withExtension: "mp3")
         
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: url!)

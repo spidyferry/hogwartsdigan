@@ -59,8 +59,6 @@
 		80A68D8426BA831E0042C5B6 /* 3DView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80A68D8326BA831E0042C5B6 /* 3DView.storyboard */; };
 		80A68D8826BA88230042C5B6 /* ObjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A68D8726BA88230042C5B6 /* ObjectViewController.swift */; };
 		80A68D8F26BA92B00042C5B6 /* Apple.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 80A68D8E26BA92B00042C5B6 /* Apple.usdz */; };
-		8A9ADA5626C4786100AAE960 /* s_narr_B.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8A9ADA5426C4786100AAE960 /* s_narr_B.mp3 */; };
-		8A9ADA5726C4786100AAE960 /* s_narr_C.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8A9ADA5526C4786100AAE960 /* s_narr_C.mp3 */; };
 		8AB1322226A94E8100DF114B /* ChapterPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB1322126A94E8100DF114B /* ChapterPage.swift */; };
 		8AB1322726A955D800DF114B /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB1322626A955D800DF114B /* Page.swift */; };
 		8AB1322926A9C33400DF114B /* Chapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB1322826A9C33400DF114B /* Chapter.swift */; };
@@ -112,6 +110,11 @@
 		8C9431D7269F1F77006369F9 /* OnBoarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C9431D6269F1F77006369F9 /* OnBoarding.storyboard */; };
 		8C9431DC269F2EE3006369F9 /* OnBoarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9431DB269F2EE3006369F9 /* OnBoarding.swift */; };
 		8C9431DE269F3281006369F9 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9431DD269F3281006369F9 /* MainScreen.swift */; };
+		8C9A808226C4D84B00879B5B /* s_narr_B.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C9A808026C4D84B00879B5B /* s_narr_B.mp3 */; };
+		8C9A808526C4D86000879B5B /* s_narr_C.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C9A808426C4D86000879B5B /* s_narr_C.mp3 */; };
+		8C9A808926C4DC0800879B5B /* s_say_B.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C9A808626C4DC0800879B5B /* s_say_B.mp3 */; };
+		8C9A808A26C4DC0800879B5B /* s_say_A.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C9A808726C4DC0800879B5B /* s_say_A.mp3 */; };
+		8C9A808B26C4DC0800879B5B /* s_say_C.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C9A808826C4DC0800879B5B /* s_say_C.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -167,8 +170,6 @@
 		80A68D8326BA831E0042C5B6 /* 3DView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = 3DView.storyboard; sourceTree = "<group>"; };
 		80A68D8726BA88230042C5B6 /* ObjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectViewController.swift; sourceTree = "<group>"; };
 		80A68D8E26BA92B00042C5B6 /* Apple.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Apple.usdz; sourceTree = "<group>"; };
-		8A9ADA5426C4786100AAE960 /* s_narr_B.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = s_narr_B.mp3; sourceTree = "<group>"; };
-		8A9ADA5526C4786100AAE960 /* s_narr_C.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = s_narr_C.mp3; sourceTree = "<group>"; };
 		8AB1322126A94E8100DF114B /* ChapterPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterPage.swift; sourceTree = "<group>"; };
 		8AB1322626A955D800DF114B /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 		8AB1322826A9C33400DF114B /* Chapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter.swift; sourceTree = "<group>"; };
@@ -222,6 +223,11 @@
 		8C9431D6269F1F77006369F9 /* OnBoarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OnBoarding.storyboard; sourceTree = "<group>"; };
 		8C9431DB269F2EE3006369F9 /* OnBoarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoarding.swift; sourceTree = "<group>"; };
 		8C9431DD269F3281006369F9 /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
+		8C9A808026C4D84B00879B5B /* s_narr_B.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = s_narr_B.mp3; sourceTree = "<group>"; };
+		8C9A808426C4D86000879B5B /* s_narr_C.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = s_narr_C.mp3; sourceTree = "<group>"; };
+		8C9A808626C4DC0800879B5B /* s_say_B.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = s_say_B.mp3; sourceTree = "<group>"; };
+		8C9A808726C4DC0800879B5B /* s_say_A.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = s_say_A.mp3; sourceTree = "<group>"; };
+		8C9A808826C4DC0800879B5B /* s_say_C.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = s_say_C.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -291,8 +297,8 @@
 		8A9ADA5326C477F900AAE960 /* Narrations */ = {
 			isa = PBXGroup;
 			children = (
-				8A9ADA5426C4786100AAE960 /* s_narr_B.mp3 */,
-				8A9ADA5526C4786100AAE960 /* s_narr_C.mp3 */,
+				8C9A808426C4D86000879B5B /* s_narr_C.mp3 */,
+				8C9A808026C4D84B00879B5B /* s_narr_B.mp3 */,
 				36CB4CFB26B83FA6003DCD14 /* s_narr_A.mp3 */,
 				364DD19126A973EE0091DF28 /* narr_A.mp3 */,
 				364DD19226A973EE0091DF28 /* narr_B.mp3 */,
@@ -395,6 +401,9 @@
 		8C8EA08C26A40381007DC059 /* AudioFiles */ = {
 			isa = PBXGroup;
 			children = (
+				8C9A808726C4DC0800879B5B /* s_say_A.mp3 */,
+				8C9A808626C4DC0800879B5B /* s_say_B.mp3 */,
+				8C9A808826C4DC0800879B5B /* s_say_C.mp3 */,
 				8A9ADA5826C47ADC00AAE960 /* Congrats */,
 				363E6C4126AFC20E00DC9D8F /* s_bgm.wav */,
 				363E6C4326AFC47100DC9D8F /* s_butt_GFP.mp3 */,
@@ -517,6 +526,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C9A808A26C4DC0800879B5B /* s_say_A.mp3 in Resources */,
 				367AB2C726A7DAA700A6789E /* R.mp3 in Resources */,
 				8C43408126AFB7150008906A /* AARSuccess.txt in Resources */,
 				8C179C0E26A4701700244FE3 /* ZapfinoExtraLT-One.otf in Resources */,
@@ -565,7 +575,8 @@
 				3620361C26A95D6B00066EFB /* s_butt_paused.mp3 in Resources */,
 				3677E0F626A9B8AF00B5FFAC /* s_congrat_B.mp3 in Resources */,
 				364DD19326A973EE0091DF28 /* narr_C.mp3 in Resources */,
-				8A9ADA5626C4786100AAE960 /* s_narr_B.mp3 in Resources */,
+				8C9A808226C4D84B00879B5B /* s_narr_B.mp3 in Resources */,
+				8C9A808B26C4DC0800879B5B /* s_say_C.mp3 in Resources */,
 				8C0B6028269D72460027FDAA /* Main.storyboard in Resources */,
 				3677E0F826A9B8AF00B5FFAC /* s_congrat_A.mp3 in Resources */,
 				8C179C0C26A4575100244FE3 /* AppleTest.mp3 in Resources */,
@@ -577,7 +588,7 @@
 				367AB2C826A7DAA700A6789E /* A.mp3 in Resources */,
 				367AB2C126A7DAA700A6789E /* T.mp3 in Resources */,
 				367AB2C226A7DAA700A6789E /* O.mp3 in Resources */,
-				8A9ADA5726C4786100AAE960 /* s_narr_C.mp3 in Resources */,
+				8C9A808526C4D86000879B5B /* s_narr_C.mp3 in Resources */,
 				80A68D8F26BA92B00042C5B6 /* Apple.usdz in Resources */,
 				367AB2B226A7DAA700A6789E /* N.mp3 in Resources */,
 				8C43409726AFE8EC0008906A /* CwordSuccess.txt in Resources */,
@@ -586,6 +597,7 @@
 				2D69F496269ED873004433B4 /* SF-Pro-Rounded-Semibold.otf in Resources */,
 				8C9431D7269F1F77006369F9 /* OnBoarding.storyboard in Resources */,
 				8C43408326AFB7150008906A /* AalphabetIntro.txt in Resources */,
+				8C9A808926C4DC0800879B5B /* s_say_B.mp3 in Resources */,
 				367AB2C026A7DAA700A6789E /* M.mp3 in Resources */,
 				367AB2CC26A7DAA700A6789E /* I.mp3 in Resources */,
 				3677E0FA26A9B8AF00B5FFAC /* s_congrat_C_object.mp3 in Resources */,
@@ -779,8 +791,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
-				DEVELOPMENT_TEAM = ZMJ8X3L72S;
+				CURRENT_PROJECT_VERSION = 5;
+				DEVELOPMENT_TEAM = VYG4M66448;
 				INFOPLIST_FILE = AR2ndTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -800,8 +812,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
-				DEVELOPMENT_TEAM = ZMJ8X3L72S;
+				CURRENT_PROJECT_VERSION = 5;
+				DEVELOPMENT_TEAM = VYG4M66448;
 				INFOPLIST_FILE = AR2ndTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

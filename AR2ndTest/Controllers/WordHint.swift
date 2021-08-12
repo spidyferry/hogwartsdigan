@@ -31,7 +31,7 @@ class WordHint: UIViewController {
             dash.append(" _")
         }
         
-        imageHint.image = UIImage(named: "A")
+        imageHint.image = UIImage(named: currentAlphabet)
     }
     
     override func viewDidAppear(_ animated: Bool) {
