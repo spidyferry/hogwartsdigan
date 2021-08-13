@@ -323,12 +323,6 @@
                                 <color key="textColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AppleBhet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A21-nj-YEC">
-                                <rect key="frame" x="236" y="206" width="722" height="179.5"/>
-                                <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="150"/>
-                                <color key="textColor" red="0.1007416174" green="0.26184284689999998" blue="0.31373336909999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="12O-yn-IAD">
                                 <rect key="frame" x="297" y="485.5" width="600" height="160"/>
                                 <color key="backgroundColor" red="0.95837527509999998" green="0.52888590099999999" blue="0.20380106570000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -366,21 +360,31 @@
                                     <segue destination="iiH-6N-EZi" kind="presentation" modalPresentationStyle="fullScreen" id="QRY-Sm-UHa"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppTitle" translatesAutoresizingMaskIntoConstraints="NO" id="rTE-EV-HGQ">
+                                <rect key="frame" x="261.5" y="262" width="671" height="179"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="rTE-EV-HGQ" secondAttribute="height" multiplier="671:179" id="2Wf-D4-Nrg"/>
+                                    <constraint firstAttribute="width" constant="671" id="h5L-lW-FMf"/>
+                                    <constraint firstAttribute="height" constant="179" id="wNE-OY-13k"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5nV-FW-8hS"/>
                         <color key="backgroundColor" red="0.9994472861" green="1" blue="0.89802503590000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="A21-nj-YEC" firstAttribute="top" secondItem="5nV-FW-8hS" secondAttribute="top" constant="206" id="09c-Te-yKg"/>
-                            <constraint firstItem="A21-nj-YEC" firstAttribute="centerX" secondItem="5nV-FW-8hS" secondAttribute="centerX" id="CG5-ox-m84"/>
+                            <constraint firstItem="12O-yn-IAD" firstAttribute="top" secondItem="rTE-EV-HGQ" secondAttribute="bottom" constant="44.5" id="AlK-7v-JqO"/>
+                            <constraint firstItem="rTE-EV-HGQ" firstAttribute="top" secondItem="5nV-FW-8hS" secondAttribute="top" constant="262" id="FAA-ov-vme"/>
                             <constraint firstItem="RTu-CY-7TH" firstAttribute="centerY" secondItem="hHj-pP-Hlf" secondAttribute="centerY" id="GmO-JE-WSg"/>
                             <constraint firstItem="hHj-pP-Hlf" firstAttribute="leading" secondItem="RTu-CY-7TH" secondAttribute="trailing" constant="10" id="JAS-WC-Xu6"/>
-                            <constraint firstItem="12O-yn-IAD" firstAttribute="top" secondItem="A21-nj-YEC" secondAttribute="bottom" constant="100" id="Mrw-3p-lxr"/>
+                            <constraint firstItem="5nV-FW-8hS" firstAttribute="trailing" secondItem="rTE-EV-HGQ" secondAttribute="trailing" constant="261.5" id="JvM-qn-Zsb"/>
                             <constraint firstItem="j6P-EJ-81Z" firstAttribute="bottom" secondItem="5nV-FW-8hS" secondAttribute="bottom" constant="25" id="Mxe-7D-vHO"/>
                             <constraint firstItem="hHj-pP-Hlf" firstAttribute="top" secondItem="5nV-FW-8hS" secondAttribute="top" constant="30" id="P46-N0-f72"/>
                             <constraint firstAttribute="bottom" secondItem="hEG-K2-ik9" secondAttribute="bottom" id="TwW-tH-x4J"/>
                             <constraint firstItem="12O-yn-IAD" firstAttribute="centerX" secondItem="5nV-FW-8hS" secondAttribute="centerX" id="XRu-sv-phh"/>
                             <constraint firstItem="5nV-FW-8hS" firstAttribute="trailing" secondItem="hHj-pP-Hlf" secondAttribute="trailing" constant="40" id="Yh5-pu-1g3"/>
                             <constraint firstItem="RTu-CY-7TH" firstAttribute="top" secondItem="5nV-FW-8hS" secondAttribute="top" constant="40" id="jyS-FV-YBC"/>
+                            <constraint firstItem="rTE-EV-HGQ" firstAttribute="centerX" secondItem="eBY-oy-bfG" secondAttribute="centerX" id="qOD-vT-GN3"/>
+                            <constraint firstItem="rTE-EV-HGQ" firstAttribute="leading" secondItem="5nV-FW-8hS" secondAttribute="leading" constant="261.5" id="qPU-Ia-XeM"/>
                             <constraint firstItem="hEG-K2-ik9" firstAttribute="trailing" secondItem="5nV-FW-8hS" secondAttribute="trailing" id="qcb-PK-I37"/>
                             <constraint firstItem="5nV-FW-8hS" firstAttribute="trailing" secondItem="j6P-EJ-81Z" secondAttribute="trailing" constant="72" id="sTZ-N3-LQJ"/>
                             <constraint firstItem="hEG-K2-ik9" firstAttribute="leading" secondItem="5nV-FW-8hS" secondAttribute="leading" id="uBB-9v-BJx"/>
@@ -2059,6 +2063,7 @@ Parents are expected to participate in monitoring and limiting the time that chi
     </inferredMetricsTieBreakers>
     <resources>
         <image name="AlphabetBox" width="296" height="277"/>
+        <image name="AppTitle" width="671" height="179"/>
         <image name="Background" width="1194" height="417"/>
         <image name="BadgeNewLearner" width="102" height="148"/>
         <image name="BadgeTheAchiever" width="103" height="149"/>
